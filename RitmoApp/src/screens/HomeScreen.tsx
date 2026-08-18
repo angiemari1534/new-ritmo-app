@@ -306,7 +306,7 @@ export default function HomeScreen({
       {/* How-to-use guide */}
       <Modal visible={guideOpen} transparent animationType="slide" onRequestClose={() => setGuideOpen(false)}>
         <Pressable style={pl.backdrop} onPress={() => setGuideOpen(false)} />
-        <LinearGradient colors={["#0D0918", "#060409"]} start={{ x: 0, y: 0 }} end={{ x: 0.5, y: 1 }} style={[pl.card, guide.modalCard]}>
+        <LinearGradient colors={["rgba(13,9,24,0.82)", "rgba(6,4,9,0.88)"]} start={{ x: 0, y: 0 }} end={{ x: 0.5, y: 1 }} style={[pl.card, guide.modalCard]}>
           <View style={guide.handle} />
           <Text style={guide.modalTitle}>🎵  How to use Ritmo  🎵</Text>
           <Text style={guide.modalSub}>Learn {language} by listening to songs you can actually sing along to.</Text>
@@ -354,6 +354,12 @@ const BEST_STEPS = [
 
 // The step-by-step intro shown by the "How to use Ritmo" button.
 const GUIDE_STEPS = [
+  {
+    emoji: "🚀",
+    title: "Start your journey",
+    body:
+      "Best way to learn: start at the very beginning of your journey and go in order — each lesson builds on the last. A few minutes every day beats one long cram session, so aim to finish at least one lesson a day. Tap the blue “Continue” tile on Home to jump right into your next lesson, or open “See your journey map” to view the whole path and pick any spot.",
+  },
   {
     emoji: "▶️",
     title: "1. Continue your lesson",

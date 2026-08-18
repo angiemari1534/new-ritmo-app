@@ -15,6 +15,7 @@ import numbersPop from "../../assets/catalog/numbers-pop.mp3";
 import numbersEdm from "../../assets/catalog/numbers-edm.mp3";
 import numbersSoul from "../../assets/catalog/numbers-soul.mp3";
 import numbersReggaeton from "../../assets/catalog/numbers-reggaeton.mp3";
+import colorsRnb from "../../assets/catalog/colors-rnb.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -268,5 +269,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000011,
     spec: { subject: "numbers", level: "prestarter", lesson: 6, genre: "Reggaeton", beat: "Tropical Normal" },
+  },
+  {
+    id: "cat-colors-rnb",
+    title: "Red, Blue, Green",
+    subject: "colors",
+    subjectLabel: "Colors",
+    level: "prestarter",
+    lesson: 1,
+    totalLessons: 20,
+    genre: "R&B",
+    beat: "Romantic Normal",
+    artistFeel: "Usher, John Legend",
+    language: "Spanish",
+    lyrics: "[Intro]\nAlright!\nNa na na\n[Verse]\nRide the beat\nred\nrojo\nrojo\nNice and easy\nblue\nazul\nazul\nFollow along\n[Chorus]\nUh yeah\nred\nrojo\nblue\nazul\ngreen\nverde\nSay it loud\n[Verse]\nOh oh oh\ngreen\nverde\nverde\nFeel it now\nyellow\namarillo\namarillo\nThat's the way\n[Chorus]\nYeah!\nred\nrojo\nblue\nazul\ngreen\nverde\nStep it up\n[Verse]\nBreak it down\nblack\nnegro\nnegro\nLa la la\nwhite\nblanco\nblanco\nKeep it up\n[Chorus]\nAll together\nred\nrojo\nblue\nazul\ngreen\nverde\nHere it comes\n[Bridge]\nSounds great\nred\nrojo\nblue\nazul\ngreen\nverde\nyellow\namarillo\nblack\nnegro\nwhite\nblanco\nHey!\n[Chorus]\nRepeat with me\nred\nrojo\nblue\nazul\ngreen\nverde\n[Outro]\nFeel the rhythm\nOh-oh!",
+    vocab: [{"es":"rojo","en":"red"},{"es":"azul","en":"blue"},{"es":"verde","en":"green"},{"es":"amarillo","en":"yellow"},{"es":"negro","en":"black"},{"es":"blanco","en":"white"}],
+    lineTimings: [{"start":0.1,"end":17.371000000000002,"loss":8.297349294026693},{"start":18.7,"end":21.76,"loss":3.483555793762207},{"start":21.76,"end":23.5,"loss":6.570002476374308},{"start":23.5,"end":24.1,"loss":9.079803466796875},{"start":24.1,"end":24.78,"loss":9.618693033854166},{"start":24.78,"end":25.04,"loss":0.6912755966186523},{"start":25.04,"end":26.799,"loss":6.500239213307699},{"start":26.8,"end":27.48,"loss":9.392862955729166},{"start":27.48,"end":29.02,"loss":9.775288899739584},{"start":29.02,"end":30.4,"loss":0.03002146085103353},{"start":30.4,"end":31.2,"loss":5.823874664306641},{"start":31.2,"end":32.22,"loss":10.538151041666666},{"start":32.22,"end":32.82,"loss":8.85638427734375},{"start":32.82,"end":33.56,"loss":8.905658721923828},{"start":33.56,"end":34.12,"loss":9.681844075520834},{"start":34.12,"end":34.78,"loss":8.70870107014974},{"start":34.78,"end":35.46,"loss":7.647884114583333},{"start":35.46,"end":35.94,"loss":0.45962058173285586},{"start":35.94,"end":39.72,"loss":3.1404552459716797},{"start":39.72,"end":42.8,"loss":8.87923069000244},{"start":42.8,"end":43.42,"loss":7.551607259114583},{"start":43.42,"end":43.68,"loss":0.5334650675455729},{"start":43.68,"end":44.04,"loss":0.03364732530381944},{"start":44.04,"end":46.14,"loss":9.298249244689941},{"start":46.14,"end":46.72,"loss":8.363349914550781},{"start":46.72,"end":47,"loss":0.007286919487847221},{"start":47,"end":47.32,"loss":8.37709723578559},{"start":47.32,"end":53.3,"loss":7.1179615656534825},{"start":53.3,"end":53.8,"loss":8.547698974609375},{"start":53.8,"end":54.5,"loss":9.5498046875},{"start":54.5,"end":55.1,"loss":8.609207153320312},{"start":55.1,"end":55.76,"loss":8.996541341145834},{"start":55.76,"end":56.24,"loss":7.204874674479167},{"start":56.24,"end":56.48,"loss":0.0011914571126302083},{"start":56.48,"end":57,"loss":8.025729974110922},{"start":57,"end":57.86,"loss":3.3863852947950366},{"start":57.86,"end":59.26,"loss":9.18831787109375},{"start":59.26,"end":59.8,"loss":0.8258260091145834},{"start":59.8,"end":60.18,"loss":7.613271077473958},{"start":60.18,"end":60.68,"loss":8.249675114949545},{"start":60.68,"end":62.04,"loss":6.1868269592523575},{"start":62.04,"end":62.3,"loss":0.0006433327992757162},{"start":62.3,"end":62.54,"loss":9.57962163289388},{"start":62.54,"end":63.589,"loss":0.04915503329700894},{"start":63.589,"end":65.019,"loss":10.112051010131836},{"start":65.019,"end":66.28,"loss":10.423263549804688},{"start":66.28,"end":75.92,"loss":8.332181803385417},{"start":75.92,"end":76.44,"loss":8.305721028645833},{"start":76.44,"end":76.86,"loss":0.1745147705078125},{"start":76.86,"end":77.52,"loss":0.01593888600667318},{"start":77.52,"end":78.02,"loss":8.020401239395142},{"start":78.02,"end":78.62,"loss":8.009365526835124},{"start":78.62,"end":80.24,"loss":6.864904085795084},{"start":80.24,"end":81.12,"loss":10.41806640625},{"start":81.12,"end":81.8,"loss":8.474539438883463},{"start":81.8,"end":82.479,"loss":7.699503580729167},{"start":82.48,"end":82.8,"loss":8.64694849650065},{"start":82.8,"end":83.42,"loss":8.311866760253906},{"start":83.42,"end":84.04,"loss":8.015421549479166},{"start":84.04,"end":84.72,"loss":7.963020833333334},{"start":84.72,"end":85.021,"loss":9.179656473795573},{"start":98.5,"end":107.52,"loss":8.096343994140625},{"start":107.52,"end":109.781,"loss":8.13885498046875},{"start":112.36,"end":113.22,"loss":0.18739954630533853},{"start":113.22,"end":113.9,"loss":7.752702077229817},{"start":113.9,"end":114.68,"loss":9.022216796875},{"start":114.68,"end":115.12,"loss":9.044921875},{"start":115.12,"end":117.12,"loss":6.840985107421875},{"start":117.12,"end":117.62,"loss":8.662858072916666},{"start":117.62,"end":118.44,"loss":7.438672383626302},{"start":118.44,"end":118.74,"loss":1.0069986979166665},{"start":118.74,"end":118.88,"loss":0.006439208984375},{"start":118.88,"end":120.1,"loss":0.04410616556803385},{"start":120.1,"end":121.02,"loss":23.375},{"start":121.02,"end":121.58,"loss":0.031494140625},{"start":121.58,"end":132.98,"loss":2.8203125}],
+    audioUrl: "",
+    audioModule: colorsRnb,
+    catalog: true,
+    createdAt: 1750000000012,
+    spec: { subject: "colors", level: "prestarter", lesson: 1, genre: "R&B", beat: "Romantic Normal" },
   }
 ];

@@ -12,6 +12,8 @@ type TabKey = "home" | "learn" | "create" | "library" | "profile" | null;
 const SLIDES: { icon: Mci; color: string; title: string; body: string; where: string; tab: TabKey }[] = [
   { icon: "music", color: "#22D3EE", title: "Learn through songs", where: "Welcome to Ritmo", tab: null,
     body: "Ritmo turns any topic into a catchy bilingual song you'll actually want to replay. Here's a quick tour." },
+  { icon: "rocket-launch", color: "#F97316", title: "Best way to start", where: "Start your journey", tab: null,
+    body: "Start at the very beginning of your journey and go in order — each lesson builds on the last. A few minutes every day beats one long cram session, so aim to finish at least one lesson a day. Tap the blue “Continue” tile on Home to jump right in." },
   { icon: "play-circle", color: "#34D399", title: "Continue your lesson", where: "Home · Continue your lesson", tab: "home",
     body: "On Home, the blue “Continue” tile plays your next lesson. Ritmo builds each one and moves you forward automatically." },
   { icon: "map-marker-path", color: "#60A5FA", title: "Your journey map", where: "Home · See your journey map", tab: "home",
