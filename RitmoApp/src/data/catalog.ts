@@ -29,6 +29,7 @@ import schoolAlt from "../../assets/catalog/school-alt.mp3";
 import technologyEdm from "../../assets/catalog/technology-edm.mp3";
 import hobbiesLatin from "../../assets/catalog/hobbies-latin.mp3";
 import transportationLatin from "../../assets/catalog/transportation-latin.mp3";
+import placesLatin from "../../assets/catalog/places-latin.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -576,5 +577,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000025,
     spec: { subject: "transportation", level: "prestarter", lesson: 1, genre: "Latin", beat: "Happy Upbeat" },
+  },
+  {
+    id: "cat-places-latin",
+    title: "Bank & Park",
+    subject: "places",
+    subjectLabel: "Places in Town",
+    level: "prestarter",
+    lesson: 1,
+    totalLessons: 20,
+    genre: "Latin",
+    beat: "Happy Upbeat",
+    artistFeel: "Ricky Martin",
+    language: "Spanish",
+    lyrics: "[Intro]\nUh yeah\nNa na na\n[Verse]\nOh!\nthe bank\nel banco\nel banco\nDo it again\nthe hospital\nel hospital\nel hospital\nWoo-hoo!\n[Chorus]\nFollow along\nthe bank\nel banco\nthe hospital\nel hospital\nthe park\nel parque\nLet's move\n[Verse]\nBreak it down\nthe park\nel parque\nel parque\nRide the beat\nthe market\nel mercado\nel mercado\nIn the pocket\n[Chorus]\nUh-huh!\nthe bank\nel banco\nthe hospital\nel hospital\nthe park\nel parque\nYeah yeah!\n[Verse]\nHey!\nthe church\nla iglesia\nla iglesia\nOh-oh!\nthe restaurant\nel restaurante\nel restaurante\nLa la la\n[Chorus]\nSay it with me\nthe bank\nel banco\nthe hospital\nel hospital\nthe park\nel parque\nHey hey!\n[Bridge]\nNice one!\nthe bank\nel banco\nthe hospital\nel hospital\nthe park\nel parque\nthe market\nel mercado\nthe church\nla iglesia\nthe restaurant\nel restaurante\nSay what?\n[Chorus]\nYou're doing great\nthe bank\nel banco\nthe hospital\nel hospital\nthe park\nel parque\n[Outro]\nKeep it up\nLet's learn!",
+    vocab: [{"es":"el banco","en":"the bank"},{"es":"el hospital","en":"the hospital"},{"es":"el parque","en":"the park"},{"es":"el mercado","en":"the market"},{"es":"la iglesia","en":"the church"},{"es":"el restaurante","en":"the restaurant"}],
+    lineTimings: [{"start":0.1,"end":2.001,"loss":6.085992813110352},{"start":12.5,"end":13.801,"loss":4.23980712890625},{"start":17.58,"end":18.09,"loss":11.983072916666666},{"start":18.09,"end":20.24,"loss":5.636922200520833},{"start":20.24,"end":21.84,"loss":5.553798522949219},{"start":21.84,"end":24.1,"loss":5.461213684082031},{"start":24.1,"end":26.42,"loss":3.440305437360491},{"start":26.42,"end":29.1,"loss":5.086938252051672},{"start":29.1,"end":30.82,"loss":5.401051169633865},{"start":30.82,"end":37.2,"loss":5.531182539463043},{"start":37.2,"end":37.93,"loss":1.21624755859375},{"start":37.93,"end":39.14,"loss":5.270077044169108},{"start":39.14,"end":40.46,"loss":4.771073913574218},{"start":40.46,"end":41.62,"loss":5.897091064453125},{"start":41.62,"end":43.04,"loss":5.129608861605326},{"start":43.04,"end":43.96,"loss":5.16772181391716},{"start":43.96,"end":44.72,"loss":5.08395029703776},{"start":44.72,"end":45.8,"loss":5.786715443929037},{"start":45.8,"end":46.78,"loss":4.259224166870117},{"start":46.78,"end":56.42,"loss":3.3176033530916484},{"start":56.42,"end":57.111,"loss":5.823283894856771},{"start":57.11,"end":57.111,"loss":5.690442911783854},{"start":57.11,"end":57.111,"loss":5.362042236328125},{"start":57.11,"end":57.111,"loss":3.9873744419642856},{"start":57.11,"end":57.111,"loss":5.329248046875},{"start":57.11,"end":57.111,"loss":6.032798549107143},{"start":57.11,"end":57.111,"loss":5.314983258928572},{"start":57.11,"end":57.111,"loss":3.2627512613932295},{"start":57.11,"end":57.111,"loss":12.056640625},{"start":57.11,"end":57.14,"loss":5.821216401599702},{"start":57.14,"end":58.22,"loss":5.494432830810547},{"start":58.22,"end":59.3,"loss":4.989253082275391},{"start":59.3,"end":60.42,"loss":5.175691974163056},{"start":60.42,"end":61.54,"loss":5.025107222795486},{"start":61.54,"end":62.62,"loss":5.407893180847168},{"start":62.62,"end":64.78,"loss":5.007868957519531},{"start":64.78,"end":65.221,"loss":13.21014404296875},{"start":65.22,"end":69.98,"loss":5.752916717529297},{"start":69.98,"end":70.86,"loss":5.390235169728597},{"start":70.86,"end":72.14,"loss":5.601182774135045},{"start":72.14,"end":72.98,"loss":0.056026458740234375},{"start":72.98,"end":75.78,"loss":9.120849609375},{"start":75.78,"end":76.92,"loss":5.259046173095703},{"start":76.92,"end":78.039,"loss":6.14131100394509},{"start":78.04,"end":79.42,"loss":4.821721448526754},{"start":79.42,"end":84,"loss":2.1911696910858156},{"start":84,"end":84.99,"loss":4.969421005249023},{"start":84.99,"end":86.04,"loss":5.2264259338378904},{"start":86.04,"end":87.16,"loss":5.054242146809896},{"start":87.16,"end":88.28,"loss":5.213052129745483},{"start":88.28,"end":89.3,"loss":5.032420243819555},{"start":89.3,"end":90.36,"loss":5.3361200332641605},{"start":90.36,"end":92.08,"loss":4.626771036783854},{"start":92.08,"end":93.02,"loss":5.264785957336426},{"start":93.02,"end":93.58,"loss":5.838783550262451},{"start":93.58,"end":94.62,"loss":5.258063507080078},{"start":94.62,"end":95.74,"loss":4.992559916178385},{"start":95.74,"end":96.88,"loss":5.090503841638565},{"start":96.88,"end":98.02,"loss":5.0389579673608145},{"start":98.02,"end":98.92,"loss":5.382492446899414},{"start":98.92,"end":100.271,"loss":5.2050122578938804},{"start":100.27,"end":100.391,"loss":5.793131510416666},{"start":100.39,"end":101.33,"loss":4.988804408482143},{"start":101.33,"end":101.331,"loss":5.513887993494669},{"start":101.33,"end":101.331,"loss":5.034044828869048},{"start":101.33,"end":101.331,"loss":6.2788075256347655},{"start":101.33,"end":101.331,"loss":4.991052419489081},{"start":101.33,"end":101.331,"loss":4.281707981654576},{"start":101.33,"end":101.331,"loss":5.410771484375},{"start":101.33,"end":101.331,"loss":5.493133544921875},{"start":101.33,"end":101.331,"loss":5.046219075520833},{"start":101.33,"end":101.331,"loss":5.169746530056},{"start":101.33,"end":101.331,"loss":5.052644767363867},{"start":101.33,"end":101.331,"loss":5.345621585845947},{"start":101.33,"end":101.68,"loss":3.217396418253581},{"start":101.68,"end":130.02,"loss":3.5727064041864303}],
+    audioUrl: "",
+    audioModule: placesLatin,
+    catalog: true,
+    createdAt: 1750000000026,
+    spec: { subject: "places", level: "prestarter", lesson: 1, genre: "Latin", beat: "Happy Upbeat" },
   }
 ];

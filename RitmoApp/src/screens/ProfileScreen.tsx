@@ -251,7 +251,7 @@ export default function ProfileScreen({
         <Text style={styles.section}>Intro tour</Text>
         <Pressable onPress={() => onUpdateSettings({ onboarded: false })} style={styles.tourBtn}>
           <View style={styles.btnRow}>
-            <MaterialCommunityIcons name="play-circle-outline" size={18} color="#C4B5FD" />
+            <MaterialCommunityIcons name="play-circle-outline" size={18} color="#EDF1F7" />
             <Text style={styles.tourBtnText}>Replay the intro tour</Text>
           </View>
         </Pressable>
@@ -271,7 +271,7 @@ export default function ProfileScreen({
           style={styles.tourBtn}
         >
           <View style={styles.btnRow}>
-            <MaterialCommunityIcons name="compass-outline" size={18} color="#C4B5FD" />
+            <MaterialCommunityIcons name="compass-outline" size={18} color="#EDF1F7" />
             <Text style={styles.tourBtnText}>Start my journey fresh</Text>
           </View>
         </Pressable>
@@ -686,8 +686,8 @@ function Chip({ label, on, onPress }: { label: string; on: boolean; onPress: () 
 
 const styles = StyleSheet.create({
   content: { padding: spacing.lg, paddingTop: 60 },
-  tourBtn: { borderRadius: radius.md, paddingVertical: 13, alignItems: "center", borderWidth: 1, borderColor: "rgba(167,139,250,0.45)", backgroundColor: "rgba(7,11,19,0.5)" },
-  tourBtnText: { color: "#C4B5FD", fontWeight: "900", fontSize: font.body },
+  tourBtn: { borderRadius: radius.md, paddingVertical: 13, alignItems: "center", borderWidth: 1, borderColor: "rgba(157,178,204,0.4)", backgroundColor: "rgba(7,11,19,0.5)" },
+  tourBtnText: { color: "#EDF1F7", fontWeight: "900", fontSize: font.body },
   karaokeBtn: { borderRadius: radius.md, overflow: "hidden", marginTop: 4 },
   karaokeBtnInner: { paddingVertical: 13, alignItems: "center" },
   karaokeBtnText: { color: "#fff", fontWeight: "900", fontSize: font.body },
