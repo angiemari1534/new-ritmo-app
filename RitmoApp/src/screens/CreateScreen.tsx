@@ -502,7 +502,7 @@ const styles = StyleSheet.create({
   clear: { color: colors.faint, fontSize: 16, paddingHorizontal: 4 },
   gGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
   gCell: { width: "22%" },
-  voiceCell: { width: "30%" },
+  voiceCell: { width: "22%" },
   gTile: { backgroundColor: "transparent", aspectRatio: 1, borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.line, alignItems: "center", justifyContent: "center", paddingHorizontal: 4, gap: 4, shadowOpacity: 0.5, shadowRadius: 5, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
   gTileOn: { borderColor: colors.accent },
   gEmoji: { fontSize: 22 },

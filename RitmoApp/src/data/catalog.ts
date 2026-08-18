@@ -5,6 +5,7 @@
 import type { Song } from "../lib/api";
 import greetingsRap from "../../assets/catalog/greetings-rap.mp3";
 import greetingsCountry from "../../assets/catalog/greetings-country.mp3";
+import greetingsRock from "../../assets/catalog/greetings-rock.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -48,5 +49,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000001,
     spec: { subject: "greetings", level: "prestarter", lesson: 2, genre: "Country", beat: "Happy Upbeat" },
+  },
+  {
+    id: "cat-greetings-rock",
+    title: "See You Later",
+    subject: "greetings",
+    subjectLabel: "Greetings & Conversation",
+    level: "prestarter",
+    lesson: 3,
+    totalLessons: 20,
+    genre: "Rock",
+    beat: "Powerful Normal",
+    artistFeel: "Queen",
+    language: "Spanish",
+    lyrics: "[Intro]\nSay it loud\nLet's roll\n[Verse]\nIn the pocket\nsee you later\nhasta luego\nhasta luego\nBring it back\nexcuse me\ncon permiso\ncon permiso\nOh my!\n[Chorus]\nBig time\nsee you later\nhasta luego\nexcuse me\ncon permiso\nI'm sorry\nlo siento\nThat's the way\n[Verse]\nThat's it!\nI'm sorry\nlo siento\nlo siento\nKeep it up\nof course\nclaro que sí\nclaro que sí\nmy name is...\nme llamo...\nme llamo...\nLet's hear it\n[Chorus]\nLet's sing!\nsee you later\nhasta luego\nexcuse me\ncon permiso\nI'm sorry\nlo siento\nLet's practice\n[Verse]\nFeel the beat\ngreeting\nsaludo\nsaludo\nSing it!\nfriend\namigo\namigo\nFeel it now\n[Chorus]\nUh-huh!\nsee you later\nhasta luego\nexcuse me\ncon permiso\nI'm sorry\nlo siento\nCome on now\n[Bridge]\nOh-oh!\nsee you later\nhasta luego\nexcuse me\ncon permiso\nI'm sorry\nlo siento\nof course\nclaro que sí\ngreeting\nsaludo\nfriend\namigo\nHit it!\n[Chorus]\nStep it up\nsee you later\nhasta luego\nexcuse me\ncon permiso\nI'm sorry\nlo siento\n[Outro]\nUh yeah\nLet's move",
+    vocab: [{"es":"hasta luego","en":"see you later"},{"es":"con permiso","en":"excuse me"},{"es":"lo siento","en":"I'm sorry"},{"es":"claro que sí","en":"of course"},{"es":"saludo","en":"greeting"},{"es":"amigo","en":"friend"}],
+    lineTimings: [{"start":2.5,"end":3.941,"loss":3.472832271030971},{"start":6.2,"end":7.281000000000001,"loss":5.076820793151855},{"start":12.94,"end":13.901,"loss":3.9432369413829984},{"start":16.18,"end":17.221,"loss":4.170116787865049},{"start":18.9,"end":20.461000000000002,"loss":5.854049072265625},{"start":22.2,"end":23.941000000000003,"loss":5.6419140625},{"start":26.14,"end":27.8,"loss":3.4356760365622385},{"start":27.8,"end":29.44,"loss":5.0528923034667965},{"start":29.44,"end":30.82,"loss":5.731793503534226},{"start":30.88,"end":32.619,"loss":5.745033482142857},{"start":32.619,"end":33.781,"loss":5.089703369140625},{"start":36.5,"end":37.440999999999995,"loss":4.999337760607402},{"start":38.96,"end":40.480999999999995,"loss":4.191166169302805},{"start":42.12,"end":43.940999999999995,"loss":5.99327392578125},{"start":46.04,"end":47.28,"loss":5.311136849721273},{"start":47.28,"end":48.6,"loss":5.514955357142857},{"start":48.6,"end":49.52,"loss":5.718516387939453},{"start":49.52,"end":50.580999999999996,"loss":5.4055025736490885},{"start":52.22,"end":53.281,"loss":3.5630396661304293},{"start":55.76,"end":56.88,"loss":6.252931404113769},{"start":56.88,"end":57.84,"loss":5.418140462239583},{"start":57.84,"end":59.28,"loss":5.726660919189453},{"start":59.28,"end":60.521,"loss":5.4617566426595054},{"start":62,"end":64.14,"loss":3.5676211970193044},{"start":64.14,"end":65.3,"loss":4.9398891528447475},{"start":65.3,"end":66.96,"loss":3.659550616854713},{"start":66.96,"end":68.2,"loss":3.742838614327567},{"start":68.2,"end":69.94,"loss":3.4931696227618625},{"start":69.94,"end":71.101,"loss":4.914703369140625},{"start":72.5,"end":74.86,"loss":5.356201171875},{"start":74.86,"end":75.88,"loss":4.170407622201102},{"start":75.88,"end":76.801,"loss":5.465834159851075},{"start":78.74,"end":80.321,"loss":4.1495416005452475},{"start":81.84,"end":83.721,"loss":6.43706298828125},{"start":85.82,"end":87.06,"loss":6.014204518000285},{"start":87.06,"end":88.42,"loss":6.047987874348958},{"start":88.42,"end":89.32,"loss":6.206632436116537},{"start":89.32,"end":91.76,"loss":5.501965459187826},{"start":91.76,"end":93.661,"loss":4.712835648059845},{"start":95.74,"end":96.98,"loss":3.9288816452026367},{"start":96.98,"end":98.54,"loss":11.836085319519043},{"start":98.54,"end":99.58,"loss":1.1961339314778647},{"start":99.58,"end":100.22,"loss":12.7421875},{"start":100.22,"end":102.24,"loss":4.734304046630859},{"start":102.24,"end":102.73,"loss":13.073543548583984},{"start":102.73,"end":103.19,"loss":1.6771990458170571},{"start":103.19,"end":104.08,"loss":11.421875},{"start":104.08,"end":110.34,"loss":7.059378487723214},{"start":110.34,"end":110.39,"loss":1.26385498046875},{"start":110.39,"end":121.001,"loss":7.715173007679634},{"start":123.28,"end":130.971,"loss":0.7328739674886069},{"start":130.97,"end":132.65,"loss":6.7852502441406255},{"start":132.65,"end":132.651,"loss":4.82311635017395},{"start":132.65,"end":132.651,"loss":6.1935753231956845},{"start":132.65,"end":132.651,"loss":4.643457323710123},{"start":132.65,"end":132.651,"loss":7.852796736217679},{"start":132.651,"end":132.67,"loss":1.04254150390625},{"start":132.67,"end":134.281,"loss":8.09033203125},{"start":134.28,"end":137.32,"loss":0.8928971608479819},{"start":137.32,"end":140.56,"loss":6.526407661437989},{"start":140.56,"end":144.46,"loss":5.056523294448853},{"start":144.46,"end":145.44,"loss":6.017700163523356},{"start":145.44,"end":146.7,"loss":4.597362554640997},{"start":146.7,"end":147.48,"loss":6.205892944335938},{"start":147.48,"end":151.4,"loss":7.464214960734049},{"start":151.4,"end":153.68,"loss":1.076420211791992},{"start":153.68,"end":153.88,"loss":0.020272751649220783},{"start":153.88,"end":154.14,"loss":0.2086639404296875},{"start":154.14,"end":154.98,"loss":12.1376953125},{"start":154.98,"end":157.76,"loss":9.715631008148193},{"start":157.76,"end":159.94,"loss":6.80949212937128},{"start":159.94,"end":161.12,"loss":3.9309272879645936},{"start":161.12,"end":161.62,"loss":5.3021087646484375},{"start":161.62,"end":162.98,"loss":0.5036204783121745},{"start":162.98,"end":166.18,"loss":6.556209716796874},{"start":166.18,"end":167.32,"loss":4.69304846127828},{"start":167.32,"end":169.48,"loss":5.939754522414434},{"start":169.48,"end":171.22,"loss":4.561738243103028},{"start":171.22,"end":183.98,"loss":5.585536486307779}],
+    audioUrl: "",
+    audioModule: greetingsRock,
+    catalog: true,
+    createdAt: 1750000000002,
+    spec: { subject: "greetings", level: "prestarter", lesson: 3, genre: "Rock", beat: "Powerful Normal" },
   }
 ];
