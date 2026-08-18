@@ -10,7 +10,8 @@
     "artistFeel": "Snoop Dogg, Eminem",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
   },
   {
     "slug": "greetings-country",
@@ -23,7 +24,8 @@
     "artistFeel": "Chris Stapleton, Luke Combs, Ella Langley",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene"
   },
   {
     "slug": "greetings-rock",
@@ -36,7 +38,8 @@
     "artistFeel": "The Doors, Pink Floyd",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "greetings-reggaeton",
@@ -49,7 +52,8 @@
     "artistFeel": "Bad Bunny, Daddy Yankee",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "greetings-rnb",
@@ -62,7 +66,8 @@
     "artistFeel": "Usher, John Legend",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "All of Me, No One, Snooze"
   },
   {
     "slug": "greetings-pop",
@@ -75,7 +80,8 @@
     "artistFeel": "Bruno Mars, The Weeknd, Harry Styles",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "numbers-hiphop",
@@ -88,7 +94,8 @@
     "artistFeel": "Snoop Dogg, Eminem",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "numbers-disco",
@@ -99,7 +106,7 @@
     "genre": "Disco",
     "beat": "Groovy Normal",
     "artistFeel": "Bee Gees",
-    "similarSongs": "I Will Survive",
+    "similarSongs": "Stayin' Alive, September, I Will Survive",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es"
@@ -115,7 +122,8 @@
     "artistFeel": "Bruno Mars, Justin Timberlake",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "numbers-edm",
@@ -126,7 +134,7 @@
     "genre": "EDM",
     "beat": "Party Normal",
     "artistFeel": "Calvin Harris, Zedd",
-    "similarSongs": "Titanium, Unstoppable",
+    "similarSongs": "Wake Me Up, Titanium, Closer",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es"
@@ -140,7 +148,7 @@
     "genre": "Soul",
     "beat": "Groovy Normal",
     "artistFeel": "Teddy Swims, Sam Smith",
-    "similarSongs": "Lose Control",
+    "similarSongs": "September, Let's Stay Together, Ain't No Mountain High Enough",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es"
@@ -154,7 +162,7 @@
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
     "artistFeel": "Daddy Yankee, Wisin & Yandel",
-    "similarSongs": "Gasolina",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es"
@@ -168,7 +176,7 @@
     "genre": "R&B",
     "beat": "Romantic Normal",
     "artistFeel": "Usher, John Legend",
-    "similarSongs": "Girl on Fire",
+    "similarSongs": "All of Me, No One, Snooze",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es"
@@ -184,7 +192,8 @@
     "artistFeel": "Aerosmith",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "colors-pop",
@@ -197,7 +206,8 @@
     "artistFeel": "Billie Eilish, The Weeknd, Bruno Mars",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "colors-disco",
@@ -210,7 +220,8 @@
     "artistFeel": "Bee Gees",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
   },
   {
     "slug": "colors-alt",
@@ -223,7 +234,8 @@
     "artistFeel": "Maroon 5",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Somebody That I Used to Know, Sweater Weather, Do I Wanna Know"
   },
   {
     "slug": "colors-country",
@@ -234,7 +246,7 @@
     "genre": "Country",
     "beat": "Groovy Normal",
     "artistFeel": "Ella Langley",
-    "similarSongs": "Choosin' Texas",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene",
     "voice": "female",
     "language": "Spanish",
     "order": "en-es"
@@ -250,7 +262,8 @@
     "artistFeel": "Bruno Mars, Justin Timberlake",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "questions-reggaeton",
@@ -263,7 +276,8 @@
     "artistFeel": "Daddy Yankee, J Balvin",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "descriptions-disco",
@@ -276,7 +290,8 @@
     "artistFeel": "Bee Gees",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
   },
   {
     "slug": "jobs-hiphop",
@@ -289,7 +304,8 @@
     "artistFeel": "Drake, J. Cole",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "school-alt",
@@ -302,7 +318,8 @@
     "artistFeel": "Coldplay, Maroon 5",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Somebody That I Used to Know, Sweater Weather, Do I Wanna Know"
   },
   {
     "slug": "technology-edm",
@@ -315,7 +332,8 @@
     "artistFeel": "Calvin Harris, Zedd",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Wake Me Up, Titanium, Closer"
   },
   {
     "slug": "hobbies-latin",
@@ -328,7 +346,8 @@
     "artistFeel": "Enrique Iglesias, Ricky Martin",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "transportation-latin",
@@ -341,7 +360,8 @@
     "artistFeel": "Marc Anthony, Ricky Martin",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "places-latin",
@@ -354,7 +374,8 @@
     "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "time-bachata",
@@ -367,7 +388,8 @@
     "artistFeel": "Romeo Santos, Prince Royce",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Propuesta Indecente, Obsesión, Darte un Beso"
   },
   {
     "slug": "nature-country",
@@ -380,7 +402,8 @@
     "artistFeel": "Lainey Wilson",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene"
   },
   {
     "slug": "emergencies-rap",
@@ -393,7 +416,8 @@
     "artistFeel": "Eminem",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
   },
   {
     "slug": "pronouns-hiphop",
@@ -406,7 +430,8 @@
     "artistFeel": "Drake, J. Cole",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "questions-rock",
@@ -419,7 +444,8 @@
     "artistFeel": "The Killers, Kings of Leon",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "descriptions-pop",
@@ -432,7 +458,8 @@
     "artistFeel": "Miley Cyrus",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "jobs-country",
@@ -445,7 +472,8 @@
     "artistFeel": "Luke Combs, Morgan Wallen",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene"
   },
   {
     "slug": "school-rap",
@@ -458,7 +486,8 @@
     "artistFeel": "Snoop Dogg, Eminem",
     "voice": "duet-m",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
   },
   {
     "slug": "technology-hiphop",
@@ -471,7 +500,8 @@
     "artistFeel": "Drake, J. Cole",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "hobbies-pop",
@@ -484,7 +514,8 @@
     "artistFeel": "Miley Cyrus",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "transportation-classicrock",
@@ -497,7 +528,8 @@
     "artistFeel": "Creedence Clearwater Revival, Tom Petty",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
   },
   {
     "slug": "places-salsa",
@@ -510,7 +542,8 @@
     "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
   },
   {
     "slug": "time-jazz",
@@ -523,7 +556,8 @@
     "artistFeel": "Michael Bublé",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Fly Me to the Moon, What a Wonderful World, Feeling Good"
   },
   {
     "slug": "nature-pop",
@@ -536,7 +570,8 @@
     "artistFeel": "Ed Sheeran, Coldplay",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "emergencies-rock",
@@ -549,7 +584,8 @@
     "artistFeel": "Linkin Park, Green Day",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "family-pop",
@@ -562,7 +598,8 @@
     "artistFeel": "Bruno Mars, Alicia Keys",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "feelings-blues",
@@ -575,7 +612,8 @@
     "artistFeel": "B.B. King, John Mayer",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
   },
   {
     "slug": "food-salsa",
@@ -588,7 +626,8 @@
     "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
   },
   {
     "slug": "cooking-latin",
@@ -601,7 +640,8 @@
     "artistFeel": "Enrique Iglesias, Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "animals-reggae",
@@ -614,7 +654,8 @@
     "artistFeel": "Bob Marley",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Three Little Birds, One Love, It Wasn't Me"
   },
   {
     "slug": "body-hiphop",
@@ -627,7 +668,8 @@
     "artistFeel": "Drake, Post Malone",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "clothing-disco",
@@ -640,7 +682,8 @@
     "artistFeel": "Donna Summer",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
   },
   {
     "slug": "home-rnb",
@@ -653,7 +696,8 @@
     "artistFeel": "John Legend, Usher",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "All of Me, No One, Snooze"
   },
   {
     "slug": "weather-classicrock",
@@ -666,7 +710,8 @@
     "artistFeel": "Creedence Clearwater Revival, Tom Petty",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
   },
   {
     "slug": "days-bachata",
@@ -679,7 +724,8 @@
     "artistFeel": "Prince Royce, Romeo Santos",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Propuesta Indecente, Obsesión, Darte un Beso"
   },
   {
     "slug": "directions-rap",
@@ -692,7 +738,8 @@
     "artistFeel": "Snoop Dogg, Eminem",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
   },
   {
     "slug": "shopping-pop",
@@ -705,7 +752,8 @@
     "artistFeel": "Dua Lipa",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "verbs-alt",
@@ -718,7 +766,8 @@
     "artistFeel": "Coldplay, The Killers",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Somebody That I Used to Know, Sweater Weather, Do I Wanna Know"
   },
   {
     "slug": "vacation-reggaeton",
@@ -731,7 +780,8 @@
     "artistFeel": "Bad Bunny, Daddy Yankee",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "greetings-latin",
@@ -744,7 +794,8 @@
     "artistFeel": "Marc Anthony, Shakira",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "pronouns-rock",
@@ -757,7 +808,8 @@
     "artistFeel": "Foo Fighters",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "colors-reggaeton",
@@ -770,7 +822,8 @@
     "artistFeel": "J Balvin, Ozuna",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "descriptions-hiphop",
@@ -783,7 +836,8 @@
     "artistFeel": "Drake, J. Cole",
     "voice": "duet-m",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "questions-pop",
@@ -796,7 +850,8 @@
     "artistFeel": "Bruno Mars, Justin Timberlake",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "family-country",
@@ -809,7 +864,8 @@
     "artistFeel": "Chris Stapleton",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene"
   },
   {
     "slug": "feelings-pop",
@@ -822,7 +878,8 @@
     "artistFeel": "Miley Cyrus",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "food-reggaeton",
@@ -835,7 +892,8 @@
     "artistFeel": "Bad Bunny",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "cooking-classicrock",
@@ -848,7 +906,8 @@
     "artistFeel": "Creedence Clearwater Revival",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
   },
   {
     "slug": "animals-rock",
@@ -861,7 +920,8 @@
     "artistFeel": "Green Day, Kings of Leon",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "body-rnb",
@@ -874,7 +934,8 @@
     "artistFeel": "Usher, Chris Brown",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "All of Me, No One, Snooze"
   },
   {
     "slug": "clothing-latin",
@@ -887,7 +948,8 @@
     "artistFeel": "Shakira",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "home-pop",
@@ -900,7 +962,8 @@
     "artistFeel": "Ed Sheeran, Shawn Mendes",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "weather-reggae",
@@ -913,7 +976,8 @@
     "artistFeel": "Bob Marley",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Three Little Birds, One Love, It Wasn't Me"
   },
   {
     "slug": "days-pop",
@@ -926,7 +990,8 @@
     "artistFeel": "Justin Timberlake, Bruno Mars",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "time-reggaeton",
@@ -939,7 +1004,8 @@
     "artistFeel": "Daddy Yankee",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "directions-latin",
@@ -952,7 +1018,8 @@
     "artistFeel": "Ricky Martin",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "transportation-rock",
@@ -965,7 +1032,8 @@
     "artistFeel": "The Killers",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "places-hiphop",
@@ -978,7 +1046,8 @@
     "artistFeel": "J. Cole, Drake",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "shopping-disco",
@@ -991,7 +1060,8 @@
     "artistFeel": "Bee Gees",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
   },
   {
     "slug": "jobs-rock",
@@ -1004,7 +1074,8 @@
     "artistFeel": "Foo Fighters",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "school-pop",
@@ -1017,7 +1088,8 @@
     "artistFeel": "Shawn Mendes, Ed Sheeran",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "technology-pop",
@@ -1030,7 +1102,8 @@
     "artistFeel": "The Weeknd, Justin Timberlake",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "hobbies-reggaeton",
@@ -1043,7 +1116,8 @@
     "artistFeel": "Bad Bunny, J Balvin",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "nature-blues",
@@ -1056,7 +1130,8 @@
     "artistFeel": "Eric Clapton, John Mayer",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
   },
   {
     "slug": "emergencies-hiphop",
@@ -1069,7 +1144,8 @@
     "artistFeel": "Eminem",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "verbs-rap",
@@ -1082,7 +1158,8 @@
     "artistFeel": "Snoop Dogg, Eminem",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
   },
   {
     "slug": "vacation-salsa",
@@ -1095,7 +1172,8 @@
     "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
   },
   {
     "slug": "greetings-l8",
@@ -1107,7 +1185,8 @@
     "artistFeel": "Drake",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "greetings-l9",
@@ -1119,7 +1198,8 @@
     "artistFeel": "Bee Gees, Earth Wind and Fire",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
   },
   {
     "slug": "pronouns-l4",
@@ -1131,7 +1211,8 @@
     "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "pronouns-l5",
@@ -1143,7 +1224,8 @@
     "artistFeel": "Chris Brown",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "All of Me, No One, Snooze"
   },
   {
     "slug": "colors-l8",
@@ -1155,7 +1237,8 @@
     "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "descriptions-l4",
@@ -1167,7 +1250,8 @@
     "artistFeel": "Usher",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "All of Me, No One, Snooze"
   },
   {
     "slug": "descriptions-l5",
@@ -1179,7 +1263,8 @@
     "artistFeel": "Queen",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
   },
   {
     "slug": "questions-l4",
@@ -1191,7 +1276,8 @@
     "artistFeel": "Drake",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "questions-l5",
@@ -1203,7 +1289,8 @@
     "artistFeel": "Snoop Dogg",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
   },
   {
     "slug": "family-l3",
@@ -1215,7 +1302,8 @@
     "artistFeel": "David Guetta",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Wake Me Up, Titanium, Closer"
   },
   {
     "slug": "family-l4",
@@ -1227,7 +1315,8 @@
     "artistFeel": "Eminem",
     "voice": "duet-m",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
   },
   {
     "slug": "feelings-l3",
@@ -1239,7 +1328,8 @@
     "artistFeel": "Kygo",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Wake Me Up, Titanium, Closer"
   },
   {
     "slug": "feelings-l4",
@@ -1251,7 +1341,8 @@
     "artistFeel": "50 Cent",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
   },
   {
     "slug": "food-l3",
@@ -1263,7 +1354,8 @@
     "artistFeel": "Queen",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
   },
   {
     "slug": "food-l4",
@@ -1275,7 +1367,8 @@
     "artistFeel": "Prince Royce",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Propuesta Indecente, Obsesión, Darte un Beso"
   },
   {
     "slug": "cooking-l3",
@@ -1287,7 +1380,8 @@
     "artistFeel": "Gilberto Santa Rosa",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
   },
   {
     "slug": "cooking-l4",
@@ -1299,7 +1393,8 @@
     "artistFeel": "Eric Clapton",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
   },
   {
     "slug": "animals-l3",
@@ -1311,7 +1406,8 @@
     "artistFeel": "Marc Anthony",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
   },
   {
     "slug": "animals-l4",
@@ -1323,7 +1419,8 @@
     "artistFeel": "John Mayer",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
   },
   {
     "slug": "body-l3",
@@ -1335,7 +1432,8 @@
     "artistFeel": "John Mayer",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
   },
   {
     "slug": "body-l4",
@@ -1347,7 +1445,8 @@
     "artistFeel": "Michael Bublé",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Fly Me to the Moon, What a Wonderful World, Feeling Good"
   },
   {
     "slug": "clothing-l3",
@@ -1359,7 +1458,8 @@
     "artistFeel": "Bob Marley",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Three Little Birds, One Love, It Wasn't Me"
   },
   {
     "slug": "clothing-l4",
@@ -1371,7 +1471,8 @@
     "artistFeel": "Ozuna",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "home-l3",
@@ -1383,7 +1484,8 @@
     "artistFeel": "Frank Sinatra",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Fly Me to the Moon, What a Wonderful World, Feeling Good"
   },
   {
     "slug": "home-l4",
@@ -1395,7 +1497,8 @@
     "artistFeel": "Bon Jovi",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "weather-l3",
@@ -1407,7 +1510,8 @@
     "artistFeel": "Don Omar",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "weather-l4",
@@ -1419,7 +1523,8 @@
     "artistFeel": "Kendrick Lamar",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "days-l3",
@@ -1431,7 +1536,8 @@
     "artistFeel": "Foo Fighters",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "days-l4",
@@ -1443,7 +1549,8 @@
     "artistFeel": "Luke Combs",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene"
   },
   {
     "slug": "time-l4",
@@ -1455,7 +1562,8 @@
     "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "time-l5",
@@ -1467,7 +1575,8 @@
     "artistFeel": "Earth Wind and Fire",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
   },
   {
     "slug": "directions-l3",
@@ -1479,7 +1588,8 @@
     "artistFeel": "J. Cole",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "HUMBLE, Sicko Mode, God's Plan"
   },
   {
     "slug": "directions-l4",
@@ -1491,7 +1601,8 @@
     "artistFeel": "Bee Gees",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
   },
   {
     "slug": "transportation-l4",
@@ -1503,7 +1614,8 @@
     "artistFeel": "Bee Gees",
     "voice": "duet-m",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
   },
   {
     "slug": "transportation-l5",
@@ -1515,7 +1627,8 @@
     "artistFeel": "Gilberto Santa Rosa",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
   },
   {
     "slug": "places-l4",
@@ -1527,7 +1640,8 @@
     "artistFeel": "Kygo",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Wake Me Up, Titanium, Closer"
   },
   {
     "slug": "places-l5",
@@ -1539,7 +1653,8 @@
     "artistFeel": "Romeo Santos",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Propuesta Indecente, Obsesión, Darte un Beso"
   },
   {
     "slug": "shopping-l3",
@@ -1551,7 +1666,8 @@
     "artistFeel": "Calvin Harris",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Wake Me Up, Titanium, Closer"
   },
   {
     "slug": "shopping-l4",
@@ -1563,7 +1679,8 @@
     "artistFeel": "Gilberto Santa Rosa",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
   },
   {
     "slug": "jobs-l4",
@@ -1575,7 +1692,8 @@
     "artistFeel": "Gilberto Santa Rosa",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
   },
   {
     "slug": "jobs-l5",
@@ -1587,7 +1705,8 @@
     "artistFeel": "Bob Marley",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Three Little Birds, One Love, It Wasn't Me"
   },
   {
     "slug": "school-l4",
@@ -1599,7 +1718,8 @@
     "artistFeel": "Tom Petty",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
   },
   {
     "slug": "school-l5",
@@ -1611,7 +1731,8 @@
     "artistFeel": "John Mayer",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
   },
   {
     "slug": "technology-l4",
@@ -1623,7 +1744,8 @@
     "artistFeel": "John Mayer",
     "voice": "duet-f",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
   },
   {
     "slug": "technology-l5",
@@ -1635,7 +1757,8 @@
     "artistFeel": "Don Omar",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "hobbies-l4",
@@ -1647,7 +1770,8 @@
     "artistFeel": "Bob Marley",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Three Little Birds, One Love, It Wasn't Me"
   },
   {
     "slug": "hobbies-l5",
@@ -1659,7 +1783,8 @@
     "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
   },
   {
     "slug": "nature-l4",
@@ -1671,7 +1796,8 @@
     "artistFeel": "Frank Sinatra",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Fly Me to the Moon, What a Wonderful World, Feeling Good"
   },
   {
     "slug": "nature-l5",
@@ -1683,7 +1809,8 @@
     "artistFeel": "Green Day",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Mr. Brightside, Bohemian Rhapsody, Sweet Child o' Mine"
   },
   {
     "slug": "emergencies-l4",
@@ -1695,7 +1822,8 @@
     "artistFeel": "Daddy Yankee",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "emergencies-l5",
@@ -1707,7 +1835,8 @@
     "artistFeel": "Ne-Yo",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "All of Me, No One, Snooze"
   },
   {
     "slug": "verbs-l3",
@@ -1719,7 +1848,8 @@
     "artistFeel": "B.B. King",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
   },
   {
     "slug": "verbs-l4",
@@ -1731,7 +1861,8 @@
     "artistFeel": "Ozuna",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
   },
   {
     "slug": "vacation-l3",
@@ -1743,7 +1874,8 @@
     "artistFeel": "Shawn Mendes",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Blinding Lights, Shape of You, As It Was"
   },
   {
     "slug": "vacation-l4",
@@ -1755,60 +1887,696 @@
     "artistFeel": "Jelly Roll",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene"
   },
-
-  {"slug":"greetings-l10","subject":"greetings","level":"prestarter","lesson":10,"genre":"Classic Rock","beat":"Powerful Upbeat","artistFeel":"Creedence Clearwater Revival","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"greetings-l11","subject":"greetings","level":"prestarter","lesson":11,"genre":"Bachata","beat":"Romantic Normal","artistFeel":"Prince Royce","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"pronouns-l6","subject":"pronouns","level":"prestarter","lesson":6,"genre":"Country","beat":"Happy Normal","artistFeel":"Luke Combs","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"pronouns-l7","subject":"pronouns","level":"prestarter","lesson":7,"genre":"Classic Rock","beat":"Powerful Upbeat","artistFeel":"Queen","voice":"duet","language":"Spanish","order":"en-es"},
-  {"slug":"descriptions-l6","subject":"descriptions","level":"prestarter","lesson":6,"genre":"Rap","beat":"Groovy Normal","artistFeel":"Eminem","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"descriptions-l7","subject":"descriptions","level":"prestarter","lesson":7,"genre":"Bachata","beat":"Romantic Normal","artistFeel":"Prince Royce","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"questions-l6","subject":"questions","level":"prestarter","lesson":6,"genre":"Salsa","beat":"Happy Upbeat","artistFeel":"Gilberto Santa Rosa","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"questions-l7","subject":"questions","level":"prestarter","lesson":7,"genre":"Blues","beat":"Groovy Normal","artistFeel":"B.B. King","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"family-l5","subject":"family","level":"prestarter","lesson":5,"genre":"Classic Rock","beat":"Powerful Upbeat","artistFeel":"Creedence Clearwater Revival","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"family-l6","subject":"family","level":"prestarter","lesson":6,"genre":"Bachata","beat":"Romantic Normal","artistFeel":"Prince Royce","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"feelings-l5","subject":"feelings","level":"prestarter","lesson":5,"genre":"Classic Rock","beat":"Powerful Upbeat","artistFeel":"Tom Petty","voice":"duet-m","language":"Spanish","order":"en-es"},
-  {"slug":"feelings-l6","subject":"feelings","level":"prestarter","lesson":6,"genre":"Bachata","beat":"Romantic Normal","artistFeel":"Romeo Santos","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"food-l5","subject":"food","level":"prestarter","lesson":5,"genre":"Blues","beat":"Groovy Normal","artistFeel":"John Mayer","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"food-l6","subject":"food","level":"prestarter","lesson":6,"genre":"Jazz","beat":"Groovy Normal","artistFeel":"Michael Bublé","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"cooking-l5","subject":"cooking","level":"prestarter","lesson":5,"genre":"Reggae","beat":"Chill Normal","artistFeel":"Peter Tosh","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"cooking-l6","subject":"cooking","level":"prestarter","lesson":6,"genre":"80s Synthpop","beat":"Happy Upbeat","artistFeel":"a-ha","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"animals-l5","subject":"animals","level":"prestarter","lesson":5,"genre":"Jazz","beat":"Groovy Normal","artistFeel":"Frank Sinatra","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"animals-l6","subject":"animals","level":"prestarter","lesson":6,"genre":"80s New Wave","beat":"Happy Upbeat","artistFeel":"Talking Heads","voice":"duet","language":"Spanish","order":"en-es"},
-  {"slug":"body-l5","subject":"body","level":"prestarter","lesson":5,"genre":"80s Synthpop","beat":"Happy Upbeat","artistFeel":"Duran Duran","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"body-l6","subject":"body","level":"prestarter","lesson":6,"genre":"80s Rock","beat":"Powerful Upbeat","artistFeel":"Bon Jovi","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"clothing-l5","subject":"clothing","level":"prestarter","lesson":5,"genre":"80s New Wave","beat":"Happy Upbeat","artistFeel":"The Cure","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"clothing-l6","subject":"clothing","level":"prestarter","lesson":6,"genre":"90s Grunge","beat":"Powerful Upbeat","artistFeel":"Pearl Jam","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"home-l5","subject":"home","level":"prestarter","lesson":5,"genre":"80s Rock","beat":"Powerful Upbeat","artistFeel":"Journey","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"home-l6","subject":"home","level":"prestarter","lesson":6,"genre":"90s Hip-Hop","beat":"Groovy Normal","artistFeel":"Wu-Tang Clan","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"weather-l5","subject":"weather","level":"prestarter","lesson":5,"genre":"90s Grunge","beat":"Powerful Upbeat","artistFeel":"Soundgarden","voice":"duet","language":"Spanish","order":"en-es"},
-  {"slug":"weather-l6","subject":"weather","level":"prestarter","lesson":6,"genre":"90s R&B","beat":"Groovy Normal","artistFeel":"Boyz II Men","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"days-l5","subject":"days","level":"prestarter","lesson":5,"genre":"90s Hip-Hop","beat":"Groovy Normal","artistFeel":"A Tribe Called Quest","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"days-l6","subject":"days","level":"prestarter","lesson":6,"genre":"90s Dance","beat":"Party Upbeat","artistFeel":"Corona","voice":"female","language":"Spanish","order":"en-es"},
-  {"slug":"time-l6","subject":"time","level":"prestarter","lesson":6,"genre":"90s Dance","beat":"Party Upbeat","artistFeel":"Corona","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"directions-l5","subject":"directions","level":"prestarter","lesson":5,"genre":"90s Dance","beat":"Party Upbeat","artistFeel":"La Bouche","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"directions-l6","subject":"directions","level":"prestarter","lesson":6,"genre":"Reggaeton","beat":"Tropical Normal","artistFeel":"Ozuna","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"transportation-l6","subject":"transportation","level":"prestarter","lesson":6,"genre":"Reggaeton","beat":"Tropical Normal","artistFeel":"Ozuna","voice":"duet","language":"Spanish","order":"en-es"},
-  {"slug":"transportation-l7","subject":"transportation","level":"prestarter","lesson":7,"genre":"Country","beat":"Happy Normal","artistFeel":"Jelly Roll","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"places-l6","subject":"places","level":"prestarter","lesson":6,"genre":"Reggaeton","beat":"Tropical Normal","artistFeel":"Don Omar","voice":"duet-m","language":"Spanish","order":"en-es"},
-  {"slug":"places-l7","subject":"places","level":"prestarter","lesson":7,"genre":"Country","beat":"Happy Normal","artistFeel":"Chris Stapleton","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"shopping-l5","subject":"shopping","level":"prestarter","lesson":5,"genre":"Reggaeton","beat":"Tropical Normal","artistFeel":"Bad Bunny","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"shopping-l6","subject":"shopping","level":"prestarter","lesson":6,"genre":"Latin","beat":"Happy Upbeat","artistFeel":"Enrique Iglesias","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"jobs-l6","subject":"jobs","level":"prestarter","lesson":6,"genre":"R&B","beat":"Groovy Normal","artistFeel":"John Legend","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"jobs-l7","subject":"jobs","level":"prestarter","lesson":7,"genre":"Rap","beat":"Groovy Normal","artistFeel":"Eminem","voice":"duet","language":"Spanish","order":"en-es"},
-  {"slug":"school-l6","subject":"school","level":"prestarter","lesson":6,"genre":"Latin","beat":"Happy Upbeat","artistFeel":"Ricky Martin","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"school-l7","subject":"school","level":"prestarter","lesson":7,"genre":"Disco","beat":"Groovy Upbeat","artistFeel":"Earth Wind and Fire","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"technology-l6","subject":"technology","level":"prestarter","lesson":6,"genre":"Disco","beat":"Groovy Upbeat","artistFeel":"Earth Wind and Fire","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"technology-l7","subject":"technology","level":"prestarter","lesson":7,"genre":"Salsa","beat":"Happy Upbeat","artistFeel":"Marc Anthony","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"hobbies-l6","subject":"hobbies","level":"prestarter","lesson":6,"genre":"Classic Rock","beat":"Powerful Upbeat","artistFeel":"Creedence Clearwater Revival","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"hobbies-l7","subject":"hobbies","level":"prestarter","lesson":7,"genre":"Bachata","beat":"Romantic Normal","artistFeel":"Prince Royce","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"nature-l6","subject":"nature","level":"prestarter","lesson":6,"genre":"Salsa","beat":"Happy Upbeat","artistFeel":"Gilberto Santa Rosa","voice":"duet","language":"Spanish","order":"en-es"},
-  {"slug":"nature-l7","subject":"nature","level":"prestarter","lesson":7,"genre":"80s Synthpop","beat":"Happy Upbeat","artistFeel":"Duran Duran","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"emergencies-l6","subject":"emergencies","level":"prestarter","lesson":6,"genre":"Reggae","beat":"Chill Normal","artistFeel":"Bob Marley","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"emergencies-l7","subject":"emergencies","level":"prestarter","lesson":7,"genre":"80s New Wave","beat":"Happy Upbeat","artistFeel":"The Cure","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"verbs-l5","subject":"verbs","level":"prestarter","lesson":5,"genre":"Classic Rock","beat":"Powerful Upbeat","artistFeel":"Creedence Clearwater Revival","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"verbs-l6","subject":"verbs","level":"prestarter","lesson":6,"genre":"Reggae","beat":"Chill Normal","artistFeel":"Bob Marley","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"vacation-l5","subject":"vacation","level":"prestarter","lesson":5,"genre":"Reggae","beat":"Chill Normal","artistFeel":"Bob Marley","voice":"male","language":"Spanish","order":"en-es"},
-  {"slug":"vacation-l6","subject":"vacation","level":"prestarter","lesson":6,"genre":"80s New Wave","beat":"Happy Upbeat","artistFeel":"Talking Heads","voice":"duet","language":"Spanish","order":"en-es"}
+  {
+    "slug": "greetings-l10",
+    "subject": "greetings",
+    "level": "prestarter",
+    "lesson": 10,
+    "genre": "Classic Rock",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Creedence Clearwater Revival",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
+  },
+  {
+    "slug": "greetings-l11",
+    "subject": "greetings",
+    "level": "prestarter",
+    "lesson": 11,
+    "genre": "Bachata",
+    "beat": "Romantic Normal",
+    "artistFeel": "Prince Royce",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Propuesta Indecente, Obsesión, Darte un Beso"
+  },
+  {
+    "slug": "pronouns-l6",
+    "subject": "pronouns",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Country",
+    "beat": "Happy Normal",
+    "artistFeel": "Luke Combs",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene"
+  },
+  {
+    "slug": "pronouns-l7",
+    "subject": "pronouns",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "Classic Rock",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Queen",
+    "voice": "duet",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
+  },
+  {
+    "slug": "descriptions-l6",
+    "subject": "descriptions",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Rap",
+    "beat": "Groovy Normal",
+    "artistFeel": "Eminem",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
+  },
+  {
+    "slug": "descriptions-l7",
+    "subject": "descriptions",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "Bachata",
+    "beat": "Romantic Normal",
+    "artistFeel": "Prince Royce",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Propuesta Indecente, Obsesión, Darte un Beso"
+  },
+  {
+    "slug": "questions-l6",
+    "subject": "questions",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Salsa",
+    "beat": "Happy Upbeat",
+    "artistFeel": "Gilberto Santa Rosa",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
+  },
+  {
+    "slug": "questions-l7",
+    "subject": "questions",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "Blues",
+    "beat": "Groovy Normal",
+    "artistFeel": "B.B. King",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
+  },
+  {
+    "slug": "family-l5",
+    "subject": "family",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "Classic Rock",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Creedence Clearwater Revival",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
+  },
+  {
+    "slug": "family-l6",
+    "subject": "family",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Bachata",
+    "beat": "Romantic Normal",
+    "artistFeel": "Prince Royce",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Propuesta Indecente, Obsesión, Darte un Beso"
+  },
+  {
+    "slug": "feelings-l5",
+    "subject": "feelings",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "Classic Rock",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Tom Petty",
+    "voice": "duet-m",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
+  },
+  {
+    "slug": "feelings-l6",
+    "subject": "feelings",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Bachata",
+    "beat": "Romantic Normal",
+    "artistFeel": "Romeo Santos",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Propuesta Indecente, Obsesión, Darte un Beso"
+  },
+  {
+    "slug": "food-l5",
+    "subject": "food",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "Blues",
+    "beat": "Groovy Normal",
+    "artistFeel": "John Mayer",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "The Thrill Is Gone, At Last, Pride and Joy"
+  },
+  {
+    "slug": "food-l6",
+    "subject": "food",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Jazz",
+    "beat": "Groovy Normal",
+    "artistFeel": "Michael Bublé",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Fly Me to the Moon, What a Wonderful World, Feeling Good"
+  },
+  {
+    "slug": "cooking-l5",
+    "subject": "cooking",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "Reggae",
+    "beat": "Chill Normal",
+    "artistFeel": "Peter Tosh",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Three Little Birds, One Love, It Wasn't Me"
+  },
+  {
+    "slug": "cooking-l6",
+    "subject": "cooking",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "80s Synthpop",
+    "beat": "Happy Upbeat",
+    "artistFeel": "a-ha",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Take on Me, Sweet Dreams, Blue Monday"
+  },
+  {
+    "slug": "animals-l5",
+    "subject": "animals",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "Jazz",
+    "beat": "Groovy Normal",
+    "artistFeel": "Frank Sinatra",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Fly Me to the Moon, What a Wonderful World, Feeling Good"
+  },
+  {
+    "slug": "animals-l6",
+    "subject": "animals",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "80s New Wave",
+    "beat": "Happy Upbeat",
+    "artistFeel": "Talking Heads",
+    "voice": "duet",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Every Breath You Take, Tainted Love, Enjoy the Silence"
+  },
+  {
+    "slug": "body-l5",
+    "subject": "body",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "80s Synthpop",
+    "beat": "Happy Upbeat",
+    "artistFeel": "Duran Duran",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Take on Me, Sweet Dreams, Blue Monday"
+  },
+  {
+    "slug": "body-l6",
+    "subject": "body",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "80s Rock",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Bon Jovi",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Livin' on a Prayer, Don't Stop Believin', Jump"
+  },
+  {
+    "slug": "clothing-l5",
+    "subject": "clothing",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "80s New Wave",
+    "beat": "Happy Upbeat",
+    "artistFeel": "The Cure",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Every Breath You Take, Tainted Love, Enjoy the Silence"
+  },
+  {
+    "slug": "clothing-l6",
+    "subject": "clothing",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "90s Grunge",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Pearl Jam",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Smells Like Teen Spirit, Come as You Are, Zombie"
+  },
+  {
+    "slug": "home-l5",
+    "subject": "home",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "80s Rock",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Journey",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Livin' on a Prayer, Don't Stop Believin', Jump"
+  },
+  {
+    "slug": "home-l6",
+    "subject": "home",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "90s Hip-Hop",
+    "beat": "Groovy Normal",
+    "artistFeel": "Wu-Tang Clan",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Juicy, California Love, It Was a Good Day"
+  },
+  {
+    "slug": "weather-l5",
+    "subject": "weather",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "90s Grunge",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Soundgarden",
+    "voice": "duet",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Smells Like Teen Spirit, Come as You Are, Zombie"
+  },
+  {
+    "slug": "weather-l6",
+    "subject": "weather",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "90s R&B",
+    "beat": "Groovy Normal",
+    "artistFeel": "Boyz II Men",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "No Scrubs, End of the Road, Waterfalls"
+  },
+  {
+    "slug": "days-l5",
+    "subject": "days",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "90s Hip-Hop",
+    "beat": "Groovy Normal",
+    "artistFeel": "A Tribe Called Quest",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Juicy, California Love, It Was a Good Day"
+  },
+  {
+    "slug": "days-l6",
+    "subject": "days",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "90s Dance",
+    "beat": "Party Upbeat",
+    "artistFeel": "Corona",
+    "voice": "female",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Barbie Girl, Blue, We Like to Party"
+  },
+  {
+    "slug": "time-l6",
+    "subject": "time",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "90s Dance",
+    "beat": "Party Upbeat",
+    "artistFeel": "Corona",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Barbie Girl, Blue, We Like to Party"
+  },
+  {
+    "slug": "directions-l5",
+    "subject": "directions",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "90s Dance",
+    "beat": "Party Upbeat",
+    "artistFeel": "La Bouche",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Barbie Girl, Blue, We Like to Party"
+  },
+  {
+    "slug": "directions-l6",
+    "subject": "directions",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Reggaeton",
+    "beat": "Tropical Normal",
+    "artistFeel": "Ozuna",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
+  },
+  {
+    "slug": "transportation-l6",
+    "subject": "transportation",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Reggaeton",
+    "beat": "Tropical Normal",
+    "artistFeel": "Ozuna",
+    "voice": "duet",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
+  },
+  {
+    "slug": "transportation-l7",
+    "subject": "transportation",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "Country",
+    "beat": "Happy Normal",
+    "artistFeel": "Jelly Roll",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene"
+  },
+  {
+    "slug": "places-l6",
+    "subject": "places",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Reggaeton",
+    "beat": "Tropical Normal",
+    "artistFeel": "Don Omar",
+    "voice": "duet-m",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
+  },
+  {
+    "slug": "places-l7",
+    "subject": "places",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "Country",
+    "beat": "Happy Normal",
+    "artistFeel": "Chris Stapleton",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Tennessee Whiskey, Last Night, Jolene"
+  },
+  {
+    "slug": "shopping-l5",
+    "subject": "shopping",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "Reggaeton",
+    "beat": "Tropical Normal",
+    "artistFeel": "Bad Bunny",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Despacito, Gasolina, Mi Gente, Provenza"
+  },
+  {
+    "slug": "shopping-l6",
+    "subject": "shopping",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Latin",
+    "beat": "Happy Upbeat",
+    "artistFeel": "Enrique Iglesias",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
+  },
+  {
+    "slug": "jobs-l6",
+    "subject": "jobs",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "R&B",
+    "beat": "Groovy Normal",
+    "artistFeel": "John Legend",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "All of Me, No One, Snooze"
+  },
+  {
+    "slug": "jobs-l7",
+    "subject": "jobs",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "Rap",
+    "beat": "Groovy Normal",
+    "artistFeel": "Eminem",
+    "voice": "duet",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Lose Yourself, In Da Club, Gin and Juice"
+  },
+  {
+    "slug": "school-l6",
+    "subject": "school",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Latin",
+    "beat": "Happy Upbeat",
+    "artistFeel": "Ricky Martin",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Bailando, Hips Don't Lie"
+  },
+  {
+    "slug": "school-l7",
+    "subject": "school",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "Disco",
+    "beat": "Groovy Upbeat",
+    "artistFeel": "Earth Wind and Fire",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
+  },
+  {
+    "slug": "technology-l6",
+    "subject": "technology",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Disco",
+    "beat": "Groovy Upbeat",
+    "artistFeel": "Earth Wind and Fire",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Stayin' Alive, September, I Will Survive"
+  },
+  {
+    "slug": "technology-l7",
+    "subject": "technology",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "Salsa",
+    "beat": "Happy Upbeat",
+    "artistFeel": "Marc Anthony",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
+  },
+  {
+    "slug": "hobbies-l6",
+    "subject": "hobbies",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Classic Rock",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Creedence Clearwater Revival",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
+  },
+  {
+    "slug": "hobbies-l7",
+    "subject": "hobbies",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "Bachata",
+    "beat": "Romantic Normal",
+    "artistFeel": "Prince Royce",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Propuesta Indecente, Obsesión, Darte un Beso"
+  },
+  {
+    "slug": "nature-l6",
+    "subject": "nature",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Salsa",
+    "beat": "Happy Upbeat",
+    "artistFeel": "Gilberto Santa Rosa",
+    "voice": "duet",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Vivir Mi Vida, Conga, La Vida Es Un Carnaval"
+  },
+  {
+    "slug": "nature-l7",
+    "subject": "nature",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "80s Synthpop",
+    "beat": "Happy Upbeat",
+    "artistFeel": "Duran Duran",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Take on Me, Sweet Dreams, Blue Monday"
+  },
+  {
+    "slug": "emergencies-l6",
+    "subject": "emergencies",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Reggae",
+    "beat": "Chill Normal",
+    "artistFeel": "Bob Marley",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Three Little Birds, One Love, It Wasn't Me"
+  },
+  {
+    "slug": "emergencies-l7",
+    "subject": "emergencies",
+    "level": "prestarter",
+    "lesson": 7,
+    "genre": "80s New Wave",
+    "beat": "Happy Upbeat",
+    "artistFeel": "The Cure",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Every Breath You Take, Tainted Love, Enjoy the Silence"
+  },
+  {
+    "slug": "verbs-l5",
+    "subject": "verbs",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "Classic Rock",
+    "beat": "Powerful Upbeat",
+    "artistFeel": "Creedence Clearwater Revival",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Hotel California, Don't Stop Believin', Sweet Home Alabama"
+  },
+  {
+    "slug": "verbs-l6",
+    "subject": "verbs",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "Reggae",
+    "beat": "Chill Normal",
+    "artistFeel": "Bob Marley",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Three Little Birds, One Love, It Wasn't Me"
+  },
+  {
+    "slug": "vacation-l5",
+    "subject": "vacation",
+    "level": "prestarter",
+    "lesson": 5,
+    "genre": "Reggae",
+    "beat": "Chill Normal",
+    "artistFeel": "Bob Marley",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Three Little Birds, One Love, It Wasn't Me"
+  },
+  {
+    "slug": "vacation-l6",
+    "subject": "vacation",
+    "level": "prestarter",
+    "lesson": 6,
+    "genre": "80s New Wave",
+    "beat": "Happy Upbeat",
+    "artistFeel": "Talking Heads",
+    "voice": "duet",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "Every Breath You Take, Tainted Love, Enjoy the Silence"
+  }
 ]

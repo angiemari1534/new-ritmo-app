@@ -65,6 +65,10 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   // 1) Genre identity + reference artist.
   parts.push(GENRE_STYLE[genre] || (genre ? `${genre} music` : "catchy melodic song"));
   if (artistFeel) parts.push(`in the style of ${artistFeel}`);
+  // Real reference songs of this genre (high priority — the strongest genre cue
+  // so MiniMax actually matches the genre's sound). Kept near the top so it
+  // survives the ~290-char cap.
+  if (similarSongs) parts.push(`sounds like the hit songs ${similarSongs}`);
   // Voice next (high priority so the char cap never trims it — esp. duet).
   if (voice === "male") parts.push("mature adult male lead vocals");
   else if (voice === "female") parts.push("warm low raspy husky female lead vocals, calm smooth and soulful, mellow not piercing or shrill, grown woman not a child");
@@ -85,7 +89,6 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   // reggaeton stays reggaeton) instead of drifting into generic pop.
   parts.push(`authentic ${genre || "pop"} song true to the ${genre || "pop"} style and instruments, catchy and grown-up, ${tempoPhrase}, clear vocals loud over soft backing, mature not a childish kids song`);
   parts.push(`correct native ${language} pronunciation`);
-  if (similarSongs) parts.push(`reminiscent of ${similarSongs}`);
   parts.push(`bilingual ${language} and English lyrics sung clearly`);
 
   let prompt = parts.join(", ");
