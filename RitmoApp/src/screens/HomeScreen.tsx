@@ -16,7 +16,7 @@ const glow = (c: string) => ({ textShadowColor: c, textShadowOffset: { width: 0,
 // One clearly-distinct colour per hue family (red, orange, amber, lime, green,
 // cyan, blue, purple, fuchsia, pink), interleaved warm/cool so no two adjacent
 // tiles look alike and there's only ONE of each "blue" or "purple".
-const NEON = ["#D8A43A", "#C4622E", "#7C8A4A", "#B98A2E", "#BF6B4A", "#CC9544", "#A0522D", "#9AA46A", "#E0B450", "#8A6D3B"];
+const NEON = ["#EF4444", "#F97316", "#FBBF24", "#22C55E", "#EC4899", "#D946EF", "#84CC16", "#22D3EE", "#3B82F6", "#A855F7"];
 
 export default function HomeScreen({
   songs,
@@ -149,7 +149,7 @@ export default function HomeScreen({
           <Animated.View style={[styles.dualWrapTeal, ready && !busy ? { transform: [{ scale: pulse }] } : null]}>
             <Pressable onPress={onContinue} disabled={busy} style={{ flex: 1 }}>
               <LinearGradient colors={["rgba(3,5,10,0.4)", "rgba(3,5,10,0.4)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.dualTileTeal}>
-                <MaterialCommunityIcons name="chat-processing" size={22} color="#D8A43A" style={styles.dualIcon} />
+                <MaterialCommunityIcons name="chat-processing" size={22} color={colors.good} style={styles.dualIcon} />
                 <Text style={styles.dualKickerTeal} numberOfLines={2} ellipsizeMode="tail">{busy ? "PREPARING…" : nextUp ? "CONTINUE CURRENT LESSON" : "PATH COMPLETE 🎉"}</Text>
                 <Text style={styles.dualTitle} numberOfLines={1} ellipsizeMode="tail">
                   {busy ? "Building…" : nextUp ? subjectLabel(nextUp.subject) : "Path done!"}
@@ -231,7 +231,7 @@ export default function HomeScreen({
                 <Text style={styles.heroTitle} numberOfLines={1}>{songTitle(latest)}</Text>
                 <Text style={styles.heroMeta} numberOfLines={1}>{[latest.genre, tierLabel(latest.level)].filter(Boolean).join(" · ")}</Text>
               </View>
-              <LinearGradient colors={["#C4622E", "#A0522D"]} style={styles.playBtn}>
+              <LinearGradient colors={[colors.pink, colors.coral]} style={styles.playBtn}>
                 <Text style={styles.playIcon}>▶</Text>
               </LinearGradient>
             </LinearGradient>
@@ -480,7 +480,7 @@ const makePl = (colors: Colors, gradients: Gradients) => StyleSheet.create({
 });
 
 const makeGuide = (colors: Colors, gradients: Gradients) => StyleSheet.create({
-  modalCard: { borderColor: "rgba(167,139,250,0.35)", borderWidth: 1, shadowColor: "#C4622E", shadowOpacity: 0.1, shadowRadius: 4, shadowOffset: { width: 0, height: 0 } },
+  modalCard: { borderColor: "rgba(167,139,250,0.35)", borderWidth: 1, shadowColor: colors.pink, shadowOpacity: 0.1, shadowRadius: 4, shadowOffset: { width: 0, height: 0 } },
   handle: { width: 44, height: 5, borderRadius: 3, backgroundColor: "rgba(167,139,250,0.4)", alignSelf: "center", marginBottom: 12 },
   modalTitle: { color: colors.accent, fontSize: font.h2, fontWeight: "900" },
   modalSub: { color: "rgba(255,255,255,0.6)", fontSize: font.small, fontWeight: "700", marginTop: 2, marginBottom: 12 },
@@ -547,15 +547,15 @@ const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   journeyBtnText: { flex: 1, color: colors.accent, fontSize: font.h3, fontWeight: "700" },
   journeyChev: { color: colors.accent, fontSize: 24, fontWeight: "700" },
   dualRow: { flexDirection: "row", gap: 12, marginTop: spacing.md },
-  dualWrapTeal: { flex: 1, shadowColor: "#D8A43A", shadowOpacity: 0.12, shadowRadius: 4, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
-  dualWrapPurple: { flex: 1, shadowColor: "#C4622E", shadowOpacity: 0.12, shadowRadius: 4, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
-  dualTileTeal: { flex: 1, borderRadius: radius.lg, padding: 14, minHeight: 150, borderWidth: 1.5, borderColor: "#D8A43A" },
-  dualTilePurple: { flex: 1, borderRadius: radius.lg, padding: 14, minHeight: 150, borderWidth: 1.5, borderColor: "#C4622E" },
+  dualWrapTeal: { flex: 1, shadowColor: colors.good, shadowOpacity: 0.12, shadowRadius: 4, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
+  dualWrapPurple: { flex: 1, shadowColor: colors.blue, shadowOpacity: 0.12, shadowRadius: 4, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
+  dualTileTeal: { flex: 1, borderRadius: radius.lg, padding: 14, minHeight: 150, borderWidth: 1.5, borderColor: colors.good },
+  dualTilePurple: { flex: 1, borderRadius: radius.lg, padding: 14, minHeight: 150, borderWidth: 1.5, borderColor: colors.blue },
   dualIcon: { position: "absolute", top: 12, right: 12 },
-  dualKickerTeal: { color: "#D8A43A", fontSize: font.tiny, fontWeight: "900", letterSpacing: 1, lineHeight: font.tiny + 3, paddingRight: 26 },
-  dualSubTeal: { color: "#D8A43A", fontSize: font.small, fontWeight: "800", marginTop: 1 },
-  dualPctTeal: { color: "#D8A43A", fontSize: font.tiny, fontWeight: "800" },
-  dualPlayTeal: { width: 34, height: 34, borderRadius: 17, backgroundColor: "#B98A2E", alignItems: "center", justifyContent: "center", shadowColor: "#B98A2E", shadowOpacity: 0.3, shadowRadius: 5, shadowOffset: { width: 0, height: 0 } },
+  dualKickerTeal: { color: colors.good, fontSize: font.tiny, fontWeight: "900", letterSpacing: 1, lineHeight: font.tiny + 3, paddingRight: 26 },
+  dualSubTeal: { color: colors.good, fontSize: font.small, fontWeight: "800", marginTop: 1 },
+  dualPctTeal: { color: colors.good, fontSize: font.tiny, fontWeight: "800" },
+  dualPlayTeal: { width: 34, height: 34, borderRadius: 17, backgroundColor: colors.good, alignItems: "center", justifyContent: "center", shadowColor: colors.good, shadowOpacity: 0.3, shadowRadius: 5, shadowOffset: { width: 0, height: 0 } },
   dualSubPurple: { color: "rgba(255,255,255,0.85)", fontSize: font.small, fontWeight: "700", marginTop: 1 },
   dualEmoji: { fontSize: 26, textShadowColor: "rgba(236,72,153,0.8)", textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 5 },
   iconGlowTeal: { textShadowColor: "rgba(34,184,176,0.8)", textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 4 },
@@ -566,8 +566,8 @@ const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   dualPct: { color: "rgba(255,255,255,0.9)", fontSize: font.tiny, fontWeight: "800" },
   dualPlay: { width: 34, height: 34, borderRadius: 17, backgroundColor: "rgba(255,255,255,0.22)", alignItems: "center", justifyContent: "center" },
   dualPlayIcon: { color: "#E6EAF0", fontSize: 15, marginLeft: 2 },
-  hero: { flexDirection: "row", alignItems: "center", gap: 12, borderRadius: radius.lg, paddingVertical: 12, paddingHorizontal: 14, marginTop: spacing.md, borderWidth: 1.5, borderColor: "#C4622E", shadowColor: "#C4622E", shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
-  heroKicker: { color: "#C4622E", fontSize: 9, fontWeight: "900", letterSpacing: 1.2 },
+  hero: { flexDirection: "row", alignItems: "center", gap: 12, borderRadius: radius.lg, paddingVertical: 12, paddingHorizontal: 14, marginTop: spacing.md, borderWidth: 1.5, borderColor: colors.pink, shadowColor: colors.pink, shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
+  heroKicker: { color: colors.pink, fontSize: 9, fontWeight: "900", letterSpacing: 1.2 },
   heroTitle: { color: colors.ink, fontSize: font.small, fontWeight: "900", marginTop: 1 },
   heroMeta: { color: colors.muted, fontSize: font.tiny, marginTop: 1 },
   playBtn: { width: 44, height: 44, borderRadius: 22, alignItems: "center", justifyContent: "center" },

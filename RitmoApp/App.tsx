@@ -62,10 +62,12 @@ import {
 import { downloadAudio, deleteAudio, readAudioBase64 } from "./src/lib/download";
 import type { SongSpec, StyleSeed } from "./src/data/presets";
 import { langCode } from "./src/data/presets";
-import { colors, gradients, gradientFor, radius } from "./src/theme";
-import { ThemeProvider } from "./src/lib/theme-context";
+import { gradientFor, radius, type Colors, type Gradients } from "./src/theme";
+import { ThemeProvider, useTheme, useThemedStyles } from "./src/lib/theme-context";
 
 function AppInner() {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const [tab, setTab] = useState<TabKey>("home");
   const [songs, setSongs] = useState<Song[]>([]);
   const [catFavs, setCatFavs] = useState<string[]>([]); // favorited built-in song ids
@@ -1062,6 +1064,8 @@ function GenBanner({
   onRetry: () => void;
   onDismissError: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   if (batch) {
     return (
       <LinearGradient colors={["#0F4A44", "#123E66"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.banner}>
@@ -1112,6 +1116,8 @@ function isToday(ts: number) {
 }
 
 function EmptyLearn({ onCreate }: { onCreate: () => void }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.emptyLearn}>
       <View style={styles.emblemWrap}>
@@ -1133,7 +1139,7 @@ function EmptyLearn({ onCreate }: { onCreate: () => void }) {
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
   splash: { flex: 1, backgroundColor: "#FBF8F1", alignItems: "center", justifyContent: "center" },
   splashLogo: { width: 300, height: 300 },

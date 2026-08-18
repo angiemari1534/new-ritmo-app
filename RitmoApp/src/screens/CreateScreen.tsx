@@ -59,7 +59,7 @@ const TEMPO_ICON: Record<string, string> = { Slow: "speedometer-slow", Normal: "
 
 // A rotating palette of neon colours — each level/topic tile gets its own
 // glowing border + icon colour to match the app's neon theme.
-const NEON = ["#D8A43A", "#C4622E", "#7C8A4A", "#B98A2E", "#BF6B4A", "#CC9544", "#A0522D", "#9AA46A", "#E0B450", "#8A6D3B", "#B5842B", "#CF7A44", "#6E7A42", "#D8A43A", "#C4622E", "#7C8A4A", "#B98A2E"];
+const NEON = ["#22D3EE", "#A78BFA", "#F472B6", "#FBBF24", "#38BDF8", "#34D399", "#F97316", "#EC4899", "#8B5CF6", "#2DD4BF", "#60A5FA", "#FB7185", "#C084FC", "#4ADE80", "#FACC15", "#5EEAD4", "#818CF8"];
 
 export default function CreateScreen({
   onBack,

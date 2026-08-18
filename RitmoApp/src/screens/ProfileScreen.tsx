@@ -38,7 +38,7 @@ const LANGUAGES = [
 ];
 // Varied symbol colours so the Profile rows aren't a wall of turquoise (which
 // also reads as the topic/accent colour). Rotated per row.
-const ICON_COLORS = ["#D8A43A", "#C4622E", "#7C8A4A", "#B98A2E", "#BF6B4A", "#CC9544", "#A0522D", "#9AA46A"];
+const ICON_COLORS = ["#A78BFA", "#F472B6", "#FBBF24", "#34D399", "#FB923C", "#818CF8", "#E44DFF", "#F97316"];
 const MOODS = ["Energetic", "Chill", "Dance", "Romantic", "Tropical", "Party", "Happy", "Sad", "Dreamy", "Groovy", "Powerful", "Calm"];
 const TEMPOS = ["Slow", "Normal", "Fast"];
 const GOALS = [1, 2, 3, 5];

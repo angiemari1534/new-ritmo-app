@@ -61,26 +61,25 @@ export function applyTheme(id: ThemeId) {
   Object.assign(gradients, t.gradients);
 }
 
-// A stable warm-vintage gradient per subject key for cover art tiles — mustard,
-// burnt orange, olive, rust and tan tones so subject icons stay in-palette.
+// A stable, vivid gradient per subject key for cover art tiles.
 export const subjectGradient: Record<string, [string, string]> = {
-  numbers: ["#D8A43A", "#C88A2A"],
-  colors: ["#C4622E", "#D8A43A"],
-  greetings: ["#CC9544", "#7C8A4A"],
-  vacation: ["#BF6B4A", "#D8A43A"],
-  cooking: ["#C4622E", "#E0B450"],
-  family: ["#A0522D", "#C4622E"],
-  days: ["#7C8A4A", "#CC9544"],
-  food: ["#C4622E", "#E0B450"],
-  animals: ["#7C8A4A", "#B98A2E"],
-  body: ["#BF6B4A", "#A0522D"],
-  clothing: ["#B98A2E", "#7C8A4A"],
-  weather: ["#9AA46A", "#D8A43A"],
-  feelings: ["#E0B450", "#C4622E"],
-  home: ["#B98A2E", "#7C8A4A"],
-  directions: ["#7C8A4A", "#CC9544"],
-  shopping: ["#C4622E", "#A0522D"],
-  verbs: ["#CC9544", "#B98A2E"],
+  numbers: ["#7C5CFF", "#B14DFF"],
+  colors: ["#FF4D8D", "#FFC24B"],
+  greetings: ["#4CA8FF", "#7C5CFF"],
+  vacation: ["#FF7A45", "#FF4D8D"],
+  cooking: ["#FF5C5C", "#FF9E45"],
+  family: ["#B14DFF", "#FF4D8D"],
+  days: ["#4CA8FF", "#34D399"],
+  food: ["#FF7A45", "#FFC24B"],
+  animals: ["#34D399", "#4CA8FF"],
+  body: ["#FF6FA5", "#B14DFF"],
+  clothing: ["#7C5CFF", "#4CA8FF"],
+  weather: ["#4CA8FF", "#FFC24B"],
+  feelings: ["#FFC24B", "#FF4D8D"],
+  home: ["#7C5CFF", "#34D399"],
+  directions: ["#34D399", "#7C5CFF"],
+  shopping: ["#FF4D8D", "#B14DFF"],
+  verbs: ["#B14DFF", "#4CA8FF"],
 };
 
 export function gradientFor(key: string): [string, string] {
