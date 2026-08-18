@@ -1,0 +1,83 @@
+========================================
+  RITMO — Spanish Through Songs (mobile app)
+========================================
+
+Everything for the new phone app lives in this folder:
+  C:\Users\luism\Ritmo\
+
+  • RitmoApp\        <- the phone app (iPhone + Android)
+  • ritmo-backend\   <- the little server that holds your secret API keys
+
+Your old web player is untouched on your Desktop; this is the new, real app.
+
+
+────────────────────────────────────────
+WHAT WORKS RIGHT NOW
+────────────────────────────────────────
+• The full app is built: Library, Create, Generating, and Player screens.
+• The backend is built and tested (it runs and answers correctly).
+• To make it generate REAL songs, we just need to (1) add your two keys and
+  (2) run it on your phone. Steps below.
+
+
+────────────────────────────────────────
+STEP 1 — Add your secret keys (one time)
+────────────────────────────────────────
+1. Open the folder:  C:\Users\luism\Ritmo\ritmo-backend\
+2. Find the file  ".env.example"  and make a COPY of it named exactly  ".env"
+   (just ".env", no other name).
+3. Open ".env" in Notepad and paste your keys after the = signs:
+       MINIMAX_API_KEY=your_minimax_key
+       ELEVENLABS_API_KEY=your_elevenlabs_key
+4. Save and close. This file stays on your computer and is never shared.
+
+
+────────────────────────────────────────
+STEP 2 — Start the server
+────────────────────────────────────────
+1. Open the app "Terminal" or "PowerShell".
+2. Copy-paste this and press Enter:
+       cd C:\Users\luism\Ritmo\ritmo-backend
+       npm start
+3. You should see:  "Ritmo backend listening..."  and both keys "set".
+   Leave this window open while you use the app.
+
+
+────────────────────────────────────────
+STEP 3 — Point the app at your computer
+────────────────────────────────────────
+1. In PowerShell, run:  ipconfig
+   Find the line "IPv4 Address" — it looks like 192.168.1.20
+2. Open this file in Notepad:
+       C:\Users\luism\Ritmo\RitmoApp\src\config.ts
+3. Change the address to YOUR number, keeping :3000 at the end, e.g.:
+       export const BACKEND_URL = "http://192.168.1.20:3000";
+4. Save.
+
+   (Your phone and computer must be on the same Wi-Fi for this to work.)
+
+
+────────────────────────────────────────
+STEP 4 — Run the app on your phone
+────────────────────────────────────────
+1. On your phone, install "Expo Go" from the App Store / Google Play (free).
+2. On your computer, open a SECOND PowerShell window and run:
+       cd C:\Users\luism\Ritmo\RitmoApp
+       npx expo start
+3. A QR code appears. On iPhone use the Camera app to scan it; on Android
+   scan it from inside the Expo Go app.
+4. Ritmo opens on your phone! Tap a starter song or "Create a song."
+
+
+────────────────────────────────────────
+LATER — Putting it on the App Store / Google Play
+────────────────────────────────────────
+This is a separate step (Phase 4) that needs:
+  • An Apple Developer account ($99/year) for the App Store
+  • A Google Play account ($25 one-time)
+  • The backend moved to an always-on server (Render) so it works when your
+    computer is off.
+Just tell Claude "let's do the app store part" when you're ready.
+
+
+Something not working? Tell Claude exactly what you see on the screen.
