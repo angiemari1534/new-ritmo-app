@@ -1121,19 +1121,19 @@ function EmptyLearn({ onCreate }: { onCreate: () => void }) {
   return (
     <View style={styles.emptyLearn}>
       <View style={styles.emblemWrap}>
-        <LinearGradient colors={["#22D3EE", "#7C5CFF", "#B14DFF"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.emblemRing}>
-          <View style={styles.emblemInner}><Text style={styles.emblemEmoji}>🎧</Text></View>
+        <LinearGradient colors={[colors.accent, colors.blue, colors.pink]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={[styles.emblemRing, { shadowColor: colors.accent }]}>
+          <View style={[styles.emblemInner, { backgroundColor: colors.bg2 }]}><Text style={styles.emblemEmoji}>🎧</Text></View>
         </LinearGradient>
-        <Text style={[styles.emNote, { top: 4, left: 20, color: "#22D3EE" }]}>♪</Text>
-        <Text style={[styles.emNote, { top: -2, right: 26, color: "#7C5CFF" }]}>♫</Text>
-        <Text style={[styles.emNote, { bottom: 18, left: 2, color: "#F472B6" }]}>♬</Text>
-        <Text style={[styles.emChar, { top: 44, right: 4, color: "#A78BFA" }]}>ñ</Text>
-        <Text style={[styles.emChar, { bottom: 6, right: 30, color: "#38BDF8" }]}>あ</Text>
+        <Text style={[styles.emNote, { top: 4, left: 20, color: colors.accent }]}>♪</Text>
+        <Text style={[styles.emNote, { top: -2, right: 26, color: colors.blue }]}>♫</Text>
+        <Text style={[styles.emNote, { bottom: 18, left: 2, color: colors.pink }]}>♬</Text>
+        <Text style={[styles.emChar, { top: 44, right: 4, color: colors.gold }]}>ñ</Text>
+        <Text style={[styles.emChar, { bottom: 6, right: 30, color: colors.good }]}>あ</Text>
       </View>
-      <GradientText text="Nothing playing yet" style={styles.emptyTitle} colors={["#22D3EE", "#B14DFF"]} />
+      <GradientText text="Nothing playing yet" style={styles.emptyTitle} colors={[colors.accent, colors.pink]} />
       <Text style={styles.emptySub}>Create a song, then it plays here with lyrics.</Text>
-      <Pressable onPress={onCreate} style={styles.emptyBtn}>
-        <GradientText text="＋  Create a song" style={styles.emptyBtnText} colors={["#22D3EE", "#B14DFF"]} />
+      <Pressable onPress={onCreate} style={[styles.emptyBtn, { borderColor: colors.accent, shadowColor: colors.accent, backgroundColor: colors.card }]}>
+        <GradientText text="＋  Create a song" style={styles.emptyBtnText} colors={[colors.accent, colors.pink]} />
       </Pressable>
     </View>
   );
