@@ -229,7 +229,6 @@ export default function CreateScreen({
 
             <Text style={styles.customHint}>Or type your own topic — or list exact words to learn, separated by commas.</Text>
             <View style={[styles.customBox, usingTopic && styles.customBoxOn]}>
-              <Text style={styles.pencil}>✏️</Text>
               <TextInput
                 value={topic}
                 onChangeText={setTopic}
@@ -242,7 +241,7 @@ export default function CreateScreen({
             </View>
             {usingTopic && (
               <Text style={styles.customNote}>
-                {customTopic.includes(",") ? "📝 We'll teach these exact words" : "✨ We'll build a custom course on your topic"}
+                {customTopic.includes(",") ? "We'll teach these exact words" : "We'll build a custom course on your topic"}
               </Text>
             )}
 
@@ -308,7 +307,6 @@ export default function CreateScreen({
 
             <Text style={styles.h}>Similar artist (optional)</Text>
             <View style={styles.customBox}>
-              <Text style={styles.pencil}>🎤</Text>
               <TextInput
                 value={artistFeel}
                 onChangeText={setArtistFeel}
@@ -323,7 +321,6 @@ export default function CreateScreen({
 
             <Text style={styles.h}>Similar songs (optional)</Text>
             <View style={styles.customBox}>
-              <Text style={styles.pencil}>🎵</Text>
               <TextInput
                 value={similarSongs}
                 onChangeText={setSimilarSongs}
