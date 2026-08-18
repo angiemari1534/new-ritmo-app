@@ -1,61 +1,62 @@
-// Ritmo design system — dark, neon, music-app feel (LingoBeats-inspired):
-// near-black navy canvas, glossy gradient tiles, pink→coral primary accent.
+// Ritmo design system — "Warm Vintage": faded-film feel, espresso canvas,
+// cream text, mustard + burnt-orange accents with an olive cool tone.
 
-// Palette drawn from the Ritmo logo: deep navy, teal/turquoise, and gold.
+// Palette: espresso brown ground, cream ink, mustard/burnt-orange accents.
 export const colors = {
-  bg: "#05080F", // near-black navy
-  bg2: "#0A101C",
-  card: "rgba(15,26,44,0.45)", // translucent "transparent black" tile over the near-black bg
-  card2: "rgba(29,54,84,0.5)", // slightly stronger translucent (selected/secondary tiles)
-  line: "#294160",
-  ink: "#E6EAF0", // soft off-white (one shade down from pure white so text isn't glaring)
-  muted: "#9DB2CC", // blue-gray
-  faint: "#697F9C",
-  accent: "#22B8B0", // teal (brand accent)
-  teal: "#22B8B0",
-  navy: "#1E4E7E",
-  pink: "#FF4D8D", // used sparingly (favorites)
-  coral: "#FF7A45",
-  good: "#34D399",
-  gold: "#E4B84C", // logo gold
-  blue: "#3B82F6",
+  bg: "#191109", // deep espresso
+  bg2: "#241809",
+  card: "rgba(58,40,20,0.42)", // warm translucent tile over the espresso bg
+  card2: "rgba(74,52,26,0.5)", // stronger translucent (selected/secondary tiles)
+  line: "#3A2C18",
+  ink: "#EDE0C8", // warm cream (soft, not glaring)
+  muted: "#B49A6E", // faded tan
+  faint: "#8A7550",
+  accent: "#D8A43A", // mustard (brand accent)
+  teal: "#D8A43A",
+  navy: "#5A3A1A", // warm brown
+  pink: "#C4622E", // burnt orange (favorites / current)
+  coral: "#C4622E",
+  good: "#7C8A4A", // faded olive (positive/cool)
+  gold: "#D8A43A", // mustard gold
+  blue: "#7C8A4A", // olive stands in for the old blue accent
 };
 
-// Named gradient pairs.
+// Named gradient pairs — warm mustard / burnt-orange / olive vintage tones.
 export const gradients: Record<string, [string, string]> = {
-  primary: ["#2A7FE0", "#22B8B0"], // blue -> teal (FAB, primary buttons)
-  purplePink: ["#1FB6AE", "#2A7FE0"], // teal -> blue (selected states)
-  violet: ["#1E4E7E", "#22B8B0"], // navy -> teal
-  sunset: ["#E4B84C", "#22B8B0"], // gold -> teal
-  ocean: ["#3B82F6", "#22B8B0"],
-  mint: ["#34D399", "#22B8B0"],
-  aqua: ["#22D3EE", "#3B82F6"],
-  teal: ["#14B8A6", "#22B8B0"],
-  seafoam: ["#2DD4BF", "#3B82F6"],
-  gold: ["#F0C765", "#D4A32E"],
-  night: ["#152740", "#0E1D33"], // navy dark card
-  magenta: ["#22B8B0", "#3B82F6"],
+  primary: ["#C4622E", "#D8A43A"], // burnt orange -> mustard (FAB, primary buttons)
+  purplePink: ["#D8A43A", "#C4622E"], // mustard -> orange (selected states)
+  violet: ["#5A3A1A", "#D8A43A"], // brown -> mustard
+  sunset: ["#D8A43A", "#C4622E"], // mustard -> orange
+  ocean: ["#7C8A4A", "#D8A43A"], // olive -> mustard
+  mint: ["#7C8A4A", "#D8A43A"],
+  aqua: ["#D8A43A", "#C4622E"],
+  teal: ["#B98A2E", "#D8A43A"],
+  seafoam: ["#7C8A4A", "#D8A43A"],
+  gold: ["#E4B85E", "#C88A2A"],
+  night: ["#2A1C0E", "#1C1208"], // espresso dark card
+  magenta: ["#D8A43A", "#C4622E"],
 };
 
-// A stable, vivid gradient per subject key for cover art tiles.
+// A stable warm-vintage gradient per subject key for cover art tiles — mustard,
+// burnt orange, olive, rust and tan tones so subject icons stay in-palette.
 export const subjectGradient: Record<string, [string, string]> = {
-  numbers: ["#7C5CFF", "#B14DFF"],
-  colors: ["#FF4D8D", "#FFC24B"],
-  greetings: ["#4CA8FF", "#7C5CFF"],
-  vacation: ["#FF7A45", "#FF4D8D"],
-  cooking: ["#FF5C5C", "#FF9E45"],
-  family: ["#B14DFF", "#FF4D8D"],
-  days: ["#4CA8FF", "#34D399"],
-  food: ["#FF7A45", "#FFC24B"],
-  animals: ["#34D399", "#4CA8FF"],
-  body: ["#FF6FA5", "#B14DFF"],
-  clothing: ["#7C5CFF", "#4CA8FF"],
-  weather: ["#4CA8FF", "#FFC24B"],
-  feelings: ["#FFC24B", "#FF4D8D"],
-  home: ["#7C5CFF", "#34D399"],
-  directions: ["#34D399", "#7C5CFF"],
-  shopping: ["#FF4D8D", "#B14DFF"],
-  verbs: ["#B14DFF", "#4CA8FF"],
+  numbers: ["#D8A43A", "#C88A2A"],
+  colors: ["#C4622E", "#D8A43A"],
+  greetings: ["#CC9544", "#7C8A4A"],
+  vacation: ["#BF6B4A", "#D8A43A"],
+  cooking: ["#C4622E", "#E0B450"],
+  family: ["#A0522D", "#C4622E"],
+  days: ["#7C8A4A", "#CC9544"],
+  food: ["#C4622E", "#E0B450"],
+  animals: ["#7C8A4A", "#B98A2E"],
+  body: ["#BF6B4A", "#A0522D"],
+  clothing: ["#B98A2E", "#7C8A4A"],
+  weather: ["#9AA46A", "#D8A43A"],
+  feelings: ["#E0B450", "#C4622E"],
+  home: ["#B98A2E", "#7C8A4A"],
+  directions: ["#7C8A4A", "#CC9544"],
+  shopping: ["#C4622E", "#A0522D"],
+  verbs: ["#CC9544", "#B98A2E"],
 };
 
 export function gradientFor(key: string): [string, string] {
