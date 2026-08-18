@@ -243,32 +243,52 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
   // ~1.6 avatars per lesson and ~0.7 notes per lesson, so a 100-lesson world is as
   // packed as a 20-lesson one. Avatars are drawn from the full 801-image pack.
   const avCount = Math.min(160, Math.max(14, Math.round(N * 1.6)));
-  const avSpots = Array.from({ length: avCount }, (_, i) => {
-    const r2 = hash(index * 131 + i * 2.3 + 5);
-    const r3 = hash(index * 131 + i * 3.1 + 11);
-    // Alternate sides so any two avatars on the SAME side are ~2 slots (≈180px)
-    // apart — far more than the 48px avatar — so they never overlap. Small
-    // vertical jitter + random horizontal offset keep it scattered, not columnar.
-    return {
-      side: (i % 2 === 0 ? "l" : "r") as "l" | "r",
-      yF: Math.min(0.99, Math.max(0.02, (i + 0.5) / avCount + (r2 - 0.5) * (0.7 / avCount))),
-      x: 4 + r3 * 60,
-    };
-  });
   const noteCount = Math.min(75, Math.max(8, Math.round(N * 0.72)));
-  const noteSpots = Array.from({ length: noteCount }, (_, i) => {
-    const r1 = hash(index * 197 + i * 2.1 + 3);
-    const r2 = hash(index * 197 + i * 1.3 + 7);
-    const r3 = hash(index * 197 + i * 3.7 + 13);
-    const r4 = hash(index * 197 + i * 4.9 + 17);
-    return {
-      side: (r1 > 0.5 ? "r" : "l") as "l" | "r",
-      yF: Math.min(0.98, Math.max(0.03, (i + 0.5) / noteCount + (r2 - 0.5) * (1.3 / noteCount))),
-      x: 30 + r3 * 74,
-      rot: Math.round((r4 - 0.5) * 34),
-      size: 22 + Math.round(r2 * 12),
+
+  // Scatter avatars and notes SPORADICALLY across both side-bands (not two neat
+  // columns) while guaranteeing nothing overlaps: a seeded rejection sampler
+  // that rejects any spot too close to something already placed OR too close to
+  // the weaving road. Memoised so it only recomputes when the world changes.
+  const { avSpots, noteSpots } = useMemo(() => {
+    const AV_SZ = 48, GAP = 6, CLEAR = 30; // CLEAR = min gap from the road centre
+    const roadXAt = (cy: number) => CENTER + AMP * Math.sin(((cy - HEADER) / ROW_H) * FREQ);
+    const placed: { cx: number; cy: number; r: number }[] = [];
+    // Try up to 18 random spots for one item; return the first that fits, else null.
+    const place = (i: number, count: number, size: number, salt: number, spread: number) => {
+      const r = size / 2;
+      const yBase = (i + 0.5) / count;
+      for (let k = 0; k < 18; k++) {
+        const side: "l" | "r" = hash(salt + i * 3.71 + k * 1.13) > 0.5 ? "r" : "l";
+        const yF = Math.min(0.97, Math.max(0.03, yBase + (hash(salt + i * 2.29 + k * 2.7) - 0.5) * (spread / count)));
+        const cy = HEADER + roadSpan * yF + r;
+        const rx = roadXAt(cy);
+        const bandMin = 8;
+        const bandMax = side === "l" ? rx - CLEAR - size : W - rx - CLEAR - size;
+        if (bandMax <= bandMin) continue; // road hugs this edge here — try again
+        const x = bandMin + hash(salt + i * 5.13 + k * 3.31) * (bandMax - bandMin);
+        const cx = side === "l" ? x + r : W - x - r;
+        let ok = true;
+        for (const p of placed) {
+          const dx = cx - p.cx, dy = cy - p.cy, need = r + p.r + GAP;
+          if (dx * dx + dy * dy < need * need) { ok = false; break; }
+        }
+        if (!ok) continue;
+        placed.push({ cx, cy, r });
+        return { side, x, yF };
+      }
+      return null;
     };
-  });
+    // Avatars first (they're bigger, give them priority), then notes fill the gaps.
+    const avs = Array.from({ length: avCount }, (_, i) => place(i, avCount, AV_SZ, index * 131 + 1, 2.4))
+      .filter(Boolean) as { side: "l" | "r"; x: number; yF: number }[];
+    const notes = Array.from({ length: noteCount }, (_, i) => {
+      const size = 22 + Math.round(hash(index * 197 + i * 1.3 + 7) * 12);
+      const rot = Math.round((hash(index * 197 + i * 4.9 + 17) - 0.5) * 34);
+      const sp = place(i, noteCount, size + 10, index * 197 + 2, 2.8); // +10 so notes stay clear of avatars
+      return sp ? { ...sp, rot, size } : null;
+    }).filter(Boolean) as { side: "l" | "r"; x: number; yF: number; rot: number; size: number }[];
+    return { avSpots: avs, noteSpots: notes };
+  }, [index, N, roadSpan, avCount, noteCount]);
 
   // Tie-dye background: cycle the neon rainbow into many colour bands down the
   // segment (more bands on longer worlds) so the hue keeps shifting, then cross
