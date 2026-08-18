@@ -63,8 +63,9 @@ import { downloadAudio, deleteAudio, readAudioBase64 } from "./src/lib/download"
 import type { SongSpec, StyleSeed } from "./src/data/presets";
 import { langCode } from "./src/data/presets";
 import { colors, gradients, gradientFor, radius } from "./src/theme";
+import { ThemeProvider } from "./src/lib/theme-context";
 
-export default function App() {
+function AppInner() {
   const [tab, setTab] = useState<TabKey>("home");
   const [songs, setSongs] = useState<Song[]>([]);
   const [catFavs, setCatFavs] = useState<string[]>([]); // favorited built-in song ids
@@ -1178,3 +1179,11 @@ const styles = StyleSheet.create({
   emptyBtn: { marginTop: 22, borderRadius: radius.pill, borderWidth: 1.5, borderColor: "#7C5CFF", paddingVertical: 14, paddingHorizontal: 30, backgroundColor: "rgba(124,92,255,0.08)", shadowColor: "#7C5CFF", shadowOpacity: 0.35, shadowRadius: 8, shadowOffset: { width: 0, height: 0 }, elevation: 4 },
   emptyBtnText: { fontSize: 17, fontWeight: "900" },
 });
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <AppInner />
+    </ThemeProvider>
+  );
+}

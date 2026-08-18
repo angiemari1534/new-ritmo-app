@@ -3,7 +3,8 @@ import { Text, View, StyleSheet, ScrollView, Pressable, Image, Modal, ActivityIn
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Screen, SectionHeader, ArtTile, ProgressBar, SubjectIcon, GradientText } from "../components/ui";
-import { colors, spacing, font, radius, gradients, gradientFor } from "../theme";
+import { spacing, font, radius, gradientFor, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { STARTER_RECIPES, SongSpec, subjectLabel, tierLabel, LEVEL_ORDER, type PathStep } from "../data/presets";
 import { songTitle } from "../lib/api";
 import type { Song } from "../lib/api";
@@ -71,8 +72,13 @@ export default function HomeScreen({
   // The "Current song" tile shows what's actually playing; if nothing is playing,
   // it falls back to the most recent song.
   const latest = current ?? songs[0];
+  const { colors, gradients, id: themeId, setTheme, themes } = useTheme();
+  const styles = useThemedStyles(makeStyles);
+  const pl = useThemedStyles(makePl);
+  const guide = useThemedStyles(makeGuide);
   const [openList, setOpenList] = useState<{ title: string; songs: Song[] } | null>(null);
   const [guideOpen, setGuideOpen] = useState(false);
+  const [themeOpen, setThemeOpen] = useState(false);
   const openSongs = openList?.songs ?? [];
   const levelsPresent = LEVEL_ORDER.filter((l) => homeLevels.includes(l) && songs.some((s) => s.level === l));
 
@@ -101,8 +107,8 @@ export default function HomeScreen({
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.headerRow}>
           <View style={styles.brandRow}>
-            <GradientText text="Ritmo" style={styles.brandText} colors={["#C4622E", "#D8A43A", "#EDE0C8"]} />
-            <MaterialCommunityIcons name="music" size={22} color="#D8A43A" style={{ marginLeft: 6 }} />
+            <GradientText text="Ritmo" style={styles.brandText} colors={[colors.pink, colors.gold, colors.ink]} />
+            <MaterialCommunityIcons name="music" size={22} color={colors.gold} style={{ marginLeft: 6 }} />
           </View>
           <View style={styles.headerRight}>
             <Pressable onPress={onOpenDictionary} style={styles.searchBtn} hitSlop={8}>
@@ -114,8 +120,15 @@ export default function HomeScreen({
           </View>
         </View>
 
-        <GradientText text="LEARN LANGUAGES, FEEL THE RHYTHM" style={styles.tagline} colors={["#C4622E", "#D8A43A", "#EDE0C8"]} />
+        <GradientText text="LEARN LANGUAGES, FEEL THE RHYTHM" style={styles.tagline} colors={[colors.pink, colors.gold, colors.ink]} />
         <Text style={styles.hiSub} numberOfLines={1}>{language} · through songs</Text>
+
+        {/* Colour theme picker */}
+        <Pressable onPress={() => setThemeOpen(true)} style={styles.themeBtn} hitSlop={6}>
+          <MaterialCommunityIcons name="palette-outline" size={15} color={colors.accent} />
+          <Text style={styles.themeBtnText}>Theme: {themes.find((t) => t.id === themeId)?.name}</Text>
+          <Text style={styles.themeChev}>›</Text>
+        </Pressable>
 
         {/* How to use Ritmo — quick intro guide, on top */}
         <Pressable onPress={() => setGuideOpen(true)} style={styles.howToBtn}>
@@ -340,6 +353,33 @@ export default function HomeScreen({
           </Pressable>
         </LinearGradient>
       </Modal>
+
+      {/* Colour theme picker */}
+      <Modal visible={themeOpen} transparent animationType="slide" onRequestClose={() => setThemeOpen(false)}>
+        <Pressable style={styles.themeBackdrop} onPress={() => setThemeOpen(false)} />
+        <View style={styles.themeSheet}>
+          <View style={styles.themeHandle} />
+          <Text style={styles.themeTitle}>Choose a colour theme</Text>
+          {themes.map((t) => {
+            const on = t.id === themeId;
+            return (
+              <Pressable key={t.id} onPress={() => { setTheme(t.id); setThemeOpen(false); }} style={[styles.themeRow, on && styles.themeRowOn]}>
+                <View style={styles.themeSwatches}>
+                  <View style={[styles.swatch, { backgroundColor: t.colors.bg2 }]} />
+                  <View style={[styles.swatch, { backgroundColor: t.colors.accent }]} />
+                  <View style={[styles.swatch, { backgroundColor: t.colors.pink }]} />
+                  <View style={[styles.swatch, { backgroundColor: t.colors.gold }]} />
+                </View>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.themeName}>{t.name}</Text>
+                  <Text style={styles.themeVibe}>{t.vibe}</Text>
+                </View>
+                {on && <MaterialCommunityIcons name="check-circle" size={20} color={colors.accent} />}
+              </Pressable>
+            );
+          })}
+        </View>
+      </Modal>
     </Screen>
   );
 }
@@ -422,7 +462,7 @@ const GUIDE_STEPS = [
   },
 ];
 
-const pl = StyleSheet.create({
+const makePl = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.55)" },
   card: { position: "absolute", bottom: 0, left: 0, right: 0, backgroundColor: colors.bg2, borderTopLeftRadius: radius.xl, borderTopRightRadius: radius.xl, padding: spacing.lg, paddingBottom: 34, borderTopWidth: 1, borderColor: colors.line },
   handle: { width: 44, height: 5, borderRadius: 3, backgroundColor: colors.line, alignSelf: "center", marginBottom: 12 },
@@ -439,7 +479,7 @@ const pl = StyleSheet.create({
   closeText: { color: colors.muted, fontSize: font.body, fontWeight: "800" },
 });
 
-const guide = StyleSheet.create({
+const makeGuide = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   modalCard: { borderColor: "rgba(167,139,250,0.35)", borderWidth: 1, shadowColor: "#C4622E", shadowOpacity: 0.1, shadowRadius: 4, shadowOffset: { width: 0, height: 0 } },
   handle: { width: 44, height: 5, borderRadius: 3, backgroundColor: "rgba(167,139,250,0.4)", alignSelf: "center", marginBottom: 12 },
   modalTitle: { color: colors.accent, fontSize: font.h2, fontWeight: "900" },
@@ -462,7 +502,7 @@ const guide = StyleSheet.create({
   gotItText: { color: colors.accent, fontSize: font.body, fontWeight: "900" },
 });
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   content: { padding: spacing.lg, paddingTop: 60 },
   howToBtn: { flexDirection: "row", alignItems: "center", gap: 8, backgroundColor: "rgba(3,5,10,0.3)", borderWidth: 1.5, borderColor: colors.gold, borderRadius: radius.md, paddingVertical: 10, paddingHorizontal: 16, marginTop: 12, shadowColor: colors.gold, shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
   howToText: { flex: 1, color: colors.gold, fontSize: font.body, fontWeight: "700" },
@@ -481,6 +521,19 @@ const styles = StyleSheet.create({
   tl1: { width: "100%", height: 26 },
   hiSub: { color: colors.coral, fontSize: font.small, fontWeight: "700", marginTop: 2, alignSelf: "flex-end", textAlign: "right" },
   tagline: { fontSize: 11, fontWeight: "900", letterSpacing: 1.5, marginTop: 2, alignSelf: "flex-start" },
+  themeBtn: { flexDirection: "row", alignItems: "center", gap: 6, alignSelf: "flex-start", marginTop: 10, paddingVertical: 6, paddingHorizontal: 12, borderRadius: radius.pill, borderWidth: 1, borderColor: colors.line, backgroundColor: colors.card },
+  themeBtnText: { color: colors.muted, fontSize: font.tiny, fontWeight: "800" },
+  themeChev: { color: colors.faint, fontSize: 14, fontWeight: "800" },
+  themeBackdrop: { flex: 1, backgroundColor: "rgba(0,0,0,0.55)" },
+  themeSheet: { position: "absolute", left: 0, right: 0, bottom: 0, backgroundColor: colors.bg2, borderTopLeftRadius: radius.xl, borderTopRightRadius: radius.xl, borderWidth: 1, borderColor: colors.line, padding: spacing.lg, paddingBottom: 30 },
+  themeHandle: { alignSelf: "center", width: 44, height: 5, borderRadius: 3, backgroundColor: colors.line, marginBottom: 14 },
+  themeTitle: { color: colors.ink, fontSize: font.h3, fontWeight: "900", marginBottom: 12 },
+  themeRow: { flexDirection: "row", alignItems: "center", gap: 12, paddingVertical: 10, paddingHorizontal: 10, borderRadius: radius.md, borderWidth: 1, borderColor: "transparent" },
+  themeRowOn: { borderColor: colors.accent, backgroundColor: colors.card },
+  themeSwatches: { flexDirection: "row" },
+  swatch: { width: 16, height: 22, marginRight: -3, borderRadius: 3, borderWidth: 1, borderColor: "rgba(0,0,0,0.35)" },
+  themeName: { color: colors.ink, fontSize: font.body, fontWeight: "800" },
+  themeVibe: { color: colors.muted, fontSize: font.tiny, marginTop: 1 },
   continueCard: { flexDirection: "row", alignItems: "center", gap: 12, borderRadius: radius.lg, padding: 13, marginTop: spacing.md },
   continueKicker: { color: "rgba(255,255,255,0.9)", fontSize: font.tiny, fontWeight: "900", letterSpacing: 1.5 },
   continueTitle: { color: "#E6EAF0", fontSize: font.h3, fontWeight: "900", marginTop: 2 },

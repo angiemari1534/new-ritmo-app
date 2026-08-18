@@ -1,41 +1,65 @@
-// Ritmo design system — "Warm Vintage": faded-film feel, espresso canvas,
-// cream text, mustard + burnt-orange accents with an olive cool tone.
+// Ritmo design system — now MULTI-THEME. Each theme defines a compact palette;
+// the full colour token set + named gradients are derived from it, so switching
+// theme recolours the whole app. The picker under "Ritmo" swaps the active one.
 
-// Palette: espresso brown ground, cream ink, mustard/burnt-orange accents.
-export const colors = {
-  bg: "#191109", // deep espresso
-  bg2: "#241809",
-  card: "rgba(58,40,20,0.42)", // warm translucent tile over the espresso bg
-  card2: "rgba(74,52,26,0.5)", // stronger translucent (selected/secondary tiles)
-  line: "#3A2C18",
-  ink: "#EDE0C8", // warm cream (soft, not glaring)
-  muted: "#B49A6E", // faded tan
-  faint: "#8A7550",
-  accent: "#D8A43A", // mustard (brand accent)
-  teal: "#D8A43A",
-  navy: "#5A3A1A", // warm brown
-  pink: "#C4622E", // burnt orange (favorites / current)
-  coral: "#C4622E",
-  good: "#7C8A4A", // faded olive (positive/cool)
-  gold: "#D8A43A", // mustard gold
-  blue: "#7C8A4A", // olive stands in for the old blue accent
+export type ThemeId = "midnight" | "sunset" | "ultraviolet" | "forest" | "mono" | "vintage";
+export type Colors = {
+  bg: string; bg2: string; card: string; card2: string; line: string;
+  ink: string; muted: string; faint: string; accent: string; teal: string;
+  navy: string; pink: string; coral: string; good: string; gold: string; blue: string;
+};
+export type Gradients = Record<string, [string, string]>;
+
+// Compact per-theme definition: the 16 colour tokens + a few extras used only to
+// build the named gradients (gA/gB = primary pair, goldL/goldD, nightA/nightB).
+type Def = Colors & { gA: string; gB: string; goldL: string; goldD: string; nightA: string; nightB: string };
+
+const DEFS: Record<ThemeId, Def> = {
+  midnight: { bg:"#05080F", bg2:"#0A101C", card:"rgba(15,26,44,0.45)", card2:"rgba(29,54,84,0.5)", line:"#294160", ink:"#E6EAF0", muted:"#9DB2CC", faint:"#697F9C", accent:"#22B8B0", teal:"#22B8B0", navy:"#1E4E7E", pink:"#FF4D8D", coral:"#FF7A45", good:"#34D399", gold:"#E4B84C", blue:"#3B82F6", gA:"#2A7FE0", gB:"#22B8B0", goldL:"#F0C765", goldD:"#D4A32E", nightA:"#152740", nightB:"#0E1D33" },
+  sunset: { bg:"#140A0C", bg2:"#1E0F12", card:"rgba(58,30,34,0.42)", card2:"rgba(80,42,46,0.5)", line:"#4A2A2C", ink:"#F1E6E4", muted:"#C99B93", faint:"#9A6E67", accent:"#FF7A45", teal:"#FF7A45", navy:"#5A2A2E", pink:"#FF5C8A", coral:"#FF7A45", good:"#F5B942", gold:"#F5B942", blue:"#E24D8B", gA:"#FF5C8A", gB:"#FF7A45", goldL:"#FFD27A", goldD:"#E0932E", nightA:"#2A1416", nightB:"#1C0E10" },
+  ultraviolet: { bg:"#0A0716", bg2:"#130C22", card:"rgba(40,28,64,0.42)", card2:"rgba(56,40,88,0.5)", line:"#332A55", ink:"#EAE6F5", muted:"#A79CC8", faint:"#7A6EA0", accent:"#A78BFA", teal:"#A78BFA", navy:"#4A3A7E", pink:"#F472B6", coral:"#E24DFF", good:"#38BDF8", gold:"#C4B5FD", blue:"#38BDF8", gA:"#7C4DFF", gB:"#A78BFA", goldL:"#D6C9FF", goldD:"#9B7CE0", nightA:"#1E1636", nightB:"#140E26" },
+  forest: { bg:"#06120E", bg2:"#0A1E17", card:"rgba(20,44,34,0.42)", card2:"rgba(30,60,46,0.5)", line:"#1E3A30", ink:"#E4EFE8", muted:"#8FB6A2", faint:"#5F8670", accent:"#2FA47E", teal:"#2FA47E", navy:"#1A4A3A", pink:"#E8B04B", coral:"#E8B04B", good:"#5FB350", gold:"#D8C066", blue:"#3FA9C9", gA:"#2FA47E", gB:"#5FB350", goldL:"#E4D07A", goldD:"#B89A3E", nightA:"#12281E", nightB:"#0A1E17" },
+  mono: { bg:"#0C0F14", bg2:"#131820", card:"rgba(30,38,48,0.45)", card2:"rgba(44,54,68,0.5)", line:"#26303C", ink:"#E4E8EE", muted:"#8B95A3", faint:"#5F6773", accent:"#6EA8FF", teal:"#6EA8FF", navy:"#3A4757", pink:"#9AA6B4", coral:"#9AA6B4", good:"#6EA8FF", gold:"#B8C1CE", blue:"#6EA8FF", gA:"#5A7A9E", gB:"#6EA8FF", goldL:"#C8D0DC", goldD:"#98A2B0", nightA:"#1A2029", nightB:"#12171E" },
+  vintage: { bg:"#191109", bg2:"#241809", card:"rgba(58,40,20,0.42)", card2:"rgba(74,52,26,0.5)", line:"#3A2C18", ink:"#EDE0C8", muted:"#B49A6E", faint:"#8A7550", accent:"#D8A43A", teal:"#D8A43A", navy:"#5A3A1A", pink:"#C4622E", coral:"#C4622E", good:"#7C8A4A", gold:"#D8A43A", blue:"#7C8A4A", gA:"#C4622E", gB:"#D8A43A", goldL:"#E4B85E", goldD:"#C88A2A", nightA:"#2A1C0E", nightB:"#1C1208" },
 };
 
-// Named gradient pairs — warm mustard / burnt-orange / olive vintage tones.
-export const gradients: Record<string, [string, string]> = {
-  primary: ["#C4622E", "#D8A43A"], // burnt orange -> mustard (FAB, primary buttons)
-  purplePink: ["#D8A43A", "#C4622E"], // mustard -> orange (selected states)
-  violet: ["#5A3A1A", "#D8A43A"], // brown -> mustard
-  sunset: ["#D8A43A", "#C4622E"], // mustard -> orange
-  ocean: ["#7C8A4A", "#D8A43A"], // olive -> mustard
-  mint: ["#7C8A4A", "#D8A43A"],
-  aqua: ["#D8A43A", "#C4622E"],
-  teal: ["#B98A2E", "#D8A43A"],
-  seafoam: ["#7C8A4A", "#D8A43A"],
-  gold: ["#E4B85E", "#C88A2A"],
-  night: ["#2A1C0E", "#1C1208"], // espresso dark card
-  magenta: ["#D8A43A", "#C4622E"],
-};
+function colorsOf(d: Def): Colors {
+  const { gA, gB, goldL, goldD, nightA, nightB, ...c } = d;
+  return c;
+}
+function gradientsOf(c: Def): Gradients {
+  return {
+    primary: [c.gA, c.gB], purplePink: [c.accent, c.pink], violet: [c.navy, c.accent],
+    sunset: [c.gold, c.pink], ocean: [c.blue, c.accent], mint: [c.good, c.accent],
+    aqua: [c.accent, c.blue], teal: [c.accent, c.gB], seafoam: [c.blue, c.accent],
+    gold: [c.goldL, c.goldD], night: [c.nightA, c.nightB], magenta: [c.accent, c.pink],
+  };
+}
+
+export const THEMES: { id: ThemeId; name: string; vibe: string; colors: Colors; gradients: Gradients }[] = [
+  { id:"midnight", name:"Midnight Teal", vibe:"Deep navy, teal and gold", colors: colorsOf(DEFS.midnight), gradients: gradientsOf(DEFS.midnight) },
+  { id:"sunset", name:"Sunset", vibe:"Espresso plum, coral and amber", colors: colorsOf(DEFS.sunset), gradients: gradientsOf(DEFS.sunset) },
+  { id:"ultraviolet", name:"Ultraviolet", vibe:"Violet, magenta and cyan", colors: colorsOf(DEFS.ultraviolet), gradients: gradientsOf(DEFS.ultraviolet) },
+  { id:"forest", name:"Forest", vibe:"Deep green, mint and lime", colors: colorsOf(DEFS.forest), gradients: gradientsOf(DEFS.forest) },
+  { id:"mono", name:"Mono Slate", vibe:"Greyscale, soft-blue accent", colors: colorsOf(DEFS.mono), gradients: gradientsOf(DEFS.mono) },
+  { id:"vintage", name:"Warm Vintage", vibe:"Espresso, cream and mustard", colors: colorsOf(DEFS.vintage), gradients: gradientsOf(DEFS.vintage) },
+];
+
+export const DEFAULT_THEME: ThemeId = "vintage";
+export function themeById(id: ThemeId) { return THEMES.find((t) => t.id === id) ?? THEMES[THEMES.length - 1]; }
+
+// Mutable "active" colour/gradient objects. Screens converted to the theme
+// context read the live palette; any not-yet-converted file imports these and
+// gets the active theme too (updated in place via applyTheme so the reference
+// stays stable). Defaults to the saved-or-vintage theme.
+export const colors: Colors = { ...themeById(DEFAULT_THEME).colors };
+export const gradients: Gradients = { ...themeById(DEFAULT_THEME).gradients };
+
+export function applyTheme(id: ThemeId) {
+  const t = themeById(id);
+  Object.assign(colors, t.colors);
+  Object.assign(gradients, t.gradients);
+}
 
 // A stable warm-vintage gradient per subject key for cover art tiles — mustard,
 // burnt orange, olive, rust and tan tones so subject icons stay in-palette.
