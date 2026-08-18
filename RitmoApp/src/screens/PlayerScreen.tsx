@@ -4,7 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import type { AudioPlayer, AudioStatus } from "expo-audio";
 import * as Speech from "expo-speech";
 import { Screen, ProgressBar, SubjectIcon } from "../components/ui";
-import { spacing, font, radius, gradientFor, type Colors, type Gradients } from "../theme";
+import { spacing, font, radius, gradientFor, subjectPair, type Colors, type Gradients } from "../theme";
 import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { langCode, tierLabel } from "../data/presets";
 import { PronouncePanel, QuizPanel, SpeakPanel } from "./LearnModes";
@@ -234,8 +234,8 @@ export default function PlayerScreen({
       )}
 
       <View style={styles.artWrap}>
-        <View style={[styles.art, { borderColor: `${gradientFor(song.subject)[0]}66` }]}>
-          <SubjectIcon subject={song.subject} size={48} color={gradientFor(song.subject)[0]} />
+        <View style={[styles.art, { borderColor: `${subjectPair(colors, song.subject)[0]}66` }]}>
+          <SubjectIcon subject={song.subject} size={48} color={subjectPair(colors, song.subject)[0]} />
         </View>
       </View>
 

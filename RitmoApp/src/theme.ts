@@ -86,6 +86,20 @@ export function gradientFor(key: string): [string, string] {
   return subjectGradient[key] ?? gradients.violet;
 }
 
+// A rotating palette drawn from the ACTIVE theme, so accent tiles / subject art
+// follow the chosen colour theme instead of a fixed rainbow.
+export function themePalette(c: Colors): string[] {
+  return [c.accent, c.pink, c.gold, c.blue, c.good, c.coral, c.navy, c.teal];
+}
+// A stable two-colour pair per subject, picked from the theme palette by a hash
+// of the key — themed subject art that still varies subject to subject.
+export function subjectPair(c: Colors, key: string): [string, string] {
+  const pal = themePalette(c);
+  let h = 0;
+  for (let i = 0; i < key.length; i++) h = (h * 31 + key.charCodeAt(i)) >>> 0;
+  return [pal[h % pal.length], pal[(h + 3) % pal.length]];
+}
+
 export const radius = { sm: 12, md: 16, lg: 20, xl: 28, pill: 999 };
 export const spacing = { xs: 6, sm: 10, md: 16, lg: 22, xl: 30 };
 export const font = { hero: 34, h1: 28, h2: 22, h3: 18, body: 16, small: 13, tiny: 11 };

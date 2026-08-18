@@ -5,7 +5,7 @@ import { Text, Pressable, StyleSheet, View, ViewStyle, Image } from "react-nativ
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import MaskedView from "@react-native-masked-view/masked-view";
-import { radius, spacing, font, type Colors, type Gradients } from "../theme";
+import { radius, spacing, font, subjectPair, type Colors, type Gradients } from "../theme";
 import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { avatarSource } from "../data/avatars";
 
@@ -163,9 +163,10 @@ export function ArtTile({
   colors?: [string, string];
   rounded?: number;
 }) {
-  const { gradients } = useTheme();
-  const pair = cols ?? gradients.violet;
-  const c = pair[0]; // the subject's neon accent colour
+  const { colors } = useTheme();
+  // Subject art follows the active theme (ignores any legacy rainbow colours).
+  const pair = subjectPair(colors, subject);
+  const c = pair[0]; // the subject's themed accent colour
   return (
     <View
       style={{

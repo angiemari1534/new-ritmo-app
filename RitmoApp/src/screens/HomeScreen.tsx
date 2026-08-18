@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, ScrollView, Pressable, Image, Modal, ActivityIn
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Screen, SectionHeader, ArtTile, ProgressBar, SubjectIcon, GradientText } from "../components/ui";
-import { spacing, font, radius, gradientFor, type Colors, type Gradients } from "../theme";
+import { spacing, font, radius, gradientFor, themePalette, type Colors, type Gradients } from "../theme";
 import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { STARTER_RECIPES, SongSpec, subjectLabel, tierLabel, LEVEL_ORDER, type PathStep } from "../data/presets";
 import { songTitle } from "../lib/api";
@@ -13,10 +13,7 @@ import type { Playlist, HomeSections } from "../lib/storage";
 // A neon halo for an icon in the given color.
 const glow = (c: string) => ({ textShadowColor: c, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 2 });
 
-// One clearly-distinct colour per hue family (red, orange, amber, lime, green,
-// cyan, blue, purple, fuchsia, pink), interleaved warm/cool so no two adjacent
-// tiles look alike and there's only ONE of each "blue" or "purple".
-const NEON = ["#EF4444", "#F97316", "#FBBF24", "#22C55E", "#EC4899", "#D946EF", "#84CC16", "#22D3EE", "#3B82F6", "#A855F7"];
+// Playlist / shortcut tile accents come from the active theme (see `pal`).
 
 export default function HomeScreen({
   songs,
@@ -73,6 +70,7 @@ export default function HomeScreen({
   // it falls back to the most recent song.
   const latest = current ?? songs[0];
   const { colors, gradients, id: themeId, setTheme, themes } = useTheme();
+  const pal = themePalette(colors); // themed accent palette for playlist tiles
   const styles = useThemedStyles(makeStyles);
   const pl = useThemedStyles(makePl);
   const guide = useThemedStyles(makeGuide);
@@ -187,15 +185,15 @@ export default function HomeScreen({
             <View style={styles.grid}>
               {favTile && (
                 <Pressable style={styles.gridCell} onPress={onOpenFavorites}>
-                  <View style={[styles.gridTile, { borderColor: NEON[0], shadowColor: NEON[0] }]}>
-                    <MaterialCommunityIcons name="heart" size={26} color={NEON[0]} style={glow(NEON[0])} />
+                  <View style={[styles.gridTile, { borderColor: pal[0], shadowColor: pal[0] }]}>
+                    <MaterialCommunityIcons name="heart" size={26} color={pal[0]} style={glow(pal[0])} />
                   </View>
                   <Text style={styles.gridLabel} numberOfLines={2} ellipsizeMode="tail">Favorites</Text>
                 </Pressable>
               )}
               {levelTiles.map((lv, i2) => {
                 const levelSongs = songs.filter((s) => s.level === lv);
-                const C = NEON[((favTile ? 1 : 0) + i2) % NEON.length];
+                const C = pal[((favTile ? 1 : 0) + i2) % pal.length];
                 return (
                   <Pressable key={lv} style={styles.gridCell} onPress={() => setOpenList({ title: tierLabel(lv), songs: levelSongs })}>
                     <View style={[styles.gridTile, { borderColor: C, shadowColor: C }]}>
@@ -207,7 +205,7 @@ export default function HomeScreen({
               })}
               {plTiles.map((pl, i3) => {
                 const plSongs = pl.songIds.map((id) => songs.find((s) => s.id === id)).filter((s): s is Song => !!s);
-                const C = NEON[((favTile ? 1 : 0) + levelTiles.length + i3) % NEON.length];
+                const C = pal[((favTile ? 1 : 0) + levelTiles.length + i3) % pal.length];
                 return (
                   <Pressable key={pl.id} style={styles.gridCell} onPress={() => setOpenList({ title: pl.name, songs: plSongs })}>
                     <View style={[styles.gridTile, { borderColor: C, shadowColor: C }]}>
@@ -249,7 +247,7 @@ export default function HomeScreen({
             <SectionHeader title="Made for you" />
             <View style={styles.grid}>
               {STARTER_RECIPES.map((r, i) => {
-                const C = NEON[((favTile ? 1 : 0) + levelTiles.length + plTiles.length + i) % NEON.length];
+                const C = pal[((favTile ? 1 : 0) + levelTiles.length + plTiles.length + i) % pal.length];
                 return (
                 <Pressable key={i} style={styles.gridCell} onPress={() => onPlayRecipe(r)}>
                   <View style={[styles.gridTile, { borderColor: C, shadowColor: C }]}>
