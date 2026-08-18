@@ -23,6 +23,7 @@ import colorsAlt from "../../assets/catalog/colors-alt.mp3";
 import colorsCountry from "../../assets/catalog/colors-country.mp3";
 import pronounsPop from "../../assets/catalog/pronouns-pop.mp3";
 import questionsReggaeton from "../../assets/catalog/questions-reggaeton.mp3";
+import descriptionsDisco from "../../assets/catalog/descriptions-disco.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -444,5 +445,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000019,
     spec: { subject: "questions", level: "prestarter", lesson: 1, genre: "Reggaeton", beat: "Tropical Normal" },
+  },
+  {
+    id: "cat-descriptions-disco",
+    title: "Big & Small",
+    subject: "descriptions",
+    subjectLabel: "Descriptions",
+    level: "prestarter",
+    lesson: 1,
+    totalLessons: 20,
+    genre: "Disco",
+    beat: "Groovy Normal",
+    artistFeel: "Bee Gees",
+    language: "Spanish",
+    lyrics: "[Intro]\nTake it away\nHere we go\n[Verse]\nThat's right\nbig\ngrande\ngrande\nYeah yeah!\nsmall\npequeño\npequeño\nYou've got it\n[Chorus]\nLet's sing!\nbig\ngrande\nsmall\npequeño\ngood\nbueno\nLock it in\n[Verse]\nSay it again\ngood\nbueno\nbueno\nStep it up\nbad\nmalo\nmalo\nLet's learn!\n[Chorus]\nNice work!\nbig\ngrande\nsmall\npequeño\ngood\nbueno\nGive it up\n[Verse]\nIn the pocket\nnew\nnuevo\nnuevo\nHere it comes\nold\nviejo\nviejo\nLet's get it!\n[Chorus]\nOh!\nbig\ngrande\nsmall\npequeño\ngood\nbueno\nWhoa!\n[Bridge]\nYou got this\nbig\ngrande\nsmall\npequeño\ngood\nbueno\nbad\nmalo\nnew\nnuevo\nold\nviejo\nSay it with me\n[Chorus]\nGo go go!\nbig\ngrande\nsmall\npequeño\ngood\nbueno\n[Outro]\nDo it again\nYes yes!",
+    vocab: [{"es":"grande","en":"big"},{"es":"pequeño","en":"small"},{"es":"bueno","en":"good"},{"es":"malo","en":"bad"},{"es":"nuevo","en":"new"},{"es":"viejo","en":"old"}],
+    lineTimings: [{"start":0.2,"end":2.56,"loss":3.102031022310257},{"start":2.56,"end":5.74,"loss":2.9422490000724792},{"start":5.74,"end":10.17,"loss":10.65073746363322},{"start":10.17,"end":11.86,"loss":8.441631740993923},{"start":11.86,"end":11.98,"loss":8.786600748697916},{"start":11.98,"end":15.479,"loss":1.7451772689819336},{"start":15.48,"end":16.92,"loss":10.508645095825196},{"start":16.92,"end":17.58,"loss":8.190301804315476},{"start":17.58,"end":18.64,"loss":7.670915876116072},{"start":18.64,"end":19.72,"loss":0.34169472588433153},{"start":19.72,"end":22,"loss":3.096825377146403},{"start":22,"end":23.12,"loss":11.591581217447915},{"start":23.12,"end":24.08,"loss":8.041258070203993},{"start":24.08,"end":24.68,"loss":9.142073567708334},{"start":24.68,"end":26.4,"loss":7.414109002976191},{"start":26.4,"end":27.14,"loss":9.142925898234049},{"start":27.14,"end":28.14,"loss":9.131585693359375},{"start":28.14,"end":28.9,"loss":0.15008544921875},{"start":28.9,"end":29.771,"loss":3.0090805689493814},{"start":29.771,"end":31.259,"loss":9.384503316879272},{"start":31.259,"end":33.24,"loss":8.79775136311849},{"start":33.24,"end":33.56,"loss":0.24150530497233072},{"start":33.56,"end":33.76,"loss":0.0043125152587890625},{"start":33.76,"end":36.1,"loss":9.582967122395834},{"start":36.1,"end":37.36,"loss":8.134602864583334},{"start":37.36,"end":37.9,"loss":0.40452921125623914},{"start":37.9,"end":44.54,"loss":8.941725730895996},{"start":44.54,"end":47.02,"loss":5.766785202026368},{"start":47.02,"end":48,"loss":10.232450358072915},{"start":48,"end":48.6,"loss":8.873281351725261},{"start":48.6,"end":50.24,"loss":7.5516473679315474},{"start":50.32,"end":50.86,"loss":8.938040415445963},{"start":50.86,"end":52.1,"loss":8.9263671875},{"start":52.1,"end":52.8,"loss":0.673583984375},{"start":52.8,"end":53.3,"loss":7.801002502441406},{"start":53.3,"end":54.86,"loss":3.217049996058146},{"start":54.86,"end":57.24,"loss":9.34409434000651},{"start":57.24,"end":57.94,"loss":0.0691375732421875},{"start":57.94,"end":58.5,"loss":0.05449765523274739},{"start":58.5,"end":59.32,"loss":9.204661899142796},{"start":59.32,"end":61,"loss":9.8681640625},{"start":61,"end":61.44,"loss":0.17598849402533637},{"start":61.44,"end":62.29,"loss":9.13771226671007},{"start":62.29,"end":63.5,"loss":8.001573350694445},{"start":63.5,"end":66.03,"loss":6.89755531946818},{"start":66.03,"end":80.22,"loss":8.661173502604166},{"start":80.22,"end":81.54,"loss":7.29054609934489},{"start":81.54,"end":82.24,"loss":8.977099609375001},{"start":82.24,"end":109.36,"loss":8.833247884114583},{"start":109.36,"end":117.24,"loss":7.774312337239583},{"start":117.24,"end":117.66,"loss":0.04673597547743055},{"start":117.66,"end":118.4,"loss":7.87276965379715},{"start":118.4,"end":118.86,"loss":10.937689887152777},{"start":118.86,"end":121.3,"loss":8.980902013324556},{"start":121.3,"end":122.84,"loss":8.36142381032308},{"start":122.84,"end":123.8,"loss":9.037229410807292},{"start":123.8,"end":124.58,"loss":9.127875434027779},{"start":124.58,"end":125.06,"loss":8.587890625},{"start":125.06,"end":125.54,"loss":9.135199652777779},{"start":125.54,"end":126.08,"loss":8.624609375},{"start":126.08,"end":126.61,"loss":8.96656248304579},{"start":126.61,"end":126.82,"loss":8.967968749999999},{"start":126.82,"end":127.02,"loss":0.11455620659722221},{"start":127.02,"end":127.16,"loss":0.4034331639607747},{"start":127.16,"end":127.44,"loss":7.792505264282227},{"start":127.44,"end":133.3,"loss":1.1853841145833333},{"start":133.3,"end":135.74,"loss":7.632532293146307},{"start":135.74,"end":138.52,"loss":9.108889709200177},{"start":138.52,"end":139.54,"loss":9.040214029947917},{"start":139.54,"end":148.359,"loss":0.8849283854166666},{"start":148.36,"end":148.86,"loss":0.06322320302327473},{"start":148.86,"end":148.9,"loss":23.75},{"start":148.9,"end":149.3,"loss":0.1416015625},{"start":149.3,"end":149.46,"loss":0.8284098307291666},{"start":149.46,"end":149.56,"loss":2.046875},{"start":149.56,"end":149.84,"loss":1.4238739013671875}],
+    audioUrl: "",
+    audioModule: descriptionsDisco,
+    catalog: true,
+    createdAt: 1750000000020,
+    spec: { subject: "descriptions", level: "prestarter", lesson: 1, genre: "Disco", beat: "Groovy Normal" },
   }
 ];

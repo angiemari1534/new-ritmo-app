@@ -212,7 +212,7 @@ export default function CreateScreen({
                   return (
                     <Pressable key={s.key} style={styles.topicCell} onPress={() => { setTopic(""); setSubject(s.key); }}>
                       <View style={[styles.topicTile, { borderColor: on ? c : `${c}55`, shadowColor: c }, on && styles.topicTileOn, on && { backgroundColor: `${c}1F` }]}>
-                        <SubjectIcon subject={s.key} size={26} color={c} />
+                        <SubjectIcon subject={s.key} size={22} color={c} />
                       </View>
                       <Text style={[styles.topicLabel, on && { color: c }]} numberOfLines={2}>{s.label}</Text>
                     </Pressable>
@@ -488,10 +488,10 @@ const styles = StyleSheet.create({
   levelCheck: { position: "absolute", top: 8, right: 10, color: colors.pink, fontWeight: "900" },
   topicGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
   topicCell: { width: "30%", alignItems: "center" },
-  topicTile: { width: "100%", aspectRatio: 1.3, borderRadius: radius.md, alignItems: "center", justifyContent: "center", borderWidth: 1, borderColor: colors.line },
+  topicTile: { width: "100%", aspectRatio: 1.7, borderRadius: radius.md, alignItems: "center", justifyContent: "center", borderWidth: 1, borderColor: colors.line },
   topicTileOn: { borderColor: "#fff" },
   topicEmoji: { fontSize: 26 },
-  topicLabel: { width: "100%", color: colors.muted, fontSize: font.small, marginTop: 5, textAlign: "center" },
+  topicLabel: { width: "100%", color: colors.muted, fontSize: font.tiny, marginTop: 4, textAlign: "center" },
   customBox: { flexDirection: "row", alignItems: "center", gap: 8, backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 14, marginTop: spacing.md },
   customBoxOn: { borderColor: colors.accent },
   pencil: { fontSize: 16 },
