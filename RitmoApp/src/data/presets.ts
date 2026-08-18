@@ -50,6 +50,8 @@ export const GENRES = [
   "Blues",
   "EDM",
   "Disco",
+  "80s",
+  "90s",
   "Club",
   "Acoustic",
   "Gospel",

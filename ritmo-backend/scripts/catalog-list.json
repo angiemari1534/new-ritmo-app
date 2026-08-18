@@ -103,10 +103,10 @@
     "subject": "numbers",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Disco",
-    "beat": "Groovy Normal",
-    "artistFeel": "Bee Gees",
-    "similarSongs": "Stayin Alive by Bee Gees",
+    "genre": "80s",
+    "beat": "Upbeat",
+    "artistFeel": "a-ha",
+    "similarSongs": "Take on Me by a-ha",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es"
@@ -187,13 +187,13 @@
     "subject": "colors",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Rock",
-    "beat": "Powerful Normal",
-    "artistFeel": "The Killers",
+    "genre": "90s",
+    "beat": "Upbeat",
+    "artistFeel": "Backstreet Boys",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mr. Brightside by The Killers"
+    "similarSongs": "I Want It That Way by Backstreet Boys"
   },
   {
     "slug": "colors-pop",
@@ -287,11 +287,11 @@
     "lesson": 1,
     "genre": "Disco",
     "beat": "Groovy Normal",
-    "artistFeel": "Earth Wind and Fire",
+    "artistFeel": "Bee Gees",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "September by Earth Wind and Fire"
+    "similarSongs": "Stayin Alive by Bee Gees"
   },
   {
     "slug": "jobs-hiphop",
@@ -327,13 +327,13 @@
     "subject": "technology",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "EDM",
-    "beat": "Party Upbeat",
-    "artistFeel": "David Guetta",
+    "genre": "80s",
+    "beat": "Upbeat",
+    "artistFeel": "a-ha",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titanium by David Guetta"
+    "similarSongs": "Take on Me by a-ha"
   },
   {
     "slug": "hobbies-latin",
@@ -411,13 +411,13 @@
     "subject": "emergencies",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "Rap",
-    "beat": "Groovy Normal",
-    "artistFeel": "Snoop Dogg",
+    "genre": "90s",
+    "beat": "Upbeat",
+    "artistFeel": "NSYNC",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Drop It Like It's Hot by Snoop Dogg"
+    "similarSongs": "Bye Bye Bye by NSYNC"
   },
   {
     "slug": "pronouns-hiphop",
@@ -441,11 +441,11 @@
     "lesson": 2,
     "genre": "Rock",
     "beat": "Powerful Upbeat",
-    "artistFeel": "Foo Fighters",
+    "artistFeel": "The Killers",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Everlong by Foo Fighters"
+    "similarSongs": "Mr. Brightside by The Killers"
   },
   {
     "slug": "descriptions-pop",
@@ -483,11 +483,11 @@
     "lesson": 2,
     "genre": "Rap",
     "beat": "Groovy Normal",
-    "artistFeel": "50 Cent",
+    "artistFeel": "Snoop Dogg",
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "In Da Club by 50 Cent"
+    "similarSongs": "Drop It Like It's Hot by Snoop Dogg"
   },
   {
     "slug": "technology-hiphop",
@@ -551,13 +551,13 @@
     "subject": "time",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Jazz",
-    "beat": "Groovy Normal",
-    "artistFeel": "Frank Sinatra",
+    "genre": "80s",
+    "beat": "Upbeat",
+    "artistFeel": "Michael Jackson",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Fly Me to the Moon by Frank Sinatra"
+    "similarSongs": "Billie Jean by Michael Jackson"
   },
   {
     "slug": "nature-pop",
@@ -581,11 +581,11 @@
     "lesson": 2,
     "genre": "Rock",
     "beat": "Powerful Upbeat",
-    "artistFeel": "Green Day",
+    "artistFeel": "Foo Fighters",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Boulevard of Broken Dreams by Green Day"
+    "similarSongs": "Everlong by Foo Fighters"
   },
   {
     "slug": "family-pop",
@@ -635,13 +635,13 @@
     "subject": "cooking",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "Latin",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Luis Fonsi",
+    "genre": "90s",
+    "beat": "Upbeat",
+    "artistFeel": "Nirvana",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Despacito by Luis Fonsi"
+    "similarSongs": "Smells Like Teen Spirit by Nirvana"
   },
   {
     "slug": "animals-reggae",
@@ -735,11 +735,11 @@
     "lesson": 1,
     "genre": "Rap",
     "beat": "Groovy Normal",
-    "artistFeel": "Jay-Z",
+    "artistFeel": "50 Cent",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "99 Problems by Jay-Z"
+    "similarSongs": "In Da Club by 50 Cent"
   },
   {
     "slug": "shopping-pop",
@@ -775,13 +775,13 @@
     "subject": "vacation",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "Reggaeton",
-    "beat": "Tropical Normal",
-    "artistFeel": "Ozuna",
+    "genre": "80s",
+    "beat": "Upbeat",
+    "artistFeel": "Bon Jovi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Taki Taki by Ozuna"
+    "similarSongs": "Livin on a Prayer by Bon Jovi"
   },
   {
     "slug": "greetings-latin",
@@ -805,11 +805,11 @@
     "lesson": 3,
     "genre": "Rock",
     "beat": "Powerful Upbeat",
-    "artistFeel": "Kings of Leon",
+    "artistFeel": "Green Day",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Use Somebody by Kings of Leon"
+    "similarSongs": "Boulevard of Broken Dreams by Green Day"
   },
   {
     "slug": "colors-reggaeton",
@@ -819,11 +819,11 @@
     "lesson": 7,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "Bad Bunny",
+    "artistFeel": "Ozuna",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titi Me Pregunto by Bad Bunny"
+    "similarSongs": "Taki Taki by Ozuna"
   },
   {
     "slug": "descriptions-hiphop",
@@ -859,13 +859,13 @@
     "subject": "family",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Country",
-    "beat": "Happy Normal",
-    "artistFeel": "Morgan Wallen",
+    "genre": "90s",
+    "beat": "Upbeat",
+    "artistFeel": "Will Smith",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Last Night by Morgan Wallen"
+    "similarSongs": "Gettin Jiggy wit It by Will Smith"
   },
   {
     "slug": "feelings-pop",
@@ -889,11 +889,11 @@
     "lesson": 2,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "Daddy Yankee",
+    "artistFeel": "Bad Bunny",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Gasolina by Daddy Yankee"
+    "similarSongs": "Titi Me Pregunto by Bad Bunny"
   },
   {
     "slug": "cooking-classicrock",
@@ -917,11 +917,11 @@
     "lesson": 2,
     "genre": "Rock",
     "beat": "Powerful Upbeat",
-    "artistFeel": "Queen",
+    "artistFeel": "Kings of Leon",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bohemian Rhapsody by Queen"
+    "similarSongs": "Use Somebody by Kings of Leon"
   },
   {
     "slug": "body-rnb",
@@ -999,13 +999,13 @@
     "subject": "time",
     "level": "prestarter",
     "lesson": 3,
-    "genre": "Reggaeton",
-    "beat": "Tropical Normal",
-    "artistFeel": "J Balvin",
+    "genre": "80s",
+    "beat": "Upbeat",
+    "artistFeel": "Prince",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mi Gente by J Balvin"
+    "similarSongs": "When Doves Cry by Prince"
   },
   {
     "slug": "directions-latin",
@@ -1015,11 +1015,11 @@
     "lesson": 2,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Marc Anthony",
+    "artistFeel": "Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Despacito by Luis Fonsi"
   },
   {
     "slug": "transportation-rock",
@@ -1029,11 +1029,11 @@
     "lesson": 3,
     "genre": "Rock",
     "beat": "Powerful Upbeat",
-    "artistFeel": "The Killers",
+    "artistFeel": "Queen",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mr. Brightside by The Killers"
+    "similarSongs": "Bohemian Rhapsody by Queen"
   },
   {
     "slug": "places-hiphop",
@@ -1071,16 +1071,30 @@
     "lesson": 3,
     "genre": "Rock",
     "beat": "Powerful Upbeat",
-    "artistFeel": "Foo Fighters",
+    "artistFeel": "The Killers",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Everlong by Foo Fighters"
+    "similarSongs": "Mr. Brightside by The Killers"
   },
   {
     "slug": "school-pop",
     "name": "Study & Learn",
     "subject": "school",
+    "level": "prestarter",
+    "lesson": 3,
+    "genre": "90s",
+    "beat": "Upbeat",
+    "artistFeel": "Backstreet Boys",
+    "voice": "male",
+    "language": "Spanish",
+    "order": "en-es",
+    "similarSongs": "I Want It That Way by Backstreet Boys"
+  },
+  {
+    "slug": "technology-pop",
+    "name": "Battery & Signal",
+    "subject": "technology",
     "level": "prestarter",
     "lesson": 3,
     "genre": "Pop",
@@ -1092,20 +1106,6 @@
     "similarSongs": "As It Was by Harry Styles"
   },
   {
-    "slug": "technology-pop",
-    "name": "Battery & Signal",
-    "subject": "technology",
-    "level": "prestarter",
-    "lesson": 3,
-    "genre": "Pop",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Ed Sheeran",
-    "voice": "male",
-    "language": "Spanish",
-    "order": "en-es",
-    "similarSongs": "Shape of You by Ed Sheeran"
-  },
-  {
     "slug": "hobbies-reggaeton",
     "name": "Free Time",
     "subject": "hobbies",
@@ -1113,11 +1113,11 @@
     "lesson": 3,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "Ozuna",
+    "artistFeel": "Daddy Yankee",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Taki Taki by Ozuna"
+    "similarSongs": "Gasolina by Daddy Yankee"
   },
   {
     "slug": "nature-blues",
@@ -1155,11 +1155,11 @@
     "lesson": 2,
     "genre": "Rap",
     "beat": "Groovy Normal",
-    "artistFeel": "Eminem",
+    "artistFeel": "Jay-Z",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Lose Yourself by Eminem"
+    "similarSongs": "99 Problems by Jay-Z"
   },
   {
     "slug": "vacation-salsa",
@@ -1208,24 +1208,24 @@
     "lesson": 4,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Enrique Iglesias",
+    "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony"
   },
   {
     "slug": "pronouns-l5",
     "subject": "pronouns",
     "level": "prestarter",
     "lesson": 5,
-    "genre": "R&B",
-    "beat": "Groovy Normal",
-    "artistFeel": "Usher",
+    "genre": "80s",
+    "beat": "Upbeat",
+    "artistFeel": "Michael Jackson",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Yeah by Usher"
+    "similarSongs": "Billie Jean by Michael Jackson"
   },
   {
     "slug": "colors-l8",
@@ -1234,11 +1234,11 @@
     "lesson": 8,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Ricky Martin",
+    "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin"
+    "similarSongs": "Bailando by Enrique Iglesias"
   },
   {
     "slug": "descriptions-l4",
@@ -1286,24 +1286,24 @@
     "lesson": 5,
     "genre": "Rap",
     "beat": "Groovy Normal",
-    "artistFeel": "Snoop Dogg",
+    "artistFeel": "Eminem",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Drop It Like It's Hot by Snoop Dogg"
+    "similarSongs": "Lose Yourself by Eminem"
   },
   {
     "slug": "family-l3",
     "subject": "family",
     "level": "prestarter",
     "lesson": 3,
-    "genre": "EDM",
-    "beat": "Party Upbeat",
-    "artistFeel": "Calvin Harris",
+    "genre": "90s",
+    "beat": "Upbeat",
+    "artistFeel": "NSYNC",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Summer by Calvin Harris"
+    "similarSongs": "Bye Bye Bye by NSYNC"
   },
   {
     "slug": "family-l4",
@@ -1312,11 +1312,11 @@
     "lesson": 4,
     "genre": "Rap",
     "beat": "Groovy Normal",
-    "artistFeel": "50 Cent",
+    "artistFeel": "Snoop Dogg",
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "In Da Club by 50 Cent"
+    "similarSongs": "Drop It Like It's Hot by Snoop Dogg"
   },
   {
     "slug": "feelings-l3",
@@ -1325,11 +1325,11 @@
     "lesson": 3,
     "genre": "EDM",
     "beat": "Party Upbeat",
-    "artistFeel": "The Chainsmokers",
+    "artistFeel": "David Guetta",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Closer by The Chainsmokers"
+    "similarSongs": "Titanium by David Guetta"
   },
   {
     "slug": "feelings-l4",
@@ -1338,11 +1338,11 @@
     "lesson": 4,
     "genre": "Rap",
     "beat": "Groovy Normal",
-    "artistFeel": "Jay-Z",
+    "artistFeel": "50 Cent",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "99 Problems by Jay-Z"
+    "similarSongs": "In Da Club by 50 Cent"
   },
   {
     "slug": "food-l3",
@@ -1442,11 +1442,11 @@
     "lesson": 4,
     "genre": "Jazz",
     "beat": "Groovy Normal",
-    "artistFeel": "Louis Armstrong",
+    "artistFeel": "Frank Sinatra",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "What a Wonderful World by Louis Armstrong"
+    "similarSongs": "Fly Me to the Moon by Frank Sinatra"
   },
   {
     "slug": "clothing-l3",
@@ -1468,11 +1468,11 @@
     "lesson": 4,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "Bad Bunny",
+    "artistFeel": "J Balvin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titi Me Pregunto by Bad Bunny"
+    "similarSongs": "Mi Gente by J Balvin"
   },
   {
     "slug": "home-l3",
@@ -1481,11 +1481,11 @@
     "lesson": 3,
     "genre": "Jazz",
     "beat": "Groovy Normal",
-    "artistFeel": "Nat King Cole",
+    "artistFeel": "Louis Armstrong",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "L-O-V-E by Nat King Cole"
+    "similarSongs": "What a Wonderful World by Louis Armstrong"
   },
   {
     "slug": "home-l4",
@@ -1507,11 +1507,11 @@
     "lesson": 3,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "Daddy Yankee",
+    "artistFeel": "Ozuna",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Gasolina by Daddy Yankee"
+    "similarSongs": "Taki Taki by Ozuna"
   },
   {
     "slug": "weather-l4",
@@ -1533,11 +1533,11 @@
     "lesson": 3,
     "genre": "Rock",
     "beat": "Powerful Upbeat",
-    "artistFeel": "Green Day",
+    "artistFeel": "Foo Fighters",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Boulevard of Broken Dreams by Green Day"
+    "similarSongs": "Everlong by Foo Fighters"
   },
   {
     "slug": "days-l4",
@@ -1546,11 +1546,11 @@
     "lesson": 4,
     "genre": "Country",
     "beat": "Happy Normal",
-    "artistFeel": "Luke Combs",
+    "artistFeel": "Morgan Wallen",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Beautiful Crazy by Luke Combs"
+    "similarSongs": "Last Night by Morgan Wallen"
   },
   {
     "slug": "time-l4",
@@ -1559,11 +1559,11 @@
     "lesson": 4,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Luis Fonsi",
+    "artistFeel": "Ricky Martin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Despacito by Luis Fonsi"
+    "similarSongs": "Livin la Vida Loca by Ricky Martin"
   },
   {
     "slug": "time-l5",
@@ -1637,11 +1637,11 @@
     "lesson": 4,
     "genre": "EDM",
     "beat": "Party Upbeat",
-    "artistFeel": "Zedd",
+    "artistFeel": "Calvin Harris",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Clarity by Zedd"
+    "similarSongs": "Summer by Calvin Harris"
   },
   {
     "slug": "places-l5",
@@ -1663,11 +1663,11 @@
     "lesson": 3,
     "genre": "EDM",
     "beat": "Party Upbeat",
-    "artistFeel": "Avicii",
+    "artistFeel": "The Chainsmokers",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Wake Me Up by Avicii"
+    "similarSongs": "Closer by The Chainsmokers"
   },
   {
     "slug": "shopping-l4",
@@ -1754,11 +1754,11 @@
     "lesson": 5,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "J Balvin",
+    "artistFeel": "Bad Bunny",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mi Gente by J Balvin"
+    "similarSongs": "Titi Me Pregunto by Bad Bunny"
   },
   {
     "slug": "hobbies-l4",
@@ -1780,11 +1780,11 @@
     "lesson": 5,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Marc Anthony",
+    "artistFeel": "Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Despacito by Luis Fonsi"
   },
   {
     "slug": "nature-l4",
@@ -1793,11 +1793,11 @@
     "lesson": 4,
     "genre": "Jazz",
     "beat": "Groovy Normal",
-    "artistFeel": "Frank Sinatra",
+    "artistFeel": "Nat King Cole",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Fly Me to the Moon by Frank Sinatra"
+    "similarSongs": "L-O-V-E by Nat King Cole"
   },
   {
     "slug": "nature-l5",
@@ -1806,11 +1806,11 @@
     "lesson": 5,
     "genre": "Rock",
     "beat": "Powerful Upbeat",
-    "artistFeel": "Kings of Leon",
+    "artistFeel": "Green Day",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Use Somebody by Kings of Leon"
+    "similarSongs": "Boulevard of Broken Dreams by Green Day"
   },
   {
     "slug": "emergencies-l4",
@@ -1819,11 +1819,11 @@
     "lesson": 4,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "Ozuna",
+    "artistFeel": "Daddy Yankee",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Taki Taki by Ozuna"
+    "similarSongs": "Gasolina by Daddy Yankee"
   },
   {
     "slug": "emergencies-l5",
@@ -1871,11 +1871,11 @@
     "lesson": 3,
     "genre": "Pop",
     "beat": "Happy Upbeat",
-    "artistFeel": "Justin Timberlake",
+    "artistFeel": "Ed Sheeran",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Can't Stop the Feeling by Justin Timberlake"
+    "similarSongs": "Shape of You by Ed Sheeran"
   },
   {
     "slug": "vacation-l4",
@@ -1884,11 +1884,11 @@
     "lesson": 4,
     "genre": "Country",
     "beat": "Happy Normal",
-    "artistFeel": "Zach Bryan",
+    "artistFeel": "Luke Combs",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Something in the Orange by Zach Bryan"
+    "similarSongs": "Beautiful Crazy by Luke Combs"
   },
   {
     "slug": "greetings-l10",
@@ -1923,11 +1923,11 @@
     "lesson": 6,
     "genre": "Country",
     "beat": "Happy Normal",
-    "artistFeel": "Jelly Roll",
+    "artistFeel": "Zach Bryan",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Save Me by Jelly Roll"
+    "similarSongs": "Something in the Orange by Zach Bryan"
   },
   {
     "slug": "pronouns-l7",
@@ -1949,11 +1949,11 @@
     "lesson": 6,
     "genre": "Rap",
     "beat": "Groovy Normal",
-    "artistFeel": "Eminem",
+    "artistFeel": "Jay-Z",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Lose Yourself by Eminem"
+    "similarSongs": "99 Problems by Jay-Z"
   },
   {
     "slug": "descriptions-l7",
@@ -2066,11 +2066,11 @@
     "lesson": 6,
     "genre": "Jazz",
     "beat": "Groovy Normal",
-    "artistFeel": "Louis Armstrong",
+    "artistFeel": "Frank Sinatra",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "What a Wonderful World by Louis Armstrong"
+    "similarSongs": "Fly Me to the Moon by Frank Sinatra"
   },
   {
     "slug": "cooking-l5",
@@ -2105,11 +2105,11 @@
     "lesson": 5,
     "genre": "Jazz",
     "beat": "Groovy Normal",
-    "artistFeel": "Nat King Cole",
+    "artistFeel": "Louis Armstrong",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "L-O-V-E by Nat King Cole"
+    "similarSongs": "What a Wonderful World by Louis Armstrong"
   },
   {
     "slug": "animals-l6",
@@ -2287,11 +2287,11 @@
     "lesson": 6,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "Bad Bunny",
+    "artistFeel": "J Balvin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titi Me Pregunto by Bad Bunny"
+    "similarSongs": "Mi Gente by J Balvin"
   },
   {
     "slug": "transportation-l6",
@@ -2313,11 +2313,11 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Happy Normal",
-    "artistFeel": "Chris Stapleton",
+    "artistFeel": "Jelly Roll",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Tennessee Whiskey by Chris Stapleton"
+    "similarSongs": "Save Me by Jelly Roll"
   },
   {
     "slug": "places-l6",
@@ -2326,11 +2326,11 @@
     "lesson": 6,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "Daddy Yankee",
+    "artistFeel": "Ozuna",
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Gasolina by Daddy Yankee"
+    "similarSongs": "Taki Taki by Ozuna"
   },
   {
     "slug": "places-l7",
@@ -2339,11 +2339,11 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Happy Normal",
-    "artistFeel": "Morgan Wallen",
+    "artistFeel": "Chris Stapleton",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Last Night by Morgan Wallen"
+    "similarSongs": "Tennessee Whiskey by Chris Stapleton"
   },
   {
     "slug": "shopping-l5",
@@ -2352,11 +2352,11 @@
     "lesson": 5,
     "genre": "Reggaeton",
     "beat": "Tropical Normal",
-    "artistFeel": "J Balvin",
+    "artistFeel": "Bad Bunny",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mi Gente by J Balvin"
+    "similarSongs": "Titi Me Pregunto by Bad Bunny"
   },
   {
     "slug": "shopping-l6",
@@ -2365,11 +2365,11 @@
     "lesson": 6,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Enrique Iglesias",
+    "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony"
   },
   {
     "slug": "jobs-l6",
@@ -2404,11 +2404,11 @@
     "lesson": 6,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Ricky Martin",
+    "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin"
+    "similarSongs": "Bailando by Enrique Iglesias"
   },
   {
     "slug": "school-l7",

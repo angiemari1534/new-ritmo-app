@@ -32,6 +32,8 @@ const P = {
   "90s R&B": [["Boyz II Men","End of the Road","m"],["TLC","No Scrubs","f"],["Mariah Carey","Fantasy","f"],["Destiny's Child","Say My Name","f"]],
   "90s Dance": [["Eiffel 65","Blue","m"],["Vengaboys","We Like to Party","m"],["Aqua","Barbie Girl","f"],["Real McCoy","Another Night","f"]],
   "90s Pop": [["Backstreet Boys","I Want It That Way","m"],["NSYNC","Bye Bye Bye","m"],["Britney Spears","Baby One More Time","f"],["Spice Girls","Wannabe","f"]],
+  "80s": [["a-ha","Take on Me","m"],["Michael Jackson","Billie Jean","m"],["Bon Jovi","Livin on a Prayer","m"],["Prince","When Doves Cry","m"],["Madonna","Like a Prayer","f"],["Cyndi Lauper","Girls Just Want to Have Fun","f"],["Whitney Houston","I Wanna Dance with Somebody","f"],["Eurythmics","Sweet Dreams","f"]],
+  "90s": [["Backstreet Boys","I Want It That Way","m"],["NSYNC","Bye Bye Bye","m"],["Nirvana","Smells Like Teen Spirit","m"],["Will Smith","Gettin Jiggy wit It","m"],["Britney Spears","Baby One More Time","f"],["Spice Girls","Wannabe","f"],["Mariah Carey","Fantasy","f"],["TLC","Waterfalls","f"]],
 };
 
 function wantGender(voice) {

@@ -41,6 +41,7 @@ const GENRE_ICON: Record<string, string> = {
   Cumbia: "drum", Jazz: "saxophone", "Children's": "teddy-bear", Folk: "leaf",
   Rap: "microphone", Soul: "music-note", Disco: "disc", Club: "speaker",
   Blues: "guitar-pick", Alternative: "headphones", "Classic Rock": "guitar-pick",
+  "80s": "cassette", "90s": "disc",
 };
 const MOOD_ICON: Record<string, string> = {
   Energetic: "lightning-bolt", Chill: "snowflake", Dance: "dance-ballroom", Romantic: "heart",
@@ -213,8 +214,8 @@ export default function CreateScreen({
                     <Pressable key={s.key} style={styles.topicCell} onPress={() => { setTopic(""); setSubject(s.key); }}>
                       <View style={[styles.topicTile, { borderColor: on ? c : `${c}55`, shadowColor: c }, on && styles.topicTileOn, on && { backgroundColor: `${c}1F` }]}>
                         <SubjectIcon subject={s.key} size={22} color={c} />
+                        <Text style={[styles.topicLabel, on && { color: c }]} numberOfLines={2}>{s.label}</Text>
                       </View>
-                      <Text style={[styles.topicLabel, on && { color: c }]} numberOfLines={2}>{s.label}</Text>
                     </Pressable>
                   );
                 })}
@@ -256,7 +257,7 @@ export default function CreateScreen({
                   <Pressable key={g} style={styles.gCell} onPress={() => setGenre(g)}>
                     <View style={[styles.gTile, { borderColor: on ? c : `${c}55`, shadowColor: c }, on && { backgroundColor: `${c}1F` }]}>
                       <MaterialCommunityIcons name={(GENRE_ICON[g] ?? "music-note") as any} size={24} color={c} style={{ marginBottom: 5 }} />
-                      <Text style={[styles.gLabel, on && { color: c }]}>{g}</Text>
+                      <Text style={[styles.gLabel, on && { color: c }]} numberOfLines={2}>{g}</Text>
                     </View>
                   </Pressable>
                 );
@@ -487,11 +488,11 @@ const styles = StyleSheet.create({
   levelSub: { color: colors.muted, fontSize: font.tiny, marginTop: 1 },
   levelCheck: { position: "absolute", top: 8, right: 10, color: colors.pink, fontWeight: "900" },
   topicGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
-  topicCell: { width: "30%", alignItems: "center" },
-  topicTile: { width: "100%", aspectRatio: 1.7, borderRadius: radius.md, alignItems: "center", justifyContent: "center", borderWidth: 1, borderColor: colors.line },
+  topicCell: { width: "22%", alignItems: "center" },
+  topicTile: { width: "100%", aspectRatio: 1, borderRadius: radius.md, alignItems: "center", justifyContent: "center", borderWidth: 1.5, borderColor: colors.line, paddingHorizontal: 4, gap: 4, shadowOpacity: 0.5, shadowRadius: 5, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
   topicTileOn: { borderColor: "#fff" },
   topicEmoji: { fontSize: 26 },
-  topicLabel: { width: "100%", color: colors.muted, fontSize: font.tiny, marginTop: 4, textAlign: "center" },
+  topicLabel: { color: colors.muted, fontSize: 9, lineHeight: 11, fontWeight: "700", textAlign: "center" },
   customBox: { flexDirection: "row", alignItems: "center", gap: 8, backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 14, marginTop: spacing.md },
   customBoxOn: { borderColor: colors.accent },
   pencil: { fontSize: 16 },
@@ -502,10 +503,10 @@ const styles = StyleSheet.create({
   gGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
   gCell: { width: "22%" },
   voiceCell: { width: "30%" },
-  gTile: { backgroundColor: "transparent", borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.line, alignItems: "center", justifyContent: "center", paddingVertical: 10, gap: 4, shadowOpacity: 0.5, shadowRadius: 5, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
+  gTile: { backgroundColor: "transparent", aspectRatio: 1, borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.line, alignItems: "center", justifyContent: "center", paddingHorizontal: 4, gap: 4, shadowOpacity: 0.5, shadowRadius: 5, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
   gTileOn: { borderColor: colors.accent },
   gEmoji: { fontSize: 22 },
-  gLabel: { color: colors.muted, fontSize: font.tiny, fontWeight: "700", textAlign: "center" },
+  gLabel: { color: colors.muted, fontSize: 9, lineHeight: 11, fontWeight: "700", textAlign: "center" },
   tempoRow: { flexDirection: "row", gap: 8, backgroundColor: colors.card, borderRadius: radius.md, padding: 5, borderWidth: 1, borderColor: colors.line },
   tempoSeg: { borderRadius: radius.sm, paddingVertical: 12, alignItems: "center" },
   tempoSegOff: {},

@@ -35,6 +35,8 @@ const GENRE_STYLE = {
   Bachata: "romantic bachata, lead requinto guitar, syncopated rhythm guitar, bongó and güira, soft bass",
   Cumbia: "cheerful cumbia, lilting accordion, güira scraper, gliding bass, danceable latin groove",
   Reggae: "laid-back roots reggae, offbeat guitar skank, deep warm bass, one-drop drums, organ bubble, sunny relaxed groove",
+  "80s": "big 1980s pop, bright analog synths, gated-reverb drums, punchy synth bass, neon retro hooks, huge catchy 80s chorus",
+  "90s": "upbeat 1990s pop and dance, bright synths and guitars, catchy radio hooks, polished 90s production, feel-good energy",
   Jazz: "smooth jazz, warm grand piano, upright bass, brushed drums, muted trumpet, saxophone",
   "Children's": "playful children's song, glockenspiel, ukulele, bouncy piano, hand claps, cheerful whistle",
   Folk: "acoustic folk, warm strummed guitar, mandolin, harmonica, brushed snare, organic storytelling feel",
