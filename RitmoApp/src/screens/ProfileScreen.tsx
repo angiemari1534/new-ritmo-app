@@ -715,6 +715,8 @@ const styles = StyleSheet.create({
   list: { backgroundColor: colors.card, borderRadius: radius.lg, borderWidth: 1, borderColor: colors.line, overflow: "hidden" },
   row: { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, borderBottomWidth: 1, borderBottomColor: colors.line },
   rowIcon: { fontSize: 20 },
+  rowIconBox: { width: 34, height: 34, borderRadius: 10, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.06)" },
+  rowIconTxt: { fontSize: 18 },
   rowTitle: { color: colors.ink, fontSize: font.body, fontWeight: "700" },
   rowSub: { color: colors.muted, fontSize: font.small, marginTop: 2 },
   chev: { color: colors.faint, fontSize: 22 },
