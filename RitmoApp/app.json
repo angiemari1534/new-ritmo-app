@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Ritmo",
+    "slug": "RitmoApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0f1020",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ritmo.app"
+    },
+    "android": {
+      "package": "com.ritmo.app",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {},
+    "plugins": [
+      "expo-audio",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Ritmo uses your photos so you can set your own profile picture."
+        }
+      ]
+    ]
+  }
+}
