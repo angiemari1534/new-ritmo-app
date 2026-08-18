@@ -12,7 +12,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Lose Yourself by Eminem",
-    "arrangement": "dark synth bells"
+    "arrangement": "aggressive synth-brass stabs"
   },
   {
     "slug": "greetings-country",
@@ -102,7 +102,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "God's Plan by Drake",
-    "arrangement": "soulful chopped-vocal sample"
+    "arrangement": "dark melodic synth lead"
   },
   {
     "slug": "numbers-disco",
@@ -192,7 +192,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "lush synth pads and sub bass"
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "colors-rock",
@@ -327,7 +327,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "HUMBLE by Kendrick Lamar",
-    "arrangement": "warm Rhodes and 808s"
+    "arrangement": "chopped-vocal hook over 808s"
   },
   {
     "slug": "school-alt",
@@ -462,7 +462,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Sicko Mode by Travis Scott",
-    "arrangement": "muted-trumpet loop"
+    "arrangement": "moody bell melody and heavy bass"
   },
   {
     "slug": "questions-rock",
@@ -522,7 +522,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Drop It Like It's Hot by Snoop Dogg",
-    "arrangement": "funky bass and horns"
+    "arrangement": "dark orchestral hit and hard drums"
   },
   {
     "slug": "technology-hiphop",
@@ -537,7 +537,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "No Role Modelz by J. Cole",
-    "arrangement": "jazzy piano loop"
+    "arrangement": "hard 808s and rattling trap hats"
   },
   {
     "slug": "hobbies-pop",
@@ -717,7 +717,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Circles by Post Malone",
-    "arrangement": "soulful chopped-vocal sample"
+    "arrangement": "dark melodic synth lead"
   },
   {
     "slug": "clothing-disco",
@@ -747,7 +747,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "No Guidance by Chris Brown",
-    "arrangement": "gospel-tinged piano"
+    "arrangement": "finger-snap trap-soul groove"
   },
   {
     "slug": "weather-classicrock",
@@ -792,7 +792,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "In Da Club by 50 Cent",
-    "arrangement": "vinyl-crackle soul sample"
+    "arrangement": "gritty distorted synth lead"
   },
   {
     "slug": "shopping-pop",
@@ -897,7 +897,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "God's Plan by Drake",
-    "arrangement": "warm Rhodes and 808s"
+    "arrangement": "chopped-vocal hook over 808s"
   },
   {
     "slug": "questions-pop",
@@ -1002,7 +1002,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Yeah by Usher",
-    "arrangement": "silky Rhodes chords"
+    "arrangement": "warm electric-piano chords"
   },
   {
     "slug": "clothing-latin",
@@ -1122,7 +1122,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "HUMBLE by Kendrick Lamar",
-    "arrangement": "muted-trumpet loop"
+    "arrangement": "moody bell melody and heavy bass"
   },
   {
     "slug": "shopping-disco",
@@ -1227,7 +1227,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Sicko Mode by Travis Scott",
-    "arrangement": "jazzy piano loop"
+    "arrangement": "hard 808s and rattling trap hats"
   },
   {
     "slug": "verbs-rap",
@@ -1242,7 +1242,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "99 Problems by Jay-Z",
-    "arrangement": "boom-bap piano loop"
+    "arrangement": "booming 808 bass and trap drums"
   },
   {
     "slug": "vacation-salsa",
@@ -1271,7 +1271,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "No Role Modelz by J. Cole",
-    "arrangement": "soulful chopped-vocal sample"
+    "arrangement": "dark melodic synth lead"
   },
   {
     "slug": "greetings-l9",
@@ -1369,7 +1369,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Circles by Post Malone",
-    "arrangement": "warm Rhodes and 808s"
+    "arrangement": "chopped-vocal hook over 808s"
   },
   {
     "slug": "questions-l5",
@@ -1383,7 +1383,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Lose Yourself by Eminem",
-    "arrangement": "dark synth bells"
+    "arrangement": "aggressive synth-brass stabs"
   },
   {
     "slug": "family-l3",
@@ -1411,7 +1411,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Drop It Like It's Hot by Snoop Dogg",
-    "arrangement": "funky bass and horns"
+    "arrangement": "dark orchestral hit and hard drums"
   },
   {
     "slug": "feelings-l3",
@@ -1439,7 +1439,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "In Da Club by 50 Cent",
-    "arrangement": "vinyl-crackle soul sample"
+    "arrangement": "gritty distorted synth lead"
   },
   {
     "slug": "food-l3",
@@ -1635,7 +1635,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "God's Plan by Drake",
-    "arrangement": "muted-trumpet loop"
+    "arrangement": "moody bell melody and heavy bass"
   },
   {
     "slug": "days-l3",
@@ -1705,7 +1705,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "God's Plan by Drake",
-    "arrangement": "jazzy piano loop"
+    "arrangement": "hard 808s and rattling trap hats"
   },
   {
     "slug": "directions-l4",
@@ -1971,7 +1971,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "All of Me by John Legend",
-    "arrangement": "lush synth pads and sub bass"
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "verbs-l3",
@@ -2097,7 +2097,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "99 Problems by Jay-Z",
-    "arrangement": "boom-bap piano loop"
+    "arrangement": "booming 808 bass and trap drums"
   },
   {
     "slug": "descriptions-l7",
@@ -2545,7 +2545,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "No Guidance by Chris Brown",
-    "arrangement": "gospel-tinged piano"
+    "arrangement": "finger-snap trap-soul groove"
   },
   {
     "slug": "jobs-l7",
@@ -2559,7 +2559,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Lose Yourself by Eminem",
-    "arrangement": "dark synth bells"
+    "arrangement": "aggressive synth-brass stabs"
   },
   {
     "slug": "school-l6",
