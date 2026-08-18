@@ -24,6 +24,7 @@ import colorsCountry from "../../assets/catalog/colors-country.mp3";
 import pronounsPop from "../../assets/catalog/pronouns-pop.mp3";
 import questionsReggaeton from "../../assets/catalog/questions-reggaeton.mp3";
 import descriptionsDisco from "../../assets/catalog/descriptions-disco.mp3";
+import jobsHiphop from "../../assets/catalog/jobs-hiphop.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -466,5 +467,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000020,
     spec: { subject: "descriptions", level: "prestarter", lesson: 1, genre: "Disco", beat: "Groovy Normal" },
+  },
+  {
+    id: "cat-jobs-hiphop",
+    title: "Teacher & Doctor",
+    subject: "jobs",
+    subjectLabel: "Jobs & Work",
+    level: "prestarter",
+    lesson: 1,
+    totalLessons: 20,
+    genre: "Hip-Hop",
+    beat: "Groovy Normal",
+    artistFeel: "Kendrick Lamar",
+    language: "Spanish",
+    lyrics: "[Intro]\nSing it!\nLock it in\n[Verse]\nRide the beat\nthe job\nel trabajo\nel trabajo\nSounds great\nthe teacher\nel maestro\nel maestro\nWoo!\n[Chorus]\nLet's learn!\nthe job\nel trabajo\nthe teacher\nel maestro\nthe doctor\nel doctor\nLet's vibe\n[Verse]\nSay it with me\nthe doctor\nel doctor\nel doctor\nOh!\nthe police officer\nel policía\nel policía\nGive it up\n[Chorus]\nThat's right\nthe job\nel trabajo\nthe teacher\nel maestro\nthe doctor\nel doctor\nOh oh oh\n[Verse]\nGo go go!\nthe cook\nel cocinero\nel cocinero\nTake it away\nthe driver\nel chofer\nel chofer\nSay it loud\n[Chorus]\nNice work!\nthe job\nel trabajo\nthe teacher\nel maestro\nthe doctor\nel doctor\nWhoa!\n[Bridge]\nTurn it up now\nthe job\nel trabajo\nthe teacher\nel maestro\nthe doctor\nel doctor\nthe police officer\nel policía\nthe cook\nel cocinero\nthe driver\nel chofer\nThat's the way\n[Chorus]\nOne more time\nthe job\nel trabajo\nthe teacher\nel maestro\nthe doctor\nel doctor\n[Outro]\nAll together\nLet's roll",
+    vocab: [{"es":"el trabajo","en":"the job"},{"es":"el maestro","en":"the teacher"},{"es":"el doctor","en":"the doctor"},{"es":"el policía","en":"the police officer"},{"es":"el cocinero","en":"the cook"},{"es":"el chofer","en":"the driver"}],
+    lineTimings: [{"start":0.34,"end":1.37,"loss":5.274012247721354},{"start":1.37,"end":2.241,"loss":3.244623456682478},{"start":6.46,"end":14.23,"loss":4.737459091913132},{"start":14.23,"end":15.48,"loss":5.645920817057291},{"start":15.48,"end":16.380000000000003,"loss":5.6260768345424115},{"start":18.04,"end":18.781000000000002,"loss":5.5504525320870535},{"start":20.74,"end":21.459,"loss":5.854432433446248},{"start":21.46,"end":22.52,"loss":5.068762715657552},{"start":22.52,"end":23.481,"loss":5.350489589146205},{"start":25.16,"end":26.08,"loss":5.458881923130581},{"start":26.08,"end":27.01,"loss":13.019775390625},{"start":27.01,"end":27.99,"loss":5.0569755013783775},{"start":27.99,"end":30.38,"loss":5.342296346028646},{"start":30.38,"end":31.8,"loss":5.495216587611607},{"start":31.8,"end":34.26,"loss":5.155433972676596},{"start":34.26,"end":37.26,"loss":5.314945765904018},{"start":37.26,"end":38.88,"loss":4.85040512084961},{"start":38.88,"end":40.02,"loss":5.210737864176432},{"start":40.02,"end":41.961,"loss":4.6957659339904785},{"start":41.96,"end":48.141,"loss":2.667836507161458},{"start":50.14,"end":51.419,"loss":4.941007804870606},{"start":51.42,"end":52.150999999999996,"loss":5.2783349355061855},{"start":52.15,"end":52.701,"loss":5.450475692749023},{"start":54.1,"end":55.91,"loss":12.146484375},{"start":55.91,"end":57.66,"loss":3.738000808118963},{"start":57.66,"end":60.24,"loss":5.849434334891183},{"start":60.24,"end":61.62,"loss":5.941723959786552},{"start":61.62,"end":62.32,"loss":3.451509475708008},{"start":62.32,"end":64.22,"loss":4.661628379821777},{"start":64.22,"end":66.92,"loss":5.498586018880209},{"start":66.92,"end":69.68,"loss":5.618990652901786},{"start":69.68,"end":71.48,"loss":5.090000997270857},{"start":71.48,"end":73.2,"loss":5.300019182477678},{"start":73.2,"end":74.66,"loss":4.8295538584391275},{"start":74.66,"end":76.08,"loss":5.097276560465494},{"start":76.08,"end":80.88,"loss":3.8582589285714284},{"start":80.88,"end":82.85,"loss":4.808001200358072},{"start":82.85,"end":83.9,"loss":4.819314575195312},{"start":83.9,"end":85.06,"loss":5.937039184570312},{"start":85.06,"end":86.16,"loss":5.974908447265625},{"start":86.16,"end":87.3,"loss":3.688417068549565},{"start":87.3,"end":87.98,"loss":5.0423833211263025},{"start":87.98,"end":89.44,"loss":5.695148722330729},{"start":89.44,"end":90.84,"loss":5.80020751953125},{"start":90.84,"end":92,"loss":3.329685392833891},{"start":92,"end":93.45,"loss":5.492887773513794},{"start":93.45,"end":95.04,"loss":5.609842936197916},{"start":95.04,"end":98.52,"loss":5.613657924107143},{"start":98.52,"end":100.76,"loss":5.056695438566662},{"start":100.76,"end":101.92,"loss":5.307014683314732},{"start":101.92,"end":103.32,"loss":4.822247441609701},{"start":103.32,"end":104.3,"loss":5.1236419677734375},{"start":104.3,"end":104.9,"loss":1.06256103515625},{"start":104.9,"end":106.52,"loss":4.843313471476238},{"start":106.52,"end":107.22,"loss":5.166621907552083},{"start":107.22,"end":108.78,"loss":5.533407156808036},{"start":108.78,"end":111.04,"loss":5.070250701904297},{"start":111.04,"end":112.44,"loss":5.274744088309151},{"start":112.44,"end":113.12,"loss":4.833133951822917},{"start":113.12,"end":114.56,"loss":5.124020004272461},{"start":114.56,"end":115.84,"loss":3.8019746858246473},{"start":115.84,"end":118.22,"loss":5.814998844691685},{"start":118.22,"end":123.24,"loss":5.205818684895833},{"start":123.24,"end":124.48,"loss":5.861578369140625},{"start":124.48,"end":125.34,"loss":5.03299560546875},{"start":125.34,"end":126.74,"loss":5.5664118448893225},{"start":126.74,"end":127.72,"loss":3.761840366181873},{"start":127.72,"end":129.58,"loss":3.457603829247611},{"start":129.58,"end":130.459,"loss":5.213344319661458},{"start":130.459,"end":131.72,"loss":5.430937848772322},{"start":131.72,"end":133.64,"loss":4.947561600094749},{"start":133.64,"end":135.42,"loss":5.284895978655134},{"start":135.42,"end":136.2,"loss":4.752589480082194},{"start":136.2,"end":137.48,"loss":5.072436777750651},{"start":137.48,"end":146.3,"loss":5.396253500382105},{"start":146.3,"end":146.9,"loss":0.2531956911087036}],
+    audioUrl: "",
+    audioModule: jobsHiphop,
+    catalog: true,
+    createdAt: 1750000000021,
+    spec: { subject: "jobs", level: "prestarter", lesson: 1, genre: "Hip-Hop", beat: "Groovy Normal" },
   }
 ];
