@@ -656,23 +656,31 @@ function PlaylistsView({
           const isOpen = expanded === pl.id;
           return (
             <View key={pl.id}>
-              <Pressable
-                onPress={() => setExpanded(isOpen ? null : pl.id)}
-                onLongPress={() => onDelete(pl.id)}
+              <Swipeable
+                renderRightActions={() => (
+                  <Pressable onPress={() => onDelete(pl.id)} style={styles.swipeDelete}>
+                    <Text style={styles.swipeDeleteText}>🗑  Delete</Text>
+                  </Pressable>
+                )}
               >
-                <View style={styles.row}>
-                  <LinearGradient colors={gradients.magenta} style={styles.plArt}>
-                    <Text style={{ fontSize: 22 }}>🎵</Text>
-                  </LinearGradient>
-                  <View style={{ flex: 1 }}>
-                    <Text style={styles.rowTitle} numberOfLines={1}>{pl.name}</Text>
-                    <Text style={styles.rowMeta}>{plSongs.length} song{plSongs.length === 1 ? "" : "s"}</Text>
+                <Pressable
+                  onPress={() => setExpanded(isOpen ? null : pl.id)}
+                  onLongPress={() => onDelete(pl.id)}
+                >
+                  <View style={styles.row}>
+                    <LinearGradient colors={gradients.magenta} style={styles.plArt}>
+                      <Text style={{ fontSize: 22 }}>🎵</Text>
+                    </LinearGradient>
+                    <View style={{ flex: 1 }}>
+                      <Text style={styles.rowTitle} numberOfLines={1}>{pl.name}</Text>
+                      <Text style={styles.rowMeta}>{plSongs.length} song{plSongs.length === 1 ? "" : "s"}</Text>
+                    </View>
+                    <Pressable onPress={() => onPlay(pl)} hitSlop={8}><Text style={styles.shufIcon}>▶</Text></Pressable>
+                    <Pressable onPress={() => onShuffle(pl)} hitSlop={8}><Text style={styles.shufIcon}>🔀</Text></Pressable>
+                    <Text style={styles.chev}>{isOpen ? "▾" : "▸"}</Text>
                   </View>
-                  <Pressable onPress={() => onPlay(pl)} hitSlop={8}><Text style={styles.shufIcon}>▶</Text></Pressable>
-                  <Pressable onPress={() => onShuffle(pl)} hitSlop={8}><Text style={styles.shufIcon}>🔀</Text></Pressable>
-                  <Text style={styles.chev}>{isOpen ? "▾" : "▸"}</Text>
-                </View>
-              </Pressable>
+                </Pressable>
+              </Swipeable>
 
               {isOpen && (
                 <View style={styles.plBody}>
@@ -743,7 +751,7 @@ function PlaylistsView({
           );
         })
       )}
-      <Text style={styles.hint}>Tap a playlist to open it · ▶ plays · 🔀 shuffles · long-press to delete. Swipe a song left to remove it.</Text>
+      <Text style={styles.hint}>Tap a playlist to open it · ▶ plays · 🔀 shuffles · swipe left to delete. Swipe a song left to remove it.</Text>
     </>
   );
 }

@@ -48,6 +48,7 @@ const MOOD_ICON: Record<string, string> = {
   Dreamy: "weather-night", Groovy: "music", Powerful: "arm-flex", Calm: "meditation",
 };
 const VOICE_ICON: Record<string, string> = { female: "face-woman", male: "face-man", duet: "human-male-female", any: "dice-5" };
+const LEVEL_ICON: Record<string, string> = { prestarter: "alphabetical-variant", starter: "seed-outline", beginner: "sprout-outline", intermediate: "chat-outline", advanced: "rocket-launch" };
 
 // A rotating palette of neon colours — each level/topic tile gets its own
 // glowing border + icon colour to match the app's neon theme.
@@ -190,9 +191,9 @@ export default function CreateScreen({
                 return (
                   <Pressable key={l.key} style={styles.levelCell} onPress={() => setTier(l.key)}>
                     <View style={[styles.levelCard, { borderColor: on ? c : `${c}55`, shadowColor: c }, on && styles.levelCardOn, on && { backgroundColor: `${c}1A` }]}>
-                      <Text style={styles.levelEmoji}>{l.emoji}</Text>
+                      <MaterialCommunityIcons name={(LEVEL_ICON[l.key] ?? "circle-outline") as any} size={22} color={c} style={{ marginBottom: 4 }} />
                       <Text style={styles.levelLabel} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7}>{l.label}</Text>
-                      <Text style={styles.levelSub}>{l.sub}</Text>
+                      <Text style={styles.levelSub} numberOfLines={1}>{l.sub}</Text>
                       {on && <Text style={[styles.levelCheck, { color: c }]}>✓</Text>}
                     </View>
                   </Pressable>
@@ -479,7 +480,7 @@ const styles = StyleSheet.create({
   hint: { color: colors.muted, fontSize: font.small, marginBottom: spacing.sm },
   levelRow: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
   levelCell: { width: "47.5%", flexGrow: 1 },
-  levelCard: { backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.line, padding: 9, minHeight: 70, justifyContent: "center" },
+  levelCard: { backgroundColor: "transparent", borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.line, paddingVertical: 9, paddingHorizontal: 6, alignItems: "center", justifyContent: "center", gap: 2, shadowOpacity: 0.5, shadowRadius: 5, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
   levelCardOn: { borderColor: colors.accent, backgroundColor: colors.card2 },
   levelEmoji: { fontSize: 22 },
   levelLabel: { color: colors.ink, fontSize: font.small, fontWeight: "900", marginTop: 5 },
