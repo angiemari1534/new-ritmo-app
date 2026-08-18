@@ -238,7 +238,7 @@ export default function LibraryScreen({
           <TextInput
             value={search}
             onChangeText={setSearch}
-            placeholder="🔎  Search songs"
+            placeholder="Search songs"
             placeholderTextColor={colors.faint}
             style={styles.search}
           />

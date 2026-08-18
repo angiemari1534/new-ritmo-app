@@ -98,7 +98,6 @@ export default function DictionaryScreen({
       <View style={styles.header}>
         <Pressable onPress={onClose} hitSlop={12} style={styles.back}><Text style={styles.backText}>‹</Text></Pressable>
         <View style={styles.searchBox}>
-          <Text style={styles.searchIcon}>🔎</Text>
           <TextInput
             value={query}
             onChangeText={(t) => { setQuery(t); setTranslated(null); }}
