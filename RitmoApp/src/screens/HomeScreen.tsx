@@ -10,12 +10,12 @@ import type { Song } from "../lib/api";
 import type { Playlist, HomeSections } from "../lib/storage";
 
 // A neon halo for an icon in the given color.
-const glow = (c: string) => ({ textShadowColor: c, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 4 });
+const glow = (c: string) => ({ textShadowColor: c, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 2 });
 
 // One clearly-distinct colour per hue family (red, orange, amber, lime, green,
 // cyan, blue, purple, fuchsia, pink), interleaved warm/cool so no two adjacent
 // tiles look alike and there's only ONE of each "blue" or "purple".
-const NEON = ["#EF4444", "#F97316", "#FBBF24", "#22C55E", "#EC4899", "#D946EF", "#84CC16", "#22D3EE", "#3B82F6", "#A855F7"];
+const NEON = ["#EF4444", "#F97316", "#FBBF24", "#22C55E", "#D14A88", "#D946EF", "#84CC16", "#22D3EE", "#3B82F6", "#A855F7"];
 
 export default function HomeScreen({
   songs,
@@ -136,7 +136,7 @@ export default function HomeScreen({
           <Animated.View style={[styles.dualWrapTeal, ready && !busy ? { transform: [{ scale: pulse }] } : null]}>
             <Pressable onPress={onContinue} disabled={busy} style={{ flex: 1 }}>
               <LinearGradient colors={["rgba(3,5,10,0.4)", "rgba(3,5,10,0.4)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.dualTileTeal}>
-                <MaterialCommunityIcons name="chat-processing" size={22} color="#34D399" style={styles.dualIcon} />
+                <MaterialCommunityIcons name="chat-processing" size={22} color="#2FA47E" style={styles.dualIcon} />
                 <Text style={styles.dualKickerTeal} numberOfLines={2} ellipsizeMode="tail">{busy ? "PREPARING…" : nextUp ? "CONTINUE CURRENT LESSON" : "PATH COMPLETE 🎉"}</Text>
                 <Text style={styles.dualTitle} numberOfLines={1} ellipsizeMode="tail">
                   {busy ? "Building…" : nextUp ? subjectLabel(nextUp.subject) : "Path done!"}
@@ -218,7 +218,7 @@ export default function HomeScreen({
                 <Text style={styles.heroTitle} numberOfLines={1}>{songTitle(latest)}</Text>
                 <Text style={styles.heroMeta} numberOfLines={1}>{[latest.genre, tierLabel(latest.level)].filter(Boolean).join(" · ")}</Text>
               </View>
-              <LinearGradient colors={["#F472B6", "#EC4899"]} style={styles.playBtn}>
+              <LinearGradient colors={["#DE68A2", "#D14A88"]} style={styles.playBtn}>
                 <Text style={styles.playIcon}>▶</Text>
               </LinearGradient>
             </LinearGradient>
@@ -440,7 +440,7 @@ const pl = StyleSheet.create({
 });
 
 const guide = StyleSheet.create({
-  modalCard: { borderColor: "rgba(167,139,250,0.35)", borderWidth: 1, shadowColor: "#8B5CF6", shadowOpacity: 0.1, shadowRadius: 4, shadowOffset: { width: 0, height: 0 } },
+  modalCard: { borderColor: "rgba(167,139,250,0.35)", borderWidth: 1, shadowColor: "#7A4FD1", shadowOpacity: 0.1, shadowRadius: 4, shadowOffset: { width: 0, height: 0 } },
   handle: { width: 44, height: 5, borderRadius: 3, backgroundColor: "rgba(167,139,250,0.4)", alignSelf: "center", marginBottom: 12 },
   modalTitle: { color: colors.accent, fontSize: font.h2, fontWeight: "900" },
   modalSub: { color: "rgba(255,255,255,0.6)", fontSize: font.small, fontWeight: "700", marginTop: 2, marginBottom: 12 },
@@ -494,14 +494,14 @@ const styles = StyleSheet.create({
   journeyBtnText: { flex: 1, color: colors.accent, fontSize: font.h3, fontWeight: "700" },
   journeyChev: { color: colors.accent, fontSize: 24, fontWeight: "700" },
   dualRow: { flexDirection: "row", gap: 12, marginTop: spacing.md },
-  dualWrapTeal: { flex: 1, shadowColor: "#34D399", shadowOpacity: 0.12, shadowRadius: 4, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
+  dualWrapTeal: { flex: 1, shadowColor: "#2FA47E", shadowOpacity: 0.12, shadowRadius: 4, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
   dualWrapPurple: { flex: 1, shadowColor: "#A970FF", shadowOpacity: 0.12, shadowRadius: 4, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
-  dualTileTeal: { flex: 1, borderRadius: radius.lg, padding: 14, minHeight: 150, borderWidth: 1.5, borderColor: "#34D399" },
-  dualTilePurple: { flex: 1, borderRadius: radius.lg, padding: 14, minHeight: 150, borderWidth: 1.5, borderColor: "#8B5CF6" },
+  dualTileTeal: { flex: 1, borderRadius: radius.lg, padding: 14, minHeight: 150, borderWidth: 1.5, borderColor: "#2FA47E" },
+  dualTilePurple: { flex: 1, borderRadius: radius.lg, padding: 14, minHeight: 150, borderWidth: 1.5, borderColor: "#7A4FD1" },
   dualIcon: { position: "absolute", top: 12, right: 12 },
-  dualKickerTeal: { color: "#34D399", fontSize: font.tiny, fontWeight: "900", letterSpacing: 1, lineHeight: font.tiny + 3, paddingRight: 26 },
-  dualSubTeal: { color: "#34D399", fontSize: font.small, fontWeight: "800", marginTop: 1 },
-  dualPctTeal: { color: "#34D399", fontSize: font.tiny, fontWeight: "800" },
+  dualKickerTeal: { color: "#2FA47E", fontSize: font.tiny, fontWeight: "900", letterSpacing: 1, lineHeight: font.tiny + 3, paddingRight: 26 },
+  dualSubTeal: { color: "#2FA47E", fontSize: font.small, fontWeight: "800", marginTop: 1 },
+  dualPctTeal: { color: "#2FA47E", fontSize: font.tiny, fontWeight: "800" },
   dualPlayTeal: { width: 34, height: 34, borderRadius: 17, backgroundColor: "#1FA679", alignItems: "center", justifyContent: "center", shadowColor: "#1FA679", shadowOpacity: 0.3, shadowRadius: 5, shadowOffset: { width: 0, height: 0 } },
   dualSubPurple: { color: "rgba(255,255,255,0.85)", fontSize: font.small, fontWeight: "700", marginTop: 1 },
   dualEmoji: { fontSize: 26, textShadowColor: "rgba(236,72,153,0.8)", textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 5 },
@@ -513,8 +513,8 @@ const styles = StyleSheet.create({
   dualPct: { color: "rgba(255,255,255,0.9)", fontSize: font.tiny, fontWeight: "800" },
   dualPlay: { width: 34, height: 34, borderRadius: 17, backgroundColor: "rgba(255,255,255,0.22)", alignItems: "center", justifyContent: "center" },
   dualPlayIcon: { color: "#E6EAF0", fontSize: 15, marginLeft: 2 },
-  hero: { flexDirection: "row", alignItems: "center", gap: 12, borderRadius: radius.lg, paddingVertical: 12, paddingHorizontal: 14, marginTop: spacing.md, borderWidth: 1.5, borderColor: "#F472B6", shadowColor: "#F472B6", shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
-  heroKicker: { color: "#F472B6", fontSize: 9, fontWeight: "900", letterSpacing: 1.2 },
+  hero: { flexDirection: "row", alignItems: "center", gap: 12, borderRadius: radius.lg, paddingVertical: 12, paddingHorizontal: 14, marginTop: spacing.md, borderWidth: 1.5, borderColor: "#DE68A2", shadowColor: "#DE68A2", shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
+  heroKicker: { color: "#DE68A2", fontSize: 9, fontWeight: "900", letterSpacing: 1.2 },
   heroTitle: { color: colors.ink, fontSize: font.small, fontWeight: "900", marginTop: 1 },
   heroMeta: { color: colors.muted, fontSize: font.tiny, marginTop: 1 },
   playBtn: { width: 44, height: 44, borderRadius: 22, alignItems: "center", justifyContent: "center" },
