@@ -270,9 +270,6 @@ export async function loadSettings(): Promise<Settings> {
     const raw = await AsyncStorage.getItem(SETTINGS_KEY);
     if (!raw) return DEFAULT_SETTINGS;
     const parsed = JSON.parse(raw);
-    // Migrate legacy image-key avatars (e.g. "av170"), whose images were lost,
-    // to a default emoji so the avatar shows everywhere instead of raw text.
-    if (typeof parsed.avatar === "string" && /^av\d+$/i.test(parsed.avatar)) parsed.avatar = "🎧";
     return {
       ...DEFAULT_SETTINGS,
       ...parsed,

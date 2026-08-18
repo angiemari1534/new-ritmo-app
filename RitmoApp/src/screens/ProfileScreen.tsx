@@ -440,8 +440,8 @@ export default function ProfileScreen({
             <View style={styles.avatarGrid}>
               {AVATAR_KEYS.map((k) => (
                 <Pressable key={k} onPress={() => { onUpdateSettings({ avatar: k }); setAvatarOpen(false); }}>
-                  <View style={[styles.avatarImgOption, styles.avatarOptionCenter, settings.avatar === k && styles.avatarOptionOn]}>
-                    <Text style={styles.avatarOptionEmoji}>{k}</Text>
+                  <View style={[styles.avatarImgOption, settings.avatar === k && styles.avatarOptionOn]}>
+                    <Image source={avatarSource(k)} style={styles.avatarImg} />
                   </View>
                 </Pressable>
               ))}

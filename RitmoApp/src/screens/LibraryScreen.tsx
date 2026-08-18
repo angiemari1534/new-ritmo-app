@@ -176,8 +176,6 @@ export default function LibraryScreen({
                 )}
               </View>
               {s.localUri && <Text style={styles.dlDot}>⬇</Text>}
-              {s.rating === 1 && <View style={styles.rateUp}><Text style={styles.rateEmoji}>👍</Text></View>}
-              {s.rating === -1 && <View style={styles.rateDown}><Text style={styles.rateEmoji}>👎</Text></View>}
             </View>
             {s.catalog && (
               <View style={styles.flagRow}>
@@ -187,15 +185,21 @@ export default function LibraryScreen({
               </View>
             )}
           </View>
-          <Pressable onPress={() => setPickerSong(s)} hitSlop={6}>
-            <View style={styles.iconBtn}><Text style={styles.iconPlus}>＋</Text></View>
-          </Pressable>
-          <Pressable onPress={() => onToggleFavorite(s.id)} hitSlop={6}>
-            <View style={[styles.iconBtn, s.favorite && styles.iconBtnFav]}><Text style={[styles.iconHeart, s.favorite && styles.iconHeartOn]}>{s.favorite ? "♥" : "♡"}</Text></View>
-          </Pressable>
-          <Pressable onPress={() => setMenuSong(s)} hitSlop={6}>
-            <View style={styles.iconBtn}><Text style={styles.iconDots}>⋯</Text></View>
-          </Pressable>
+          <View style={styles.rightCol}>
+            <View style={styles.iconBtnRow}>
+              <Pressable onPress={() => setPickerSong(s)} hitSlop={6}>
+                <View style={styles.iconBtn}><Text style={styles.iconPlus}>＋</Text></View>
+              </Pressable>
+              <Pressable onPress={() => onToggleFavorite(s.id)} hitSlop={6}>
+                <View style={[styles.iconBtn, s.favorite && styles.iconBtnFav]}><Text style={[styles.iconHeart, s.favorite && styles.iconHeartOn]}>{s.favorite ? "♥" : "♡"}</Text></View>
+              </Pressable>
+              <Pressable onPress={() => setMenuSong(s)} hitSlop={6}>
+                <View style={styles.iconBtn}><Text style={styles.iconDots}>⋯</Text></View>
+              </Pressable>
+            </View>
+            {s.rating === 1 && <View style={[styles.rateUp, styles.ratingUnder]}><Text style={styles.rateEmoji}>👍</Text></View>}
+            {s.rating === -1 && <View style={[styles.rateDown, styles.ratingUnder]}><Text style={styles.rateEmoji}>👎</Text></View>}
+          </View>
         </View>
       </Pressable>
     </Swipeable>
@@ -803,6 +807,9 @@ const styles = StyleSheet.create({
   rateUp: { backgroundColor: "rgba(55,214,122,0.16)", borderRadius: 10, paddingHorizontal: 5, paddingVertical: 1 },
   rateDown: { backgroundColor: "rgba(245,120,120,0.16)", borderRadius: 10, paddingHorizontal: 5, paddingVertical: 1 },
   rateEmoji: { fontSize: 12 },
+  rightCol: { alignItems: "center", gap: 2 },
+  iconBtnRow: { flexDirection: "row", alignItems: "center" },
+  ratingUnder: { marginTop: 2 },
   iconBtn: { width: 30, height: 30, borderRadius: 15, alignItems: "center", justifyContent: "center", backgroundColor: colors.card2, borderWidth: 1, borderColor: colors.line, marginLeft: 3 },
   iconBtnFav: { borderColor: "#F05A96", backgroundColor: "rgba(240,90,150,0.15)" },
   iconPlus: { color: colors.ink, fontSize: 16, fontWeight: "900" },
