@@ -250,15 +250,23 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
   // that rejects any spot too close to something already placed OR too close to
   // the weaving road. Memoised so it only recomputes when the world changes.
   const { avSpots, noteSpots } = useMemo(() => {
-    const AV_SZ = 48, GAP = 6, CLEAR = 30; // CLEAR = min gap from the road centre
+    // CLEAR = min gap from the road CENTRE to a decoration's near edge. The
+    // current-position ("YOU") avatar is NODE+14 wide (≈30px each side of the
+    // road), so keep decorations well beyond that so they never cover it.
+    const AV_SZ = 48, GAP = 6, CLEAR = 48;
     const roadXAt = (cy: number) => CENTER + AMP * Math.sin(((cy - HEADER) / ROW_H) * FREQ);
     const placed: { cx: number; cy: number; r: number }[] = [];
-    // Try up to 18 random spots for one item; return the first that fits, else null.
-    const place = (i: number, count: number, size: number, salt: number, spread: number) => {
+    // Try up to 20 spots for one item; return the first that fits, else null.
+    // `prefSide` biases the first tries to a chosen side so the two sides stay
+    // balanced (equal-ish), but a spot can fall back to the other side if the
+    // road hugs the preferred edge there.
+    const place = (i: number, count: number, size: number, salt: number, spread: number, prefSide: "l" | "r") => {
       const r = size / 2;
       const yBase = (i + 0.5) / count;
-      for (let k = 0; k < 18; k++) {
-        const side: "l" | "r" = hash(salt + i * 3.71 + k * 1.13) > 0.5 ? "r" : "l";
+      for (let k = 0; k < 20; k++) {
+        // First 14 tries stay on the preferred side (keeps sides balanced),
+        // then allow the other side as a fallback so nothing is dropped.
+        const side: "l" | "r" = k < 14 ? prefSide : (prefSide === "l" ? "r" : "l");
         const yF = Math.min(0.97, Math.max(0.03, yBase + (hash(salt + i * 2.29 + k * 2.7) - 0.5) * (spread / count)));
         const cy = HEADER + roadSpan * yF + r;
         const rx = roadXAt(cy);
@@ -278,13 +286,14 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
       }
       return null;
     };
-    // Avatars first (they're bigger, give them priority), then notes fill the gaps.
-    const avs = Array.from({ length: avCount }, (_, i) => place(i, avCount, AV_SZ, index * 131 + 1, 2.4))
+    // Avatars first (bigger, get priority), sides alternate by index so the
+    // count is even on each side; then notes fill the gaps (also alternating).
+    const avs = Array.from({ length: avCount }, (_, i) => place(i, avCount, AV_SZ, index * 131 + 1, 2.4, i % 2 === 0 ? "l" : "r"))
       .filter(Boolean) as { side: "l" | "r"; x: number; yF: number }[];
     const notes = Array.from({ length: noteCount }, (_, i) => {
       const size = 22 + Math.round(hash(index * 197 + i * 1.3 + 7) * 12);
       const rot = Math.round((hash(index * 197 + i * 4.9 + 17) - 0.5) * 34);
-      const sp = place(i, noteCount, size + 10, index * 197 + 2, 2.8); // +10 so notes stay clear of avatars
+      const sp = place(i, noteCount, size + 10, index * 197 + 2, 2.8, i % 2 === 0 ? "r" : "l"); // +10 so notes stay clear of avatars
       return sp ? { ...sp, rot, size } : null;
     }).filter(Boolean) as { side: "l" | "r"; x: number; yF: number; rot: number; size: number }[];
     return { avSpots: avs, noteSpots: notes };
