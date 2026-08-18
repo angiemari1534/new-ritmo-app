@@ -234,11 +234,15 @@ function AppInner() {
     return () => sub.remove();
   }, [player]);
 
-  // Backup trigger: the position has reached (or passed) the end of the track.
+  // Backup trigger for when the finish event doesn't fire: the position is within
+  // half a second of the REAL end. We require `t` to sit in a tight band just
+  // below `duration` (not merely `t >= dur - 0.5`) — otherwise a momentarily
+  // wrong/short duration reading counts as "finished" mid-song and the track
+  // jumps or restarts. Also ignore tiny bogus durations.
   useEffect(() => {
     const dur = status.duration || 0;
     const t = status.currentTime || 0;
-    if (dur > 0 && t >= dur - 0.5) advanceQueue();
+    if (dur > 1 && t >= dur - 0.5 && t <= dur + 1) advanceQueue();
   }, [status.currentTime, status.duration]);
 
   async function openFlashcards() {
