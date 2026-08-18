@@ -17,6 +17,7 @@ import numbersSoul from "../../assets/catalog/numbers-soul.mp3";
 import numbersReggaeton from "../../assets/catalog/numbers-reggaeton.mp3";
 import colorsRnb from "../../assets/catalog/colors-rnb.mp3";
 import colorsRock from "../../assets/catalog/colors-rock.mp3";
+import colorsPop from "../../assets/catalog/colors-pop.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -312,5 +313,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000013,
     spec: { subject: "colors", level: "prestarter", lesson: 2, genre: "Rock", beat: "Powerful Normal" },
+  },
+  {
+    id: "cat-colors-pop",
+    title: "Light & Dark Shades",
+    subject: "colors",
+    subjectLabel: "Colors",
+    level: "prestarter",
+    lesson: 3,
+    totalLessons: 20,
+    genre: "Pop",
+    beat: "Dreamy Normal",
+    artistFeel: "Bruno Mars",
+    language: "Spanish",
+    lyrics: "[Intro]\nOoh!\nAlright!\n[Verse]\nHit it!\nsilver\nplateado\nplateado\nHere it comes\nlight\nclaro\nclaro\nLet's roll\n[Chorus]\nFeel the rhythm\nsilver\nplateado\nlight\nclaro\ndark\noscuro\nLet's practice\n[Verse]\nTake it away\ndark\noscuro\noscuro\nHey!\nthe favorite color\nel color favorito\nel color favorito\nbrown\ncafé\ncafé\nUh yeah\n[Chorus]\nRepeat with me\nsilver\nplateado\nlight\nclaro\ndark\noscuro\nOh-oh!\n[Verse]\nRide the beat\nbright\nbrillante\nbrillante\nSounds great\na soft shade\nun tono suave\nun tono suave\nHey hey!\n[Chorus]\nUh-huh!\nsilver\nplateado\nlight\nclaro\ndark\noscuro\nYou know it\n[Bridge]\nOne more round\nsilver\nplateado\nlight\nclaro\ndark\noscuro\nthe favorite color\nel color favorito\nbright\nbrillante\na soft shade\nun tono suave\nTurn it up now\n[Chorus]\nBreak it down\nsilver\nplateado\nlight\nclaro\ndark\noscuro\n[Outro]\nWoo-hoo!\nYou got this",
+    vocab: [{"es":"plateado","en":"silver"},{"es":"claro","en":"light"},{"es":"oscuro","en":"dark"},{"es":"el color favorito","en":"the favorite color"},{"es":"brillante","en":"bright"},{"es":"un tono suave","en":"a soft shade"}],
+    lineTimings: [{"start":0.1,"end":0.531,"loss":9.239664713541666},{"start":1.9,"end":2.461,"loss":9.101487398147583},{"start":8.12,"end":8.581,"loss":5.7356012980143225},{"start":9.92,"end":11.14,"loss":7.911649598015679},{"start":11.14,"end":12.38,"loss":7.985766092936198},{"start":12.38,"end":13.64,"loss":7.9669342041015625},{"start":13.64,"end":15.38,"loss":3.1687620639801026},{"start":15.38,"end":15.76,"loss":8.275716145833334},{"start":15.76,"end":16.37,"loss":9.256640625000001},{"start":16.37,"end":16.82,"loss":8.215315755208334},{"start":16.82,"end":18.38,"loss":4.659626770019531},{"start":18.38,"end":19.6,"loss":5.77483688791593},{"start":19.6,"end":20.3,"loss":8.687606811523438},{"start":20.3,"end":20.96,"loss":7.611014811197916},{"start":20.96,"end":23.42,"loss":8.456046549479167},{"start":23.42,"end":24.48,"loss":8.856618245442709},{"start":24.48,"end":25.24,"loss":9.680491129557291},{"start":25.24,"end":25.86,"loss":0.22601394653320314},{"start":25.86,"end":27.96,"loss":4.692896699905395},{"start":27.96,"end":29.86,"loss":6.839072767645121},{"start":29.86,"end":31.14,"loss":7.863525390625},{"start":31.14,"end":32.32,"loss":8.088026258680555},{"start":32.32,"end":32.92,"loss":7.936737060546875},{"start":32.92,"end":33.74,"loss":0.8115698430273267},{"start":33.74,"end":34.98,"loss":3.9117984771728516},{"start":34.98,"end":37.96,"loss":4.127761745452881},{"start":37.96,"end":39.66,"loss":9.767663669586181},{"start":39.66,"end":40.94,"loss":9.579315185546875},{"start":40.94,"end":41.5,"loss":0.7000681559244791},{"start":41.5,"end":42.66,"loss":7.612999386257595},{"start":42.66,"end":43.32,"loss":4.556688117980957},{"start":43.32,"end":47.7,"loss":6.217399668693543},{"start":47.7,"end":48.54,"loss":8.889925130208333},{"start":48.54,"end":49.5,"loss":8.406646728515625},{"start":49.5,"end":50.36,"loss":10.12344021267361},{"start":50.36,"end":51.9,"loss":7.706407335069444},{"start":51.9,"end":52.84,"loss":7.8807373046875},{"start":52.84,"end":53.5,"loss":0.25113169352213544},{"start":53.5,"end":54.06,"loss":8.049975077311197},{"start":54.06,"end":57.36,"loss":8.64442201455434},{"start":57.36,"end":58.06,"loss":0.02840418285793728},{"start":58.06,"end":58.54,"loss":8.33023117383321},{"start":58.54,"end":59.14,"loss":2.4419581095377603},{"start":59.14,"end":59.86,"loss":5.14099609375},{"start":59.86,"end":62.38,"loss":4.503760910034179},{"start":62.38,"end":64.479,"loss":3.4882181167602537},{"start":64.479,"end":100.70100000000001,"loss":9.584481909161521},{"start":107.12,"end":108.58,"loss":8.940520324707032},{"start":108.58,"end":109.52,"loss":9.076212565104166},{"start":109.52,"end":110.28,"loss":8.790298461914062},{"start":110.28,"end":111.2,"loss":9.46212429470486},{"start":111.2,"end":112.3,"loss":0.27542538113064235},{"start":112.3,"end":112.98,"loss":0.006902456283569336},{"start":112.98,"end":115.82,"loss":8.176335652669271},{"start":115.82,"end":116.64,"loss":0.0027809739112854004},{"start":116.64,"end":119.8,"loss":8.620558412869771},{"start":119.8,"end":122.46,"loss":6.506479263305664},{"start":122.46,"end":123.34,"loss":10.069647894965277},{"start":123.34,"end":124.42,"loss":7.986246744791667},{"start":124.42,"end":125.2,"loss":0.0052062273025512695},{"start":125.2,"end":125.86,"loss":7.199665832519531},{"start":125.86,"end":126.92,"loss":2.7103342692057293},{"start":126.92,"end":129.16,"loss":8.28644053141276},{"start":129.16,"end":131.58,"loss":6.978331433402167},{"start":131.58,"end":132.88,"loss":3.4604446411132814},{"start":132.88,"end":134.36,"loss":0.65997314453125},{"start":134.36,"end":135.34,"loss":7.651867826779683},{"start":135.34,"end":137.38,"loss":3.066826581954956},{"start":137.44,"end":139.18,"loss":3.4775783767302832},{"start":139.18,"end":142.54,"loss":9.359703216552735},{"start":142.54,"end":147.32,"loss":7.619312104724702},{"start":147.32,"end":150.28,"loss":2.927490234375},{"start":150.28,"end":150.281,"loss":24.625},{"start":150.28,"end":150.281,"loss":0.023193359375},{"start":156.14,"end":157.48,"loss":1.4078534444173176},{"start":157.48,"end":157.56,"loss":0.010498046875},{"start":157.56,"end":160.42,"loss":2.9798177083333335},{"start":160.42,"end":160.421,"loss":0.1484375},{"start":162.64,"end":167.19,"loss":1.923095703125}],
+    audioUrl: "",
+    audioModule: colorsPop,
+    catalog: true,
+    createdAt: 1750000000014,
+    spec: { subject: "colors", level: "prestarter", lesson: 3, genre: "Pop", beat: "Dreamy Normal" },
   }
 ];

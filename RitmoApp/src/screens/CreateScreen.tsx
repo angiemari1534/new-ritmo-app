@@ -339,15 +339,21 @@ export default function CreateScreen({
             <View style={styles.tempoRow}>
               {TEMPOS.map((t) => {
                 const on = tempo === t.key;
+                const inner = (
+                  <>
+                    <Text style={styles.tempoEmoji}>{t.emoji}</Text>
+                    <Text style={on ? styles.tempoTextOn : styles.tempoText} numberOfLines={1}>{t.key}</Text>
+                  </>
+                );
                 return on ? (
                   <Pressable key={t.key} style={{ flex: 1 }} onPress={() => setTempo(t.key)}>
                     <LinearGradient colors={gradients.primary} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.tempoSeg}>
-                      <Text style={styles.tempoTextOn}>{t.emoji} {t.key}</Text>
+                      {inner}
                     </LinearGradient>
                   </Pressable>
                 ) : (
                   <Pressable key={t.key} style={[styles.tempoSeg, styles.tempoSegOff, { flex: 1 }]} onPress={() => setTempo(t.key)}>
-                    <Text style={styles.tempoText}>{t.emoji} {t.key}</Text>
+                    {inner}
                   </Pressable>
                 );
               })}
@@ -512,10 +518,11 @@ const styles = StyleSheet.create({
   gEmoji: { fontSize: 22 },
   gLabel: { color: colors.muted, fontSize: 9, lineHeight: 11, fontWeight: "700", textAlign: "center" },
   tempoRow: { flexDirection: "row", gap: 8, backgroundColor: colors.card, borderRadius: radius.md, padding: 5, borderWidth: 1, borderColor: colors.line },
-  tempoSeg: { borderRadius: radius.sm, paddingVertical: 12, alignItems: "center" },
+  tempoSeg: { borderRadius: radius.sm, paddingVertical: 9, alignItems: "center", justifyContent: "center", gap: 2 },
   tempoSegOff: {},
-  tempoText: { color: colors.muted, fontWeight: "800", fontSize: font.small },
-  tempoTextOn: { color: "#fff", fontWeight: "900", fontSize: font.small },
+  tempoEmoji: { fontSize: 17, textAlign: "center" },
+  tempoText: { color: colors.muted, fontWeight: "800", fontSize: font.tiny, textAlign: "center" },
+  tempoTextOn: { color: "#fff", fontWeight: "900", fontSize: font.tiny, textAlign: "center" },
   lessons: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
   lesson: { backgroundColor: colors.card, borderRadius: radius.sm, borderWidth: 1, borderColor: colors.line, paddingVertical: 10, paddingHorizontal: 14, minWidth: 52, alignItems: "center" },
   lessonSel: { borderColor: "transparent" },
