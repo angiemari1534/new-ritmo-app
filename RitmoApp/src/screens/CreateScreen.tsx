@@ -248,13 +248,14 @@ export default function CreateScreen({
           <>
             <Text style={styles.h}>Choose a genre</Text>
             <View style={styles.gGrid}>
-              {GENRES.map((g) => {
+              {GENRES.map((g, i) => {
                 const on = genre === g;
+                const c = NEON[i % NEON.length];
                 return (
                   <Pressable key={g} style={styles.gCell} onPress={() => setGenre(g)}>
-                    <View style={[styles.gTile, on && styles.gTileOn]}>
-                      <MaterialCommunityIcons name={(GENRE_ICON[g] ?? "music-note") as any} size={26} color={on ? "#fff" : colors.accent} style={{ marginBottom: 6 }} />
-                      <Text style={[styles.gLabel, on && { color: "#fff" }]}>{g}</Text>
+                    <View style={[styles.gTile, { borderColor: on ? c : `${c}55`, shadowColor: c }, on && { backgroundColor: `${c}1F` }]}>
+                      <MaterialCommunityIcons name={(GENRE_ICON[g] ?? "music-note") as any} size={24} color={c} style={{ marginBottom: 5 }} />
+                      <Text style={[styles.gLabel, on && { color: c }]}>{g}</Text>
                     </View>
                   </Pressable>
                 );
@@ -263,13 +264,14 @@ export default function CreateScreen({
 
             <Text style={styles.h}>Beat / mood</Text>
             <View style={styles.gGrid}>
-              {MOODS.map((m) => {
+              {MOODS.map((m, i) => {
                 const on = mood === m.key;
+                const c = NEON[i % NEON.length];
                 return (
                   <Pressable key={m.key} style={styles.gCell} onPress={() => setMood(m.key)}>
-                    <View style={[styles.gTile, on && styles.gTileOn]}>
-                      <Text style={styles.gEmoji}>{m.emoji}</Text>
-                      <Text style={[styles.gLabel, on && { color: "#fff" }]}>{m.key}</Text>
+                    <View style={[styles.gTile, { borderColor: on ? c : `${c}55`, shadowColor: c }, on && { backgroundColor: `${c}1F` }]}>
+                      <MaterialCommunityIcons name={(MOOD_ICON[m.key] ?? "music") as any} size={24} color={c} style={{ marginBottom: 5 }} />
+                      <Text style={[styles.gLabel, on && { color: c }]}>{m.key}</Text>
                     </View>
                   </Pressable>
                 );
@@ -283,13 +285,14 @@ export default function CreateScreen({
                 { key: "male", label: "Male" },
                 { key: "duet", label: "Duet" },
                 { key: "any", label: "Surprise" },
-              ].map((v) => {
+              ].map((v, i) => {
                 const on = voice === v.key;
+                const c = NEON[(i + 2) % NEON.length];
                 return (
                   <Pressable key={v.key} style={styles.voiceCell} onPress={() => setVoice(v.key)}>
-                    <View style={[styles.gTile, on && styles.gTileOn]}>
-                      <MaterialCommunityIcons name={(VOICE_ICON[v.key] ?? "account") as any} size={26} color={on ? "#fff" : colors.accent} style={{ marginBottom: 6 }} />
-                      <Text style={[styles.gLabel, on && { color: "#fff" }]}>{v.label}</Text>
+                    <View style={[styles.gTile, { borderColor: on ? c : `${c}55`, shadowColor: c }, on && { backgroundColor: `${c}1F` }]}>
+                      <MaterialCommunityIcons name={(VOICE_ICON[v.key] ?? "account") as any} size={24} color={c} style={{ marginBottom: 5 }} />
+                      <Text style={[styles.gLabel, on && { color: c }]}>{v.label}</Text>
                     </View>
                   </Pressable>
                 );
@@ -476,7 +479,7 @@ const styles = StyleSheet.create({
   hint: { color: colors.muted, fontSize: font.small, marginBottom: spacing.sm },
   levelRow: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
   levelCell: { width: "47.5%", flexGrow: 1 },
-  levelCard: { backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.line, padding: 12, minHeight: 110, justifyContent: "center" },
+  levelCard: { backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.line, padding: 11, minHeight: 88, justifyContent: "center" },
   levelCardOn: { borderColor: colors.accent, backgroundColor: colors.card2 },
   levelEmoji: { fontSize: 26 },
   levelLabel: { color: colors.ink, fontSize: font.body, fontWeight: "900", marginTop: 8 },
@@ -498,8 +501,8 @@ const styles = StyleSheet.create({
   gGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
   gCell: { width: "22%" },
   voiceCell: { width: "30%" },
-  gTile: { backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.line, alignItems: "center", justifyContent: "center", paddingVertical: 14, gap: 6 },
-  gTileOn: { borderColor: colors.accent, backgroundColor: colors.card2 },
+  gTile: { backgroundColor: "transparent", borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.line, alignItems: "center", justifyContent: "center", paddingVertical: 10, gap: 4, shadowOpacity: 0.5, shadowRadius: 5, shadowOffset: { width: 0, height: 0 }, elevation: 2 },
+  gTileOn: { borderColor: colors.accent },
   gEmoji: { fontSize: 22 },
   gLabel: { color: colors.muted, fontSize: font.tiny, fontWeight: "700", textAlign: "center" },
   tempoRow: { flexDirection: "row", gap: 8, backgroundColor: colors.card, borderRadius: radius.md, padding: 5, borderWidth: 1, borderColor: colors.line },

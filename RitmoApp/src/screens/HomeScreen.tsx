@@ -114,7 +114,8 @@ export default function HomeScreen({
           </View>
         </View>
 
-        <Text style={styles.hiSub}>{language} · through songs</Text>
+        <GradientText text="LEARN LANGUAGES, FEEL THE RHYTHM" style={styles.tagline} colors={["#2A7FE0", "#22B8B0", "#E4B84C"]} />
+        <Text style={styles.hiSub} numberOfLines={1}>{language} · through songs</Text>
 
         {/* How to use Ritmo — quick intro guide, on top */}
         <Pressable onPress={() => setGuideOpen(true)} style={styles.howToBtn}>
@@ -472,7 +473,8 @@ const styles = StyleSheet.create({
   hi: { color: colors.ink, fontSize: font.hero, fontWeight: "900", marginTop: spacing.lg },
   taglineWrap: { marginTop: 8, width: "100%" },
   tl1: { width: "100%", height: 26 },
-  hiSub: { color: colors.coral, fontSize: font.small, fontWeight: "700", marginTop: 4, alignSelf: "flex-end", textAlign: "right" },
+  hiSub: { color: colors.coral, fontSize: font.small, fontWeight: "700", marginTop: 2, alignSelf: "flex-end", textAlign: "right" },
+  tagline: { fontSize: 11, fontWeight: "900", letterSpacing: 1.5, marginTop: 2, alignSelf: "flex-start" },
   continueCard: { flexDirection: "row", alignItems: "center", gap: 12, borderRadius: radius.lg, padding: 13, marginTop: spacing.md },
   continueKicker: { color: "rgba(255,255,255,0.9)", fontSize: font.tiny, fontWeight: "900", letterSpacing: 1.5 },
   continueTitle: { color: "#fff", fontSize: font.h3, fontWeight: "900", marginTop: 2 },

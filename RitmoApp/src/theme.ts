@@ -5,8 +5,8 @@
 export const colors = {
   bg: "#05080F", // near-black navy
   bg2: "#0A101C",
-  card: "#152740",
-  card2: "#1D3654",
+  card: "rgba(15,26,44,0.45)", // translucent "transparent black" tile over the near-black bg
+  card2: "rgba(29,54,84,0.5)", // slightly stronger translucent (selected/secondary tiles)
   line: "#294160",
   ink: "#FFFFFF",
   muted: "#9DB2CC", // blue-gray
