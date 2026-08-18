@@ -23,6 +23,7 @@ import colorsAlt from "../../assets/catalog/colors-alt.mp3";
 import colorsCountry from "../../assets/catalog/colors-country.mp3";
 import pronounsPop from "../../assets/catalog/pronouns-pop.mp3";
 import questionsReggaeton from "../../assets/catalog/questions-reggaeton.mp3";
+import descriptionsDisco from "../../assets/catalog/descriptions-disco.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -444,5 +445,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000019,
     spec: { subject: "questions", level: "prestarter", lesson: 1, genre: "Reggaeton", beat: "Tropical Normal" },
+  },
+  {
+    id: "cat-descriptions-disco",
+    title: "Big & Small",
+    subject: "descriptions",
+    subjectLabel: "Descriptions",
+    level: "prestarter",
+    lesson: 1,
+    totalLessons: 20,
+    genre: "Disco",
+    beat: "Groovy Normal",
+    artistFeel: "Earth Wind and Fire",
+    language: "Spanish",
+    lyrics: "[Intro]\nOh-oh!\nBring it back\n[Verse]\nKeep it up\nbig\ngrande\ngrande\nFeel it now\nsmall\npequeño\npequeño\nThat's it!\n[Chorus]\nListen up!\nbig\ngrande\nsmall\npequeño\ngood\nbueno\nOne more round\n[Verse]\nThat's the way\ngood\nbueno\nbueno\nHere it comes\nbad\nmalo\nmalo\nLet's move\n[Chorus]\nAlmost there\nbig\ngrande\nsmall\npequeño\ngood\nbueno\nGroove with me\n[Verse]\nNice and easy\nnew\nnuevo\nnuevo\nOh yeah!\nold\nviejo\nviejo\nYes yes!\n[Chorus]\nHey hey!\nbig\ngrande\nsmall\npequeño\ngood\nbueno\nSay it loud\n[Bridge]\nHere we go\nbig\ngrande\nsmall\npequeño\ngood\nbueno\nbad\nmalo\nnew\nnuevo\nold\nviejo\nRide the beat\n[Chorus]\nBig time\nbig\ngrande\nsmall\npequeño\ngood\nbueno\n[Outro]\nLet's get it!\nLet's go!",
+    vocab: [{"es":"grande","en":"big"},{"es":"pequeño","en":"small"},{"es":"bueno","en":"good"},{"es":"malo","en":"bad"},{"es":"nuevo","en":"new"},{"es":"viejo","en":"old"}],
+    lineTimings: [{"start":3.24,"end":4.841,"loss":9.190321180555555},{"start":6,"end":11.52,"loss":3.0698942214250566},{"start":11.52,"end":14.12,"loss":6.991531054178873},{"start":14.12,"end":14.959,"loss":9.359884474012587},{"start":14.959,"end":16,"loss":7.8664644029405375},{"start":16,"end":17,"loss":0.07442283630371094},{"start":17,"end":20.58,"loss":6.420219691594442},{"start":20.58,"end":21.681,"loss":7.705891927083333},{"start":22.82,"end":23.98,"loss":7.8131902785528276},{"start":23.98,"end":24.46,"loss":0.5459815131293403},{"start":24.46,"end":26.12,"loss":5.047618261973064},{"start":26.12,"end":27.58,"loss":11.5154296875},{"start":27.58,"end":28.64,"loss":8.198927137586805},{"start":28.64,"end":29.32,"loss":9.633764139811198},{"start":29.32,"end":31.56,"loss":7.684372674851191},{"start":31.56,"end":32.17,"loss":10.76528819402059},{"start":32.17,"end":32.900999999999996,"loss":8.112630208333334},{"start":34.64,"end":35.12,"loss":0.30910910500420463},{"start":35.12,"end":36.54,"loss":2.988153803348541},{"start":36.54,"end":39.32,"loss":9.384066903591156},{"start":39.32,"end":41,"loss":8.158333333333333},{"start":41,"end":42.06,"loss":0.4415699640909831},{"start":42.06,"end":43.51,"loss":0.06587715148925781},{"start":43.51,"end":46.64,"loss":9.459025065104166},{"start":46.64,"end":47.74,"loss":8.528645833333334},{"start":47.74,"end":50.84,"loss":0.029291152954101562},{"start":50.84,"end":54.4,"loss":8.108344992001852},{"start":54.4,"end":56.66,"loss":5.116231511433919},{"start":56.66,"end":57.7,"loss":11.337069702148437},{"start":57.74,"end":58.44,"loss":9.064997736612955},{"start":58.44,"end":60.64,"loss":7.537004743303572},{"start":60.64,"end":61.21,"loss":10.36805534362793},{"start":61.21,"end":62.32,"loss":7.930598958333333},{"start":62.32,"end":63.22,"loss":0.8169708251953125},{"start":63.22,"end":64.18,"loss":7.2551422119140625},{"start":64.18,"end":66.76,"loss":3.143612861633301},{"start":66.76,"end":68.32,"loss":10.248273213704426},{"start":68.32,"end":69.6,"loss":0.1719970703125},{"start":69.6,"end":70.52,"loss":8.21132303873698},{"start":70.52,"end":71.33,"loss":9.519200219048395},{"start":71.33,"end":72.88,"loss":10.21544921875},{"start":72.88,"end":73.28,"loss":1.6106906467013886},{"start":73.28,"end":74.11,"loss":8.26086457570394},{"start":74.11,"end":75.32,"loss":1.0998942057291667},{"start":75.32,"end":76.831,"loss":11.201990763346354},{"start":76.831,"end":78.48,"loss":9.808014628092447},{"start":78.48,"end":80.74,"loss":8.538178943452381},{"start":80.74,"end":81.42,"loss":9.533711115519205},{"start":81.42,"end":81.88,"loss":8.959114583333333},{"start":81.88,"end":83.14,"loss":0.8954128689236112},{"start":83.14,"end":84.38,"loss":0.032788594563802086},{"start":84.38,"end":92.92,"loss":6.804815928141276},{"start":92.92,"end":94.73,"loss":6.806933204332987},{"start":94.73,"end":97.72,"loss":7.042236863999139},{"start":97.72,"end":100.14,"loss":7.707147121429443},{"start":100.14,"end":101.9,"loss":11.15},{"start":101.9,"end":103.16,"loss":7.916720920138889},{"start":103.16,"end":104.2,"loss":9.135009765625},{"start":104.2,"end":104.8,"loss":8.464898003472223},{"start":104.8,"end":105.68,"loss":9.201041666666667},{"start":105.68,"end":106.8,"loss":9.065264383951822},{"start":106.8,"end":107.9,"loss":9.491536458333334},{"start":107.9,"end":109.82,"loss":7.588063557942708},{"start":109.82,"end":110.12,"loss":0.07387966579861112},{"start":110.12,"end":110.641,"loss":7.344950358072917},{"start":118.76,"end":120.1,"loss":0.7166307237413193},{"start":120.1,"end":122.581,"loss":10.140426635742188},{"start":124.54,"end":126.44,"loss":9.800994066510881},{"start":126.44,"end":128.16,"loss":9.306563059488932},{"start":128.16,"end":129.34,"loss":8.629947916666667},{"start":129.34,"end":135.48,"loss":0.298199462890625},{"start":135.48,"end":147.74,"loss":0.9222117529975044},{"start":147.74,"end":147.751,"loss":12.602294921875},{"start":150.82,"end":155.72,"loss":0.48931121826171875},{"start":155.72,"end":155.82,"loss":0.0020599365234375},{"start":155.86,"end":156.64,"loss":0.8049672444661459}],
+    audioUrl: "",
+    audioModule: descriptionsDisco,
+    catalog: true,
+    createdAt: 1750000000020,
+    spec: { subject: "descriptions", level: "prestarter", lesson: 1, genre: "Disco", beat: "Groovy Normal" },
   }
 ];

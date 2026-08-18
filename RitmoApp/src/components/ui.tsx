@@ -98,14 +98,19 @@ export function Chip({
   label,
   selected,
   onPress,
+  icon,
+  iconColor,
 }: {
   label: string;
   selected: boolean;
   onPress: () => void;
+  icon?: MciName;
+  iconColor?: string;
 }) {
   return (
     <Pressable onPress={onPress}>
-      <View style={[styles.chip, selected && styles.chipSelected]}>
+      <View style={[styles.chip, selected && styles.chipSelected, icon ? { flexDirection: "row", alignItems: "center", gap: 6 } : null]}>
+        {icon ? <MaterialCommunityIcons name={icon} size={16} color={iconColor ?? (selected ? colors.accent : colors.muted)} /> : null}
         <Text style={[styles.chipText, selected && styles.chipTextSelected]}>{label}</Text>
       </View>
     </Pressable>

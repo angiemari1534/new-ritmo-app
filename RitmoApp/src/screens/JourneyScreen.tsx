@@ -47,6 +47,11 @@ const TIEDYE = [
   "#22D3EE", "#38BDF8", "#3B82F6", "#818CF8", "#A78BFA", "#C084FC", "#E44DFF",
   "#F472B6", "#FB7185", "#FB923C", "#FBBF24", "#A3E635", "#34D399", "#2DD4BF",
 ];
+// Deep / dark jewel tones mixed into the tie-dye so the wash isn't uniformly
+// bright — some bands go dark and moody, adding contrast and variation.
+const DEEP = [
+  "#3B0A5C", "#12235C", "#5C0A33", "#0A3D3A", "#1A0A4A", "#4A2A0A", "#0A4A1A", "#3A0A12", "#241452", "#0B1E3E",
+];
 // Bright ring colours — each avatar along the route gets a different border.
 const RINGS = ["#FF3D71", "#FF9A00", "#FFE600", "#B4FF00", "#00FFA3", "#00E5FF", "#3B82F6", "#7C4DFF", "#FF00C8", "#FF5CA8", "#00D9C0", "#F97316", "#A3FF00", "#E44DFF", "#22D3EE", "#FBBF24"];
 // Every avatar in the pack (801) is mixed into the map. A large coprime stride
@@ -303,15 +308,22 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
     return { avSpots: avs, noteSpots: notes };
   }, [index, N, roadSpan, avCount, noteCount]);
 
-  // Tie-dye background: cycle the neon rainbow into many colour bands down the
-  // segment (more bands on longer worlds) so the hue keeps shifting fast, then
-  // cross it with two more hue-shifted diagonal washes so the colours mix and
-  // swirl. Larger per-band strides jump further around the wheel each step, so
-  // adjacent bands contrast instead of easing between neighbours.
-  const bands = Math.min(34, Math.max(9, Math.round(N / 3.5)));
-  const washA = Array.from({ length: bands }, (_, k) => `${TIEDYE[(index * 3 + k * 2) % TIEDYE.length]}7D`) as [string, string, ...string[]];
-  const washB = Array.from({ length: bands }, (_, k) => `${TIEDYE[(index * 3 + k * 2 + 5) % TIEDYE.length]}5C`) as [string, string, ...string[]];
-  const washC = Array.from({ length: bands }, (_, k) => `${TIEDYE[(index * 3 + k * 3 + 9) % TIEDYE.length]}40`) as [string, string, ...string[]];
+  // Tie-dye background. Instead of cycling the palette by a fixed stride (which
+  // makes every world look the same), each band's colour is HASH-picked from the
+  // seed (index, band, layer) so the sequence never repeats down the map. Some
+  // bands are pulled from DEEP (dark jewel tones) so the wash mixes bright and
+  // dark rather than staying uniformly neon. Band count is jittered per world too.
+  const bands = Math.min(36, Math.max(10, Math.round(N / 3.2) + Math.round(hash(index * 9.1 + 3) * 6)));
+  // Pick a colour for one band: `deepChance` of the time from DEEP, else TIEDYE.
+  const pick = (salt: number, k: number, deepChance: number, alpha: string) => {
+    const dark = hash(index * 17.3 + k * 1.7 + salt) < deepChance;
+    const pal = dark ? DEEP : TIEDYE;
+    const c = pal[Math.floor(hash(index * 6.53 + k * 2.91 + salt * 1.3) * pal.length) % pal.length];
+    return `${c}${alpha}`;
+  };
+  const washA = Array.from({ length: bands }, (_, k) => pick(1.1, k, 0.30, "7D")) as [string, string, ...string[]];
+  const washB = Array.from({ length: bands }, (_, k) => pick(2.7, k, 0.38, "5C")) as [string, string, ...string[]];
+  const washC = Array.from({ length: bands }, (_, k) => pick(4.3, k, 0.50, "40")) as [string, string, ...string[]];
 
   return (
     <View style={{ width: W, height: SEG_H }}>

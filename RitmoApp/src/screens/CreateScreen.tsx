@@ -54,6 +54,7 @@ const MOOD_ICON: Record<string, string> = {
 };
 const VOICE_ICON: Record<string, string> = { female: "face-woman", male: "face-man", duet: "human-male-female", any: "dice-5" };
 const LEVEL_ICON: Record<string, string> = { prestarter: "alphabetical-variant", starter: "seed-outline", beginner: "sprout-outline", intermediate: "chat-outline", advanced: "rocket-launch" };
+const TEMPO_ICON: Record<string, string> = { Slow: "speedometer-slow", Normal: "speedometer-medium", Upbeat: "speedometer", Fast: "rocket-launch" };
 
 // A rotating palette of neon colours — each level/topic tile gets its own
 // glowing border + icon colour to match the app's neon theme.
@@ -341,7 +342,7 @@ export default function CreateScreen({
                 const on = tempo === t.key;
                 const inner = (
                   <>
-                    <Text style={styles.tempoEmoji}>{t.emoji}</Text>
+                    <MaterialCommunityIcons name={(TEMPO_ICON[t.key] ?? "metronome") as any} size={20} color={on ? "#fff" : colors.muted} style={{ marginBottom: 3 }} />
                     <Text style={on ? styles.tempoTextOn : styles.tempoText} numberOfLines={1}>{t.key}</Text>
                   </>
                 );
@@ -450,18 +451,9 @@ export default function CreateScreen({
                     </View>
                     <Text style={styles.h}>Moods to mix</Text>
                     <View style={styles.gGrid}>
-                      {MOODS.map((m, i) => {
-                        const on = mixMoods.includes(m.key);
-                        const c = NEON[i % NEON.length];
-                        return (
-                          <Pressable key={m.key} style={styles.gCell} onPress={() => setMixMoods((a) => toggleIn(a, m.key))}>
-                            <View style={[styles.gTile, { borderColor: on ? c : `${c}55`, shadowColor: c }, on && { backgroundColor: `${c}1F` }]}>
-                              <MaterialCommunityIcons name={(MOOD_ICON[m.key] ?? "music") as any} size={24} color={c} style={{ marginBottom: 5 }} />
-                              <Text style={[styles.gLabel, on && { color: c }]} numberOfLines={2}>{m.key}</Text>
-                            </View>
-                          </Pressable>
-                        );
-                      })}
+                      {MOODS.map((m) => (
+                        <Chip key={m.key} label={m.key} icon={(MOOD_ICON[m.key] ?? "music") as any} selected={mixMoods.includes(m.key)} onPress={() => setMixMoods((a) => toggleIn(a, m.key))} />
+                      ))}
                     </View>
                   </>
                 )}
