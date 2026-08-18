@@ -212,7 +212,7 @@ export default function HomeScreen({
         {sections.continueLearning && latest && (
           <Pressable onPress={() => onOpenSong(latest)} style={{ marginTop: spacing.lg }}>
             <LinearGradient colors={["rgba(3,5,10,0.3)", "rgba(3,5,10,0.3)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.hero}>
-              <ArtTile subject={latest.subject} size={46} colors={gradientFor(latest.subject)} rounded={radius.md} />
+              <ArtTile subject={latest.subject} size={40} colors={gradientFor(latest.subject)} rounded={radius.md} />
               <View style={{ flex: 1 }}>
                 <Text style={styles.heroKicker}>CURRENT SONG</Text>
                 <Text style={styles.heroTitle} numberOfLines={1}>{songTitle(latest)}</Text>
@@ -464,7 +464,7 @@ const guide = StyleSheet.create({
 
 const styles = StyleSheet.create({
   content: { padding: spacing.lg, paddingTop: 60 },
-  howToBtn: { flexDirection: "row", alignItems: "center", gap: 8, backgroundColor: "rgba(3,5,10,0.3)", borderWidth: 1.5, borderColor: colors.gold, borderRadius: radius.md, paddingVertical: 14, paddingHorizontal: 16, marginTop: 12, shadowColor: colors.gold, shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
+  howToBtn: { flexDirection: "row", alignItems: "center", gap: 8, backgroundColor: "rgba(3,5,10,0.3)", borderWidth: 1.5, borderColor: colors.gold, borderRadius: radius.md, paddingVertical: 10, paddingHorizontal: 16, marginTop: 12, shadowColor: colors.gold, shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
   howToText: { flex: 1, color: colors.gold, fontSize: font.body, fontWeight: "700" },
   howToChev: { color: colors.gold, fontSize: 22, fontWeight: "700" },
   headerRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
@@ -490,7 +490,7 @@ const styles = StyleSheet.create({
   continuePlayIcon: { color: "#fff", fontSize: 18, marginLeft: 3 },
   journeyLink: { alignSelf: "center", flexDirection: "row", alignItems: "center", backgroundColor: colors.card, borderWidth: 1, borderColor: colors.accent, borderRadius: radius.pill, paddingVertical: 11, paddingHorizontal: 22, marginTop: 10 },
   journeyLinkText: { color: colors.accent, fontSize: font.body, fontWeight: "900" },
-  journeyBtn: { flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: "rgba(3,5,10,0.3)", borderWidth: 1.5, borderColor: colors.accent, borderRadius: radius.md, paddingVertical: 15, paddingHorizontal: 16, marginTop: spacing.md, shadowColor: colors.accent, shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
+  journeyBtn: { flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: "rgba(3,5,10,0.3)", borderWidth: 1.5, borderColor: colors.accent, borderRadius: radius.md, paddingVertical: 10, paddingHorizontal: 16, marginTop: spacing.md, shadowColor: colors.accent, shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
   journeyBtnText: { flex: 1, color: colors.accent, fontSize: font.h3, fontWeight: "700" },
   journeyChev: { color: colors.accent, fontSize: 24, fontWeight: "700" },
   dualRow: { flexDirection: "row", gap: 12, marginTop: spacing.md },
@@ -513,10 +513,10 @@ const styles = StyleSheet.create({
   dualPct: { color: "rgba(255,255,255,0.9)", fontSize: font.tiny, fontWeight: "800" },
   dualPlay: { width: 34, height: 34, borderRadius: 17, backgroundColor: "rgba(255,255,255,0.22)", alignItems: "center", justifyContent: "center" },
   dualPlayIcon: { color: "#fff", fontSize: 15, marginLeft: 2 },
-  hero: { flexDirection: "row", alignItems: "center", gap: 12, borderRadius: radius.lg, padding: 11, marginTop: spacing.md, borderWidth: 1.5, borderColor: "#F472B6", shadowColor: "#F472B6", shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
-  heroKicker: { color: "#F472B6", fontSize: font.tiny, fontWeight: "900", letterSpacing: 1.2 },
-  heroTitle: { color: colors.ink, fontSize: font.body, fontWeight: "900", marginTop: 1 },
-  heroMeta: { color: colors.muted, fontSize: font.small, marginTop: 2 },
+  hero: { flexDirection: "row", alignItems: "center", gap: 12, borderRadius: radius.lg, paddingVertical: 12, paddingHorizontal: 14, marginTop: spacing.md, borderWidth: 1.5, borderColor: "#F472B6", shadowColor: "#F472B6", shadowOpacity: 0.1, shadowRadius: 3, shadowOffset: { width: 0, height: 0 }, elevation: 1 },
+  heroKicker: { color: "#F472B6", fontSize: 9, fontWeight: "900", letterSpacing: 1.2 },
+  heroTitle: { color: colors.ink, fontSize: font.small, fontWeight: "900", marginTop: 1 },
+  heroMeta: { color: colors.muted, fontSize: font.tiny, marginTop: 1 },
   playBtn: { width: 44, height: 44, borderRadius: 22, alignItems: "center", justifyContent: "center" },
   playIcon: { color: "#fff", fontSize: 18, marginLeft: 3 },
   welcome: { borderRadius: radius.lg, padding: 22, marginTop: spacing.md },
