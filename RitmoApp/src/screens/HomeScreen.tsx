@@ -73,6 +73,9 @@ export default function HomeScreen({
   const latest = current ?? songs[0];
   const [openList, setOpenList] = useState<{ title: string; songs: Song[] } | null>(null);
   const [guideOpen, setGuideOpen] = useState(false);
+  // Preview toggle: a warm, faded "vintage film" tint over the whole Home screen.
+  // Fully reversible — tap the pill to turn it back off.
+  const [vintage, setVintage] = useState(false);
   const openSongs = openList?.songs ?? [];
   const levelsPresent = LEVEL_ORDER.filter((l) => homeLevels.includes(l) && songs.some((s) => s.level === l));
 
@@ -116,6 +119,12 @@ export default function HomeScreen({
 
         <GradientText text="LEARN LANGUAGES, FEEL THE RHYTHM" style={styles.tagline} colors={["#2A7FE0", "#22B8B0", "#E4B84C"]} />
         <Text style={styles.hiSub} numberOfLines={1}>{language} · through songs</Text>
+
+        {/* Vintage look — preview toggle (tap again to turn it off) */}
+        <Pressable onPress={() => setVintage((v) => !v)} style={[styles.vintageToggle, vintage && styles.vintageToggleOn]} hitSlop={6}>
+          <MaterialCommunityIcons name="image-filter-vintage" size={15} color={vintage ? "#E9D9B0" : colors.muted} />
+          <Text style={[styles.vintageToggleText, vintage && { color: "#E9D9B0" }]}>{vintage ? "Vintage on — tap to turn off" : "Try a vintage look"}</Text>
+        </Pressable>
 
         {/* How to use Ritmo — quick intro guide, on top */}
         <Pressable onPress={() => setGuideOpen(true)} style={styles.howToBtn}>
@@ -252,6 +261,16 @@ export default function HomeScreen({
 
         <View style={{ height: 24 }} />
       </ScrollView>
+
+      {/* Vintage film wash — warm sepia tint + soft top/bottom vignette. Sits
+          over the whole screen but lets touches pass through (pointerEvents none),
+          so it's a pure look-only overlay you can toggle off. */}
+      {vintage && (
+        <>
+          <LinearGradient pointerEvents="none" colors={["rgba(198,150,80,0.24)", "rgba(150,96,44,0.20)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={StyleSheet.absoluteFill} />
+          <LinearGradient pointerEvents="none" colors={["rgba(30,20,8,0.34)", "rgba(20,14,6,0.06)", "rgba(30,20,8,0.38)"]} locations={[0, 0.5, 1]} start={{ x: 0.5, y: 0 }} end={{ x: 0.5, y: 1 }} style={StyleSheet.absoluteFill} />
+        </>
+      )}
 
       <Modal
         visible={openList !== null}
@@ -481,6 +500,9 @@ const styles = StyleSheet.create({
   tl1: { width: "100%", height: 26 },
   hiSub: { color: colors.coral, fontSize: font.small, fontWeight: "700", marginTop: 2, alignSelf: "flex-end", textAlign: "right" },
   tagline: { fontSize: 11, fontWeight: "900", letterSpacing: 1.5, marginTop: 2, alignSelf: "flex-start" },
+  vintageToggle: { flexDirection: "row", alignItems: "center", gap: 6, alignSelf: "flex-start", marginTop: 10, paddingVertical: 6, paddingHorizontal: 12, borderRadius: radius.pill, borderWidth: 1, borderColor: colors.line, backgroundColor: "rgba(7,11,19,0.5)" },
+  vintageToggleOn: { borderColor: "rgba(198,150,80,0.7)", backgroundColor: "rgba(120,84,36,0.28)" },
+  vintageToggleText: { color: colors.muted, fontSize: font.tiny, fontWeight: "800" },
   continueCard: { flexDirection: "row", alignItems: "center", gap: 12, borderRadius: radius.lg, padding: 13, marginTop: spacing.md },
   continueKicker: { color: "rgba(255,255,255,0.9)", fontSize: font.tiny, fontWeight: "900", letterSpacing: 1.5 },
   continueTitle: { color: "#E6EAF0", fontSize: font.h3, fontWeight: "900", marginTop: 2 },
