@@ -188,16 +188,39 @@ function AppInner() {
   const currentRef = useRef(current);
   currentRef.current = current;
   const advancedFromRef = useRef<string | null>(null);
+  const songsRef = useRef(displaySongs);
+  songsRef.current = displaySongs;
+  const shuffleRef = useRef(shuffle);
+  shuffleRef.current = shuffle;
 
   function advanceQueue() {
     const cur = currentRef.current;
-    if (!cur || loopRef.current) return;
+    if (!cur || loopRef.current) return; // repeat on → let the same song loop
     if (advancedFromRef.current === cur.id) return; // already advanced from this song
     advancedFromRef.current = cur.id;
     const { queue: q, queueIndex: i } = queueRef.current;
     if (i < q.length - 1) {
+      // Still songs left in the current queue/playlist.
       setQueueIndex(i + 1);
       setCurrent(q[i + 1]);
+      return;
+    }
+    // Queue exhausted → keep playing by moving to the next song in the library
+    // (or a random one when shuffle is on), so playback never just stops.
+    const all = songsRef.current;
+    if (all.length < 2) return;
+    let next;
+    if (shuffleRef.current) {
+      const others = all.filter((x) => x.id !== cur.id);
+      next = others[Math.floor(Math.random() * others.length)];
+    } else {
+      const idx = all.findIndex((x) => x.id === cur.id);
+      next = all[(idx + 1) % all.length]; // wrap around at the end
+    }
+    if (next) {
+      setCurrent(next);
+      setQueue([next]);
+      setQueueIndex(0);
     }
   }
 
