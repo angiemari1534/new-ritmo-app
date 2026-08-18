@@ -440,8 +440,8 @@ export default function ProfileScreen({
             <View style={styles.avatarGrid}>
               {AVATAR_KEYS.map((k) => (
                 <Pressable key={k} onPress={() => { onUpdateSettings({ avatar: k }); setAvatarOpen(false); }}>
-                  <View style={[styles.avatarImgOption, settings.avatar === k && styles.avatarOptionOn]}>
-                    <Image source={avatarSource(k)} style={styles.avatarImg} />
+                  <View style={[styles.avatarImgOption, styles.avatarOptionCenter, settings.avatar === k && styles.avatarOptionOn]}>
+                    <Text style={styles.avatarOptionEmoji}>{k}</Text>
                   </View>
                 </Pressable>
               ))}
@@ -669,8 +669,6 @@ const styles = StyleSheet.create({
   karaokeBtn: { borderRadius: radius.md, overflow: "hidden", marginTop: 4 },
   karaokeBtnInner: { paddingVertical: 13, alignItems: "center" },
   karaokeBtnText: { color: "#fff", fontWeight: "900", fontSize: font.body },
-  tourBtn: { borderRadius: radius.md, paddingVertical: 13, alignItems: "center", borderWidth: 1, borderColor: "rgba(34,184,176,0.4)", backgroundColor: "rgba(7,11,19,0.5)" },
-  tourBtnText: { color: colors.accent, fontWeight: "900", fontSize: font.body },
   title: { color: colors.ink, fontSize: font.h1, fontWeight: "900", textAlign: "center", marginBottom: spacing.md },
   card: { borderRadius: radius.lg, padding: 18, borderWidth: 1, borderColor: colors.line },
   headRow: { flexDirection: "row", alignItems: "center", gap: 12 },
@@ -690,6 +688,8 @@ const styles = StyleSheet.create({
   avatarOption: { width: 54, height: 54, borderRadius: 27, backgroundColor: colors.card, borderWidth: 2, borderColor: colors.line, alignItems: "center", justifyContent: "center" },
   avatarImgOption: { width: 60, height: 60, borderRadius: 30, borderWidth: 2, borderColor: colors.line, overflow: "hidden" },
   avatarImg: { width: "100%", height: "100%" },
+  avatarOptionCenter: { alignItems: "center", justifyContent: "center", backgroundColor: colors.card },
+  avatarOptionEmoji: { fontSize: 30 },
   avatarOptionOn: { borderColor: colors.accent, borderWidth: 3 },
   avatarOptionText: { fontSize: 26 },
   name: { color: colors.ink, fontSize: font.h2, fontWeight: "900" },

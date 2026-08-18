@@ -47,6 +47,18 @@ const SUBJECT_ICON: Record<string, MciName> = {
   directions: "compass-outline",
   shopping: "shopping-outline",
   verbs: "flash-outline",
+  pronouns: "account-multiple-outline",
+  questions: "help-circle-outline",
+  descriptions: "shape-outline",
+  jobs: "briefcase-outline",
+  school: "school-outline",
+  technology: "cellphone",
+  hobbies: "run",
+  transportation: "bus",
+  places: "city-variant-outline",
+  time: "clock-outline",
+  nature: "tree-outline",
+  emergencies: "ambulance",
 };
 
 export function SubjectIcon({ subject, size, color = "#fff" }: { subject: string; size: number; color?: string }) {

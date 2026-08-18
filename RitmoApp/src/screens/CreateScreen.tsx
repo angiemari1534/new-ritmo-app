@@ -253,7 +253,7 @@ export default function CreateScreen({
                 return (
                   <Pressable key={g} style={styles.gCell} onPress={() => setGenre(g)}>
                     <View style={[styles.gTile, on && styles.gTileOn]}>
-                      <Text style={styles.gEmoji}>{GENRE_EMOJI[g] ?? "🎵"}</Text>
+                      <MaterialCommunityIcons name={(GENRE_ICON[g] ?? "music-note") as any} size={26} color={on ? "#fff" : colors.accent} style={{ marginBottom: 6 }} />
                       <Text style={[styles.gLabel, on && { color: "#fff" }]}>{g}</Text>
                     </View>
                   </Pressable>
@@ -279,15 +279,16 @@ export default function CreateScreen({
             <Text style={styles.h}>Voice</Text>
             <View style={styles.gGrid}>
               {[
-                { key: "female", emoji: "👩", label: "Female" },
-                { key: "male", emoji: "👨", label: "Male" },
-                { key: "any", emoji: "🎲", label: "Surprise" },
+                { key: "female", label: "Female" },
+                { key: "male", label: "Male" },
+                { key: "duet", label: "Duet" },
+                { key: "any", label: "Surprise" },
               ].map((v) => {
                 const on = voice === v.key;
                 return (
                   <Pressable key={v.key} style={styles.voiceCell} onPress={() => setVoice(v.key)}>
                     <View style={[styles.gTile, on && styles.gTileOn]}>
-                      <Text style={styles.gEmoji}>{v.emoji}</Text>
+                      <MaterialCommunityIcons name={(VOICE_ICON[v.key] ?? "account") as any} size={26} color={on ? "#fff" : colors.accent} style={{ marginBottom: 6 }} />
                       <Text style={[styles.gLabel, on && { color: "#fff" }]}>{v.label}</Text>
                     </View>
                   </Pressable>

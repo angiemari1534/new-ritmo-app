@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Text, View, StyleSheet, ScrollView, Pressable, Image, Modal, ActivityIndicator, Animated } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Screen, SectionHeader, ArtTile, ProgressBar, SubjectIcon } from "../components/ui";
+import { Screen, SectionHeader, ArtTile, ProgressBar, SubjectIcon, GradientText } from "../components/ui";
 import { colors, spacing, font, radius, gradients, gradientFor } from "../theme";
 import { STARTER_RECIPES, SongSpec, subjectLabel, tierLabel, LEVEL_ORDER, type PathStep } from "../data/presets";
 import { songTitle } from "../lib/api";
@@ -101,7 +101,7 @@ export default function HomeScreen({
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.headerRow}>
           <View style={styles.brandRow}>
-            <Image source={require("../../assets/wordmark_t.png")} style={styles.brandImg} resizeMode="contain" />
+            <GradientText text="Ritmo" style={styles.brandText} colors={["#2A7FE0", "#22B8B0", "#E4B84C"]} />
             <MaterialCommunityIcons name="music" size={22} color="#E4B84C" style={{ marginLeft: 6 }} />
           </View>
           <View style={styles.headerRight}>
@@ -114,9 +114,6 @@ export default function HomeScreen({
           </View>
         </View>
 
-        <View style={styles.taglineWrap}>
-          <Image source={require("../../assets/tagline_t.png")} style={styles.tl1} resizeMode="contain" />
-        </View>
         <Text style={styles.hiSub}>{language} · through songs</Text>
 
         {/* How to use Ritmo — quick intro guide, on top */}
@@ -468,6 +465,7 @@ const styles = StyleSheet.create({
   searchBtn: { width: 44, height: 44, borderRadius: 22, backgroundColor: "rgba(7,11,19,0.5)", borderWidth: 1.5, borderColor: colors.accent, alignItems: "center", justifyContent: "center", shadowColor: colors.accent, shadowOpacity: 0.2, shadowRadius: 5, shadowOffset: { width: 0, height: 0 }, elevation: 3 },
   brandRow: { flexDirection: "row", alignItems: "center" },
   brandImg: { width: 132, height: 44 },
+  brandText: { fontSize: 32, fontWeight: "900", letterSpacing: 0.5 },
   brand: { color: colors.ink, fontSize: font.h1, fontWeight: "900", letterSpacing: 0.5 },
   streak: { flexDirection: "row", alignItems: "center", gap: 6, backgroundColor: "rgba(7,11,19,0.5)", borderRadius: radius.pill, paddingVertical: 7, paddingHorizontal: 14, borderWidth: 1.5, borderColor: colors.gold, shadowColor: colors.gold, shadowOpacity: 0.2, shadowRadius: 5, shadowOffset: { width: 0, height: 0 }, elevation: 3 },
   streakText: { color: colors.gold, fontWeight: "900", fontSize: font.small },
