@@ -163,11 +163,14 @@ function AppInner() {
     return () => clearTimeout(t);
   }, []);
 
-  // Load & auto-play whenever the current song changes.
+  // Load & auto-play whenever the current song changes. Apply the repeat flag to
+  // the freshly-loaded track right here — replace() can reset it, which otherwise
+  // made songs loop instead of advancing to the next one.
   useEffect(() => {
     if (!current) return;
     try {
       player.replace(current.audioModule ?? current.localUri ?? current.audioUrl);
+      player.loop = loop;
       player.play();
     } catch {}
   }, [current?.id]);
