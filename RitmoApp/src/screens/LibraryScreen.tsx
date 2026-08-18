@@ -165,14 +165,16 @@ export default function LibraryScreen({
             <Text style={styles.rowTitle} numberOfLines={1}>{songTitle(s)}</Text>
             {!!s.genre && <Text style={styles.rowMeta} numberOfLines={1}>{s.genre}</Text>}
             <View style={styles.metaRow}>
-              <View style={styles.lvlPill}>
-                <Text style={styles.lvlPillText} numberOfLines={1}>{(s.level === "prestarter" ? "Words" : tierLabel(s.level))} · L{s.lesson}</Text>
-              </View>
-              {s.catalog && (
-                <View style={styles.builtinPill}>
-                  <Text style={styles.builtinPillText} numberOfLines={1}>★ Built-in</Text>
+              <View style={styles.pillPair}>
+                <View style={styles.lvlPill}>
+                  <Text style={styles.lvlPillText} numberOfLines={1}>{(s.level === "prestarter" ? "Words" : tierLabel(s.level))} · L{s.lesson}</Text>
                 </View>
-              )}
+                {s.catalog && (
+                  <View style={styles.builtinPill}>
+                    <Text style={styles.builtinPillText} numberOfLines={1}>★ Built-in</Text>
+                  </View>
+                )}
+              </View>
               {s.localUri && <Text style={styles.dlDot}>⬇</Text>}
               {s.rating === 1 && <View style={styles.rateUp}><Text style={styles.rateEmoji}>👍</Text></View>}
               {s.rating === -1 && <View style={styles.rateDown}><Text style={styles.rateEmoji}>👎</Text></View>}
@@ -787,14 +789,15 @@ const styles = StyleSheet.create({
   chip: { borderRadius: radius.pill, paddingVertical: 9, paddingHorizontal: 14 },
   chipOff: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.line },
   chipText: { color: colors.muted, fontSize: font.small, fontWeight: "800" },
-  row: { flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1, borderColor: colors.line, padding: 9, marginBottom: 8 },
+  row: { flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: "rgba(5,8,15,0.45)", borderRadius: radius.md, borderWidth: 1, borderColor: colors.line, padding: 9, marginBottom: 8 },
   plArt: { width: 52, height: 52, borderRadius: radius.md, alignItems: "center", justifyContent: "center" },
   rowTitle: { color: colors.ink, fontSize: 12.5, fontWeight: "700", lineHeight: 16 },
   rowMeta: { color: colors.muted, fontSize: 10.5, lineHeight: 14, textTransform: "capitalize", flexShrink: 1 },
   lvlPill: { backgroundColor: colors.card2, borderWidth: 1, borderColor: colors.accent, borderRadius: radius.pill, paddingVertical: 2, paddingHorizontal: 7 },
   lvlPillText: { color: colors.accent, fontSize: font.tiny, fontWeight: "900" },
   rowMid: { flex: 1, minWidth: 0 },
-  metaRow: { flexDirection: "row", alignItems: "center", gap: 5, marginTop: 4, flexWrap: "nowrap" },
+  metaRow: { flexDirection: "row", alignItems: "center", gap: 5, marginTop: 4, flexWrap: "wrap" },
+  pillPair: { flexDirection: "row", alignItems: "center", gap: 5 },
   builtinPill: { backgroundColor: colors.card2, borderWidth: 1, borderColor: colors.accent, borderRadius: radius.pill, paddingVertical: 2, paddingHorizontal: 9 },
   builtinPillText: { color: colors.accent, fontSize: font.tiny, fontWeight: "900" },
   rateUp: { backgroundColor: "rgba(55,214,122,0.16)", borderRadius: 10, paddingHorizontal: 5, paddingVertical: 1 },

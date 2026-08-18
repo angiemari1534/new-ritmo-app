@@ -778,9 +778,8 @@ export default function App() {
   if (booting) {
     return (
       <View style={styles.splash}>
-        <StatusBar style="light" />
-        <GradientText text="Ritmo" style={styles.splashBrand} colors={["#2A7FE0", "#22B8B0", "#E4B84C"]} />
-        <GradientText text="LEARN LANGUAGES, FEEL THE RHYTHM" style={styles.splashTag} colors={["#2A7FE0", "#22B8B0", "#E4B84C"]} />
+        <StatusBar style="dark" />
+        <Image source={require("./assets/logo.png")} style={styles.splashLogo} resizeMode="contain" />
       </View>
     );
   }
@@ -1135,8 +1134,8 @@ function EmptyLearn({ onCreate }: { onCreate: () => void }) {
 
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
-  splash: { flex: 1, backgroundColor: "#05080F", alignItems: "center", justifyContent: "center", gap: 10 },
-  splashLogo: { width: 260, height: 260 },
+  splash: { flex: 1, backgroundColor: "#FBF8F1", alignItems: "center", justifyContent: "center" },
+  splashLogo: { width: 300, height: 300 },
   splashBrand: { fontSize: 64, fontWeight: "900", letterSpacing: 1 },
   splashTag: { fontSize: 13, fontWeight: "900", letterSpacing: 2 },
   banner: { flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: "#0E3E42", paddingVertical: 12, paddingHorizontal: 16 },
