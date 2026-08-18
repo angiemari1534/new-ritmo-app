@@ -4,7 +4,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { Screen, StatTile, ProgressBar } from "../components/ui";
-import { colors, spacing, font, radius, gradients } from "../theme";
+import { spacing, font, radius, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { GENRES, TIERS } from "../data/presets";
 import { AVATAR_KEYS, avatarSource } from "../data/avatars";
 import type { Settings, Playlist } from "../lib/storage";
@@ -62,6 +63,8 @@ const PLAN_ROWS = [
 
 // A rounded icon box with a themed vector symbol (not an emoji).
 function RowIcon({ name, color }: { name: string; color?: string }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.rowIconBox}>
       <MaterialCommunityIcons name={name as any} size={20} color={color ?? colors.accent} />
@@ -98,6 +101,9 @@ export default function ProfileScreen({
   karaokeStatus?: string;
   onOpenPaywall?: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
+  const sheet = useThemedStyles(makeSheet);
   const [editing, setEditing] = useState<EditKey>(null);
   const [avatarOpen, setAvatarOpen] = useState(false);
   const [customEmoji, setCustomEmoji] = useState("");
@@ -492,6 +498,9 @@ function SettingsSheet({
   onUpdate: (p: Partial<Settings>) => void;
   onResetData: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
+  const sheet = useThemedStyles(makeSheet);
   const [name, setName] = useState(settings.name);
 
   const titleMap: Record<string, string> = {
@@ -664,6 +673,8 @@ function SettingsSheet({
 }
 
 function OptionRow({ label, on, onPress }: { label: string; on: boolean; onPress: () => void }) {
+  const { colors, gradients } = useTheme();
+  const sheet = useThemedStyles(makeSheet);
   return (
     <Pressable onPress={onPress}>
       <View style={[sheet.opt, on && sheet.optOn]}>
@@ -675,6 +686,8 @@ function OptionRow({ label, on, onPress }: { label: string; on: boolean; onPress
 }
 
 function Chip({ label, on, onPress }: { label: string; on: boolean; onPress: () => void }) {
+  const { colors, gradients } = useTheme();
+  const sheet = useThemedStyles(makeSheet);
   return (
     <Pressable onPress={onPress}>
       <View style={[sheet.chip, on ? sheet.chipOn : sheet.chipOff]}>
@@ -684,7 +697,7 @@ function Chip({ label, on, onPress }: { label: string; on: boolean; onPress: () 
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   content: { padding: spacing.lg, paddingTop: 60 },
   tourBtn: { borderRadius: radius.md, paddingVertical: 13, alignItems: "center", borderWidth: 1, borderColor: "rgba(157,178,204,0.4)", backgroundColor: "rgba(7,11,19,0.5)" },
   tourBtnText: { color: "#B9C1CE", fontWeight: "900", fontSize: font.body },
@@ -749,7 +762,7 @@ const styles = StyleSheet.create({
   footer: { color: colors.faint, fontSize: font.small, textAlign: "center", marginTop: spacing.xl },
 });
 
-const sheet = StyleSheet.create({
+const makeSheet = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.55)" },
   card: {
     position: "absolute",

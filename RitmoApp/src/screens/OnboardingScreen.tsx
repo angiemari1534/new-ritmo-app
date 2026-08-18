@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Text, View, StyleSheet, Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { colors, spacing, font, radius, gradients } from "../theme";
+import { spacing, font, radius, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 
 type Mci = React.ComponentProps<typeof MaterialCommunityIcons>["name"];
 type TabKey = "home" | "learn" | "create" | "library" | "profile" | null;
@@ -47,6 +48,8 @@ const TABS: { key: Exclude<TabKey, null>; icon: Mci; label: string }[] = [
 // A little mock of the bottom tab bar with one tab lit up, so the user sees
 // exactly where the feature lives.
 function MiniTabBar({ highlight, color }: { highlight: TabKey; color: string }) {
+  const { colors } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.miniBar}>
       {TABS.map((t) => {
@@ -73,6 +76,8 @@ function MiniTabBar({ highlight, color }: { highlight: TabKey; color: string }) 
 }
 
 export default function OnboardingScreen({ onDone }: { onDone: () => void }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const [i, setI] = useState(0);
   const last = i === SLIDES.length - 1;
   const s = SLIDES[i];
@@ -126,7 +131,7 @@ export default function OnboardingScreen({ onDone }: { onDone: () => void }) {
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   root: { flex: 1, padding: spacing.lg, paddingBottom: 40, justifyContent: "flex-end" },
   skip: { position: "absolute", top: 56, right: spacing.lg, zIndex: 2 },
   skipText: { color: colors.muted, fontSize: font.body, fontWeight: "700" },

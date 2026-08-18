@@ -3,7 +3,8 @@ import { Text, View, StyleSheet, ScrollView, Pressable, TextInput, ActivityIndic
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Screen, GradientButton, SubjectIcon, Chip } from "../components/ui";
-import { colors, spacing, font, radius, gradients, gradientFor } from "../theme";
+import { spacing, font, radius, gradientFor, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { GENRES, Tier, SongSpec, StyleSeed, CurriculumSubject, FALLBACK_CURRICULUM, lessonsFor } from "../data/presets";
 import { getCurriculum } from "../lib/api";
 import { loadProgress, type Progress } from "../lib/storage";
@@ -75,6 +76,8 @@ export default function CreateScreen({
   onSeedConsumed?: () => void;
   defaults?: { genre: string; mood: string; tempo: string; genres: string[]; moods: string[] };
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const [step, setStep] = useState(1);
   const [curriculum, setCurriculum] = useState<CurriculumSubject[]>(FALLBACK_CURRICULUM);
   const [progress, setProgress] = useState<Progress>({});
@@ -475,7 +478,7 @@ export default function CreateScreen({
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   top: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingTop: 56, paddingHorizontal: spacing.lg },
   back: { color: colors.ink, fontSize: 30, fontWeight: "800", width: 24 },
   title: { color: colors.ink, fontSize: font.h3, fontWeight: "900" },

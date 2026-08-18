@@ -2,7 +2,8 @@ import React, { useMemo, useState } from "react";
 import { Text, View, StyleSheet, Pressable, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import * as Speech from "expo-speech";
-import { colors, spacing, font, radius, gradients } from "../theme";
+import { spacing, font, radius, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import type { VocabPair } from "../lib/api";
 
 function speak(text: string, language: string, rate = 0.55) {
@@ -16,6 +17,8 @@ function shuffle<T>(a: T[]): T[] {
 
 // ---- Pronunciation: hear each word spoken slowly ------------------------
 export function PronouncePanel({ vocab, lang }: { vocab: VocabPair[]; lang: string }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const playAll = () => {
     Speech.stop();
     for (const w of vocab) {
@@ -47,6 +50,8 @@ export function PronouncePanel({ vocab, lang }: { vocab: VocabPair[]; lang: stri
 
 // ---- Speaking practice: hear it, repeat out loud, self-assess -----------
 export function SpeakPanel({ vocab, lang }: { vocab: VocabPair[]; lang: string }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const [i, setI] = useState(0);
   if (vocab.length === 0) return <Empty text="No words to practice yet." />;
   if (i >= vocab.length)
@@ -78,6 +83,8 @@ export function SpeakPanel({ vocab, lang }: { vocab: VocabPair[]; lang: string }
 
 // ---- Quiz: multiple choice from the song's vocab -----------------------
 export function QuizPanel({ vocab, lang }: { vocab: VocabPair[]; lang: string }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const questions = useMemo(() => {
     const items = vocab.filter((v) => v.es && v.en);
     if (items.length < 2) return [];
@@ -156,6 +163,8 @@ export function QuizPanel({ vocab, lang }: { vocab: VocabPair[]; lang: string })
 }
 
 function Empty({ text }: { text: string }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.center}>
       <Text style={styles.doneSub}>{text}</Text>
@@ -163,7 +172,7 @@ function Empty({ text }: { text: string }) {
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   panel: { flex: 1, paddingHorizontal: spacing.lg },
   center: { flex: 1, alignItems: "center", justifyContent: "center", padding: spacing.lg },
   rowBtns: { flexDirection: "row", gap: 12, justifyContent: "center", marginVertical: 12 },

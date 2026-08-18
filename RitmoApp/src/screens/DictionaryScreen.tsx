@@ -2,7 +2,8 @@ import React, { useMemo, useRef, useState } from "react";
 import { Text, View, StyleSheet, Pressable, TextInput, SectionList } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import * as Speech from "expo-speech";
-import { colors, spacing, font, radius, gradients } from "../theme";
+import { spacing, font, radius, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { DICTIONARY, type DictEntry } from "../data/dictionary";
 import { translateWord } from "../lib/api";
 import type { VocabPair } from "../lib/api";
@@ -33,6 +34,8 @@ export default function DictionaryScreen({
   languageName?: string;
   onClose: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const [query, setQuery] = useState("");
   const [mode, setMode] = useState<"english" | "spanish">("english");
   const [translating, setTranslating] = useState(false);
@@ -173,7 +176,7 @@ export default function DictionaryScreen({
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
   header: { flexDirection: "row", alignItems: "center", gap: 8, paddingTop: 54, paddingHorizontal: spacing.md, paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: "rgba(34,184,176,0.18)" },
   back: { width: 34, alignItems: "center" },

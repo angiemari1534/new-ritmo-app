@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Text, View, StyleSheet, Animated, Easing, Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Screen, SubjectIcon } from "../components/ui";
-import { colors, spacing, font, gradients, gradientFor } from "../theme";
+import { spacing, font, gradientFor, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 
 const STEPS = [
   "Writing your bilingual lyrics…",
@@ -23,6 +24,8 @@ export default function GeneratingScreen({
   onCancel: () => void;
   onRetry: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const pulse = useRef(new Animated.Value(0)).current;
   const [stepIndex, setStepIndex] = useState(0);
 
@@ -82,7 +85,7 @@ export default function GeneratingScreen({
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   center: { flex: 1, alignItems: "center", justifyContent: "center", padding: spacing.xl },
   orb: { width: 140, height: 140, borderRadius: 70, alignItems: "center", justifyContent: "center" },
   orbEmoji: { fontSize: 64 },

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Text, View, StyleSheet, ScrollView, Pressable, Modal, TextInput, Share, Alert } from "react-native";
 import { Swipeable } from "react-native-gesture-handler";
 import { Screen, ArtTile, GradientButton } from "../components/ui";
-import { colors, spacing, font, radius, gradientFor, gradients } from "../theme";
+import { spacing, font, radius, gradientFor, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { songTitle, sendFlags } from "../lib/api";
 import { tierLabel, subjectLabel } from "../data/presets";
@@ -65,6 +66,9 @@ export default function LibraryScreen({
   onRemoveFromPlaylist: (playlistId: string, songId: string) => void;
   onOpenSongInPlaylist: (s: Song, list?: Song[]) => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
+  const sheet = useThemedStyles(makeSheet);
   const [filter, setFilter] = useState<Filter>("all");
 
   // Open on a specific filter when asked (e.g. Home's Favorites tile).
@@ -606,6 +610,8 @@ function flagsShareText(catFlags: Record<string, CatalogFlag[]>, songs: Song[]):
 }
 
 function FlagBtn({ label, on, tone, onPress }: { label: string; on: boolean; tone: "lock" | "reroll" | "bad"; onPress: () => void }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const onStyle = tone === "lock" ? styles.flagOnLock : tone === "reroll" ? styles.flagOnReroll : styles.flagOnBad;
   return (
     <Pressable onPress={onPress} hitSlop={4} style={{ flex: 1 }}>
@@ -635,6 +641,9 @@ function PlaylistsView({
   onOpenSong: (s: Song, list?: Song[]) => void;
   onNew: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
+  const sheet = useThemedStyles(makeSheet);
   const [expanded, setExpanded] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"default" | "subject" | "builtin">("default");
   return (
@@ -757,6 +766,8 @@ function PlaylistsView({
 }
 
 function SheetAction({ icon, label, onPress, danger }: { icon: string; label: string; onPress: () => void; danger?: boolean }) {
+  const { colors, gradients } = useTheme();
+  const sheet = useThemedStyles(makeSheet);
   return (
     <Pressable onPress={onPress}>
       <View style={sheet.action}>
@@ -768,6 +779,8 @@ function SheetAction({ icon, label, onPress, danger }: { icon: string; label: st
 }
 
 function SortPill({ label, on, onPress }: { label: string; on: boolean; onPress: () => void }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <Pressable onPress={onPress} hitSlop={6}>
       <View style={[styles.sortPill, on && styles.sortPillOn]}>
@@ -778,6 +791,8 @@ function SortPill({ label, on, onPress }: { label: string; on: boolean; onPress:
 }
 
 function FilterChip({ label, on, onPress }: { label: string; on: boolean; onPress: () => void }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <Pressable onPress={onPress}>
       {on ? (
@@ -793,7 +808,7 @@ function FilterChip({ label, on, onPress }: { label: string; on: boolean; onPres
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   content: { padding: spacing.lg, paddingTop: 60 },
   title: { color: colors.ink, fontSize: font.h1, fontWeight: "900", marginBottom: spacing.md },
   filters: { flexDirection: "row", gap: 8, marginBottom: spacing.md },
@@ -885,7 +900,7 @@ const styles = StyleSheet.create({
   toastText: { color: colors.ink, fontSize: font.small, fontWeight: "800" },
 });
 
-const sheet = StyleSheet.create({
+const makeSheet = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.55)" },
   card: { position: "absolute", bottom: 0, left: 0, right: 0, backgroundColor: colors.bg2, borderTopLeftRadius: radius.xl, borderTopRightRadius: radius.xl, padding: spacing.lg, paddingBottom: 34, borderTopWidth: 1, borderColor: colors.line },
   handle: { width: 44, height: 5, borderRadius: 3, backgroundColor: colors.line, alignSelf: "center", marginBottom: 12 },

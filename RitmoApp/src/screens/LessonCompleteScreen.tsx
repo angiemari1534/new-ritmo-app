@@ -2,7 +2,8 @@ import React, { useMemo, useState } from "react";
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import * as Speech from "expo-speech";
-import { colors, spacing, font, radius, gradients } from "../theme";
+import { spacing, font, radius, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { tierLabel, subjectLabel } from "../data/presets";
 import type { Song, VocabPair } from "../lib/api";
 
@@ -38,6 +39,8 @@ export default function LessonCompleteScreen({
   onComplete: (goNext: boolean) => void;
   onExit: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const vocab = (song.vocab || []).filter((v) => v?.es && v?.en);
   const questions = useMemo(() => buildQuestions(vocab), [song.id]);
   const [step, setStep] = useState<"words" | "quiz" | "done">("words");
@@ -178,7 +181,7 @@ export default function LessonCompleteScreen({
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg, paddingHorizontal: spacing.lg },
   header: { flexDirection: "row", alignItems: "center", paddingTop: 56, paddingBottom: 10 },
   kicker: { color: colors.accent, fontSize: font.tiny, fontWeight: "900", letterSpacing: 2 },

@@ -4,7 +4,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import type { AudioPlayer, AudioStatus } from "expo-audio";
 import * as Speech from "expo-speech";
 import { Screen, ProgressBar, SubjectIcon } from "../components/ui";
-import { colors, spacing, font, radius, gradients, gradientFor } from "../theme";
+import { spacing, font, radius, gradientFor, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { langCode, tierLabel } from "../data/presets";
 import { PronouncePanel, QuizPanel, SpeakPanel } from "./LearnModes";
 import { reportLine, songTitle } from "../lib/api";
@@ -62,6 +63,8 @@ export default function PlayerScreen({
   flags?: CatalogFlag[];
   onToggleFlag?: (flag: CatalogFlag) => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const scrollRef = useRef<ScrollView>(null);
   const [lyricsH, setLyricsH] = useState(300);
   const [mode, setMode] = useState<"lyrics" | "pronounce" | "quiz" | "speak">("lyrics");
@@ -358,6 +361,8 @@ function fmt(sec: number) {
 }
 
 function PlayerFlagBtn({ label, on, tone, onPress }: { label: string; on: boolean; tone: "lock" | "reroll" | "bad"; onPress: () => void }) {
+  const { colors } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const onStyle = tone === "lock" ? styles.pflagLock : tone === "reroll" ? styles.pflagReroll : styles.pflagBad;
   return (
     <Pressable onPress={onPress} hitSlop={4} style={{ flex: 1 }}>
@@ -368,7 +373,7 @@ function PlayerFlagBtn({ label, on, tone, onPress }: { label: string; on: boolea
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   header: { flexDirection: "row", alignItems: "center", paddingTop: 44, paddingHorizontal: spacing.md },
   lockedBar: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 7, paddingHorizontal: spacing.md, marginTop: 10 },
   lockedDot: { width: 10, height: 10, borderRadius: 5, backgroundColor: "#37D67A", shadowColor: "#37D67A", shadowOpacity: 0.7, shadowRadius: 4, shadowOffset: { width: 0, height: 0 } },

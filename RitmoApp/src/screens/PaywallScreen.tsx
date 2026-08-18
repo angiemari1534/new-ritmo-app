@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Text, View, StyleSheet, Pressable, ScrollView, Modal } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { colors, radius, font, spacing, gradients } from "../theme";
+import { radius, font, spacing, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { PLANS, type PlanId } from "../lib/entitlements";
 import { tierLabel } from "../data/presets";
 
@@ -21,6 +22,8 @@ export default function PaywallScreen({
   onSubscribe: (plan: PlanId) => void;
   onClose: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const [annual, setAnnual] = useState(false);
 
   return (
@@ -89,7 +92,7 @@ export default function PaywallScreen({
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   root: { flex: 1, backgroundColor: "#05080F", paddingTop: 56, paddingHorizontal: spacing.lg },
   header: { flexDirection: "row", alignItems: "center" },
   title: { flex: 1, color: colors.ink, fontSize: font.h1, fontWeight: "900" },

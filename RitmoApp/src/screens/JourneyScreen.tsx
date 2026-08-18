@@ -3,7 +3,8 @@ import { Text, View, StyleSheet, Pressable, Image, Dimensions, FlatList, ScrollV
 import Svg, { Path, Defs, LinearGradient as SvgGradient, Stop } from "react-native-svg";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { colors, spacing, font, radius, gradients } from "../theme";
+import { spacing, font, radius, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { tierLabel, subjectLabel, LEVELS, LEVEL_ORDER, subjectsForLevel, lessonsFor, type PathStep, type Tier } from "../data/presets";
 import { avatarSource, AVATAR_KEYS } from "../data/avatars";
 import type { Progress } from "../lib/storage";
@@ -130,6 +131,8 @@ export default function JourneyScreen({
   onJumpTo: (step: PathStep) => void;
   onClose: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const listRef = useRef<FlatList<Seg>>(null);
   const avImg = avatarSource(avatar) ?? (isUri(avatar) ? { uri: avatar } : null);
   // Where the avatar sits: the lesson you're currently on (so it follows you as
@@ -225,6 +228,8 @@ export default function JourneyScreen({
 }
 
 function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress: Progress; here: PathStep | null; avImg: any; onJumpTo: (s: PathStep) => void }) {
+  const { colors } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const { tier, subject, index } = seg;
   const N = lessonsFor(tier, subject); // this topic's lesson count
   const SEG_H = segHeight(tier, subject);
@@ -421,7 +426,7 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
   header: { flexDirection: "row", alignItems: "center", paddingTop: 56, paddingHorizontal: spacing.lg, paddingBottom: 6 },
   title: { color: colors.accent, fontSize: font.h1, fontWeight: "900" },

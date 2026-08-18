@@ -3,7 +3,8 @@ import { Text, View, StyleSheet, Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import * as Speech from "expo-speech";
 import { Screen } from "../components/ui";
-import { colors, spacing, font, radius, gradients } from "../theme";
+import { spacing, font, radius, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import type { VocabPair } from "../lib/api";
 
 export default function FlashcardsScreen({
@@ -19,6 +20,8 @@ export default function FlashcardsScreen({
   onToggleKnown: (es: string) => void;
   onClose: () => void;
 }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const [onlyLearning, setOnlyLearning] = useState(true);
   const knownSet = useMemo(() => new Set(known), [known]);
 
@@ -112,6 +115,8 @@ export default function FlashcardsScreen({
 }
 
 function Pill({ label, on, onPress }: { label: string; on: boolean; onPress: () => void }) {
+  const { colors, gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <Pressable onPress={onPress}>
       {on ? (
@@ -125,7 +130,7 @@ function Pill({ label, on, onPress }: { label: string; on: boolean; onPress: () 
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingTop: 56, paddingHorizontal: spacing.lg },
   close: { color: colors.ink, fontSize: 22, fontWeight: "800", width: 24 },
   title: { color: colors.ink, fontSize: font.h3, fontWeight: "900" },
