@@ -379,5 +379,8 @@ const MAP: Record<string, number> = {
 export const AVATAR_KEYS: string[] = Object.keys(MAP);
 
 export function avatarSource(a?: string): number | undefined {
-  return a ? MAP[a] : undefined;
+  if (!a) return undefined;
+  // Accept both padded ("av002") and unpadded ("av2") keys.
+  const m = /^av0*(\d+)$/.exec(a);
+  return MAP[m ? "av" + m[1] : a];
 }
