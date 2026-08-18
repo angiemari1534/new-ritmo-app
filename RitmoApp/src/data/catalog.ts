@@ -91,6 +91,7 @@ import greetingsL9 from "../../assets/catalog/greetings-l9.mp3";
 import pronounsL4 from "../../assets/catalog/pronouns-l4.mp3";
 import pronounsL5 from "../../assets/catalog/pronouns-l5.mp3";
 import colorsL8 from "../../assets/catalog/colors-l8.mp3";
+import descriptionsL4 from "../../assets/catalog/descriptions-l4.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -1940,5 +1941,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000087,
     spec: { subject: "colors", level: "prestarter", lesson: 8, genre: "Latin", beat: "Happy Upbeat" },
+  },
+  {
+    id: "cat-descriptions-l4",
+    title: "Descriptions — First Words · Lesson 4",
+    subject: "descriptions",
+    subjectLabel: "Descriptions",
+    level: "prestarter",
+    lesson: 4,
+    totalLessons: 20,
+    genre: "R&B",
+    beat: "Groovy Normal",
+    artistFeel: "Alicia Keys",
+    language: "Spanish",
+    lyrics: "[Intro]\nTake it away\nGive it up\n[Verse]\nOne more word\nhot\ncaliente\ncaliente\nOne more round\ncold\nfrío\nfrío\nOne more time\n[Chorus]\nThat's the way\nhot\ncaliente\ncold\nfrío\nsweet\ndulce\nHere we go\n[Verse]\nLet's hear it\nsweet\ndulce\ndulce\nUh yeah\nbitter\namargo\namargo\nstrong\nfuerte\nfuerte\nTurn it up now\n[Chorus]\nWith me now\nhot\ncaliente\ncold\nfrío\nsweet\ndulce\nOh oh oh\n[Verse]\nNa na na\nrough\náspero\náspero\nRide the beat\nsoft\nsuave\nsuave\nUh-huh!\n[Chorus]\nYou've got it\nhot\ncaliente\ncold\nfrío\nsweet\ndulce\nLet's vibe\n[Bridge]\nOoh!\nhot\ncaliente\ncold\nfrío\nsweet\ndulce\nbitter\namargo\nrough\náspero\nsoft\nsuave\nOh-oh!\n[Chorus]\nLa la la\nhot\ncaliente\ncold\nfrío\nsweet\ndulce\n[Outro]\nFollow along\nWoo-hoo!",
+    vocab: [{"es":"caliente","en":"hot"},{"es":"frío","en":"cold"},{"es":"dulce","en":"sweet"},{"es":"amargo","en":"bitter"},{"es":"áspero","en":"rough"},{"es":"suave","en":"soft"}],
+    lineTimings: [{"start":5.02,"end":7.82,"loss":3.274793107062578},{"start":7.82,"end":9.88,"loss":3.2596866488456726},{"start":9.88,"end":12.379,"loss":6.106415589650473},{"start":12.38,"end":14.379,"loss":8.477526346842447},{"start":14.38,"end":15.72,"loss":8.720511118570963},{"start":15.72,"end":16.1,"loss":0.08070161607530382},{"start":16.1,"end":17.42,"loss":7.360730361938477},{"start":17.42,"end":18,"loss":9.699780782063803},{"start":18,"end":18.26,"loss":8.731469048394098},{"start":18.26,"end":18.74,"loss":0.0014254252115885417},{"start":18.74,"end":24.3,"loss":2.9965165158112845},{"start":24.3,"end":26.09,"loss":9.940620382626852},{"start":26.09,"end":26.7,"loss":9.352045694986979},{"start":26.7,"end":27.7,"loss":8.661610921223959},{"start":27.7,"end":28.38,"loss":9.233502197265624},{"start":28.38,"end":29.38,"loss":8.078906250000001},{"start":29.38,"end":29.68,"loss":0.3353830973307292},{"start":29.68,"end":30.36,"loss":7.959737141927083},{"start":30.36,"end":32,"loss":3.0317758083343507},{"start":32,"end":35.32,"loss":8.920874786376952},{"start":35.32,"end":35.72,"loss":1.27734375},{"start":35.72,"end":36.4,"loss":7.949263254801433},{"start":36.4,"end":37.1,"loss":9.018604278564453},{"start":37.1,"end":39.26,"loss":9.766682942708334},{"start":39.26,"end":40,"loss":7.258258819580078},{"start":40,"end":40.64,"loss":8.023546006944445},{"start":40.64,"end":41.36,"loss":7.829644097222222},{"start":41.36,"end":41.98,"loss":0.037242889404296875},{"start":41.98,"end":42.36,"loss":0.0005286534627278646},{"start":42.36,"end":43.34,"loss":8.255330191718206},{"start":43.34,"end":46.42,"loss":4.614578593860973},{"start":46.42,"end":48.94,"loss":9.435174465179443},{"start":48.94,"end":49.7,"loss":8.118984476725261},{"start":49.7,"end":50.66,"loss":8.629166666666666},{"start":50.66,"end":54.589,"loss":1.2493489583333333},{"start":54.589,"end":56.04,"loss":0.8580729166666666},{"start":56.04,"end":56.54,"loss":8.167643229166666},{"start":56.54,"end":56.8,"loss":0.4138997395833333},{"start":56.8,"end":58.34,"loss":9.050906944274903},{"start":58.34,"end":60.1,"loss":3.4443359375},{"start":60.1,"end":60.72,"loss":7.7490234375},{"start":60.72,"end":63.76,"loss":7.635416666666667},{"start":63.76,"end":63.910999999999994,"loss":8.444010416666666},{"start":63.91,"end":68.119,"loss":6.269175028800964},{"start":68.12,"end":68.72,"loss":0.0029144287109375},{"start":68.72,"end":69.18,"loss":9.45290798611111},{"start":69.18,"end":69.92,"loss":7.347120443979899},{"start":69.92,"end":70.75,"loss":8.412821451822916},{"start":70.75,"end":74.1,"loss":9.321179008483886},{"start":74.1,"end":75.119,"loss":7.897395833333333},{"start":75.12,"end":77.14,"loss":1.3709767659505208},{"start":77.14,"end":79.06,"loss":7.735107421875},{"start":79.06,"end":91.39,"loss":8.708143446180555},{"start":91.39,"end":92.62,"loss":7.034515380859375},{"start":92.62,"end":93.35,"loss":8.596847534179688},{"start":93.35,"end":94.44,"loss":9.819281005859375},{"start":94.44,"end":95.16,"loss":8.388984680175781},{"start":95.16,"end":96.16,"loss":7.886458333333334},{"start":96.16,"end":96.54,"loss":8.59530300564236},{"start":96.54,"end":97.46,"loss":7.895616319444444},{"start":97.46,"end":97.84,"loss":7.853706868489584},{"start":97.84,"end":98.72,"loss":7.3988037109375},{"start":98.72,"end":99.45100000000001,"loss":7.660970052083333},{"start":99.45100000000001,"end":101.801,"loss":8.15859375},{"start":104.1,"end":109.361,"loss":8.602986653645834},{"start":126.5,"end":126.78,"loss":1.8118998209635417},{"start":126.78,"end":129.479,"loss":7.3984425862630205},{"start":129.479,"end":129.49,"loss":8.486735026041666},{"start":129.49,"end":131.82,"loss":8.574217478434244},{"start":131.82,"end":133.269,"loss":8.155197143554688},{"start":133.269,"end":134.66,"loss":6.86828842163086},{"start":134.66,"end":134.88,"loss":20.125},{"start":134.88,"end":134.9,"loss":0.3125},{"start":134.9,"end":134.95,"loss":2.4925130208333335},{"start":134.95,"end":134.951,"loss":0.8359375},{"start":134.951,"end":134.98,"loss":1.76064453125},{"start":134.98,"end":135,"loss":19.625},{"start":135,"end":135.01,"loss":0.150390625},{"start":135.01,"end":136.12,"loss":2.7392578125}],
+    audioUrl: "",
+    audioModule: descriptionsL4,
+    catalog: true,
+    createdAt: 1750000000088,
+    spec: { subject: "descriptions", level: "prestarter", lesson: 4, genre: "R&B", beat: "Groovy Normal" },
   }
 ];

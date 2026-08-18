@@ -2,7 +2,7 @@
 // the full colour token set + named gradients are derived from it, so switching
 // theme recolours the whole app. The picker under "Ritmo" swaps the active one.
 
-export type ThemeId = "midnight" | "sunset" | "ultraviolet" | "forest" | "mono" | "vintage";
+export type ThemeId = "midnight" | "sunset" | "ultraviolet" | "forest" | "mono" | "vintage" | "classic";
 export type Colors = {
   bg: string; bg2: string; card: string; card2: string; line: string;
   ink: string; muted: string; faint: string; accent: string; teal: string;
@@ -21,6 +21,7 @@ const DEFS: Record<ThemeId, Def> = {
   forest: { bg:"#06120E", bg2:"#0A1E17", card:"rgba(20,44,34,0.42)", card2:"rgba(30,60,46,0.5)", line:"#1E3A30", ink:"#E4EFE8", muted:"#8FB6A2", faint:"#5F8670", accent:"#2FA47E", teal:"#2FA47E", navy:"#1A4A3A", pink:"#E8B04B", coral:"#E8B04B", good:"#5FB350", gold:"#D8C066", blue:"#3FA9C9", gA:"#2FA47E", gB:"#5FB350", goldL:"#E4D07A", goldD:"#B89A3E", nightA:"#12281E", nightB:"#0A1E17" },
   mono: { bg:"#0C0F14", bg2:"#131820", card:"rgba(30,38,48,0.45)", card2:"rgba(44,54,68,0.5)", line:"#26303C", ink:"#E4E8EE", muted:"#8B95A3", faint:"#5F6773", accent:"#6EA8FF", teal:"#6EA8FF", navy:"#3A4757", pink:"#9AA6B4", coral:"#9AA6B4", good:"#6EA8FF", gold:"#B8C1CE", blue:"#6EA8FF", gA:"#5A7A9E", gB:"#6EA8FF", goldL:"#C8D0DC", goldD:"#98A2B0", nightA:"#1A2029", nightB:"#12171E" },
   vintage: { bg:"#191109", bg2:"#241809", card:"rgba(58,40,20,0.42)", card2:"rgba(74,52,26,0.5)", line:"#3A2C18", ink:"#EDE0C8", muted:"#B49A6E", faint:"#8A7550", accent:"#D8A43A", teal:"#D8A43A", navy:"#5A3A1A", pink:"#C4622E", coral:"#C4622E", good:"#7C8A4A", gold:"#D8A43A", blue:"#7C8A4A", gA:"#C4622E", gB:"#D8A43A", goldL:"#E4B85E", goldD:"#C88A2A", nightA:"#2A1C0E", nightB:"#1C1208" },
+  classic: { bg:"#0E1A2E", bg2:"#16243D", card:"rgba(30,52,84,0.4)", card2:"rgba(44,70,108,0.5)", line:"#2A3E5C", ink:"#F1E9D6", muted:"#A8B6CC", faint:"#6E7E98", accent:"#22A9A0", teal:"#22A9A0", navy:"#2A5A9E", pink:"#E4B84C", coral:"#D9A63C", good:"#2E9B8E", gold:"#E4B84C", blue:"#3E6FA8", gA:"#2A5A9E", gB:"#22A9A0", goldL:"#F0C765", goldD:"#D4A32E", nightA:"#16243D", nightB:"#0E1A2E" },
 };
 
 function colorsOf(d: Def): Colors {
@@ -43,6 +44,7 @@ export const THEMES: { id: ThemeId; name: string; vibe: string; colors: Colors; 
   { id:"forest", name:"Forest", vibe:"Deep green, mint and lime", colors: colorsOf(DEFS.forest), gradients: gradientsOf(DEFS.forest) },
   { id:"mono", name:"Mono Slate", vibe:"Greyscale, soft-blue accent", colors: colorsOf(DEFS.mono), gradients: gradientsOf(DEFS.mono) },
   { id:"vintage", name:"Warm Vintage", vibe:"Espresso, cream and mustard", colors: colorsOf(DEFS.vintage), gradients: gradientsOf(DEFS.vintage) },
+  { id:"classic", name:"Ritmo Classic", vibe:"Your logo — navy, teal, gold on cream", colors: colorsOf(DEFS.classic), gradients: gradientsOf(DEFS.classic) },
 ];
 
 export const DEFAULT_THEME: ThemeId = "midnight";
