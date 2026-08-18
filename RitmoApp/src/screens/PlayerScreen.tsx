@@ -125,13 +125,17 @@ export default function PlayerScreen({
     });
   }, [lines, duration, hasReal]);
 
-  // When using the free estimate, let the user tap the line being sung to snap
-  // the timing to it (fixes any drift instantly). Offset resets per song.
-  const [estOffset, setEstOffset] = useState(0);
-  useEffect(() => setEstOffset(0), [song.id]);
-  const syncEst = (singableIdx: number) => {
-    if (hasReal || !estStarts || estStarts[singableIdx] == null) return;
-    setEstOffset(currentTime - estStarts[singableIdx]);
+  // A single sync offset applied to BOTH real and estimated timings, so the user
+  // can tap the line currently being sung to snap the highlight to it and fix any
+  // drift (stale alignment after a re-generation, or an imprecise estimate).
+  // Resets per song.
+  const [syncOffset, setSyncOffset] = useState(0);
+  useEffect(() => setSyncOffset(0), [song.id]);
+  const tAdj = currentTime - syncOffset;
+  const syncToLine = (singableIdx: number) => {
+    const base = hasReal ? timings![singableIdx]?.start : estStarts?.[singableIdx];
+    if (base == null) return;
+    setSyncOffset(currentTime - base);
   };
 
   const hasTimings = hasReal || !!estStarts;
@@ -140,13 +144,12 @@ export default function PlayerScreen({
     for (let k = 0; k < timings!.length; k++) {
       const t = timings![k];
       if (!t) continue;
-      if (t.start <= currentTime) activeSingable = k;
+      if (t.start <= tAdj) activeSingable = k;
       else break;
     }
   } else if (estStarts) {
-    const t = currentTime - estOffset;
     for (let k = 0; k < estStarts.length; k++) {
-      if (estStarts[k] <= t) activeSingable = k;
+      if (estStarts[k] <= tAdj) activeSingable = k;
       else break;
     }
   }
@@ -302,7 +305,7 @@ export default function PlayerScreen({
         <>
           {hasTimings && (
             <Text style={styles.karaokeHint}>
-              {hasReal ? "🎤 Karaoke — the glowing line follows the song" : "🎤 Karaoke — tap the line being sung to line it up"}
+              Karaoke — if the glow drifts, tap the line being sung to line it up
             </Text>
           )}
           <ScrollView
@@ -322,7 +325,7 @@ export default function PlayerScreen({
                 <Text
                   key={i}
                   onLayout={(e) => (lineYs.current[i] = e.nativeEvent.layout.y)}
-                  onPress={() => syncEst(l.singableIndex)}
+                  onPress={() => syncToLine(l.singableIndex)}
                   onLongPress={() => report(l.text)}
                   style={[
                     { fontSize: lineFont, lineHeight, color: colors.ink, fontWeight: "600" },

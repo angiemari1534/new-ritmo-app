@@ -102,6 +102,7 @@ import feelingsL4 from "../../assets/catalog/feelings-l4.mp3";
 import foodL3 from "../../assets/catalog/food-l3.mp3";
 import foodL4 from "../../assets/catalog/food-l4.mp3";
 import cookingL3 from "../../assets/catalog/cooking-l3.mp3";
+import cookingL4 from "../../assets/catalog/cooking-l4.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -2182,5 +2183,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000098,
     spec: { subject: "cooking", level: "prestarter", lesson: 3, genre: "Salsa", beat: "Happy Upbeat" },
+  },
+  {
+    id: "cat-cooking-l4",
+    title: "Cooking & Kitchen — First Words · Lesson 4",
+    subject: "cooking",
+    subjectLabel: "Cooking & Kitchen",
+    level: "prestarter",
+    lesson: 4,
+    totalLessons: 20,
+    genre: "Blues",
+    beat: "Groovy Normal",
+    artistFeel: "Etta James",
+    language: "Spanish",
+    lyrics: "[Intro]\nYeah!\nOne more round\n[Verse]\nAll together\npot\nla olla\nla olla\nOh oh oh\nstove\nla cocina\nla cocina\nSay it again\n[Chorus]\nListen up!\npot\nla olla\nstove\nla cocina\nonion\nla cebolla\nNice work!\n[Verse]\nSing it out\nonion\nla cebolla\nla cebolla\nOne more time\nmeat\nla carne\nla carne\nmix the ingredients\nmezclar los ingredientes\nmezclar los ingredientes\nOh-oh!\n[Chorus]\nHands up\npot\nla olla\nstove\nla cocina\nonion\nla cebolla\nLet's sing!\n[Verse]\nOne more word\nblender\nla batidora\nla batidora\nIn the pocket\nflour\nla harina\nla harina\nHit it!\n[Chorus]\nHey hey!\npot\nla olla\nstove\nla cocina\nonion\nla cebolla\nBring it back\n[Bridge]\nSounds great\npot\nla olla\nstove\nla cocina\nonion\nla cebolla\nmeat\nla carne\nblender\nla batidora\nflour\nla harina\nOh!\n[Chorus]\nLet's get it!\npot\nla olla\nstove\nla cocina\nonion\nla cebolla\n[Outro]\nStep it up\nThat's it!",
+    vocab: [{"es":"la olla","en":"pot"},{"es":"la cocina","en":"stove"},{"es":"la cebolla","en":"onion"},{"es":"la carne","en":"meat"},{"es":"la batidora","en":"blender"},{"es":"la harina","en":"flour"}],
+    lineTimings: [{"start":0.14,"end":2.141,"loss":8.52004369099935},{"start":6.06,"end":9.06,"loss":2.9071957826614376},{"start":9.06,"end":10.65,"loss":5.425482022762298},{"start":10.65,"end":11.2,"loss":9.211263020833334},{"start":11.2,"end":13.42,"loss":5.34111328125},{"start":13.42,"end":15.58,"loss":4.660748291015625},{"start":15.58,"end":19.66,"loss":6.378862762451172},{"start":19.66,"end":20.36,"loss":1.1754862467447917},{"start":20.36,"end":22.28,"loss":5.282644653320313},{"start":22.28,"end":24.74,"loss":4.802354939778646},{"start":24.74,"end":26.49,"loss":3.2769165794054667},{"start":26.49,"end":27.96,"loss":9.875390625},{"start":27.96,"end":28.82,"loss":1.5803629557291667},{"start":28.82,"end":31.04,"loss":9.46697265625},{"start":31.1,"end":32.68,"loss":1.057373046875},{"start":32.68,"end":33.96,"loss":9.7590234375},{"start":33.96,"end":35.18,"loss":1.6043875558035714},{"start":35.18,"end":36.28,"loss":4.645145034790039},{"start":36.28,"end":37.56,"loss":4.931058502197265},{"start":37.56,"end":39.42,"loss":7.1234354972839355},{"start":39.42,"end":40.400999999999996,"loss":7.256690615699405},{"start":40.4,"end":44.18,"loss":5.3040283203125},{"start":44.18,"end":45.98,"loss":0.011178541183471679},{"start":45.98,"end":47.24,"loss":6.828108549118042},{"start":47.24,"end":47.96,"loss":7.071280924479166},{"start":47.96,"end":48.84,"loss":5.173134765625},{"start":48.84,"end":50.14,"loss":0.9863649772875238},{"start":50.14,"end":52.3,"loss":6.774724509034838},{"start":52.3,"end":54.74,"loss":3.750355003845124},{"start":54.74,"end":59.06,"loss":6.621277225017548},{"start":59.06,"end":59.78,"loss":8.776529947916666},{"start":59.78,"end":60.71,"loss":5.1818115234375},{"start":60.71,"end":62.22,"loss":9.014469401041667},{"start":62.22,"end":64.099,"loss":5.086072285970053},{"start":64.099,"end":65.06,"loss":8.710481770833333},{"start":65.06,"end":66.48,"loss":5.013818359375},{"start":66.48,"end":67.56,"loss":0.5274767557779948},{"start":67.56,"end":68.9,"loss":5.34181744257609},{"start":68.9,"end":69.86,"loss":4.893655218396868},{"start":69.86,"end":72.66,"loss":6.639081001281738},{"start":72.66,"end":74.82,"loss":7.408467610677083},{"start":74.82,"end":75.72,"loss":0.05728009541829428},{"start":75.72,"end":77.02,"loss":10.01906878153483},{"start":77.02,"end":79.08,"loss":4.1964874267578125},{"start":79.08,"end":79.92,"loss":7.364810519748264},{"start":79.92,"end":80.6,"loss":4.860377502441406},{"start":80.6,"end":82.031,"loss":5.684562174479167},{"start":82.031,"end":83.52,"loss":5.604752604166666},{"start":83.52,"end":85.46,"loss":9.415140380859375},{"start":85.46,"end":86.32,"loss":1.4249064127604167},{"start":86.32,"end":88.179,"loss":9.091854654947918},{"start":88.179,"end":88.7,"loss":1.82763671875},{"start":88.7,"end":90.26,"loss":4.538661150251116},{"start":90.26,"end":90.94,"loss":0.001250902811686198},{"start":90.94,"end":92.26,"loss":4.465203386942545},{"start":92.26,"end":93.84,"loss":6.752204895019531},{"start":93.84,"end":95.46,"loss":9.4631640625},{"start":95.46,"end":97.12,"loss":1.0393108791775174},{"start":97.12,"end":99.7,"loss":9.6582470703125},{"start":99.7,"end":101.04,"loss":1.4865315755208333},{"start":101.04,"end":101.84,"loss":9.669091796875},{"start":101.84,"end":102.68,"loss":1.1752339680989583},{"start":102.68,"end":104.3,"loss":8.808597891671317},{"start":104.3,"end":105.5,"loss":0.9681574503580729},{"start":105.5,"end":106.479,"loss":9.382841796875},{"start":106.48,"end":107.32,"loss":0.9634975857204862},{"start":107.32,"end":109.42,"loss":8.992057291666665},{"start":109.42,"end":109.94,"loss":0.01999241511027018},{"start":109.94,"end":110.58,"loss":5.973931884765625},{"start":110.58,"end":111.2,"loss":8.36474609375},{"start":111.2,"end":113.74,"loss":6.4146881103515625},{"start":113.74,"end":115.6,"loss":7.318790859646267},{"start":115.6,"end":117.54,"loss":5.7541943359375},{"start":117.54,"end":118.74,"loss":7.361363002232142},{"start":118.74,"end":131.039,"loss":1.3455078125},{"start":131.1,"end":131.11,"loss":8.203125},{"start":131.11,"end":140.68,"loss":1.4122721354166667},{"start":140.68,"end":140.84,"loss":0.003204345703125},{"start":140.84,"end":141.06,"loss":2.7291666666666665}],
+    audioUrl: "",
+    audioModule: cookingL4,
+    catalog: true,
+    createdAt: 1750000000099,
+    spec: { subject: "cooking", level: "prestarter", lesson: 4, genre: "Blues", beat: "Groovy Normal" },
   }
 ];
