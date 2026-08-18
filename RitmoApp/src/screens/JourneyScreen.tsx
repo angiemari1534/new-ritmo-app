@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Pressable, Image, Dimensions, FlatList, ScrollV
 import Svg, { Path, Defs, LinearGradient as SvgGradient, Stop } from "react-native-svg";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { spacing, font, radius, type Colors, type Gradients } from "../theme";
+import { spacing, font, radius, themedMapPalette, type Colors, type Gradients } from "../theme";
 import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { tierLabel, subjectLabel, LEVELS, LEVEL_ORDER, subjectsForLevel, lessonsFor, type PathStep, type Tier } from "../data/presets";
 import { avatarSource, AVATAR_KEYS } from "../data/avatars";
@@ -230,6 +230,10 @@ export default function JourneyScreen({
 function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress: Progress; here: PathStep | null; avImg: any; onJumpTo: (s: PathStep) => void }) {
   const { colors } = useTheme();
   const styles = useThemedStyles(makeStyles);
+  // The whole map colour world (dark bases, tie-dye wash, road accents, rings,
+  // notes) is derived from the active theme so it shifts shades to match it.
+  const mp = themedMapPalette(colors);
+  const SEG_BG = mp.segBg, SEG_ACCENT = mp.segAccent, TIEDYE = mp.tiedye, DEEP = mp.deep, RINGS = mp.rings, NOTE_COLORS = mp.notes;
   const { tier, subject, index } = seg;
   const N = lessonsFor(tier, subject); // this topic's lesson count
   const SEG_H = segHeight(tier, subject);

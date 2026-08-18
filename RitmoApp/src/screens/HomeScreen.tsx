@@ -105,7 +105,7 @@ export default function HomeScreen({
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.headerRow}>
           <View style={styles.brandRow}>
-            <GradientText text="Ritmo" style={styles.brandText} colors={[colors.pink, colors.gold, colors.ink]} />
+            <GradientText text="Ritmo" style={styles.brandText} colors={[gradients.primary[0], colors.accent, colors.gold]} />
             <MaterialCommunityIcons name="music" size={22} color={colors.gold} style={{ marginLeft: 6 }} />
           </View>
           <View style={styles.headerRight}>
@@ -118,7 +118,7 @@ export default function HomeScreen({
           </View>
         </View>
 
-        <GradientText text="LEARN LANGUAGES, FEEL THE RHYTHM" style={styles.tagline} colors={[colors.pink, colors.gold, colors.ink]} />
+        <GradientText text="LEARN LANGUAGES, FEEL THE RHYTHM" style={styles.tagline} colors={[gradients.primary[0], colors.accent, colors.gold]} />
         <Text style={styles.hiSub} numberOfLines={1}>{language} · through songs</Text>
 
         {/* Colour theme picker */}

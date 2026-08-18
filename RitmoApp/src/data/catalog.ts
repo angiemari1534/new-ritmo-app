@@ -88,6 +88,9 @@ import verbsRap from "../../assets/catalog/verbs-rap.mp3";
 import vacationSalsa from "../../assets/catalog/vacation-salsa.mp3";
 import greetingsL8 from "../../assets/catalog/greetings-l8.mp3";
 import greetingsL9 from "../../assets/catalog/greetings-l9.mp3";
+import pronounsL4 from "../../assets/catalog/pronouns-l4.mp3";
+import pronounsL5 from "../../assets/catalog/pronouns-l5.mp3";
+import colorsL8 from "../../assets/catalog/colors-l8.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -1874,5 +1877,68 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000084,
     spec: { subject: "greetings", level: "prestarter", lesson: 9, genre: "Disco", beat: "Groovy Upbeat" },
+  },
+  {
+    id: "cat-pronouns-l4",
+    title: "Pronouns — First Words · Lesson 4",
+    subject: "pronouns",
+    subjectLabel: "Pronouns",
+    level: "prestarter",
+    lesson: 4,
+    totalLessons: 20,
+    genre: "Latin",
+    beat: "Happy Upbeat",
+    artistFeel: "Enrique Iglesias",
+    language: "Spanish",
+    lyrics: "[Intro]\nLet's roll\nWith me now\n[Verse]\nUh yeah\nwe (feminine)\nnosotras\nnosotras\nOne more round\nyou all (formal)\nustedes\nustedes\nThat's the way\n[Chorus]\nLa la la\nwe (feminine)\nnosotras\nyou all (formal)\nustedes\nthey (feminine)\nellas\nLet's sing!\n[Verse]\nWoo!\nthey (feminine)\nellas\nellas\nHands up\nus\nnos\nnos\nSay it again\n[Chorus]\nLet's vibe\nwe (feminine)\nnosotras\nyou all (formal)\nustedes\nthey (feminine)\nellas\nLet's learn!\n[Bridge]\nFollow along\nwe (feminine)\nnosotras\nyou all (formal)\nustedes\nthey (feminine)\nellas\nus\nnos\nOh!\n[Chorus]\nSing it out\nwe (feminine)\nnosotras\nyou all (formal)\nustedes\nthey (feminine)\nellas\n[Outro]\nListen up!\nKeep it up",
+    vocab: [{"es":"nosotras","en":"we (feminine)"},{"es":"ustedes","en":"you all (formal)"},{"es":"ellas","en":"they (feminine)"},{"es":"nos","en":"us"}],
+    lineTimings: [{"start":0.1,"end":0.741,"loss":5.122957191467285},{"start":2.44,"end":12.52,"loss":3.0653764406840005},{"start":12.52,"end":17.5,"loss":5.686486053466797},{"start":17.5,"end":27.16,"loss":6.453671875},{"start":27.16,"end":31.38,"loss":8.979166666666666},{"start":31.38,"end":34.22,"loss":8.477973090277777},{"start":34.22,"end":35.88,"loss":4.020170942942301},{"start":35.88,"end":39.66,"loss":7.141103699093773},{"start":39.66,"end":41.04,"loss":9.550409226190476},{"start":41.04,"end":41.68,"loss":0.07726891835530598},{"start":41.68,"end":44.751,"loss":3.342379570007324},{"start":44.751,"end":48.32,"loss":6.359991455078125},{"start":48.32,"end":50.38,"loss":5.69183349609375},{"start":50.38,"end":51.34,"loss":0.8603142632378472},{"start":51.34,"end":55.42,"loss":7.163453919546945},{"start":55.42,"end":56.18,"loss":9.280208333333333},{"start":56.18,"end":57.42,"loss":4.711025238037109},{"start":57.42,"end":59.84,"loss":8.304036458333334},{"start":59.84,"end":64.34,"loss":5.229556884765625},{"start":64.34,"end":65.28,"loss":9.411458333333334},{"start":65.28,"end":67.9,"loss":9.553749999999999},{"start":67.9,"end":68.9,"loss":0.9551839192708332},{"start":68.9,"end":70.44,"loss":9.908854166666666},{"start":70.44,"end":71.6,"loss":10.33203125},{"start":71.6,"end":72.51,"loss":9.295355902777777},{"start":72.51,"end":73.52,"loss":0.37677256266276044},{"start":73.52,"end":74.12,"loss":7.716384315490722},{"start":74.12,"end":78.64,"loss":3.81882449388504},{"start":78.64,"end":81.66,"loss":9.7209033203125},{"start":81.66,"end":82.82,"loss":0.9301676432291668},{"start":82.82,"end":83.96,"loss":8.568227132161459},{"start":83.96,"end":87.7,"loss":6.875489970615932},{"start":87.7,"end":89.68,"loss":8.422395833333333},{"start":89.68,"end":91.2,"loss":4.820359090169271},{"start":91.2,"end":93.81,"loss":1.9410861545138889},{"start":93.81,"end":96.25,"loss":6.177421875},{"start":96.25,"end":97.9,"loss":9.70048828125},{"start":97.9,"end":99.38,"loss":0.961243184407552},{"start":99.38,"end":100.75,"loss":8.677804129464286},{"start":100.75,"end":104.02,"loss":7.167721557617187},{"start":104.02,"end":105.16,"loss":8.734375},{"start":105.16,"end":107.5,"loss":10.577473958333334},{"start":107.5,"end":108.42,"loss":7.225640190972222},{"start":108.42,"end":108.72,"loss":0.1654949188232422},{"start":108.72,"end":109.88,"loss":7.29510498046875},{"start":109.88,"end":110.68,"loss":1.1809895833333333},{"start":110.68,"end":114.46,"loss":6.603528340657552},{"start":114.46,"end":115.98,"loss":5.130781046549479},{"start":115.98,"end":117.88,"loss":8.997302827380953},{"start":117.88,"end":120.821,"loss":6.622779846191406},{"start":122.88,"end":123.52,"loss":0.8153086238437229},{"start":123.52,"end":124.64,"loss":5.249181926250458},{"start":124.64,"end":124.72,"loss":0.0004425048828125},{"start":124.72,"end":124.84,"loss":0.0111083984375},{"start":124.84,"end":125.04,"loss":0.001384735107421875}],
+    audioUrl: "",
+    audioModule: pronounsL4,
+    catalog: true,
+    createdAt: 1750000000085,
+    spec: { subject: "pronouns", level: "prestarter", lesson: 4, genre: "Latin", beat: "Happy Upbeat" },
+  },
+  {
+    id: "cat-pronouns-l5",
+    title: "Pronouns — First Words · Lesson 5",
+    subject: "pronouns",
+    subjectLabel: "Pronouns",
+    level: "prestarter",
+    lesson: 5,
+    totalLessons: 20,
+    genre: "R&B",
+    beat: "Groovy Normal",
+    artistFeel: "Usher",
+    language: "Spanish",
+    lyrics: "[Intro]\nNice work!\nFollow along\n[Verse]\nAlmost there\nwe\nnosotros\nnosotros\nSay what?\nyou (plural, informal)\nvosotros\nvosotros\nLet it flow\n[Chorus]\nOoh!\nwe\nnosotros\nyou (plural, informal)\nvosotros\nthey (feminine)\nellas\nIn the pocket\n[Verse]\nBreak it down\nthey (feminine)\nellas\nellas\nWith me now\nyou (plural, formal)\nustedes\nustedes\nwith me\nconmigo\nconmigo\nSay it loud\n[Chorus]\nYeah yeah!\nwe\nnosotros\nyou (plural, informal)\nvosotros\nthey (feminine)\nellas\nRepeat with me\n[Bridge]\nKeep it up\nwe\nnosotros\nyou (plural, informal)\nvosotros\nthey (feminine)\nellas\nyou (plural, formal)\nustedes\nHey hey!\n[Chorus]\nSay it with me\nwe\nnosotros\nyou (plural, informal)\nvosotros\nthey (feminine)\nellas\n[Outro]\nLet's go!\nGroove with me",
+    vocab: [{"es":"nosotros","en":"we"},{"es":"vosotros","en":"you (plural, informal)"},{"es":"ellas","en":"they (feminine)"},{"es":"ustedes","en":"you (plural, formal)"}],
+    lineTimings: [{"start":0.58,"end":1.2009999999999998,"loss":4.949108283519744},{"start":5.16,"end":5.9,"loss":4.810529340108236},{"start":9.74,"end":10.49,"loss":4.7475100485483805},{"start":10.49,"end":11.29,"loss":13.29315185546875},{"start":11.29,"end":13.14,"loss":2.365933895111084},{"start":13.14,"end":13.18,"loss":12.578125},{"start":13.18,"end":14.48,"loss":5.473480224609375},{"start":14.48,"end":17.72,"loss":7.518674747527592},{"start":17.72,"end":19.72,"loss":1.9325408935546875},{"start":19.72,"end":20.68,"loss":12.75},{"start":20.68,"end":22.84,"loss":4.1384964897519065},{"start":22.84,"end":23.5,"loss":10.691805362701416},{"start":23.5,"end":25.22,"loss":1.5064849853515625},{"start":25.22,"end":26.84,"loss":11.47265625},{"start":26.84,"end":30.2,"loss":8.467236291794551},{"start":30.2,"end":31.74,"loss":0.9314265780978732},{"start":31.74,"end":32.46,"loss":10.228350830078124},{"start":32.46,"end":33.6,"loss":1.5947265625},{"start":33.6,"end":37.42,"loss":8.113002232142858},{"start":37.42,"end":39.87,"loss":3.573363022577195},{"start":39.87,"end":40.52,"loss":4.392746210098267},{"start":40.52,"end":40.769,"loss":1.40673828125},{"start":40.769,"end":42.94,"loss":1.4888671875},{"start":42.94,"end":43.18,"loss":10.871651785714286},{"start":43.18,"end":44.96,"loss":4.740514119466146},{"start":44.96,"end":45.48,"loss":3.311991373697917},{"start":45.48,"end":46.68,"loss":0.8818502426147461},{"start":46.68,"end":47.519,"loss":9.846428571428572},{"start":47.56,"end":48.29,"loss":12.604352678571429},{"start":48.29,"end":48.54,"loss":3.4982357025146484},{"start":48.54,"end":50.46,"loss":7.306805046237245},{"start":50.46,"end":52.78,"loss":5.060524350120907},{"start":52.78,"end":52.9,"loss":0.578277587890625},{"start":52.9,"end":53.54,"loss":10.2587890625},{"start":53.54,"end":57.14,"loss":4.459036772591728},{"start":57.14,"end":58.2,"loss":12.3828125},{"start":58.2,"end":60.08,"loss":5.857699457804362},{"start":60.08,"end":61.98,"loss":11.42805650499132},{"start":61.98,"end":66.97,"loss":4.977808271135602},{"start":66.97,"end":71.1,"loss":7.8348772321428575},{"start":71.1,"end":71.38,"loss":0.7822113037109375},{"start":71.38,"end":71.78,"loss":10.51123046875},{"start":71.78,"end":74.86,"loss":3.6328522818429128},{"start":74.86,"end":76.04,"loss":4.099609375},{"start":76.04,"end":80,"loss":9.844772291183471},{"start":80,"end":80.19,"loss":1.4834696451822917},{"start":80.19,"end":84.47,"loss":7.792801751030816},{"start":84.47,"end":86.44,"loss":1.43974609375},{"start":86.44,"end":87.7,"loss":10.3821875},{"start":87.7,"end":91.5,"loss":5.858633404686338},{"start":91.5,"end":92.17,"loss":10.326812744140625},{"start":92.17,"end":99.78,"loss":1.1171875},{"start":99.78,"end":100.1,"loss":3.216632298060826},{"start":100.1,"end":100.18,"loss":3.3115234375},{"start":100.18,"end":102.539,"loss":10.623056888580322},{"start":102.54,"end":102.98,"loss":1.1934432983398438},{"start":102.98,"end":105.32,"loss":10.046915096706815},{"start":105.32,"end":115.281,"loss":4.786172967208059}],
+    audioUrl: "",
+    audioModule: pronounsL5,
+    catalog: true,
+    createdAt: 1750000000086,
+    spec: { subject: "pronouns", level: "prestarter", lesson: 5, genre: "R&B", beat: "Groovy Normal" },
+  },
+  {
+    id: "cat-colors-l8",
+    title: "Colors — First Words · Lesson 8",
+    subject: "colors",
+    subjectLabel: "Colors",
+    level: "prestarter",
+    lesson: 8,
+    totalLessons: 20,
+    genre: "Latin",
+    beat: "Happy Upbeat",
+    artistFeel: "Ricky Martin",
+    language: "Spanish",
+    lyrics: "[Intro]\nHands up\nYou've got it\n[Verse]\nAlmost there\nnavy blue\nazul marino\nazul marino\nOh!\nlime green\nverde lima\nverde lima\nOh-oh!\n[Chorus]\nFeel the rhythm\nnavy blue\nazul marino\nlime green\nverde lima\npeach\nmelocotón\nOh yeah!\n[Verse]\nLet's sing!\npeach\nmelocotón\nmelocotón\nBig time\nemerald\nesmeralda\nesmeralda\nTurn it up now\n[Chorus]\nYes yes!\nnavy blue\nazul marino\nlime green\nverde lima\npeach\nmelocotón\nUh yeah\n[Verse]\nWhoa!\nchampagne\nchampán\nchampán\nLet's get it!\ncinnamon\ncanela\ncanela\nLet it flow\n[Chorus]\nLet's practice\nnavy blue\nazul marino\nlime green\nverde lima\npeach\nmelocotón\nRepeat with me\n[Bridge]\nWoo!\nnavy blue\nazul marino\nlime green\nverde lima\npeach\nmelocotón\nemerald\nesmeralda\nchampagne\nchampán\ncinnamon\ncanela\nListen up!\n[Chorus]\nLet's go!\nnavy blue\nazul marino\nlime green\nverde lima\npeach\nmelocotón\n[Outro]\nLa la la\nHey!",
+    vocab: [{"es":"azul marino","en":"navy blue"},{"es":"verde lima","en":"lime green"},{"es":"melocotón","en":"peach"},{"es":"esmeralda","en":"emerald"},{"es":"champán","en":"champagne"},{"es":"canela","en":"cinnamon"}],
+    lineTimings: [{"start":4.48,"end":6.28,"loss":5.301601753234864},{"start":6.28,"end":19.28,"loss":2.8322305579980216},{"start":19.28,"end":20.66,"loss":5.3669086456298825},{"start":20.66,"end":22.28,"loss":5.15023193359375},{"start":22.28,"end":25.16,"loss":5.431764729817709},{"start":25.16,"end":27.14,"loss":5.531976318359375},{"start":27.14,"end":27.7,"loss":8.391031901041666},{"start":27.7,"end":29.34,"loss":4.669453735351563},{"start":29.34,"end":30.8,"loss":5.05147705078125},{"start":30.8,"end":32.6,"loss":4.803116861979166},{"start":32.6,"end":33.32,"loss":7.099711100260417},{"start":33.32,"end":35,"loss":3.123638312021891},{"start":35,"end":36.58,"loss":5.074240112304688},{"start":36.58,"end":38.08,"loss":5.167464192708334},{"start":38.08,"end":39.52,"loss":4.851164855957031},{"start":39.52,"end":40.64,"loss":9.509462280273437},{"start":40.64,"end":41.96,"loss":8.660578974971065},{"start":41.96,"end":42.36,"loss":0.41680908203125},{"start":42.36,"end":44.55,"loss":5.326649322509765},{"start":44.55,"end":50.96,"loss":9.92415283203125},{"start":50.96,"end":52.94,"loss":8.417923538773147},{"start":52.94,"end":54.64,"loss":8.244091457790798},{"start":54.64,"end":55.74,"loss":0.08811781141493057},{"start":55.74,"end":57.44,"loss":9.350557463509697},{"start":57.44,"end":58.5,"loss":7.194896556712963},{"start":58.5,"end":60.38,"loss":7.115261501736111},{"start":60.38,"end":60.86,"loss":0.3437231381734212},{"start":60.86,"end":62.66,"loss":2.614124329884847},{"start":62.66,"end":64.12,"loss":5.135806274414063},{"start":64.12,"end":66.2,"loss":4.891005452473959},{"start":66.2,"end":67.42,"loss":5.212387542724609},{"start":67.42,"end":68.9,"loss":4.916568603515625},{"start":68.9,"end":69.8,"loss":9.879710693359375},{"start":69.8,"end":70.881,"loss":8.171581127025464},{"start":72.34,"end":73.04,"loss":1.3636144002278645},{"start":73.04,"end":75.051,"loss":9.2876220703125},{"start":76.1,"end":77,"loss":8.729958852132162},{"start":77,"end":78.06,"loss":8.742640904017858},{"start":78.06,"end":78.84,"loss":8.681886763799758},{"start":78.84,"end":79.4,"loss":0.010930930243598092},{"start":79.4,"end":81.88,"loss":6.52248211701711},{"start":81.88,"end":82.6,"loss":7.709537082248264},{"start":82.6,"end":83.02,"loss":7.921978420681423},{"start":83.02,"end":83.32,"loss":0.7143592834472656},{"start":83.32,"end":87.82,"loss":5.817655266821385},{"start":87.82,"end":89.38,"loss":5.023851013183593},{"start":89.38,"end":91.04,"loss":5.390098063151042},{"start":91.04,"end":92.36,"loss":5.056509094238281},{"start":92.36,"end":93.62,"loss":5.152275390625},{"start":93.62,"end":95.38,"loss":9.847753092447917},{"start":95.38,"end":95.98,"loss":0.547275119357639},{"start":95.98,"end":96.44,"loss":0.019443511962890625},{"start":96.44,"end":100.26,"loss":5.871120452880859},{"start":100.26,"end":101.48,"loss":8.1015625},{"start":101.48,"end":102.94,"loss":5.223941040039063},{"start":102.94,"end":104.4,"loss":4.764357147216797},{"start":104.4,"end":105.55,"loss":5.2813958740234375},{"start":105.55,"end":107.2,"loss":9.58255615234375},{"start":107.2,"end":108.12,"loss":7.470900762648809},{"start":108.12,"end":109.44,"loss":6.913031684027778},{"start":109.44,"end":110.9,"loss":7.549439041702835},{"start":110.9,"end":112.399,"loss":8.07433101109096},{"start":112.4,"end":113.14,"loss":7.753461519877116},{"start":113.14,"end":113.741,"loss":7.007576836480035},{"start":114.76,"end":115.82,"loss":0.27658377753363717},{"start":115.82,"end":120.98,"loss":7.954669698079427},{"start":120.98,"end":123.04,"loss":5.63219248453776},{"start":123.04,"end":124.6,"loss":4.825762939453125},{"start":124.6,"end":126.06,"loss":5.274454752604166},{"start":126.06,"end":127.52,"loss":4.759134216308594},{"start":127.52,"end":128.64,"loss":5.292431640625},{"start":128.64,"end":130.42,"loss":9.601314290364584},{"start":130.42,"end":131.06,"loss":0.9736836751302084},{"start":131.06,"end":131.321,"loss":7.13641357421875},{"start":131.32,"end":131.321,"loss":0.58984375},{"start":139.14,"end":139.46,"loss":1.16943359375}],
+    audioUrl: "",
+    audioModule: colorsL8,
+    catalog: true,
+    createdAt: 1750000000087,
+    spec: { subject: "colors", level: "prestarter", lesson: 8, genre: "Latin", beat: "Happy Upbeat" },
   }
 ];

@@ -100,6 +100,31 @@ export function subjectPair(c: Colors, key: string): [string, string] {
   return [pal[h % pal.length], pal[(h + 3) % pal.length]];
 }
 
+// ---- Colour mixing (for deriving journey-map shades from the theme) ----
+function hx(h: string): [number, number, number] {
+  const s = h.replace("#", "");
+  return [parseInt(s.slice(0, 2), 16), parseInt(s.slice(2, 4), 16), parseInt(s.slice(4, 6), 16)];
+}
+function toHex(r: number, g: number, b: number): string {
+  const c = (n: number) => Math.max(0, Math.min(255, Math.round(n))).toString(16).padStart(2, "0");
+  return "#" + c(r) + c(g) + c(b);
+}
+export function mix(a: string, b: string, t: number): string {
+  const A = hx(a), B = hx(b);
+  return toHex(A[0] + (B[0] - A[0]) * t, A[1] + (B[1] - A[1]) * t, A[2] + (B[2] - A[2]) * t);
+}
+
+// The journey map's whole colour world (tie-dye wash, dark bases, road accents,
+// avatar rings, note colours) derived from the active theme so it shifts shades
+// to match the chosen theme.
+export function themedMapPalette(c: Colors) {
+  const brights = [c.accent, c.pink, c.gold, c.blue, c.good, c.coral];
+  const tiedye = brights.concat([mix(c.accent, c.blue, 0.5), mix(c.pink, c.gold, 0.5)]);
+  const deep = brights.map((x) => mix(x, c.bg, 0.72));
+  const segBg: [string, string][] = brights.map((x) => [mix(x, c.bg, 0.86), c.bg]);
+  return { tiedye, deep, segBg, segAccent: brights, rings: brights, notes: brights };
+}
+
 export const radius = { sm: 12, md: 16, lg: 20, xl: 28, pill: 999 };
 export const spacing = { xs: 6, sm: 10, md: 16, lg: 22, xl: 30 };
 export const font = { hero: 34, h1: 28, h2: 22, h3: 18, body: 16, small: 13, tiny: 11 };
