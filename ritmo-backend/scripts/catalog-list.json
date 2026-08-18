@@ -11,7 +11,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Lose Yourself by Eminem"
+    "similarSongs": "Lose Yourself by Eminem",
+    "arrangement": "dark synth bells"
   },
   {
     "slug": "greetings-country",
@@ -25,7 +26,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Tennessee Whiskey by Chris Stapleton"
+    "similarSongs": "Tennessee Whiskey by Chris Stapleton",
+    "arrangement": "pedal-steel guitar lead"
   },
   {
     "slug": "greetings-rock",
@@ -39,7 +41,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bohemian Rhapsody by Queen"
+    "similarSongs": "Bohemian Rhapsody by Queen",
+    "arrangement": "organ and crunchy guitars"
   },
   {
     "slug": "greetings-reggaeton",
@@ -53,7 +56,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titi Me Pregunto by Bad Bunny"
+    "similarSongs": "Titi Me Pregunto by Bad Bunny",
+    "arrangement": "marimba-style synth hook"
   },
   {
     "slug": "greetings-rnb",
@@ -67,7 +71,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Yeah by Usher"
+    "similarSongs": "Yeah by Usher",
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "greetings-pop",
@@ -81,7 +86,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Uptown Funk by Bruno Mars"
+    "similarSongs": "Uptown Funk by Bruno Mars",
+    "arrangement": "funky electric-guitar riff"
   },
   {
     "slug": "numbers-hiphop",
@@ -95,7 +101,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "God's Plan by Drake"
+    "similarSongs": "God's Plan by Drake",
+    "arrangement": "soulful chopped-vocal sample"
   },
   {
     "slug": "numbers-disco",
@@ -109,7 +116,8 @@
     "similarSongs": "Take on Me by a-ha",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "arrangement": "sax solo over synths"
   },
   {
     "slug": "numbers-pop",
@@ -123,7 +131,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Blinding Lights by The Weeknd"
+    "similarSongs": "Blinding Lights by The Weeknd",
+    "arrangement": "piano-driven arrangement"
   },
   {
     "slug": "numbers-edm",
@@ -137,7 +146,8 @@
     "similarSongs": "Wake Me Up by Avicii",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "arrangement": "plucky festival synths"
   },
   {
     "slug": "numbers-soul",
@@ -151,7 +161,8 @@
     "similarSongs": "Superstition by Stevie Wonder",
     "voice": "duet",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "arrangement": "Hammond organ and rhythm guitar"
   },
   {
     "slug": "numbers-reggaeton",
@@ -165,7 +176,8 @@
     "similarSongs": "Gasolina by Daddy Yankee",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "arrangement": "deep bass and moody piano chords"
   },
   {
     "slug": "colors-rnb",
@@ -179,7 +191,8 @@
     "similarSongs": "All of Me by John Legend",
     "voice": "male",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "arrangement": "lush synth pads and sub bass"
   },
   {
     "slug": "colors-rock",
@@ -193,7 +206,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "I Want It That Way by Backstreet Boys"
+    "similarSongs": "I Want It That Way by Backstreet Boys",
+    "arrangement": "new-jack-swing groove"
   },
   {
     "slug": "colors-pop",
@@ -207,7 +221,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Uptown Funk by Bruno Mars"
+    "similarSongs": "Uptown Funk by Bruno Mars",
+    "arrangement": "plucky synth arps and claps"
   },
   {
     "slug": "colors-disco",
@@ -221,7 +236,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Stayin Alive by Bee Gees"
+    "similarSongs": "Stayin Alive by Bee Gees",
+    "arrangement": "slap bass and horns"
   },
   {
     "slug": "colors-alt",
@@ -235,7 +251,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Do I Wanna Know by Arctic Monkeys"
+    "similarSongs": "Do I Wanna Know by Arctic Monkeys",
+    "arrangement": "layered synth and guitar"
   },
   {
     "slug": "colors-country",
@@ -249,7 +266,8 @@
     "similarSongs": "Jolene by Dolly Parton",
     "voice": "female",
     "language": "Spanish",
-    "order": "en-es"
+    "order": "en-es",
+    "arrangement": "banjo and dobro"
   },
   {
     "slug": "pronouns-pop",
@@ -263,7 +281,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "As It Was by Harry Styles"
+    "similarSongs": "As It Was by Harry Styles",
+    "arrangement": "bright synth-lead hook"
   },
   {
     "slug": "questions-reggaeton",
@@ -277,7 +296,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mi Gente by J Balvin"
+    "similarSongs": "Mi Gente by J Balvin",
+    "arrangement": "brassy synth lead"
   },
   {
     "slug": "descriptions-disco",
@@ -291,7 +311,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Stayin Alive by Bee Gees"
+    "similarSongs": "Stayin Alive by Bee Gees",
+    "arrangement": "string-stab hook"
   },
   {
     "slug": "jobs-hiphop",
@@ -305,7 +326,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "HUMBLE by Kendrick Lamar"
+    "similarSongs": "HUMBLE by Kendrick Lamar",
+    "arrangement": "warm Rhodes and 808s"
   },
   {
     "slug": "school-alt",
@@ -319,7 +341,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Sweater Weather by The Neighbourhood"
+    "similarSongs": "Sweater Weather by The Neighbourhood",
+    "arrangement": "fuzzy bass-driven riff"
   },
   {
     "slug": "technology-edm",
@@ -333,7 +356,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Take on Me by a-ha"
+    "similarSongs": "Take on Me by a-ha",
+    "arrangement": "arpeggiated synth hook"
   },
   {
     "slug": "hobbies-latin",
@@ -347,7 +371,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "transportation-latin",
@@ -361,7 +386,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "places-latin",
@@ -375,7 +401,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin"
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "time-bachata",
@@ -389,7 +416,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Propuesta Indecente by Romeo Santos"
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
+    "arrangement": "syncopated guitar and bongó"
   },
   {
     "slug": "nature-country",
@@ -403,7 +431,8 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Before He Cheats by Carrie Underwood"
+    "similarSongs": "Before He Cheats by Carrie Underwood",
+    "arrangement": "warm piano and gentle steel"
   },
   {
     "slug": "emergencies-rap",
@@ -417,7 +446,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bye Bye Bye by NSYNC"
+    "similarSongs": "Bye Bye Bye by NSYNC",
+    "arrangement": "acoustic-guitar pop"
   },
   {
     "slug": "pronouns-hiphop",
@@ -431,7 +461,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Sicko Mode by Travis Scott"
+    "similarSongs": "Sicko Mode by Travis Scott",
+    "arrangement": "muted-trumpet loop"
   },
   {
     "slug": "questions-rock",
@@ -445,7 +476,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mr. Brightside by The Killers"
+    "similarSongs": "Mr. Brightside by The Killers",
+    "arrangement": "punchy power chords"
   },
   {
     "slug": "descriptions-pop",
@@ -459,7 +491,8 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Levitating by Dua Lipa"
+    "similarSongs": "Levitating by Dua Lipa",
+    "arrangement": "funky electric-guitar riff"
   },
   {
     "slug": "jobs-country",
@@ -473,7 +506,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Tennessee Whiskey by Chris Stapleton"
+    "similarSongs": "Tennessee Whiskey by Chris Stapleton",
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "school-rap",
@@ -487,7 +521,8 @@
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Drop It Like It's Hot by Snoop Dogg"
+    "similarSongs": "Drop It Like It's Hot by Snoop Dogg",
+    "arrangement": "funky bass and horns"
   },
   {
     "slug": "technology-hiphop",
@@ -501,7 +536,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "No Role Modelz by J. Cole"
+    "similarSongs": "No Role Modelz by J. Cole",
+    "arrangement": "jazzy piano loop"
   },
   {
     "slug": "hobbies-pop",
@@ -515,7 +551,8 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "7 Rings by Ariana Grande"
+    "similarSongs": "7 Rings by Ariana Grande",
+    "arrangement": "piano-driven arrangement"
   },
   {
     "slug": "transportation-classicrock",
@@ -529,7 +566,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Hotel California by Eagles"
+    "similarSongs": "Hotel California by Eagles",
+    "arrangement": "bluesy slide-guitar lead"
   },
   {
     "slug": "places-salsa",
@@ -543,7 +581,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "piano montuno"
   },
   {
     "slug": "time-jazz",
@@ -557,7 +596,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Billie Jean by Michael Jackson"
+    "similarSongs": "Billie Jean by Michael Jackson",
+    "arrangement": "big synth-brass stabs"
   },
   {
     "slug": "nature-pop",
@@ -571,7 +611,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Shape of You by Ed Sheeran"
+    "similarSongs": "Shape of You by Ed Sheeran",
+    "arrangement": "plucky synth arps and claps"
   },
   {
     "slug": "emergencies-rock",
@@ -585,7 +626,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Everlong by Foo Fighters"
+    "similarSongs": "Everlong by Foo Fighters",
+    "arrangement": "soaring lead-guitar hooks"
   },
   {
     "slug": "family-pop",
@@ -599,7 +641,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Blinding Lights by The Weeknd"
+    "similarSongs": "Blinding Lights by The Weeknd",
+    "arrangement": "bright synth-lead hook"
   },
   {
     "slug": "feelings-blues",
@@ -613,7 +656,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "The Thrill Is Gone by B.B. King"
+    "similarSongs": "The Thrill Is Gone by B.B. King",
+    "arrangement": "organ and shuffle guitar"
   },
   {
     "slug": "food-salsa",
@@ -627,7 +671,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa"
+    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa",
+    "arrangement": "flute-and-violin charanga"
   },
   {
     "slug": "cooking-latin",
@@ -641,7 +686,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Smells Like Teen Spirit by Nirvana"
+    "similarSongs": "Smells Like Teen Spirit by Nirvana",
+    "arrangement": "bright synth-and-guitar hook"
   },
   {
     "slug": "animals-reggae",
@@ -655,7 +701,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Three Little Birds by Bob Marley"
+    "similarSongs": "Three Little Birds by Bob Marley",
+    "arrangement": "horn-section stabs"
   },
   {
     "slug": "body-hiphop",
@@ -669,7 +716,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Circles by Post Malone"
+    "similarSongs": "Circles by Post Malone",
+    "arrangement": "soulful chopped-vocal sample"
   },
   {
     "slug": "clothing-disco",
@@ -683,7 +731,8 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Hot Stuff by Donna Summer"
+    "similarSongs": "Hot Stuff by Donna Summer",
+    "arrangement": "clavinet and strings"
   },
   {
     "slug": "home-rnb",
@@ -697,7 +746,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "No Guidance by Chris Brown"
+    "similarSongs": "No Guidance by Chris Brown",
+    "arrangement": "gospel-tinged piano"
   },
   {
     "slug": "weather-classicrock",
@@ -711,7 +761,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Don't Stop Believin by Journey"
+    "similarSongs": "Don't Stop Believin by Journey",
+    "arrangement": "piano-and-guitar boogie"
   },
   {
     "slug": "days-bachata",
@@ -725,7 +776,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Propuesta Indecente by Romeo Santos"
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
+    "arrangement": "romantic guitar arpeggios"
   },
   {
     "slug": "directions-rap",
@@ -739,7 +791,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "In Da Club by 50 Cent"
+    "similarSongs": "In Da Club by 50 Cent",
+    "arrangement": "vinyl-crackle soul sample"
   },
   {
     "slug": "shopping-pop",
@@ -753,7 +806,8 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Firework by Katy Perry"
+    "similarSongs": "Firework by Katy Perry",
+    "arrangement": "funky electric-guitar riff"
   },
   {
     "slug": "verbs-alt",
@@ -767,7 +821,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Heat Waves by Glass Animals"
+    "similarSongs": "Heat Waves by Glass Animals",
+    "arrangement": "atmospheric guitar textures"
   },
   {
     "slug": "vacation-reggaeton",
@@ -781,7 +836,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin on a Prayer by Bon Jovi"
+    "similarSongs": "Livin on a Prayer by Bon Jovi",
+    "arrangement": "gated-reverb drums and synths"
   },
   {
     "slug": "greetings-latin",
@@ -795,7 +851,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "pronouns-rock",
@@ -809,7 +866,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Boulevard of Broken Dreams by Green Day"
+    "similarSongs": "Boulevard of Broken Dreams by Green Day",
+    "arrangement": "twin distorted guitar riffs"
   },
   {
     "slug": "colors-reggaeton",
@@ -823,7 +881,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Taki Taki by Ozuna"
+    "similarSongs": "Taki Taki by Ozuna",
+    "arrangement": "dembow with staccato synth stabs"
   },
   {
     "slug": "descriptions-hiphop",
@@ -837,7 +896,8 @@
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "God's Plan by Drake"
+    "similarSongs": "God's Plan by Drake",
+    "arrangement": "warm Rhodes and 808s"
   },
   {
     "slug": "questions-pop",
@@ -851,7 +911,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Can't Stop the Feeling by Justin Timberlake"
+    "similarSongs": "Can't Stop the Feeling by Justin Timberlake",
+    "arrangement": "piano-driven arrangement"
   },
   {
     "slug": "family-country",
@@ -865,7 +926,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Gettin Jiggy wit It by Will Smith"
+    "similarSongs": "Gettin Jiggy wit It by Will Smith",
+    "arrangement": "dance-piano stabs"
   },
   {
     "slug": "feelings-pop",
@@ -879,7 +941,8 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Good 4 U by Olivia Rodrigo"
+    "similarSongs": "Good 4 U by Olivia Rodrigo",
+    "arrangement": "plucky synth arps and claps"
   },
   {
     "slug": "food-reggaeton",
@@ -893,7 +956,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titi Me Pregunto by Bad Bunny"
+    "similarSongs": "Titi Me Pregunto by Bad Bunny",
+    "arrangement": "marimba-style synth hook"
   },
   {
     "slug": "cooking-classicrock",
@@ -907,7 +971,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Have You Ever Seen the Rain by Creedence Clearwater Revival"
+    "similarSongs": "Have You Ever Seen the Rain by Creedence Clearwater Revival",
+    "arrangement": "wailing guitar solo"
   },
   {
     "slug": "animals-rock",
@@ -921,7 +986,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Use Somebody by Kings of Leon"
+    "similarSongs": "Use Somebody by Kings of Leon",
+    "arrangement": "organ and crunchy guitars"
   },
   {
     "slug": "body-rnb",
@@ -935,7 +1001,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Yeah by Usher"
+    "similarSongs": "Yeah by Usher",
+    "arrangement": "silky Rhodes chords"
   },
   {
     "slug": "clothing-latin",
@@ -949,7 +1016,8 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Hips Don't Lie by Shakira"
+    "similarSongs": "Hips Don't Lie by Shakira",
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "home-pop",
@@ -963,7 +1031,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Uptown Funk by Bruno Mars"
+    "similarSongs": "Uptown Funk by Bruno Mars",
+    "arrangement": "bright synth-lead hook"
   },
   {
     "slug": "weather-reggae",
@@ -977,7 +1046,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Temperature by Sean Paul"
+    "similarSongs": "Temperature by Sean Paul",
+    "arrangement": "dub bass and echo"
   },
   {
     "slug": "days-pop",
@@ -991,7 +1061,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Blinding Lights by The Weeknd"
+    "similarSongs": "Blinding Lights by The Weeknd",
+    "arrangement": "funky electric-guitar riff"
   },
   {
     "slug": "time-reggaeton",
@@ -1005,7 +1076,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "When Doves Cry by Prince"
+    "similarSongs": "When Doves Cry by Prince",
+    "arrangement": "sax solo over synths"
   },
   {
     "slug": "directions-latin",
@@ -1019,7 +1091,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Despacito by Luis Fonsi"
+    "similarSongs": "Despacito by Luis Fonsi",
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "transportation-rock",
@@ -1033,7 +1106,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bohemian Rhapsody by Queen"
+    "similarSongs": "Bohemian Rhapsody by Queen",
+    "arrangement": "punchy power chords"
   },
   {
     "slug": "places-hiphop",
@@ -1047,7 +1121,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "HUMBLE by Kendrick Lamar"
+    "similarSongs": "HUMBLE by Kendrick Lamar",
+    "arrangement": "muted-trumpet loop"
   },
   {
     "slug": "shopping-disco",
@@ -1061,7 +1136,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "September by Earth Wind and Fire"
+    "similarSongs": "September by Earth Wind and Fire",
+    "arrangement": "wah guitar and strings"
   },
   {
     "slug": "jobs-rock",
@@ -1075,7 +1151,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mr. Brightside by The Killers"
+    "similarSongs": "Mr. Brightside by The Killers",
+    "arrangement": "soaring lead-guitar hooks"
   },
   {
     "slug": "school-pop",
@@ -1089,7 +1166,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "I Want It That Way by Backstreet Boys"
+    "similarSongs": "I Want It That Way by Backstreet Boys",
+    "arrangement": "new-jack-swing groove"
   },
   {
     "slug": "technology-pop",
@@ -1103,7 +1181,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "As It Was by Harry Styles"
+    "similarSongs": "As It Was by Harry Styles",
+    "arrangement": "piano-driven arrangement"
   },
   {
     "slug": "hobbies-reggaeton",
@@ -1117,7 +1196,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Gasolina by Daddy Yankee"
+    "similarSongs": "Gasolina by Daddy Yankee",
+    "arrangement": "deep bass and moody piano chords"
   },
   {
     "slug": "nature-blues",
@@ -1131,7 +1211,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Pride and Joy by Stevie Ray Vaughan"
+    "similarSongs": "Pride and Joy by Stevie Ray Vaughan",
+    "arrangement": "piano boogie and horns"
   },
   {
     "slug": "emergencies-hiphop",
@@ -1145,7 +1226,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Sicko Mode by Travis Scott"
+    "similarSongs": "Sicko Mode by Travis Scott",
+    "arrangement": "jazzy piano loop"
   },
   {
     "slug": "verbs-rap",
@@ -1159,7 +1241,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "99 Problems by Jay-Z"
+    "similarSongs": "99 Problems by Jay-Z",
+    "arrangement": "boom-bap piano loop"
   },
   {
     "slug": "vacation-salsa",
@@ -1173,7 +1256,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "El Cantante by Hector Lavoe"
+    "similarSongs": "El Cantante by Hector Lavoe",
+    "arrangement": "trombone front line"
   },
   {
     "slug": "greetings-l8",
@@ -1186,7 +1270,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "No Role Modelz by J. Cole"
+    "similarSongs": "No Role Modelz by J. Cole",
+    "arrangement": "soulful chopped-vocal sample"
   },
   {
     "slug": "greetings-l9",
@@ -1199,7 +1284,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Le Freak by Chic"
+    "similarSongs": "Le Freak by Chic",
+    "arrangement": "slap bass and horns"
   },
   {
     "slug": "pronouns-l4",
@@ -1212,7 +1298,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "pronouns-l5",
@@ -1225,7 +1312,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Billie Jean by Michael Jackson"
+    "similarSongs": "Billie Jean by Michael Jackson",
+    "arrangement": "arpeggiated synth hook"
   },
   {
     "slug": "colors-l8",
@@ -1238,7 +1326,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "descriptions-l4",
@@ -1251,7 +1340,8 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "No One by Alicia Keys"
+    "similarSongs": "No One by Alicia Keys",
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "descriptions-l5",
@@ -1264,7 +1354,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Free Fallin by Tom Petty"
+    "similarSongs": "Free Fallin by Tom Petty",
+    "arrangement": "Hammond organ and guitars"
   },
   {
     "slug": "questions-l4",
@@ -1277,7 +1368,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Circles by Post Malone"
+    "similarSongs": "Circles by Post Malone",
+    "arrangement": "warm Rhodes and 808s"
   },
   {
     "slug": "questions-l5",
@@ -1290,7 +1382,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Lose Yourself by Eminem"
+    "similarSongs": "Lose Yourself by Eminem",
+    "arrangement": "dark synth bells"
   },
   {
     "slug": "family-l3",
@@ -1303,7 +1396,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bye Bye Bye by NSYNC"
+    "similarSongs": "Bye Bye Bye by NSYNC",
+    "arrangement": "acoustic-guitar pop"
   },
   {
     "slug": "family-l4",
@@ -1316,7 +1410,8 @@
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Drop It Like It's Hot by Snoop Dogg"
+    "similarSongs": "Drop It Like It's Hot by Snoop Dogg",
+    "arrangement": "funky bass and horns"
   },
   {
     "slug": "feelings-l3",
@@ -1329,7 +1424,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titanium by David Guetta"
+    "similarSongs": "Titanium by David Guetta",
+    "arrangement": "piano-house chords"
   },
   {
     "slug": "feelings-l4",
@@ -1342,7 +1438,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "In Da Club by 50 Cent"
+    "similarSongs": "In Da Club by 50 Cent",
+    "arrangement": "vinyl-crackle soul sample"
   },
   {
     "slug": "food-l3",
@@ -1355,7 +1452,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Hotel California by Eagles"
+    "similarSongs": "Hotel California by Eagles",
+    "arrangement": "bluesy slide-guitar lead"
   },
   {
     "slug": "food-l4",
@@ -1368,7 +1466,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Darte un Beso by Prince Royce"
+    "similarSongs": "Darte un Beso by Prince Royce",
+    "arrangement": "lead requinto guitar"
   },
   {
     "slug": "cooking-l3",
@@ -1381,7 +1480,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "blazing brass mambo"
   },
   {
     "slug": "cooking-l4",
@@ -1394,7 +1494,8 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "At Last by Etta James"
+    "similarSongs": "At Last by Etta James",
+    "arrangement": "stinging lead-guitar licks"
   },
   {
     "slug": "animals-l3",
@@ -1407,7 +1508,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "piano montuno"
   },
   {
     "slug": "animals-l4",
@@ -1420,7 +1522,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Tears in Heaven by Eric Clapton"
+    "similarSongs": "Tears in Heaven by Eric Clapton",
+    "arrangement": "slide guitar and harmonica"
   },
   {
     "slug": "body-l3",
@@ -1433,7 +1536,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "The Thrill Is Gone by B.B. King"
+    "similarSongs": "The Thrill Is Gone by B.B. King",
+    "arrangement": "organ and shuffle guitar"
   },
   {
     "slug": "body-l4",
@@ -1446,7 +1550,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Fly Me to the Moon by Frank Sinatra"
+    "similarSongs": "Fly Me to the Moon by Frank Sinatra",
+    "arrangement": "tenor-sax lead"
   },
   {
     "slug": "clothing-l3",
@@ -1459,7 +1564,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "It Wasn't Me by Shaggy"
+    "similarSongs": "It Wasn't Me by Shaggy",
+    "arrangement": "organ bubble and skank"
   },
   {
     "slug": "clothing-l4",
@@ -1472,7 +1578,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mi Gente by J Balvin"
+    "similarSongs": "Mi Gente by J Balvin",
+    "arrangement": "brassy synth lead"
   },
   {
     "slug": "home-l3",
@@ -1485,7 +1592,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "What a Wonderful World by Louis Armstrong"
+    "similarSongs": "What a Wonderful World by Louis Armstrong",
+    "arrangement": "piano trio"
   },
   {
     "slug": "home-l4",
@@ -1498,7 +1606,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bohemian Rhapsody by Queen"
+    "similarSongs": "Bohemian Rhapsody by Queen",
+    "arrangement": "twin distorted guitar riffs"
   },
   {
     "slug": "weather-l3",
@@ -1511,7 +1620,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Taki Taki by Ozuna"
+    "similarSongs": "Taki Taki by Ozuna",
+    "arrangement": "dembow with staccato synth stabs"
   },
   {
     "slug": "weather-l4",
@@ -1524,7 +1634,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "God's Plan by Drake"
+    "similarSongs": "God's Plan by Drake",
+    "arrangement": "muted-trumpet loop"
   },
   {
     "slug": "days-l3",
@@ -1537,7 +1648,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Everlong by Foo Fighters"
+    "similarSongs": "Everlong by Foo Fighters",
+    "arrangement": "organ and crunchy guitars"
   },
   {
     "slug": "days-l4",
@@ -1550,7 +1662,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Last Night by Morgan Wallen"
+    "similarSongs": "Last Night by Morgan Wallen",
+    "arrangement": "pedal-steel guitar lead"
   },
   {
     "slug": "time-l4",
@@ -1563,7 +1676,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin"
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "time-l5",
@@ -1576,7 +1690,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Stayin Alive by Bee Gees"
+    "similarSongs": "Stayin Alive by Bee Gees",
+    "arrangement": "string-stab hook"
   },
   {
     "slug": "directions-l3",
@@ -1589,7 +1704,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "God's Plan by Drake"
+    "similarSongs": "God's Plan by Drake",
+    "arrangement": "jazzy piano loop"
   },
   {
     "slug": "directions-l4",
@@ -1602,7 +1718,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "September by Earth Wind and Fire"
+    "similarSongs": "September by Earth Wind and Fire",
+    "arrangement": "clavinet and strings"
   },
   {
     "slug": "transportation-l4",
@@ -1615,7 +1732,8 @@
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Le Freak by Chic"
+    "similarSongs": "Le Freak by Chic",
+    "arrangement": "wah guitar and strings"
   },
   {
     "slug": "transportation-l5",
@@ -1628,7 +1746,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa"
+    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa",
+    "arrangement": "flute-and-violin charanga"
   },
   {
     "slug": "places-l4",
@@ -1641,7 +1760,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Summer by Calvin Harris"
+    "similarSongs": "Summer by Calvin Harris",
+    "arrangement": "future-bass wobble"
   },
   {
     "slug": "places-l5",
@@ -1654,7 +1774,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Obsesion by Aventura"
+    "similarSongs": "Obsesion by Aventura",
+    "arrangement": "syncopated guitar and bongó"
   },
   {
     "slug": "shopping-l3",
@@ -1667,7 +1788,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Closer by The Chainsmokers"
+    "similarSongs": "Closer by The Chainsmokers",
+    "arrangement": "big supersaw drops"
   },
   {
     "slug": "shopping-l4",
@@ -1680,7 +1802,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa"
+    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa",
+    "arrangement": "trombone front line"
   },
   {
     "slug": "jobs-l4",
@@ -1693,7 +1816,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "El Cantante by Hector Lavoe"
+    "similarSongs": "El Cantante by Hector Lavoe",
+    "arrangement": "blazing brass mambo"
   },
   {
     "slug": "jobs-l5",
@@ -1706,7 +1830,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "I Can See Clearly Now by Jimmy Cliff"
+    "similarSongs": "I Can See Clearly Now by Jimmy Cliff",
+    "arrangement": "horn-section stabs"
   },
   {
     "slug": "school-l4",
@@ -1719,7 +1844,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Don't Stop Believin by Journey"
+    "similarSongs": "Don't Stop Believin by Journey",
+    "arrangement": "piano-and-guitar boogie"
   },
   {
     "slug": "school-l5",
@@ -1732,7 +1858,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Pride and Joy by Stevie Ray Vaughan"
+    "similarSongs": "Pride and Joy by Stevie Ray Vaughan",
+    "arrangement": "piano boogie and horns"
   },
   {
     "slug": "technology-l4",
@@ -1745,7 +1872,8 @@
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Something to Talk About by Bonnie Raitt"
+    "similarSongs": "Something to Talk About by Bonnie Raitt",
+    "arrangement": "stinging lead-guitar licks"
   },
   {
     "slug": "technology-l5",
@@ -1758,7 +1886,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titi Me Pregunto by Bad Bunny"
+    "similarSongs": "Titi Me Pregunto by Bad Bunny",
+    "arrangement": "marimba-style synth hook"
   },
   {
     "slug": "hobbies-l4",
@@ -1771,7 +1900,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Three Little Birds by Bob Marley"
+    "similarSongs": "Three Little Birds by Bob Marley",
+    "arrangement": "dub bass and echo"
   },
   {
     "slug": "hobbies-l5",
@@ -1784,7 +1914,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Despacito by Luis Fonsi"
+    "similarSongs": "Despacito by Luis Fonsi",
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "nature-l4",
@@ -1797,7 +1928,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "L-O-V-E by Nat King Cole"
+    "similarSongs": "L-O-V-E by Nat King Cole",
+    "arrangement": "vibraphone and brushes"
   },
   {
     "slug": "nature-l5",
@@ -1810,7 +1942,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Boulevard of Broken Dreams by Green Day"
+    "similarSongs": "Boulevard of Broken Dreams by Green Day",
+    "arrangement": "punchy power chords"
   },
   {
     "slug": "emergencies-l4",
@@ -1823,7 +1956,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Gasolina by Daddy Yankee"
+    "similarSongs": "Gasolina by Daddy Yankee",
+    "arrangement": "deep bass and moody piano chords"
   },
   {
     "slug": "emergencies-l5",
@@ -1836,7 +1970,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "All of Me by John Legend"
+    "similarSongs": "All of Me by John Legend",
+    "arrangement": "lush synth pads and sub bass"
   },
   {
     "slug": "verbs-l3",
@@ -1849,7 +1984,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Tears in Heaven by Eric Clapton"
+    "similarSongs": "Tears in Heaven by Eric Clapton",
+    "arrangement": "slide guitar and harmonica"
   },
   {
     "slug": "verbs-l4",
@@ -1862,7 +1998,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titi Me Pregunto by Bad Bunny"
+    "similarSongs": "Titi Me Pregunto by Bad Bunny",
+    "arrangement": "brassy synth lead"
   },
   {
     "slug": "vacation-l3",
@@ -1875,7 +2012,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Shape of You by Ed Sheeran"
+    "similarSongs": "Shape of You by Ed Sheeran",
+    "arrangement": "plucky synth arps and claps"
   },
   {
     "slug": "vacation-l4",
@@ -1888,7 +2026,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Beautiful Crazy by Luke Combs"
+    "similarSongs": "Beautiful Crazy by Luke Combs",
+    "arrangement": "banjo and dobro"
   },
   {
     "slug": "greetings-l10",
@@ -1901,7 +2040,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Have You Ever Seen the Rain by Creedence Clearwater Revival"
+    "similarSongs": "Have You Ever Seen the Rain by Creedence Clearwater Revival",
+    "arrangement": "wailing guitar solo"
   },
   {
     "slug": "greetings-l11",
@@ -1914,7 +2054,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Propuesta Indecente by Romeo Santos"
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
+    "arrangement": "romantic guitar arpeggios"
   },
   {
     "slug": "pronouns-l6",
@@ -1927,7 +2068,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Something in the Orange by Zach Bryan"
+    "similarSongs": "Something in the Orange by Zach Bryan",
+    "arrangement": "warm piano and gentle steel"
   },
   {
     "slug": "pronouns-l7",
@@ -1940,7 +2082,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Hotel California by Eagles"
+    "similarSongs": "Hotel California by Eagles",
+    "arrangement": "Hammond organ and guitars"
   },
   {
     "slug": "descriptions-l6",
@@ -1953,7 +2096,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "99 Problems by Jay-Z"
+    "similarSongs": "99 Problems by Jay-Z",
+    "arrangement": "boom-bap piano loop"
   },
   {
     "slug": "descriptions-l7",
@@ -1966,7 +2110,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Darte un Beso by Prince Royce"
+    "similarSongs": "Darte un Beso by Prince Royce",
+    "arrangement": "lead requinto guitar"
   },
   {
     "slug": "questions-l6",
@@ -1979,7 +2124,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "piano montuno"
   },
   {
     "slug": "questions-l7",
@@ -1992,7 +2138,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "The Thrill Is Gone by B.B. King"
+    "similarSongs": "The Thrill Is Gone by B.B. King",
+    "arrangement": "organ and shuffle guitar"
   },
   {
     "slug": "family-l5",
@@ -2005,7 +2152,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Free Fallin by Tom Petty"
+    "similarSongs": "Free Fallin by Tom Petty",
+    "arrangement": "bluesy slide-guitar lead"
   },
   {
     "slug": "family-l6",
@@ -2018,7 +2166,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Obsesion by Aventura"
+    "similarSongs": "Obsesion by Aventura",
+    "arrangement": "syncopated guitar and bongó"
   },
   {
     "slug": "feelings-l5",
@@ -2031,7 +2180,8 @@
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Hotel California by Eagles"
+    "similarSongs": "Hotel California by Eagles",
+    "arrangement": "piano-and-guitar boogie"
   },
   {
     "slug": "feelings-l6",
@@ -2044,7 +2194,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Propuesta Indecente by Romeo Santos"
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
+    "arrangement": "romantic guitar arpeggios"
   },
   {
     "slug": "food-l5",
@@ -2057,7 +2208,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Pride and Joy by Stevie Ray Vaughan"
+    "similarSongs": "Pride and Joy by Stevie Ray Vaughan",
+    "arrangement": "piano boogie and horns"
   },
   {
     "slug": "food-l6",
@@ -2070,7 +2222,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Fly Me to the Moon by Frank Sinatra"
+    "similarSongs": "Fly Me to the Moon by Frank Sinatra",
+    "arrangement": "muted-trumpet lead"
   },
   {
     "slug": "cooking-l5",
@@ -2083,7 +2236,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Three Little Birds by Bob Marley"
+    "similarSongs": "Three Little Birds by Bob Marley",
+    "arrangement": "organ bubble and skank"
   },
   {
     "slug": "cooking-l6",
@@ -2109,7 +2263,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "What a Wonderful World by Louis Armstrong"
+    "similarSongs": "What a Wonderful World by Louis Armstrong",
+    "arrangement": "tenor-sax lead"
   },
   {
     "slug": "animals-l6",
@@ -2291,7 +2446,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Mi Gente by J Balvin"
+    "similarSongs": "Mi Gente by J Balvin",
+    "arrangement": "dembow with staccato synth stabs"
   },
   {
     "slug": "transportation-l6",
@@ -2304,7 +2460,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Gasolina by Daddy Yankee"
+    "similarSongs": "Gasolina by Daddy Yankee",
+    "arrangement": "marimba-style synth hook"
   },
   {
     "slug": "transportation-l7",
@@ -2317,7 +2474,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Save Me by Jelly Roll"
+    "similarSongs": "Save Me by Jelly Roll",
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "places-l6",
@@ -2330,7 +2488,8 @@
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Taki Taki by Ozuna"
+    "similarSongs": "Taki Taki by Ozuna",
+    "arrangement": "deep bass and moody piano chords"
   },
   {
     "slug": "places-l7",
@@ -2343,7 +2502,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Tennessee Whiskey by Chris Stapleton"
+    "similarSongs": "Tennessee Whiskey by Chris Stapleton",
+    "arrangement": "pedal-steel guitar lead"
   },
   {
     "slug": "shopping-l5",
@@ -2356,7 +2516,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Titi Me Pregunto by Bad Bunny"
+    "similarSongs": "Titi Me Pregunto by Bad Bunny",
+    "arrangement": "brassy synth lead"
   },
   {
     "slug": "shopping-l6",
@@ -2369,7 +2530,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "jobs-l6",
@@ -2382,7 +2544,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "No Guidance by Chris Brown"
+    "similarSongs": "No Guidance by Chris Brown",
+    "arrangement": "gospel-tinged piano"
   },
   {
     "slug": "jobs-l7",
@@ -2395,7 +2558,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Lose Yourself by Eminem"
+    "similarSongs": "Lose Yourself by Eminem",
+    "arrangement": "dark synth bells"
   },
   {
     "slug": "school-l6",
@@ -2408,7 +2572,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "school-l7",
@@ -2421,7 +2586,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Stayin Alive by Bee Gees"
+    "similarSongs": "Stayin Alive by Bee Gees",
+    "arrangement": "slap bass and horns"
   },
   {
     "slug": "technology-l6",
@@ -2434,7 +2600,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "September by Earth Wind and Fire"
+    "similarSongs": "September by Earth Wind and Fire",
+    "arrangement": "string-stab hook"
   },
   {
     "slug": "technology-l7",
@@ -2447,7 +2614,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa"
+    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa",
+    "arrangement": "flute-and-violin charanga"
   },
   {
     "slug": "hobbies-l6",
@@ -2460,7 +2628,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Don't Stop Believin by Journey"
+    "similarSongs": "Don't Stop Believin by Journey",
+    "arrangement": "wailing guitar solo"
   },
   {
     "slug": "hobbies-l7",
@@ -2473,7 +2642,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Darte un Beso by Prince Royce"
+    "similarSongs": "Darte un Beso by Prince Royce",
+    "arrangement": "lead requinto guitar"
   },
   {
     "slug": "nature-l6",
@@ -2486,7 +2656,8 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "El Cantante by Hector Lavoe"
+    "similarSongs": "El Cantante by Hector Lavoe",
+    "arrangement": "trombone front line"
   },
   {
     "slug": "nature-l7",
@@ -2512,7 +2683,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Temperature by Sean Paul"
+    "similarSongs": "Temperature by Sean Paul",
+    "arrangement": "horn-section stabs"
   },
   {
     "slug": "emergencies-l7",
@@ -2538,7 +2710,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Have You Ever Seen the Rain by Creedence Clearwater Revival"
+    "similarSongs": "Have You Ever Seen the Rain by Creedence Clearwater Revival",
+    "arrangement": "Hammond organ and guitars"
   },
   {
     "slug": "verbs-l6",
@@ -2551,7 +2724,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "It Wasn't Me by Shaggy"
+    "similarSongs": "It Wasn't Me by Shaggy",
+    "arrangement": "dub bass and echo"
   },
   {
     "slug": "vacation-l5",
@@ -2564,7 +2738,8 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "I Can See Clearly Now by Jimmy Cliff"
+    "similarSongs": "I Can See Clearly Now by Jimmy Cliff",
+    "arrangement": "organ bubble and skank"
   },
   {
     "slug": "vacation-l6",

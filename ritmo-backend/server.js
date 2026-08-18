@@ -146,7 +146,7 @@ app.post("/lyrics", async (req, res) => {
 // POST /create-song { subject, level, genre, beat, artistFeel }
 app.post("/create-song", async (req, res) => {
   try {
-    const { subject, topic, level, lesson, genre, beat, artistFeel, similarSongs, reviewWords, avoidWords, language, order, voice } = req.body || {};
+    const { subject, topic, level, lesson, genre, beat, artistFeel, similarSongs, arrangement, reviewWords, avoidWords, language, order, voice } = req.body || {};
     const lang = language || "Spanish";
     const ord = order === "en-es" ? "en-es" : "es-en";
     const reviewVocab = Array.isArray(reviewWords) ? reviewWords.slice(0, 4) : [];
@@ -154,7 +154,7 @@ app.post("/create-song", async (req, res) => {
     const built = await buildLyrics({ subject, topic, level, lesson, reviewVocab, avoidWords: avoid, language: lang, order: ord, genre });
     const { title, lyrics, vocab, subjectLabel } = built;
 
-    const song = await generateSong({ lyrics, genre, beat, artistFeel, similarSongs, level, language: lang, voice });
+    const song = await generateSong({ lyrics, genre, beat, artistFeel, similarSongs, arrangement, level, language: lang, voice });
 
     // MiniMax may give us a URL or raw bytes; normalize to a URL the app can play.
     let audioUrl = song.audioUrl;

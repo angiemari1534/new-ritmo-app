@@ -77,7 +77,7 @@ async function makeSong(s, avoidWords) {
     return { data, buf: Buffer.from(await mr.arrayBuffer()) };
   }
   // MiniMax: /create-song makes lyrics + audio in one call (keeps artistFeel).
-  const cr = await postJson(`${BACKEND}/create-song`, { subject: s.subject, topic: s.topic, level: s.level, lesson: s.lesson, genre: s.genre, beat: s.beat, artistFeel: s.artistFeel, similarSongs: s.similarSongs, voice: s.voice, language: s.language || "Spanish", order: s.order || "en-es", avoidWords });
+  const cr = await postJson(`${BACKEND}/create-song`, { subject: s.subject, topic: s.topic, level: s.level, lesson: s.lesson, genre: s.genre, beat: s.beat, artistFeel: s.artistFeel, similarSongs: s.similarSongs, arrangement: s.arrangement, voice: s.voice, language: s.language || "Spanish", order: s.order || "en-es", avoidWords });
   const d = await cr.json();
   if (!d || d.error || !d.audioUrl) { console.log("CREATE FAILED:", (d && d.error) || "no audio"); return null; }
   const data = { title: d.title, subject: d.subject, subjectLabel: d.subjectLabel, level: d.level, lesson: d.lesson, totalLessons: d.totalLessons || 100, genre: d.genre, lyrics: d.lyrics, vocab: d.vocab };

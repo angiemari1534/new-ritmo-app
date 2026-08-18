@@ -21,11 +21,11 @@ const GENRE_STYLE = {
   "Hip-Hop": "chill hip-hop, smooth mellow 808 bass, light hi-hats, soft synth pads, relaxed easy beat",
   Rap: "laid-back boom-bap rap, mellow vinyl drums, warm upright bass, soft jazzy piano, relaxed head-nod groove",
   Soul: "classic Motown soul, warm horn section, Hammond organ, tight rhythm guitar, finger-snap groove",
-  Country: "modern country, warm acoustic guitar and mellow slide electric guitar, raw gravelly soulful vocals, laid-back easy groove, warm upright bass, Southern Americana storytelling, moody and heartfelt, real country not pop",
-  Rock: "energetic guitar rock, driving distorted electric guitar riffs, punchy live drums, solid bass, big anthemic rock chorus, powerful but melodic",
-  "Classic Rock": "70s classic rock anthem, driving distorted electric guitar riffs, bluesy guitar solo, Hammond organ, punchy live drums, big sing-along chorus, raw analog rock energy",
-  Alternative: "90s alternative rock, driving distorted guitars, loud-quiet dynamics, gritty melodic vocals, punchy live drums, anthemic indie-rock energy, not pop",
-  Blues: "gritty electric blues, wailing bent-note slide guitar licks, 12-bar shuffle, walking bassline, brushed drums, soulful raspy blues vocals, smoky bar feel",
+  Country: "modern country, warm acoustic and mellow slide guitar, raw gravelly soulful vocals, laid-back groove, heartfelt, real country not pop",
+  Rock: "energetic guitar rock, driving distorted riffs, punchy live drums, big anthemic chorus, powerful but melodic",
+  "Classic Rock": "70s classic rock anthem, distorted guitar riffs, bluesy solo, Hammond organ, big sing-along chorus, raw analog energy",
+  Alternative: "90s alternative rock, distorted guitars, loud-quiet dynamics, gritty melodic vocals, anthemic indie energy, not pop",
+  Blues: "gritty electric blues, wailing bent-note guitar, 12-bar shuffle, walking bass, soulful raspy vocals, smoky bar feel",
   EDM: "bright melodic EDM, warm synths, gentle pads, danceable four-on-the-floor, uplifting and clear",
   Disco: "70s disco, funky wah-wah guitar, smooth slap bass, steady four-on-the-floor, warm strings and horns",
   Club: "melodic dance, warm synth bass, bright plucks, steady four-on-the-floor, feel-good energy",
@@ -51,6 +51,34 @@ const GENRE_STYLE = {
   "90s Pop": "90s pop, bright catchy hooks, upbeat guitars and synths, polished radio production, feel-good energy",
 };
 
+// Per-genre ARRANGEMENT variants — a different LEAD instrument / production
+// twist for each song so two songs of the SAME genre don't share one identical
+// backing track. Rotated per song (catalog) or hashed from the picks (live), so
+// the instrumentals vary within a genre instead of all sounding alike.
+const ARRANGEMENTS = {
+  Pop: ["bright synth-lead hook", "funky electric-guitar riff", "piano-driven arrangement", "plucky synth arps and claps"],
+  Latin: ["nylon guitar and brass", "piano montuno and congas", "accordion and horns", "marimba and light percussion"],
+  Reggaeton: ["dembow with staccato synth stabs", "marimba-style synth hook", "deep bass and moody piano chords", "brassy synth lead"],
+  "R&B": ["silky Rhodes chords", "smooth clean-guitar licks", "lush synth pads and sub bass", "gospel-tinged piano"],
+  "Hip-Hop": ["jazzy piano loop", "soulful chopped-vocal sample", "warm Rhodes and 808s", "muted-trumpet loop"],
+  Rap: ["boom-bap piano loop", "dark synth bells", "funky bass and horns", "vinyl-crackle soul sample"],
+  Soul: ["punchy horn section", "Hammond organ and rhythm guitar", "sweeping strings and horns", "gospel piano and claps"],
+  Country: ["acoustic guitar and fiddle", "pedal-steel guitar lead", "banjo and dobro", "warm piano and gentle steel"],
+  Rock: ["twin distorted guitar riffs", "organ and crunchy guitars", "punchy power chords", "soaring lead-guitar hooks"],
+  "Classic Rock": ["Hammond organ and guitars", "bluesy slide-guitar lead", "piano-and-guitar boogie", "wailing guitar solo"],
+  Alternative: ["jangly reverb guitars", "layered synth and guitar", "fuzzy bass-driven riff", "atmospheric guitar textures"],
+  Blues: ["slide guitar and harmonica", "organ and shuffle guitar", "piano boogie and horns", "stinging lead-guitar licks"],
+  EDM: ["big supersaw drops", "plucky festival synths", "piano-house chords", "future-bass wobble"],
+  Disco: ["wah guitar and strings", "slap bass and horns", "string-stab hook", "clavinet and strings"],
+  Club: ["deep house piano stabs", "plucky synth bass", "vocal-chop hook", "tech-house groove"],
+  Salsa: ["blazing brass mambo", "piano montuno", "flute-and-violin charanga", "trombone front line"],
+  Bachata: ["lead requinto guitar", "syncopated guitar and bongó", "romantic guitar arpeggios"],
+  Reggae: ["organ bubble and skank", "horn-section stabs", "dub bass and echo"],
+  Jazz: ["muted-trumpet lead", "tenor-sax lead", "piano trio", "vibraphone and brushes"],
+  "80s": ["gated-reverb drums and synths", "sax solo over synths", "arpeggiated synth hook", "big synth-brass stabs"],
+  "90s": ["dance-piano stabs", "new-jack-swing groove", "acoustic-guitar pop", "bright synth-and-guitar hook"],
+};
+
 // Tempo → an explicit BPM range so the model locks to a real, danceable beat.
 const TEMPO_BPM = {
   Slow: "relaxed slow tempo around 75 BPM",
@@ -62,7 +90,7 @@ const TEMPO_BPM = {
 // Order = priority: whatever gets trimmed at the 290-char cap should be the
 // least important, so genre + realism + the user's reference come first, and
 // the rhythm/groove cues sit right after.
-function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, language = "Spanish", voice }) {
+function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, language = "Spanish", voice, arrangement }) {
   const parts = [];
   // 1) Genre identity + reference artist.
   parts.push(GENRE_STYLE[genre] || (genre ? `${genre} music` : "catchy melodic song"));
@@ -71,6 +99,17 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   // so MiniMax actually matches the genre's sound). Kept near the top so it
   // survives the ~290-char cap.
   if (similarSongs) parts.push(`sounds like the hit songs ${similarSongs}`);
+  // Lead-instrument / arrangement variety so same-genre songs don't share one
+  // identical backing track. Use the caller's pick, else rotate the genre pool
+  // by a hash of the picks so even live "Create" songs differ from each other.
+  const pool = ARRANGEMENTS[genre];
+  let arr = arrangement;
+  if (!arr && pool) {
+    const seed = String(genre) + "|" + String(similarSongs || artistFeel || "") + "|" + String(beat || "");
+    let h = 0; for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+    arr = pool[h % pool.length];
+  }
+  if (arr) parts.push(`led by ${arr}`);
   // Voice next (high priority so the char cap never trims it — esp. duet).
   if (voice === "male") parts.push("mature adult male lead vocals");
   else if (voice === "female") parts.push("warm low raspy husky female lead vocals, calm smooth and soulful, mellow not piercing or shrill, grown woman not a child");
@@ -118,11 +157,11 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   return prompt;
 }
 
-async function generateSong({ lyrics, genre, beat, artistFeel, similarSongs, level, language = "Spanish", voice }) {
+async function generateSong({ lyrics, genre, beat, artistFeel, similarSongs, level, language = "Spanish", voice, arrangement }) {
   const apiKey = process.env.MINIMAX_API_KEY;
   if (!apiKey) throw new Error("MINIMAX_API_KEY is not set");
 
-  const prompt = buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, language, voice });
+  const prompt = buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, language, voice, arrangement });
 
   const body = {
     model: MODEL,
@@ -203,4 +242,4 @@ function extractAudio(result) {
   return null;
 }
 
-module.exports = { generateSong, buildStylePrompt, GENRE_STYLE, TEMPO_BPM };
+module.exports = { generateSong, buildStylePrompt, GENRE_STYLE, TEMPO_BPM, ARRANGEMENTS };

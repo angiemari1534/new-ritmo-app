@@ -2,6 +2,7 @@
 // voices vary (from Angie's repository). Rotates a gender-matched pool per genre
 // so consecutive same-genre songs don't sound alike. [artist, song, gender].
 const fs = require("fs");
+const { ARRANGEMENTS } = require("../lib/minimax");
 const LIST = __dirname + "/catalog-list.json";
 const songs = JSON.parse(fs.readFileSync(LIST, "utf8"));
 
@@ -43,6 +44,7 @@ function wantGender(voice) {
 }
 
 const counters = {};
+const arrCounters = {};
 let changed = 0;
 for (const s of songs) {
   const pool = P[s.genre];
@@ -55,7 +57,15 @@ for (const s of songs) {
   const [artist, song] = sub[idx % sub.length];
   s.artistFeel = artist;
   s.similarSongs = `${song} by ${artist}`;
+  // Rotate the lead instrument / arrangement per genre so the backing tracks
+  // don't all sound alike. Offset by 1 vs the artist counter so voice and
+  // instrument don't repeat in lockstep.
+  const arr = ARRANGEMENTS[s.genre];
+  if (arr && arr.length) {
+    const ai = (arrCounters[s.genre] = (arrCounters[s.genre] || 0) + 1) - 1;
+    s.arrangement = arr[(ai + 1) % arr.length];
+  }
   changed++;
 }
 fs.writeFileSync(LIST, JSON.stringify(songs, null, 2) + "\n");
-console.log(`varied artist/voice refs on ${changed} songs.`);
+console.log(`varied artist/voice + arrangement on ${changed} songs.`);
