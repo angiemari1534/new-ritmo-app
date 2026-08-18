@@ -37,7 +37,7 @@ function gradientsOf(c: Def): Gradients {
 }
 
 export const THEMES: { id: ThemeId; name: string; vibe: string; colors: Colors; gradients: Gradients }[] = [
-  { id:"midnight", name:"Midnight Teal", vibe:"Deep navy, teal and gold", colors: colorsOf(DEFS.midnight), gradients: gradientsOf(DEFS.midnight) },
+  { id:"midnight", name:"Original (Midnight Teal)", vibe:"Your original look — navy, teal and gold", colors: colorsOf(DEFS.midnight), gradients: gradientsOf(DEFS.midnight) },
   { id:"sunset", name:"Sunset", vibe:"Espresso plum, coral and amber", colors: colorsOf(DEFS.sunset), gradients: gradientsOf(DEFS.sunset) },
   { id:"ultraviolet", name:"Ultraviolet", vibe:"Violet, magenta and cyan", colors: colorsOf(DEFS.ultraviolet), gradients: gradientsOf(DEFS.ultraviolet) },
   { id:"forest", name:"Forest", vibe:"Deep green, mint and lime", colors: colorsOf(DEFS.forest), gradients: gradientsOf(DEFS.forest) },
@@ -45,7 +45,7 @@ export const THEMES: { id: ThemeId; name: string; vibe: string; colors: Colors; 
   { id:"vintage", name:"Warm Vintage", vibe:"Espresso, cream and mustard", colors: colorsOf(DEFS.vintage), gradients: gradientsOf(DEFS.vintage) },
 ];
 
-export const DEFAULT_THEME: ThemeId = "vintage";
+export const DEFAULT_THEME: ThemeId = "midnight";
 export function themeById(id: ThemeId) { return THEMES.find((t) => t.id === id) ?? THEMES[THEMES.length - 1]; }
 
 // Mutable "active" colour/gradient objects. Screens converted to the theme

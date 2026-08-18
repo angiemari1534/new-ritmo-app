@@ -5,7 +5,8 @@ import { Text, Pressable, StyleSheet, View, ViewStyle, Image } from "react-nativ
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import MaskedView from "@react-native-masked-view/masked-view";
-import { colors, radius, spacing, font, gradients } from "../theme";
+import { radius, spacing, font, type Colors, type Gradients } from "../theme";
+import { useTheme, useThemedStyles } from "../lib/theme-context";
 import { avatarSource } from "../data/avatars";
 
 // Text filled with a smooth gradient (navy → teal → gold by default).
@@ -66,6 +67,7 @@ export function SubjectIcon({ subject, size, color = "#fff" }: { subject: string
 }
 
 export function Screen({ children }: { children: React.ReactNode }) {
+  const styles = useThemedStyles(makeStyles);
   return <View style={styles.screen}>{children}</View>;
 }
 
@@ -78,12 +80,14 @@ export function GradientButton({
   label: string;
   onPress: () => void;
   disabled?: boolean;
-  variant?: keyof typeof gradients;
+  variant?: string;
 }) {
+  const { gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <Pressable onPress={onPress} disabled={disabled} style={{ opacity: disabled ? 0.5 : 1 }}>
       <LinearGradient
-        colors={gradients[variant]}
+        colors={gradients[variant] ?? gradients.primary}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}
         style={styles.btn}
@@ -107,6 +111,8 @@ export function Chip({
   icon?: MciName;
   iconColor?: string;
 }) {
+  const { colors } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <Pressable onPress={onPress}>
       <View style={[styles.chip, selected && styles.chipSelected, icon ? { flexDirection: "row", alignItems: "center", gap: 6 } : null]}>
@@ -126,6 +132,7 @@ export function SectionHeader({
   actionLabel?: string;
   onAction?: () => void;
 }) {
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.sectionHeader}>
       <Text style={styles.sectionTitle}>{title}</Text>
@@ -139,6 +146,7 @@ export function SectionHeader({
 }
 
 export function Card({ children, style }: { children: React.ReactNode; style?: ViewStyle }) {
+  const styles = useThemedStyles(makeStyles);
   return <View style={[styles.card, style]}>{children}</View>;
 }
 
@@ -147,7 +155,7 @@ export function Card({ children, style }: { children: React.ReactNode; style?: V
 export function ArtTile({
   subject,
   size = 150,
-  colors: cols = gradients.violet,
+  colors: cols,
   rounded = radius.lg,
 }: {
   subject: string;
@@ -155,7 +163,9 @@ export function ArtTile({
   colors?: [string, string];
   rounded?: number;
 }) {
-  const c = cols[0]; // the subject's neon accent colour
+  const { gradients } = useTheme();
+  const pair = cols ?? gradients.violet;
+  const c = pair[0]; // the subject's neon accent colour
   return (
     <View
       style={{
@@ -175,6 +185,8 @@ export function ArtTile({
 }
 
 export function ProgressBar({ pct, height = 6 }: { pct: number; height?: number }) {
+  const { gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={[styles.progressTrack, { height, borderRadius: height / 2 }]}>
       <LinearGradient
@@ -188,6 +200,7 @@ export function ProgressBar({ pct, height = 6 }: { pct: number; height?: number 
 }
 
 export function StatTile({ value, label, color }: { value: string | number; label: string; color: string }) {
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.statTile}>
       <Text style={[styles.statValue, { color }]}>{value}</Text>
@@ -197,6 +210,7 @@ export function StatTile({ value, label, color }: { value: string | number; labe
 }
 
 export function SectionLabel({ children }: { children: React.ReactNode }) {
+  const styles = useThemedStyles(makeStyles);
   return <Text style={styles.sectionLabel}>{children}</Text>;
 }
 
@@ -215,6 +229,8 @@ const isUriAvatar = (a?: string) =>
   !!a && (a.startsWith("file:") || a.startsWith("http") || a.startsWith("content:") || a.startsWith("data:") || a.startsWith("ph:") || a.startsWith("assets-library:"));
 
 export function TabBar({ active, onSelect, avatar }: { active: TabKey; onSelect: (k: TabKey) => void; avatar?: string }) {
+  const { gradients } = useTheme();
+  const styles = useThemedStyles(makeStyles);
   const avImg = avatarSource(avatar) ?? (isUriAvatar(avatar) ? { uri: avatar } : null);
   return (
     <View style={styles.tabBar}>
@@ -249,7 +265,7 @@ export function TabBar({ active, onSelect, avatar }: { active: TabKey; onSelect:
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.bg },
   btn: { borderRadius: radius.md, paddingVertical: 16, paddingHorizontal: 20, alignItems: "center" },
   btnText: { color: "#E6EAF0", fontSize: font.body, fontWeight: "900", letterSpacing: 0.3 },
