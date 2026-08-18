@@ -42,7 +42,11 @@ const SEG_BG: [string, string][] = [
 const SEG_ACCENT = ["#22D3EE", "#FBBF24", "#A78BFA", "#2DD4BF", "#F472B6", "#38BDF8"];
 // A vibrant neon rainbow used to paint each world as a tie-dye blend — the
 // background cycles through these hues, shifting colour frequently down the map.
-const TIEDYE = ["#22D3EE", "#818CF8", "#A78BFA", "#C084FC", "#F472B6", "#FB7185", "#FBBF24", "#34D399", "#38BDF8"];
+// A full spectrum so the wash sweeps through every colour, not just cool tones.
+const TIEDYE = [
+  "#22D3EE", "#38BDF8", "#3B82F6", "#818CF8", "#A78BFA", "#C084FC", "#E44DFF",
+  "#F472B6", "#FB7185", "#FB923C", "#FBBF24", "#A3E635", "#34D399", "#2DD4BF",
+];
 // Bright ring colours — each avatar along the route gets a different border.
 const RINGS = ["#FF3D71", "#FF9A00", "#FFE600", "#B4FF00", "#00FFA3", "#00E5FF", "#3B82F6", "#7C4DFF", "#FF00C8", "#FF5CA8", "#00D9C0", "#F97316", "#A3FF00", "#E44DFF", "#22D3EE", "#FBBF24"];
 // Every avatar in the pack (801) is mixed into the map. A large coprime stride
@@ -300,20 +304,25 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
   }, [index, N, roadSpan, avCount, noteCount]);
 
   // Tie-dye background: cycle the neon rainbow into many colour bands down the
-  // segment (more bands on longer worlds) so the hue keeps shifting, then cross
-  // it with a second, hue-shifted diagonal wash so the colours mix and swirl.
-  const bands = Math.min(22, Math.max(5, Math.round(N / 6)));
-  const washA = Array.from({ length: bands }, (_, k) => `${TIEDYE[(index * 2 + k) % TIEDYE.length]}59`) as [string, string, ...string[]];
-  const washB = Array.from({ length: bands }, (_, k) => `${TIEDYE[(index * 2 + k + 4) % TIEDYE.length]}3B`) as [string, string, ...string[]];
+  // segment (more bands on longer worlds) so the hue keeps shifting fast, then
+  // cross it with two more hue-shifted diagonal washes so the colours mix and
+  // swirl. Larger per-band strides jump further around the wheel each step, so
+  // adjacent bands contrast instead of easing between neighbours.
+  const bands = Math.min(34, Math.max(9, Math.round(N / 3.5)));
+  const washA = Array.from({ length: bands }, (_, k) => `${TIEDYE[(index * 3 + k * 2) % TIEDYE.length]}7D`) as [string, string, ...string[]];
+  const washB = Array.from({ length: bands }, (_, k) => `${TIEDYE[(index * 3 + k * 2 + 5) % TIEDYE.length]}5C`) as [string, string, ...string[]];
+  const washC = Array.from({ length: bands }, (_, k) => `${TIEDYE[(index * 3 + k * 3 + 9) % TIEDYE.length]}40`) as [string, string, ...string[]];
 
   return (
     <View style={{ width: W, height: SEG_H }}>
       {/* Dark base for depth + text contrast */}
       <LinearGradient colors={[bg[0], bg[1], nextBg[0]]} locations={[0, 0.6, 1]} start={{ x: 0.5, y: 0 }} end={{ x: 0.5, y: 1 }} style={StyleSheet.absoluteFill} />
       {/* Tie-dye wash 1: many rainbow bands flowing down (diagonal) */}
-      <LinearGradient colors={washA} start={{ x: 0.15, y: 0 }} end={{ x: 0.85, y: 1 }} style={StyleSheet.absoluteFill} />
+      <LinearGradient colors={washA} start={{ x: 0.12, y: 0 }} end={{ x: 0.88, y: 1 }} style={StyleSheet.absoluteFill} />
       {/* Tie-dye wash 2: shifted hues on the opposite diagonal → colours mix */}
-      <LinearGradient colors={washB} start={{ x: 0.9, y: 0.05 }} end={{ x: 0.1, y: 0.95 }} style={StyleSheet.absoluteFill} />
+      <LinearGradient colors={washB} start={{ x: 0.92, y: 0.05 }} end={{ x: 0.08, y: 0.95 }} style={StyleSheet.absoluteFill} />
+      {/* Tie-dye wash 3: a near-horizontal sweep so the colours swirl, not just band */}
+      <LinearGradient colors={washC} start={{ x: 0, y: 0.35 }} end={{ x: 1, y: 0.65 }} style={StyleSheet.absoluteFill} />
 
       <Svg width={W} height={SEG_H} style={StyleSheet.absoluteFill}>
         <Defs>
