@@ -5,7 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { colors, spacing, font, radius, gradients } from "../theme";
 import { tierLabel, subjectLabel, LEVELS, LEVEL_ORDER, subjectsForLevel, lessonsFor, type PathStep, type Tier } from "../data/presets";
-import { avatarSource } from "../data/avatars";
+import { avatarSource, AVATAR_KEYS } from "../data/avatars";
 import type { Progress } from "../lib/storage";
 
 const isUri = (a?: string) =>
@@ -45,7 +45,10 @@ const SEG_ACCENT = ["#22D3EE", "#FBBF24", "#A78BFA", "#2DD4BF", "#F472B6", "#38B
 const TIEDYE = ["#22D3EE", "#818CF8", "#A78BFA", "#C084FC", "#F472B6", "#FB7185", "#FBBF24", "#34D399", "#38BDF8"];
 // Bright ring colours — each avatar along the route gets a different border.
 const RINGS = ["#FF3D71", "#FF9A00", "#FFE600", "#B4FF00", "#00FFA3", "#00E5FF", "#3B82F6", "#7C4DFF", "#FF00C8", "#FF5CA8", "#00D9C0", "#F97316", "#A3FF00", "#E44DFF", "#22D3EE", "#FBBF24"];
-const SCENE_AV = ["av002", "av006", "av034", "av037", "av050", "av065", "av071", "av085", "av097", "av100", "av004", "av059", "av009", "av017", "av046", "av022", "av007", "av013", "av029", "av042", "av055", "av068", "av081", "av093", "av111", "av120", "av133", "av148", "av160", "av175", "av188", "av200"];
+// Every avatar in the pack (801) is mixed into the map. A large coprime stride
+// (see below) walks the whole list so the whole collection is spread across the
+// worlds instead of repeating the same handful.
+const SCENE_AV = AVATAR_KEYS;
 // Glossy music notes scattered singly along the route (between the avatars and
 // the road), for decoration. Black notes with a soft white halo so they read on
 // the colorful background.
@@ -237,9 +240,9 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
   // Decorations scale with the segment length so a 100-lesson world is just as
   // full of avatars and music notes as a 20-lesson one (capped for performance).
   const roadSpan = N * ROW_H;
-  // ~1 avatar per lesson and ~0.7 notes per lesson, so a 100-lesson world is as
-  // packed as a 20-lesson one (avatars reuse ~32 cached images, so this is light).
-  const avCount = Math.min(100, Math.max(10, Math.round(N * 1.0)));
+  // ~1.6 avatars per lesson and ~0.7 notes per lesson, so a 100-lesson world is as
+  // packed as a 20-lesson one. Avatars are drawn from the full 801-image pack.
+  const avCount = Math.min(160, Math.max(14, Math.round(N * 1.6)));
   const avSpots = Array.from({ length: avCount }, (_, i) => {
     const r2 = hash(index * 131 + i * 2.3 + 5);
     const r3 = hash(index * 131 + i * 3.1 + 11);
@@ -305,7 +308,7 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
       {avSpots.map((spot, i) => (
         <Image
           key={i}
-          source={avatarSource(SCENE_AV[(index * 7 + i) % SCENE_AV.length])}
+          source={avatarSource(SCENE_AV[(index * 131 + i * 179) % SCENE_AV.length])}
           style={[styles.sceneAv, spot.side === "l" ? { left: spot.x } : { right: spot.x }, { top: HEADER + roadSpan * spot.yF, borderColor: RINGS[(index * 5 + i) % RINGS.length] }]}
         />
       ))}
