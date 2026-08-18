@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Text, View, StyleSheet, ScrollView, Pressable, Modal, TextInput, Alert, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { Screen, StatTile, ProgressBar } from "../components/ui";
 import { colors, spacing, font, radius, gradients } from "../theme";
@@ -20,12 +21,12 @@ const isPhotoAvatar = (a?: string) =>
   !!a && (a.startsWith("file:") || a.startsWith("http") || a.startsWith("content:") || a.startsWith("data:") || a.startsWith("ph:") || a.startsWith("assets-library:"));
 
 const HOME_ROWS = [
-  { key: "continueLearning" as const, icon: "▶️", label: "Continue Learning" },
-  { key: "madeForYou" as const, icon: "✨", label: "Made for you" },
-  { key: "favorites" as const, icon: "❤️", label: "Favorites" },
-  { key: "levels" as const, icon: "🎓", label: "Levels (Starter, Explorer…)" },
-  { key: "playlists" as const, icon: "🎵", label: "Playlists" },
-  { key: "memory" as const, icon: "🧠", label: "Memory Mix" },
+  { key: "continueLearning" as const, icon: "play-circle-outline", label: "Continue Learning" },
+  { key: "madeForYou" as const, icon: "creation", label: "Made for you" },
+  { key: "favorites" as const, icon: "heart-outline", label: "Favorites" },
+  { key: "levels" as const, icon: "school-outline", label: "Levels (Starter, Explorer…)" },
+  { key: "playlists" as const, icon: "playlist-music-outline", label: "Playlists" },
+  { key: "memory" as const, icon: "brain", label: "Memory Mix" },
 ];
 const LANGUAGES = [
   { label: "Spanish", flag: "🇪🇸" },
@@ -34,6 +35,9 @@ const LANGUAGES = [
   { label: "German", flag: "🇩🇪" },
   { label: "Portuguese", flag: "🇵🇹" },
 ];
+// Varied symbol colours so the Profile rows aren't a wall of turquoise (which
+// also reads as the topic/accent colour). Rotated per row.
+const ICON_COLORS = ["#A78BFA", "#F472B6", "#FBBF24", "#34D399", "#FB923C", "#818CF8", "#E44DFF", "#F97316"];
 const MOODS = ["Energetic", "Chill", "Dance", "Romantic", "Tropical", "Party", "Happy", "Sad", "Dreamy", "Groovy", "Powerful", "Calm"];
 const TEMPOS = ["Slow", "Normal", "Fast"];
 const GOALS = [1, 2, 3, 5];
@@ -42,25 +46,25 @@ type EditKey = "language" | "music" | "goal" | "notifications" | "account" | "he
 
 // Extra settings rows (plan / app). These just show info for now.
 const PLAN_ROWS = [
-  { key: "subscription", i: "💳", t: "Subscription", s: "Free plan",
+  { key: "subscription", i: "credit-card-outline", t: "Subscription", s: "Free plan",
     at: "Subscription", ab: "You're on the Free plan. A Premium plan (unlimited songs, precise karaoke on every song, cloud backup) is coming soon." },
-  { key: "upgrade", i: "🚀", t: "Upgrade to Premium", s: "Coming soon",
+  { key: "upgrade", i: "rocket-launch-outline", t: "Upgrade to Premium", s: "Coming soon",
     at: "Upgrade to Premium", ab: "Premium is coming soon: unlimited song creation, precise karaoke on every song, cloud backup across your devices, and no ads. We'll let you know the moment it's ready." },
-  { key: "backup", i: "☁️", t: "Backup & sync", s: "Coming soon",
+  { key: "backup", i: "cloud-outline", t: "Backup & sync", s: "Coming soon",
     at: "Backup & sync", ab: "Soon you'll be able to back up your songs, progress and playlists to the cloud and sync them across devices." },
-  { key: "restore", i: "🧾", t: "Restore purchases", s: "",
+  { key: "restore", i: "restore", t: "Restore purchases", s: "",
     at: "Restore purchases", ab: "No purchases to restore yet — Premium isn't available quite yet." },
-  { key: "about", i: "ℹ️", t: "About Ritmo", s: "Version 1.0",
+  { key: "about", i: "information-outline", t: "About Ritmo", s: "Version 1.0",
     at: "About Ritmo", ab: "Ritmo — learn languages through AI-generated bilingual songs.\n\nVersion 1.0" },
-  { key: "rate", i: "⭐", t: "Rate Ritmo", s: "",
+  { key: "rate", i: "star-outline", t: "Rate Ritmo", s: "",
     at: "Rate Ritmo", ab: "Thanks for using Ritmo! Ratings will be available once Ritmo is published to the app stores." },
 ];
 
-// A rounded icon box that keeps the emoji perfectly centered.
-function RowIcon({ children }: { children: React.ReactNode }) {
+// A rounded icon box with a themed vector symbol (not an emoji).
+function RowIcon({ name, color }: { name: string; color?: string }) {
   return (
     <View style={styles.rowIconBox}>
-      <Text style={styles.rowIconTxt}>{children}</Text>
+      <MaterialCommunityIcons name={name as any} size={20} color={color ?? colors.accent} />
     </View>
   );
 }
@@ -121,12 +125,12 @@ export default function ProfileScreen({
   const langFlag = LANGUAGES.find((l) => l.label === settings.language)?.flag ?? "🌐";
 
   const rows = [
-    { key: "language" as const, i: "🌐", t: "Language", s: `${langFlag} ${settings.language}` },
-    { key: "music" as const, i: "🎵", t: "Music preferences", s: `${settings.defaultGenres.join(", ") || "any"} · ${settings.defaultMoods.join(", ") || "any"}` },
-    { key: "goal" as const, i: "🎯", t: "Learning goals", s: `${settings.dailyGoal}/day · ${songsToday} today` },
-    { key: "notifications" as const, i: "🔔", t: "Notifications", s: settings.reminders ? "Reminders on" : "Reminders off" },
-    { key: "account" as const, i: "👤", t: "Account", s: settings.name },
-    { key: "help" as const, i: "❓", t: "Help", s: "Support & FAQs" },
+    { key: "language" as const, i: "web", t: "Language", s: `${langFlag} ${settings.language}` },
+    { key: "music" as const, i: "tune-vertical", t: "Music preferences", s: `${settings.defaultGenres.join(", ") || "any"} · ${settings.defaultMoods.join(", ") || "any"}` },
+    { key: "goal" as const, i: "target", t: "Learning goals", s: `${settings.dailyGoal}/day · ${songsToday} today` },
+    { key: "notifications" as const, i: "bell-outline", t: "Notifications", s: settings.reminders ? "Reminders on" : "Reminders off" },
+    { key: "account" as const, i: "account-outline", t: "Account", s: settings.name },
+    { key: "help" as const, i: "help-circle-outline", t: "Help", s: "Support & FAQs" },
   ];
 
   return (
@@ -146,18 +150,24 @@ export default function ProfileScreen({
                   <Text style={styles.avatarText}>{settings.avatar}</Text>
                 </LinearGradient>
               )}
-              <View style={styles.avatarEdit}><Text style={styles.avatarEditText}>✎</Text></View>
+              <View style={styles.avatarEdit}><MaterialCommunityIcons name="pencil" size={12} color="#fff" /></View>
             </Pressable>
             <View style={{ flex: 1 }}>
               <Text style={styles.name}>{settings.name}</Text>
               <Text style={styles.lang}>{langFlag} {settings.language}</Text>
             </View>
             <View style={styles.streakChip}>
-              <Text style={styles.streakNum}>🔥 {streak}</Text>
+              <View style={{ flexDirection: "row", alignItems: "center", gap: 4 }}>
+                <MaterialCommunityIcons name="fire" size={16} color={colors.gold} />
+                <Text style={styles.streakNum}>{streak}</Text>
+              </View>
               <Text style={styles.streakLbl}>day streak</Text>
             </View>
           </View>
-          <Text style={styles.motto}>✨ Keep the rhythm, keep learning!</Text>
+          <View style={styles.mottoRow}>
+            <MaterialCommunityIcons name="creation" size={14} color={ICON_COLORS[0]} />
+            <Text style={styles.motto}>Keep the rhythm, keep learning!</Text>
+          </View>
           <View style={{ marginTop: 12 }}>
             <ProgressBar pct={(intoLevel / 500) * 100} height={8} />
           </View>
@@ -230,14 +240,20 @@ export default function ProfileScreen({
           style={styles.karaokeBtn}
         >
           <LinearGradient colors={gradients.primary} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.karaokeBtnInner}>
-            <Text style={styles.karaokeBtnText}>🎤  Add karaoke to my older songs</Text>
+            <View style={styles.btnRow}>
+              <MaterialCommunityIcons name="microphone" size={18} color="#fff" />
+              <Text style={styles.karaokeBtnText}>Add karaoke to my older songs</Text>
+            </View>
           </LinearGradient>
         </Pressable>
         {karaokeStatus ? <Text style={styles.hint}>{karaokeStatus}</Text> : null}
 
         <Text style={styles.section}>Intro tour</Text>
         <Pressable onPress={() => onUpdateSettings({ onboarded: false })} style={styles.tourBtn}>
-          <Text style={styles.tourBtnText}>▶  Replay the intro tour</Text>
+          <View style={styles.btnRow}>
+            <MaterialCommunityIcons name="play-circle-outline" size={18} color={colors.accent} />
+            <Text style={styles.tourBtnText}>Replay the intro tour</Text>
+          </View>
         </Pressable>
 
         <Text style={styles.section}>Journey</Text>
@@ -254,7 +270,10 @@ export default function ProfileScreen({
           }
           style={styles.tourBtn}
         >
-          <Text style={styles.tourBtnText}>🧭  Start my journey fresh</Text>
+          <View style={styles.btnRow}>
+            <MaterialCommunityIcons name="compass-outline" size={18} color={colors.accent} />
+            <Text style={styles.tourBtnText}>Start my journey fresh</Text>
+          </View>
         </Pressable>
 
         <Text style={styles.section}>Home screen tiles</Text>
@@ -267,7 +286,7 @@ export default function ProfileScreen({
                 onPress={() => onUpdateSettings({ homeSections: { ...settings.homeSections, [r.key]: !on } })}
               >
                 <View style={[styles.row, idx === HOME_ROWS.length - 1 && { borderBottomWidth: 0 }]}>
-                  <RowIcon>{r.icon}</RowIcon>
+                  <RowIcon name={r.icon} color={ICON_COLORS[idx % ICON_COLORS.length]} />
                   <Text style={[styles.rowTitle, { flex: 1 }]}>{r.label}</Text>
                   <View style={[styles.toggle, on && styles.toggleOn]}>
                     <View style={[styles.dot, on && styles.dotOn]} />
@@ -296,7 +315,7 @@ export default function ProfileScreen({
                 }
               >
                 <View style={styles.row}>
-                  <RowIcon>🎓</RowIcon>
+                  <RowIcon name="school-outline" color={ICON_COLORS[2]} />
                   <Text style={[styles.rowTitle, { flex: 1 }]} numberOfLines={1}>{t.label} level</Text>
                   <View style={[styles.toggle, on && styles.toggleOn]}>
                     <View style={[styles.dot, on && styles.dotOn]} />
@@ -319,7 +338,7 @@ export default function ProfileScreen({
                 }
               >
                 <View style={[styles.row, idx === playlists.length - 1 && { borderBottomWidth: 0 }]}>
-                  <RowIcon>🎵</RowIcon>
+                  <RowIcon name="playlist-music-outline" color={ICON_COLORS[idx % ICON_COLORS.length]} />
                   <Text style={[styles.rowTitle, { flex: 1 }]} numberOfLines={1}>{p.name}</Text>
                   <View style={[styles.toggle, on && styles.toggleOn]}>
                     <View style={[styles.dot, on && styles.dotOn]} />
@@ -335,7 +354,7 @@ export default function ProfileScreen({
         <View style={styles.list}>
           <Pressable onPress={() => onUpdateSettings({ autoPrepare: !settings.autoPrepare })}>
             <View style={[styles.row, { borderBottomWidth: 0 }]}>
-              <RowIcon>⚡</RowIcon>
+              <RowIcon name="flash-outline" color={ICON_COLORS[4]} />
               <View style={{ flex: 1 }}>
                 <Text style={styles.rowTitle}>Prepare my next lesson automatically</Text>
                 <Text style={styles.rowSub}>Builds the next song ahead from your preferences — shuffled to a fresh feel each time (never the same style twice in a row). Uses a little extra credit.</Text>
@@ -352,7 +371,7 @@ export default function ProfileScreen({
           {rows.map((r, idx) => (
             <Pressable key={r.key} onPress={() => setEditing(r.key)}>
               <View style={[styles.row, idx === rows.length - 1 && { borderBottomWidth: 0 }]}>
-                <RowIcon>{r.i}</RowIcon>
+                <RowIcon name={r.i} color={ICON_COLORS[idx % ICON_COLORS.length]} />
                 <View style={{ flex: 1 }}>
                   <Text style={styles.rowTitle}>{r.t}</Text>
                   <Text style={styles.rowSub} numberOfLines={1}>{r.s}</Text>
@@ -379,7 +398,7 @@ export default function ProfileScreen({
             return (
               <Pressable key={r.key} onPress={() => (paywallRow && onOpenPaywall ? onOpenPaywall() : Alert.alert(r.at, r.ab))}>
                 <View style={[styles.row, idx === rows.length - 1 && { borderBottomWidth: 0 }]}>
-                  <RowIcon>{r.i}</RowIcon>
+                  <RowIcon name={r.i} color={ICON_COLORS[(idx + 3) % ICON_COLORS.length]} />
                   <View style={{ flex: 1 }}>
                     <Text style={styles.rowTitle}>{r.t}</Text>
                     {!!sub && <Text style={styles.rowSub} numberOfLines={1}>{sub}</Text>}
@@ -411,7 +430,10 @@ export default function ProfileScreen({
 
           <Pressable onPress={pickAvatarPhoto}>
             <LinearGradient colors={gradients.primary} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.uploadBtn}>
-              <Text style={styles.uploadText}>📷  Upload my own picture</Text>
+              <View style={styles.btnRow}>
+                <MaterialCommunityIcons name="camera-outline" size={18} color="#fff" />
+                <Text style={styles.uploadText}>Upload my own picture</Text>
+              </View>
             </LinearGradient>
           </Pressable>
 
@@ -697,7 +719,9 @@ const styles = StyleSheet.create({
   streakChip: { alignItems: "center" },
   streakNum: { color: colors.gold, fontSize: font.h3, fontWeight: "900" },
   streakLbl: { color: colors.muted, fontSize: font.tiny },
-  motto: { color: colors.muted, fontSize: font.small, marginTop: 14 },
+  motto: { color: colors.muted, fontSize: font.small },
+  mottoRow: { flexDirection: "row", alignItems: "center", gap: 6, marginTop: 14 },
+  btnRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
   levelRow: { flexDirection: "row", justifyContent: "space-between", marginTop: 8 },
   xpText: { color: colors.muted, fontSize: font.small },
   levelText: { color: colors.accent, fontSize: font.small, fontWeight: "900" },
