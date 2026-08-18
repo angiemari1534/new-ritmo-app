@@ -442,7 +442,7 @@ const styles = StyleSheet.create({
   topicTileText: { color: colors.ink, fontSize: 13, fontWeight: "700" },
 
   band: { position: "absolute", top: 18, left: 0, right: 0, alignItems: "center" },
-  bandText: { color: "#fff", backgroundColor: "rgba(7,11,19,0.75)", borderWidth: 1.5, borderColor: "rgba(34,184,176,0.6)", borderRadius: radius.pill, paddingVertical: 8, paddingHorizontal: 18, fontSize: font.small, lineHeight: font.small + 7, fontWeight: "900", letterSpacing: 1, textTransform: "uppercase", overflow: "hidden" },
+  bandText: { color: "#E6EAF0", backgroundColor: "rgba(7,11,19,0.75)", borderWidth: 1.5, borderColor: "rgba(34,184,176,0.6)", borderRadius: radius.pill, paddingVertical: 8, paddingHorizontal: 18, fontSize: font.small, lineHeight: font.small + 7, fontWeight: "900", letterSpacing: 1, textTransform: "uppercase", overflow: "hidden" },
 
   sceneAv: { position: "absolute", width: 48, height: 48, borderRadius: 24, borderWidth: 3, borderColor: "#fff", opacity: 0.98 },
   note: { position: "absolute", textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 6 },
@@ -454,8 +454,8 @@ const styles = StyleSheet.create({
   nodeFuture: { width: NODE, height: NODE, borderRadius: NODE / 2, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(8,12,20,0.55)", borderWidth: 1.5 },
   currentWrap: { width: NODE, height: NODE, alignItems: "center", justifyContent: "center" },
   nodeAvatar: { width: NODE + 14, height: NODE + 14, borderRadius: (NODE + 14) / 2, borderWidth: 3, borderColor: "#fff", backgroundColor: "rgba(8,12,20,0.7)", shadowColor: "#fff", shadowOpacity: 0.95, shadowRadius: 10, shadowOffset: { width: 0, height: 0 }, elevation: 9 },
-  nodeNum: { color: "#fff", fontSize: font.small, fontWeight: "900" },
-  nodeNumDim: { color: "#fff", fontSize: font.small, fontWeight: "900" },
+  nodeNum: { color: "#E6EAF0", fontSize: font.small, fontWeight: "900" },
+  nodeNumDim: { color: "#E6EAF0", fontSize: font.small, fontWeight: "900" },
   nodeCheck: { color: "#06232B", fontSize: 18, fontWeight: "900" },
   youPill: { position: "absolute", bottom: -13, backgroundColor: "#000", borderRadius: radius.pill, borderWidth: 1, borderColor: "rgba(34,211,238,0.6)", paddingHorizontal: 6, paddingVertical: 1, zIndex: 2 },
   youPillText: { color: "#22D3EE", fontSize: 8, fontWeight: "500", letterSpacing: 0.3 },

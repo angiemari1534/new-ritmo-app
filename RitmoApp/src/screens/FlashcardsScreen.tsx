@@ -116,7 +116,7 @@ function Pill({ label, on, onPress }: { label: string; on: boolean; onPress: () 
     <Pressable onPress={onPress}>
       {on ? (
         <LinearGradient colors={gradients.purplePink} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.pill}>
-          <Text style={[styles.pillText, { color: "#fff" }]}>{label}</Text>
+          <Text style={[styles.pillText, { color: "#E6EAF0" }]}>{label}</Text>
         </LinearGradient>
       ) : (
         <View style={[styles.pill, styles.pillOff]}><Text style={styles.pillText}>{label}</Text></View>
@@ -140,10 +140,10 @@ const styles = StyleSheet.create({
   card: { width: "100%", minHeight: 220, borderRadius: radius.xl, alignItems: "center", justifyContent: "center", padding: spacing.lg, borderWidth: 1, borderColor: colors.line },
   cardWord: { color: colors.ink, fontSize: 34, fontWeight: "900", textAlign: "center" },
   tapHint: { color: colors.muted, fontSize: font.small, marginTop: 14 },
-  cardEs: { color: "#fff", fontSize: font.h2, fontWeight: "900", textAlign: "center" },
+  cardEs: { color: "#E6EAF0", fontSize: font.h2, fontWeight: "900", textAlign: "center" },
   cardEn: { color: "rgba(255,255,255,0.95)", fontSize: font.h1, fontWeight: "900", textAlign: "center", marginTop: 10 },
   hear: { marginTop: 18, backgroundColor: "rgba(255,255,255,0.18)", borderRadius: radius.pill, paddingVertical: 10, paddingHorizontal: 20 },
-  hearText: { color: "#fff", fontWeight: "800" },
+  hearText: { color: "#E6EAF0", fontWeight: "800" },
   nav: { flexDirection: "row", justifyContent: "space-between", width: "100%", marginTop: 16 },
   navBtn: { paddingVertical: 8, paddingHorizontal: 16, borderRadius: radius.pill, backgroundColor: colors.card, borderWidth: 1, borderColor: colors.line },
   navText: { color: colors.accent, fontSize: font.body, fontWeight: "900" },
@@ -154,5 +154,5 @@ const styles = StyleSheet.create({
   doneEmoji: { fontSize: 56 },
   done: { color: colors.ink, fontSize: font.h2, fontWeight: "900", marginTop: 10 },
   primary: { backgroundColor: colors.accent, borderRadius: radius.md, paddingVertical: 14, paddingHorizontal: 26, marginTop: 20 },
-  primaryText: { color: "#fff", fontWeight: "900", fontSize: font.body },
+  primaryText: { color: "#E6EAF0", fontWeight: "900", fontSize: font.body },
 });

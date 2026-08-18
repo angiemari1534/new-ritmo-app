@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   featText: { color: colors.ink, fontSize: font.small, fontWeight: "600", flex: 1 },
   cta: { borderRadius: radius.md, paddingVertical: 13, alignItems: "center" },
   ctaOff: { opacity: 0.4 },
-  ctaText: { color: "#fff", fontSize: font.body, fontWeight: "900" },
+  ctaText: { color: "#E6EAF0", fontSize: font.body, fontWeight: "900" },
   currentTag: { color: colors.gold, fontSize: font.small, fontWeight: "800", marginTop: 10 },
   restore: { alignItems: "center", paddingVertical: 14 },
   restoreText: { color: colors.muted, fontSize: font.small, fontWeight: "800" },

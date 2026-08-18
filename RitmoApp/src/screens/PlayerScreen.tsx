@@ -405,7 +405,7 @@ const styles = StyleSheet.create({
   disabled: { opacity: 0.25 },
   styleBtn: { fontSize: 22 },
   playBtn: { width: 64, height: 64, borderRadius: 32, alignItems: "center", justifyContent: "center" },
-  playText: { color: "#fff", fontSize: 22, fontWeight: "900" },
+  playText: { color: "#E6EAF0", fontSize: 22, fontWeight: "900" },
   loopNote: { color: colors.muted, fontSize: font.small, textAlign: "center", marginTop: 8 },
   modeRow: { flexDirection: "row", gap: 6, paddingHorizontal: spacing.lg, marginTop: spacing.sm },
   modeTile: { flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 3, backgroundColor: colors.card, borderRadius: radius.pill, borderWidth: 1, borderColor: colors.line, paddingVertical: 3, paddingHorizontal: 5 },
@@ -420,5 +420,5 @@ const styles = StyleSheet.create({
   karaokeHint: { color: colors.muted, fontSize: 11, fontWeight: "700", textAlign: "center", marginTop: 8 },
   finishLesson: { paddingHorizontal: spacing.lg, paddingTop: 8, paddingBottom: 12 },
   finishLessonBtn: { borderRadius: radius.md, paddingVertical: 14, paddingHorizontal: 16, alignItems: "center" },
-  finishLessonText: { color: "#fff", fontSize: font.body, fontWeight: "900" },
+  finishLessonText: { color: "#E6EAF0", fontSize: font.body, fontWeight: "900" },
 });

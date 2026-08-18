@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
 
   footer: { paddingVertical: 12 },
   primaryBtn: { borderRadius: radius.md, paddingVertical: 16, alignItems: "center" },
-  primaryText: { color: "#fff", fontSize: font.body, fontWeight: "900" },
+  primaryText: { color: "#E6EAF0", fontSize: font.body, fontWeight: "900" },
   skip: { alignItems: "center", paddingVertical: 14 },
   skipText: { color: colors.muted, fontSize: font.small, fontWeight: "800" },
 

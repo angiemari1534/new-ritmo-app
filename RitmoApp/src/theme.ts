@@ -8,7 +8,7 @@ export const colors = {
   card: "rgba(15,26,44,0.45)", // translucent "transparent black" tile over the near-black bg
   card2: "rgba(29,54,84,0.5)", // slightly stronger translucent (selected/secondary tiles)
   line: "#294160",
-  ink: "#FFFFFF",
+  ink: "#E6EAF0", // soft off-white (one shade down from pure white so text isn't glaring)
   muted: "#9DB2CC", // blue-gray
   faint: "#697F9C",
   accent: "#22B8B0", // teal (brand accent)

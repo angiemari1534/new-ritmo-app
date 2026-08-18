@@ -91,6 +91,6 @@ const styles = StyleSheet.create({
   step: { color: colors.muted, fontSize: font.body, marginTop: 10, textAlign: "center" },
   error: { color: colors.pink, fontSize: font.body, marginTop: 10, textAlign: "center", lineHeight: 22 },
   btn: { borderRadius: 16, paddingVertical: 15, paddingHorizontal: 40, alignItems: "center" },
-  btnText: { color: "#fff", fontSize: font.body, fontWeight: "900" },
+  btnText: { color: "#E6EAF0", fontSize: font.body, fontWeight: "900" },
   cancel: { color: colors.muted, fontSize: font.body, fontWeight: "700" },
 });

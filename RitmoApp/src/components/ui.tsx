@@ -252,7 +252,7 @@ export function TabBar({ active, onSelect, avatar }: { active: TabKey; onSelect:
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.bg },
   btn: { borderRadius: radius.md, paddingVertical: 16, paddingHorizontal: 20, alignItems: "center" },
-  btnText: { color: "#fff", fontSize: font.body, fontWeight: "900", letterSpacing: 0.3 },
+  btnText: { color: "#E6EAF0", fontSize: font.body, fontWeight: "900", letterSpacing: 0.3 },
   chip: {
     backgroundColor: "rgba(7,11,19,0.5)",
     borderRadius: radius.pill,
@@ -321,6 +321,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 0 },
     elevation: 6,
   },
-  fabPlus: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -2 },
+  fabPlus: { color: "#E6EAF0", fontSize: 32, fontWeight: "300", marginTop: -2 },
   fabLabel: { color: colors.accent, fontSize: font.tiny, fontWeight: "800", marginTop: 4 },
 });

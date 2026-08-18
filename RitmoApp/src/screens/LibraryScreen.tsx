@@ -782,7 +782,7 @@ function FilterChip({ label, on, onPress }: { label: string; on: boolean; onPres
     <Pressable onPress={onPress}>
       {on ? (
         <LinearGradient colors={gradients.purplePink} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.chip}>
-          <Text style={[styles.chipText, { color: "#fff" }]}>{label}</Text>
+          <Text style={[styles.chipText, { color: "#E6EAF0" }]}>{label}</Text>
         </LinearGradient>
       ) : (
         <View style={[styles.chip, styles.chipOff]}>
@@ -842,7 +842,7 @@ const styles = StyleSheet.create({
   dots: { color: colors.muted, fontSize: 24, paddingHorizontal: 4, fontWeight: "900" },
   play: { color: colors.ink, fontSize: 18, paddingHorizontal: 8 },
   swipeDelete: { backgroundColor: "#D9365E", justifyContent: "center", alignItems: "center", width: 104, borderRadius: radius.md, marginBottom: 10, marginLeft: 8 },
-  swipeDeleteText: { color: "#fff", fontWeight: "900", fontSize: font.small, textAlign: "center" },
+  swipeDeleteText: { color: "#E6EAF0", fontWeight: "900", fontSize: font.small, textAlign: "center" },
   shufIcon: { fontSize: 18, paddingHorizontal: 6 },
   chev: { color: colors.muted, fontSize: 16, paddingHorizontal: 6, fontWeight: "900" },
   plBody: { marginTop: -4, marginBottom: 10, marginLeft: 14, paddingLeft: 10, borderLeftWidth: 2, borderLeftColor: colors.line },
@@ -873,7 +873,7 @@ const styles = StyleSheet.create({
   plSongTitle: { color: colors.ink, fontSize: font.small, fontWeight: "800" },
   swipeRemove: { backgroundColor: "#B4823A", justifyContent: "center", alignItems: "center", width: 104, borderRadius: radius.sm, marginBottom: 8, marginLeft: 8 },
   shuffleBtn: { borderRadius: radius.md, paddingVertical: 13, alignItems: "center", marginBottom: 12 },
-  shuffleText: { color: "#fff", fontWeight: "900", fontSize: font.body },
+  shuffleText: { color: "#E6EAF0", fontWeight: "900", fontSize: font.body },
   hint: { color: colors.faint, fontSize: font.small, marginTop: 6 },
   newPlaylist: { backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1, borderColor: colors.accent, padding: 14, alignItems: "center", marginBottom: 12 },
   newPlaylistText: { color: colors.accent, fontSize: font.body, fontWeight: "800" },
@@ -900,7 +900,7 @@ const sheet = StyleSheet.create({
   note: { color: colors.muted, fontSize: font.small, marginTop: 4 },
   input: { backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1, borderColor: colors.line, color: colors.ink, fontSize: font.body, padding: 14, marginBottom: 12 },
   primary: { borderRadius: radius.md, paddingVertical: 14, alignItems: "center" },
-  primaryText: { color: "#fff", fontSize: font.body, fontWeight: "900" },
+  primaryText: { color: "#E6EAF0", fontSize: font.body, fontWeight: "900" },
   close: { marginTop: 12, alignItems: "center", paddingVertical: 12 },
   closeText: { color: colors.muted, fontSize: font.body, fontWeight: "800" },
 });

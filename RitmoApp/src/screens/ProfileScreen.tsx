@@ -667,7 +667,7 @@ function OptionRow({ label, on, onPress }: { label: string; on: boolean; onPress
   return (
     <Pressable onPress={onPress}>
       <View style={[sheet.opt, on && sheet.optOn]}>
-        <Text style={[sheet.optLabel, on && { color: "#fff" }]}>{label}</Text>
+        <Text style={[sheet.optLabel, on && { color: "#E6EAF0" }]}>{label}</Text>
         {on && <Text style={sheet.check}>✓</Text>}
       </View>
     </Pressable>
@@ -690,7 +690,7 @@ const styles = StyleSheet.create({
   tourBtnText: { color: "#B9C1CE", fontWeight: "900", fontSize: font.body },
   karaokeBtn: { borderRadius: radius.md, overflow: "hidden", marginTop: 4 },
   karaokeBtnInner: { paddingVertical: 13, alignItems: "center" },
-  karaokeBtnText: { color: "#fff", fontWeight: "900", fontSize: font.body },
+  karaokeBtnText: { color: "#E6EAF0", fontWeight: "900", fontSize: font.body },
   title: { color: colors.ink, fontSize: font.h1, fontWeight: "900", textAlign: "center", marginBottom: spacing.md },
   card: { borderRadius: radius.lg, padding: 18, borderWidth: 1, borderColor: colors.line },
   headRow: { flexDirection: "row", alignItems: "center", gap: 12 },
@@ -698,14 +698,14 @@ const styles = StyleSheet.create({
   avatarPhoto: { width: 60, height: 60, borderRadius: 30, backgroundColor: colors.card },
   avatarText: { fontSize: 28 },
   uploadBtn: { borderRadius: radius.md, paddingVertical: 14, alignItems: "center", marginBottom: 12 },
-  uploadText: { color: "#fff", fontSize: font.body, fontWeight: "900" },
+  uploadText: { color: "#E6EAF0", fontSize: font.body, fontWeight: "900" },
   customRow: { flexDirection: "row", gap: 10, marginBottom: 14 },
   customInput: { flex: 1, backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1, borderColor: colors.line, color: colors.ink, fontSize: font.body, paddingVertical: 12, paddingHorizontal: 14 },
   customUse: { backgroundColor: colors.accent, borderRadius: radius.md, paddingHorizontal: 20, alignItems: "center", justifyContent: "center" },
   customUseText: { color: "#062", fontWeight: "900", fontSize: font.body },
   pickHint: { color: colors.muted, fontSize: font.small, fontWeight: "800", marginBottom: 10 },
   avatarEdit: { position: "absolute", bottom: -2, right: -2, backgroundColor: colors.pink, borderRadius: 10, width: 20, height: 20, alignItems: "center", justifyContent: "center", borderWidth: 2, borderColor: colors.bg2 },
-  avatarEditText: { color: "#fff", fontSize: 10, fontWeight: "900" },
+  avatarEditText: { color: "#E6EAF0", fontSize: 10, fontWeight: "900" },
   avatarGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, justifyContent: "center" },
   avatarOption: { width: 54, height: 54, borderRadius: 27, backgroundColor: colors.card, borderWidth: 2, borderColor: colors.line, alignItems: "center", justifyContent: "center" },
   avatarImgOption: { width: 60, height: 60, borderRadius: 30, borderWidth: 2, borderColor: colors.line, overflow: "hidden" },
@@ -735,7 +735,7 @@ const styles = StyleSheet.create({
   segment: { flexDirection: "row", gap: 8, backgroundColor: colors.card, borderRadius: radius.md, padding: 5, borderWidth: 1, borderColor: colors.line },
   seg: { borderRadius: radius.sm, paddingVertical: 12, alignItems: "center" },
   segText: { color: colors.muted, fontWeight: "800", fontSize: font.small },
-  segTextOn: { color: "#fff", fontWeight: "900", fontSize: font.small },
+  segTextOn: { color: "#E6EAF0", fontWeight: "900", fontSize: font.small },
   list: { backgroundColor: colors.card, borderRadius: radius.lg, borderWidth: 1, borderColor: colors.line, overflow: "hidden" },
   row: { flexDirection: "row", alignItems: "center", gap: 10, paddingVertical: 9, paddingHorizontal: 12, borderBottomWidth: 1, borderBottomColor: colors.line },
   rowIcon: { fontSize: 20 },
@@ -794,5 +794,5 @@ const sheet = StyleSheet.create({
   a: { color: colors.muted, fontSize: font.small, marginTop: 4, lineHeight: 20 },
   doneBtn: { marginTop: 14 },
   done: { borderRadius: radius.md, paddingVertical: 15, alignItems: "center" },
-  doneText: { color: "#fff", fontWeight: "900", fontSize: font.body },
+  doneText: { color: "#E6EAF0", fontWeight: "900", fontSize: font.body },
 });

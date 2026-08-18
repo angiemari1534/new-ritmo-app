@@ -163,5 +163,5 @@ const styles = StyleSheet.create({
     borderRadius: radius.md, paddingVertical: 16, alignItems: "center",
     shadowColor: "#22B8B0", shadowOpacity: 0.2, shadowRadius: 5, shadowOffset: { width: 0, height: 0 }, elevation: 3,
   },
-  btnText: { color: "#fff", fontSize: font.body, fontWeight: "900" },
+  btnText: { color: "#E6EAF0", fontSize: font.body, fontWeight: "900" },
 });
