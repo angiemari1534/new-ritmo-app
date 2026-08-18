@@ -29,8 +29,10 @@ const MOODS = [
   { key: "Romantic", emoji: "❤️" }, { key: "Tropical", emoji: "🌴" }, { key: "Party", emoji: "🎉" },
   { key: "Happy", emoji: "😊" }, { key: "Sad", emoji: "😢" }, { key: "Dreamy", emoji: "🌙" },
   { key: "Groovy", emoji: "🕺" }, { key: "Powerful", emoji: "💪" }, { key: "Calm", emoji: "🧘" },
+  { key: "Uplifting", emoji: "🌅" }, { key: "Epic", emoji: "🔥" }, { key: "Nostalgic", emoji: "📼" },
+  { key: "Playful", emoji: "😜" }, { key: "Moody", emoji: "🎭" }, { key: "Confident", emoji: "👑" },
 ];
-const TEMPOS = [{ key: "Slow", emoji: "🐌" }, { key: "Normal", emoji: "🎵" }, { key: "Fast", emoji: "🚀" }];
+const TEMPOS = [{ key: "Slow", emoji: "🐌" }, { key: "Normal", emoji: "🎵" }, { key: "Upbeat", emoji: "🎶" }, { key: "Fast", emoji: "🚀" }];
 
 // Outline vector icons for genres / moods / voice, so step 2 uses the same
 // symbol style as the topic tiles on step 1 (not colorful emoji).
@@ -47,6 +49,8 @@ const MOOD_ICON: Record<string, string> = {
   Energetic: "lightning-bolt", Chill: "snowflake", Dance: "dance-ballroom", Romantic: "heart",
   Tropical: "palm-tree", Party: "party-popper", Happy: "emoticon-happy-outline", Sad: "emoticon-sad-outline",
   Dreamy: "weather-night", Groovy: "music", Powerful: "arm-flex", Calm: "meditation",
+  Uplifting: "white-balance-sunny", Epic: "fire", Nostalgic: "history",
+  Playful: "emoticon-wink-outline", Moody: "drama-masks", Confident: "crown",
 };
 const VOICE_ICON: Record<string, string> = { female: "face-woman", male: "face-man", duet: "human-male-female", any: "dice-5" };
 const LEVEL_ICON: Record<string, string> = { prestarter: "alphabetical-variant", starter: "seed-outline", beginner: "sprout-outline", intermediate: "chat-outline", advanced: "rocket-launch" };

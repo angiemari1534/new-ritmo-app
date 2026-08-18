@@ -14,6 +14,7 @@ import numbersDisco from "../../assets/catalog/numbers-disco.mp3";
 import numbersPop from "../../assets/catalog/numbers-pop.mp3";
 import numbersEdm from "../../assets/catalog/numbers-edm.mp3";
 import numbersSoul from "../../assets/catalog/numbers-soul.mp3";
+import numbersReggaeton from "../../assets/catalog/numbers-reggaeton.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -246,5 +247,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000010,
     spec: { subject: "numbers", level: "prestarter", lesson: 5, genre: "Soul", beat: "Groovy Normal" },
+  },
+  {
+    id: "cat-numbers-reggaeton",
+    title: "Twenty to Thirty",
+    subject: "numbers",
+    subjectLabel: "Numbers",
+    level: "prestarter",
+    lesson: 6,
+    totalLessons: 20,
+    genre: "Reggaeton",
+    beat: "Tropical Normal",
+    artistFeel: "Daddy Yankee",
+    language: "Spanish",
+    lyrics: "[Intro]\nCome on now\nLock it in\n[Verse]\nYou know it\ntenth\ndécimo\ndécimo\nTurn it up now\ntwentieth\nvigésimo\nvigésimo\nLet's vibe\n[Chorus]\nOne more time\ntenth\ndécimo\ntwentieth\nvigésimo\norder\norden\nNice one!\n[Verse]\nHit it!\norder\norden\norden\nSing along\nnumber\nnúmero\nnúmero\nOne more word\n[Chorus]\nFeel it now\ntenth\ndécimo\ntwentieth\nvigésimo\norder\norden\nTake it away\n[Verse]\nFeel the beat\nto count\ncontar\ncontar\nHey hey!\namount\ncantidad\ncantidad\nAlright!\n[Chorus]\nSing it!\ntenth\ndécimo\ntwentieth\nvigésimo\norder\norden\nSay it with me\n[Bridge]\nBig time\ntenth\ndécimo\ntwentieth\nvigésimo\norder\norden\nnumber\nnúmero\nto count\ncontar\namount\ncantidad\nGo go go!\n[Chorus]\nSay what?\ntenth\ndécimo\ntwentieth\nvigésimo\norder\norden\n[Outro]\nYes yes!\nAll together",
+    vocab: [{"es":"décimo","en":"tenth"},{"es":"vigésimo","en":"twentieth"},{"es":"orden","en":"order"},{"es":"número","en":"number"},{"es":"contar","en":"to count"},{"es":"cantidad","en":"amount"}],
+    lineTimings: [{"start":0.08,"end":4.02,"loss":3.3872400919596353},{"start":4.02,"end":11.321,"loss":3.0547730922698975},{"start":15.18,"end":15.860999999999999,"loss":6.242961686849594},{"start":16.92,"end":17.481,"loss":8.14957512749566},{"start":18.78,"end":20.2,"loss":8.01100328233507},{"start":20.2,"end":20.46,"loss":0.03448073069254557},{"start":20.46,"end":22.96,"loss":6.954115395594124},{"start":22.96,"end":23.66,"loss":8.794219970703125},{"start":23.66,"end":25.32,"loss":0.15212376912434897},{"start":25.32,"end":26.74,"loss":7.910343488057454},{"start":26.74,"end":27.54,"loss":0.1406346321105957},{"start":27.54,"end":29.06,"loss":9.321303621927896},{"start":29.06,"end":29.779,"loss":8.0501788104022},{"start":29.78,"end":30.401,"loss":8.555684407552084},{"start":31.86,"end":32.36,"loss":8.07820790608724},{"start":32.36,"end":33.72,"loss":8.083260091145833},{"start":33.72,"end":34.17,"loss":1.1229276259740193},{"start":34.17,"end":34.8,"loss":8.163099500868055},{"start":34.8,"end":35.89,"loss":5.1137081909179685},{"start":35.89,"end":36.56,"loss":9.51542724609375},{"start":36.56,"end":37.46,"loss":8.36844482421875},{"start":37.46,"end":37.89,"loss":0.10539398193359374},{"start":37.89,"end":38.15,"loss":8.27056630452474},{"start":38.15,"end":39.8,"loss":8.746354166666666},{"start":39.8,"end":40.150999999999996,"loss":7.081298828125},{"start":41.18,"end":41.6,"loss":0.2510606977674696},{"start":41.6,"end":42.08,"loss":7.177233378092448},{"start":42.08,"end":43.56,"loss":4.147479057312012},{"start":43.56,"end":44.86,"loss":9.145594618055554},{"start":44.86,"end":45.8,"loss":8.680679321289062},{"start":45.8,"end":46.28,"loss":7.95521748860677},{"start":46.28,"end":47.18,"loss":8.017268880208333},{"start":47.18,"end":47.42,"loss":0.3745015462239583},{"start":47.42,"end":48.44,"loss":0.003885507583618164},{"start":48.44,"end":49.24,"loss":7.599942525227864},{"start":49.24,"end":50.06,"loss":3.3855226834615073},{"start":50.06,"end":52.54,"loss":8.673718070983888},{"start":52.54,"end":53.98,"loss":5.216707102457682},{"start":53.98,"end":54.61,"loss":7.855767144097222},{"start":54.61,"end":55.14,"loss":8.646647135416666},{"start":55.14,"end":56.79,"loss":4.963187122344971},{"start":56.79,"end":57.18,"loss":8.125478108723959},{"start":57.18,"end":57.949,"loss":7.953816731770833},{"start":57.949,"end":58.42,"loss":7.346451822916666},{"start":58.42,"end":58.86,"loss":8.062880622016058},{"start":58.86,"end":59.98,"loss":5.612516106499566},{"start":59.98,"end":60.58,"loss":7.733490498860678},{"start":60.58,"end":61.98,"loss":8.364479573567708},{"start":61.98,"end":62.3,"loss":7.442464192708333},{"start":62.3,"end":62.44,"loss":0.5169270833333334},{"start":62.44,"end":63.06,"loss":0.005732377370198567},{"start":63.06,"end":71.74,"loss":7.613413492838542},{"start":71.74,"end":73.99,"loss":6.592441148468942},{"start":73.99,"end":75.20100000000001,"loss":9.550045776367188},{"start":82,"end":83.2,"loss":7.9697814941406255},{"start":83.2,"end":84.1,"loss":8.035673014322917},{"start":84.1,"end":84.54,"loss":8.09428013695611},{"start":84.54,"end":85.46,"loss":6.967312282986111},{"start":85.46,"end":85.91,"loss":2.4053385416666666},{"start":85.91,"end":86.43,"loss":7.816623263888889},{"start":86.43,"end":87.98,"loss":7.552402072482639},{"start":87.98,"end":88.35,"loss":8.529296875},{"start":88.35,"end":89.32,"loss":4.62447509765625},{"start":89.32,"end":90.09,"loss":9.683081732855902},{"start":90.09,"end":90.38,"loss":0.084930419921875},{"start":90.38,"end":91.52,"loss":8.502257283528646},{"start":91.58,"end":100.76,"loss":8.86802207099067},{"start":100.76,"end":101.63,"loss":5.51493896484375},{"start":101.63,"end":102.1,"loss":8.392067464192708},{"start":102.1,"end":103.32,"loss":7.468946668836806},{"start":103.32,"end":103.78,"loss":1.4232444763183594},{"start":103.78,"end":104.13,"loss":22.25},{"start":104.13,"end":104.7,"loss":0.244140625},{"start":104.7,"end":104.86,"loss":0.22509765625},{"start":104.86,"end":104.9,"loss":0.00146484375},{"start":104.9,"end":105.34,"loss":0.10527181625366211}],
+    audioUrl: "",
+    audioModule: numbersReggaeton,
+    catalog: true,
+    createdAt: 1750000000011,
+    spec: { subject: "numbers", level: "prestarter", lesson: 6, genre: "Reggaeton", beat: "Tropical Normal" },
   }
 ];

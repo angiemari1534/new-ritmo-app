@@ -87,6 +87,22 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
     Fast: "fast high-energy tempo",
   };
   const tempoPhrase = TEMPO_PHRASE[tempoWord] || "steady medium tempo";
+  // Mood comes from the FIRST word of the beat ("Groovy Normal" -> Groovy), so
+  // the user's mood pick actually shapes the feel (not just the tempo).
+  const moodWord = String(beat || "").trim().split(/\s+/)[0];
+  const MOOD_PHRASE = {
+    Energetic: "high-energy and driving", Chill: "relaxed and laid-back",
+    Dance: "danceable club feel", Romantic: "warm and romantic",
+    Tropical: "sunny tropical vibe", Party: "fun party-anthem energy",
+    Happy: "bright happy mood", Sad: "melancholy emotional mood",
+    Dreamy: "dreamy atmospheric feel", Groovy: "funky groovy pocket",
+    Powerful: "bold powerful and anthemic", Calm: "calm and gentle",
+    Uplifting: "uplifting feel-good lift", Epic: "epic cinematic and huge",
+    Nostalgic: "warm nostalgic throwback feel", Playful: "playful and cheeky",
+    Moody: "moody and brooding", Confident: "confident and swaggering",
+  };
+  const moodPhrase = MOOD_PHRASE[moodWord];
+  if (moodPhrase) parts.push(moodPhrase);
   // The feel — tied to the GENRE so it stays true to it (country stays country,
   // reggaeton stays reggaeton) instead of drifting into generic pop.
   parts.push(`authentic ${genre || "pop"} song true to the ${genre || "pop"} style and instruments, catchy and grown-up, ${tempoPhrase}, clear vocals loud over soft backing, mature not a childish kids song`);
