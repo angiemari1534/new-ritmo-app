@@ -450,9 +450,18 @@ export default function CreateScreen({
                     </View>
                     <Text style={styles.h}>Moods to mix</Text>
                     <View style={styles.gGrid}>
-                      {MOODS.map((m) => (
-                        <Chip key={m.key} label={`${m.emoji} ${m.key}`} selected={mixMoods.includes(m.key)} onPress={() => setMixMoods((a) => toggleIn(a, m.key))} />
-                      ))}
+                      {MOODS.map((m, i) => {
+                        const on = mixMoods.includes(m.key);
+                        const c = NEON[i % NEON.length];
+                        return (
+                          <Pressable key={m.key} style={styles.gCell} onPress={() => setMixMoods((a) => toggleIn(a, m.key))}>
+                            <View style={[styles.gTile, { borderColor: on ? c : `${c}55`, shadowColor: c }, on && { backgroundColor: `${c}1F` }]}>
+                              <MaterialCommunityIcons name={(MOOD_ICON[m.key] ?? "music") as any} size={24} color={c} style={{ marginBottom: 5 }} />
+                              <Text style={[styles.gLabel, on && { color: c }]} numberOfLines={2}>{m.key}</Text>
+                            </View>
+                          </Pressable>
+                        );
+                      })}
                     </View>
                   </>
                 )}
