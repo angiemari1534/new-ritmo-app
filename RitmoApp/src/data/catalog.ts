@@ -28,6 +28,7 @@ import jobsHiphop from "../../assets/catalog/jobs-hiphop.mp3";
 import schoolAlt from "../../assets/catalog/school-alt.mp3";
 import technologyEdm from "../../assets/catalog/technology-edm.mp3";
 import hobbiesLatin from "../../assets/catalog/hobbies-latin.mp3";
+import transportationLatin from "../../assets/catalog/transportation-latin.mp3";
 
 export const CATALOG: Song[] = [
   {
@@ -554,5 +555,26 @@ export const CATALOG: Song[] = [
     catalog: true,
     createdAt: 1750000000024,
     spec: { subject: "hobbies", level: "prestarter", lesson: 1, genre: "Latin", beat: "Happy Upbeat" },
+  },
+  {
+    id: "cat-transportation-latin",
+    title: "Car, Bus, Train",
+    subject: "transportation",
+    subjectLabel: "Transportation",
+    level: "prestarter",
+    lesson: 1,
+    totalLessons: 20,
+    genre: "Latin",
+    beat: "Happy Upbeat",
+    artistFeel: "Enrique Iglesias",
+    language: "Spanish",
+    lyrics: "[Intro]\nStep it up\nAlright!\n[Verse]\nTake it away\nthe car\nel coche\nel coche\nBreak it down\nthe bus\nel autobús\nel autobús\nGive it up\n[Chorus]\nLet's hear it\nthe car\nel coche\nthe bus\nel autobús\nthe train\nel tren\nHere we go\n[Verse]\nLet's move\nthe train\nel tren\nel tren\nHit it!\nthe airplane\nel avión\nel avión\nSounds great\n[Chorus]\nHey hey!\nthe car\nel coche\nthe bus\nel autobús\nthe train\nel tren\nOh-oh!\n[Verse]\nSing along\nthe bicycle\nla bicicleta\nla bicicleta\nTurn it up now\nthe taxi\nel taxi\nel taxi\nFeel the beat\n[Chorus]\nYou're doing great\nthe car\nel coche\nthe bus\nel autobús\nthe train\nel tren\nRepeat with me\n[Bridge]\nLet's get it!\nthe car\nel coche\nthe bus\nel autobús\nthe train\nel tren\nthe airplane\nel avión\nthe bicycle\nla bicicleta\nthe taxi\nel taxi\nFeel the rhythm\n[Chorus]\nGroove with me\nthe car\nel coche\nthe bus\nel autobús\nthe train\nel tren\n[Outro]\nBig time\nLet's learn!",
+    vocab: [{"es":"el coche","en":"the car"},{"es":"el autobús","en":"the bus"},{"es":"el tren","en":"the train"},{"es":"el avión","en":"the airplane"},{"es":"la bicicleta","en":"the bicycle"},{"es":"el taxi","en":"the taxi"}],
+    lineTimings: [{"start":5.82,"end":6.7010000000000005,"loss":3.6293798174176897},{"start":11.02,"end":11.741,"loss":12.647998690605164},{"start":11.74,"end":16,"loss":3.610332897731236},{"start":16,"end":17.24,"loss":5.140422566731771},{"start":17.24,"end":18.66,"loss":5.28892578125},{"start":18.66,"end":19.96,"loss":5.6035546875},{"start":19.96,"end":22.02,"loss":3.4977345126015797},{"start":22.02,"end":23.98,"loss":4.95285898844401},{"start":23.98,"end":25.32,"loss":6.561793736049107},{"start":25.32,"end":26.98,"loss":6.146526227678572},{"start":26.98,"end":27.68,"loss":3.6052165712629045},{"start":27.68,"end":29.82,"loss":3.5217417172023224},{"start":29.82,"end":31.74,"loss":4.868038431803385},{"start":31.74,"end":33.68,"loss":5.067902832031249},{"start":33.68,"end":34.22,"loss":4.905648803710937},{"start":34.22,"end":35.5,"loss":6.423174176897322},{"start":35.5,"end":36.26,"loss":5.076020304361979},{"start":36.26,"end":37.5,"loss":6.176747131347656},{"start":37.5,"end":42.16,"loss":3.465029716491699},{"start":42.16,"end":45.64,"loss":5.313930149078369},{"start":45.64,"end":47.16,"loss":5.21544657389323},{"start":47.16,"end":48.18,"loss":5.954498291015625},{"start":48.18,"end":49.02,"loss":6.002777099609375},{"start":49.02,"end":51.12,"loss":5.4731201171875},{"start":51.12,"end":52.38,"loss":5.639518896738688},{"start":52.38,"end":53.94,"loss":5.582916870117187},{"start":53.94,"end":55.76,"loss":5.737752990722656},{"start":55.76,"end":57.42,"loss":4.8691293780008955},{"start":57.42,"end":58.73,"loss":5.244658915201823},{"start":58.73,"end":59.741,"loss":4.717594401041667},{"start":59.74,"end":61.96,"loss":5.24445556640625},{"start":61.96,"end":62.9,"loss":4.873331705729166},{"start":62.9,"end":64.16,"loss":6.397441755022322},{"start":64.16,"end":65.019,"loss":5.082714640299479},{"start":65.019,"end":66.179,"loss":6.140113830566406},{"start":66.179,"end":71.78,"loss":1.2963053385416667},{"start":71.78,"end":74.17,"loss":4.7364005279541015},{"start":74.17,"end":76.16,"loss":5.121335660843622},{"start":76.16,"end":77.54,"loss":5.559699164496528},{"start":77.54,"end":79.24,"loss":5.458798556857639},{"start":79.24,"end":81.32,"loss":4.709777633349101},{"start":81.32,"end":82.32,"loss":4.777556355794271},{"start":82.32,"end":83.76,"loss":5.649577331542969},{"start":83.76,"end":85.44,"loss":5.667708206176758},{"start":85.44,"end":87.38,"loss":3.3890795026506697},{"start":87.38,"end":91.46,"loss":3.392303916386196},{"start":91.46,"end":93.86,"loss":4.733247884114584},{"start":93.86,"end":95.66,"loss":4.996003417968749},{"start":95.66,"end":96.53,"loss":4.839890543619791},{"start":96.53,"end":97.88,"loss":6.290483747209821},{"start":97.88,"end":98.72,"loss":5.046949666341146},{"start":98.72,"end":99.6,"loss":6.127799987792969},{"start":99.6,"end":101.241,"loss":3.05917325473967},{"start":101.24,"end":114.79,"loss":4.412842373620896},{"start":114.79,"end":115.6,"loss":4.919124348958333},{"start":115.6,"end":117.58,"loss":5.16118896484375},{"start":117.58,"end":119,"loss":4.880971272786459},{"start":119,"end":120.56,"loss":6.336148507254464},{"start":120.56,"end":121.5,"loss":5.050809936523438},{"start":121.5,"end":122.52,"loss":6.194822692871094},{"start":122.52,"end":124.72,"loss":5.247102292378743},{"start":124.72,"end":125.6,"loss":5.5364923095703125},{"start":125.6,"end":126.8,"loss":4.564852337610153},{"start":126.8,"end":128.24,"loss":5.281443956163194},{"start":128.24,"end":129.78,"loss":4.992979431152344},{"start":129.78,"end":131.4,"loss":5.410427093505859},{"start":131.4,"end":162.12,"loss":3.3758278574262346},{"start":162.12,"end":165.44,"loss":3.3508821101415727},{"start":165.44,"end":168.6,"loss":4.852921549479166},{"start":168.6,"end":170.239,"loss":5.18964599609375},{"start":170.239,"end":171.56,"loss":4.825201416015625},{"start":171.56,"end":173.54,"loss":6.226175362723214},{"start":173.54,"end":174.18,"loss":5.042578938802083},{"start":174.18,"end":178.72,"loss":6.0532684326171875},{"start":178.72,"end":184.48,"loss":4.905107148488363},{"start":184.48,"end":188.4,"loss":0.3657947301864624}],
+    audioUrl: "",
+    audioModule: transportationLatin,
+    catalog: true,
+    createdAt: 1750000000025,
+    spec: { subject: "transportation", level: "prestarter", lesson: 1, genre: "Latin", beat: "Happy Upbeat" },
   }
 ];

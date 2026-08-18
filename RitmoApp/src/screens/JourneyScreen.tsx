@@ -314,10 +314,13 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
   // rainbow made every world average to the same blur; clustering per-world means
   // one world reads teal-and-violet, the next magenta-and-orange, etc. Band count,
   // hue centre, spread, dark amount AND wash directions all vary by segment.
-  const bands = Math.min(36, Math.max(10, Math.round(N / 3.2) + Math.round(hash(index * 9.1 + 3) * 6)));
+  // FEWER, larger colour regions so the map reads calm, not busy — plus more
+  // dark so it stays moody. Each world still has its own hue centre + varied
+  // direction so worlds differ down the map.
+  const bands = Math.min(11, Math.max(4, Math.round(N / 8) + Math.round(hash(index * 9.1 + 3) * 2)));
   const hueBase = Math.round(hash(index * 12.9 + 1) * TIEDYE.length); // this world's colour centre
-  const hueSpread = 2 + Math.floor(hash(index * 4.7 + 2) * 4); // 2..5 hues wide
-  const darkBias = 0.22 + hash(index * 8.3 + 5) * 0.3; // 0.22..0.52 dark amount, per world
+  const hueSpread = 1 + Math.floor(hash(index * 4.7 + 2) * 3); // 1..3 hues wide (tighter = calmer)
+  const darkBias = 0.34 + hash(index * 8.3 + 5) * 0.3; // 0.34..0.64 dark amount, per world
   // Pick a colour for one band: mostly near this world's hue centre, sometimes DEEP.
   const pick = (salt: number, k: number, deepBoost: number, alpha: string) => {
     const dark = hash(index * 17.3 + k * 1.7 + salt) < darkBias + deepBoost;
@@ -329,14 +332,13 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
     const idx = ((hueBase + off) % TIEDYE.length + TIEDYE.length) % TIEDYE.length;
     return `${TIEDYE[idx]}${alpha}`;
   };
-  const washA = Array.from({ length: bands }, (_, k) => pick(1.1, k, 0.0, "80")) as [string, string, ...string[]];
-  const washB = Array.from({ length: bands }, (_, k) => pick(2.7, k, 0.06, "5C")) as [string, string, ...string[]];
-  const washC = Array.from({ length: bands }, (_, k) => pick(4.3, k, 0.16, "42")) as [string, string, ...string[]];
-  // Per-world wash directions so the swirl orientation differs down the map too.
-  const d1 = hash(index * 3.1 + 7), d2 = hash(index * 5.3 + 11), d3 = hash(index * 7.9 + 13);
+  // Only two soft washes now (dropped the third swirl layer) so it's less busy.
+  const washA = Array.from({ length: bands }, (_, k) => pick(1.1, k, 0.0, "6E")) as [string, string, ...string[]];
+  const washB = Array.from({ length: bands }, (_, k) => pick(2.7, k, 0.10, "44")) as [string, string, ...string[]];
+  // Per-world wash directions so the orientation differs down the map too.
+  const d1 = hash(index * 3.1 + 7), d2 = hash(index * 5.3 + 11);
   const dirA = { start: { x: d1 * 0.5, y: 0 }, end: { x: 1 - d1 * 0.5, y: 1 } };
   const dirB = { start: { x: 1 - d2 * 0.45, y: 0.05 }, end: { x: d2 * 0.45, y: 0.95 } };
-  const dirC = { start: { x: 0, y: 0.15 + d3 * 0.4 }, end: { x: 1, y: 0.85 - d3 * 0.4 } };
 
   return (
     <View style={{ width: W, height: SEG_H }}>
@@ -344,10 +346,8 @@ function Segment({ seg, progress, here, avImg, onJumpTo }: { seg: Seg; progress:
       <LinearGradient colors={[bg[0], bg[1], nextBg[0]]} locations={[0, 0.6, 1]} start={{ x: 0.5, y: 0 }} end={{ x: 0.5, y: 1 }} style={StyleSheet.absoluteFill} />
       {/* Tie-dye wash 1: this world's hue family flowing down (per-world diagonal) */}
       <LinearGradient colors={washA} start={dirA.start} end={dirA.end} style={StyleSheet.absoluteFill} />
-      {/* Tie-dye wash 2: shifted hues on the opposite diagonal → colours mix */}
+      {/* Tie-dye wash 2: shifted hues on the opposite diagonal → colours mix softly */}
       <LinearGradient colors={washB} start={dirB.start} end={dirB.end} style={StyleSheet.absoluteFill} />
-      {/* Tie-dye wash 3: a near-horizontal sweep so the colours swirl, not just band */}
-      <LinearGradient colors={washC} start={dirC.start} end={dirC.end} style={StyleSheet.absoluteFill} />
 
       <Svg width={W} height={SEG_H} style={StyleSheet.absoluteFill}>
         <Defs>
