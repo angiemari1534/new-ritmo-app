@@ -115,15 +115,52 @@ export const LESSONS_PER_SUBJECT = 20;
 // capture as many words as possible for each topic (~6 new words per lesson).
 // Topics not listed use the default. Tune freely.
 export const PRESTARTER_LESSONS: Record<string, number> = {
-  food: 16, animals: 16, verbs: 16,
-  greetings: 12, body: 12, home: 12, cooking: 12, vacation: 12, descriptions: 12,
-  family: 10, days: 10, feelings: 10, clothing: 10, shopping: 10,
-  jobs: 10, school: 10, hobbies: 10, transportation: 10, places: 10, nature: 10,
-  colors: 8, weather: 8, directions: 8, pronouns: 8, questions: 8,
-  technology: 8, emergencies: 8,
-  numbers: 6, time: 6,
+  greetings: 12, pronouns: 9, numbers: 13, colors: 10, descriptions: 9, questions: 9,
+  family: 9, feelings: 7, food: 9, cooking: 9, animals: 9, body: 8,
+  clothing: 7, home: 8, weather: 7, days: 9, time: 9,
+  directions: 8, transportation: 9, places: 9, shopping: 7,
+  jobs: 9, school: 9, technology: 9, hobbies: 9, nature: 9, emergencies: 9,
+  verbs: 8, vacation: 9,
 };
-const PRESTARTER_DEFAULT_LESSONS = 8;
+const PRESTARTER_DEFAULT_LESSONS = 9;
+
+// Phrase-level lessons PER TOPIC PER LEVEL — sized so each topic has enough
+// lessons to fully learn it at that level. Foundational/finite topics (numbers,
+// colors) are short; communication-heavy topics (verbs, food, greetings,
+// questions) run long (over 20 at the higher levels). Intermediate peaks;
+// Advanced is a bit shorter (specialized vocabulary).
+export const PHRASE_LESSONS: Record<string, { starter: number; beginner: number; intermediate: number; advanced: number }> = {
+  greetings: { starter: 14, beginner: 22, intermediate: 26, advanced: 19 },
+  pronouns: { starter: 12, beginner: 18, intermediate: 22, advanced: 16 },
+  numbers: { starter: 6, beginner: 9, intermediate: 11, advanced: 8 },
+  colors: { starter: 7, beginner: 10, intermediate: 12, advanced: 9 },
+  descriptions: { starter: 11, beginner: 16, intermediate: 20, advanced: 14 },
+  questions: { starter: 14, beginner: 21, intermediate: 25, advanced: 18 },
+  family: { starter: 12, beginner: 18, intermediate: 22, advanced: 16 },
+  feelings: { starter: 12, beginner: 18, intermediate: 22, advanced: 16 },
+  food: { starter: 14, beginner: 21, intermediate: 25, advanced: 18 },
+  cooking: { starter: 11, beginner: 17, intermediate: 21, advanced: 15 },
+  animals: { starter: 9, beginner: 14, intermediate: 17, advanced: 12 },
+  body: { starter: 10, beginner: 15, intermediate: 19, advanced: 14 },
+  clothing: { starter: 10, beginner: 14, intermediate: 18, advanced: 13 },
+  home: { starter: 10, beginner: 15, intermediate: 19, advanced: 14 },
+  weather: { starter: 7, beginner: 11, intermediate: 13, advanced: 10 },
+  days: { starter: 7, beginner: 11, intermediate: 13, advanced: 10 },
+  time: { starter: 7, beginner: 11, intermediate: 13, advanced: 10 },
+  directions: { starter: 11, beginner: 17, intermediate: 21, advanced: 15 },
+  transportation: { starter: 11, beginner: 16, intermediate: 20, advanced: 14 },
+  places: { starter: 11, beginner: 16, intermediate: 20, advanced: 14 },
+  shopping: { starter: 11, beginner: 17, intermediate: 21, advanced: 15 },
+  jobs: { starter: 11, beginner: 16, intermediate: 20, advanced: 14 },
+  school: { starter: 11, beginner: 16, intermediate: 20, advanced: 14 },
+  technology: { starter: 10, beginner: 15, intermediate: 19, advanced: 14 },
+  hobbies: { starter: 11, beginner: 16, intermediate: 20, advanced: 14 },
+  nature: { starter: 10, beginner: 15, intermediate: 19, advanced: 14 },
+  emergencies: { starter: 10, beginner: 14, intermediate: 18, advanced: 13 },
+  verbs: { starter: 17, beginner: 25, intermediate: 30, advanced: 22 },
+  vacation: { starter: 12, beginner: 18, intermediate: 22, advanced: 16 },
+};
+const PHRASE_DEFAULT = { starter: 12, beginner: 18, intermediate: 22, advanced: 16 };
 
 export function levelDef(t?: string): LevelDef | undefined {
   return LEVELS.find((l) => l.key === t);
@@ -137,6 +174,11 @@ export function lessonsFor(t: Tier, subject?: string): number {
   const lvl = levelDef(t);
   if (!lvl) return LESSONS_PER_SUBJECT;
   if (lvl.mode === "word" && subject) return PRESTARTER_LESSONS[subject] ?? PRESTARTER_DEFAULT_LESSONS;
+  // Phrase levels: per-topic, per-level count so each topic runs as long as it
+  // needs to be fully learned.
+  if (subject && (t === "starter" || t === "beginner" || t === "intermediate" || t === "advanced")) {
+    return (PHRASE_LESSONS[subject] ?? PHRASE_DEFAULT)[t];
+  }
   return lvl.lessonsPerSubject;
 }
 // Back-compat: lessons for a level ignoring topic (phrase levels, or a default).

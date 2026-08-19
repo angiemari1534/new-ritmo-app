@@ -134,13 +134,9 @@ export default function CreateScreen({
   const current = curriculum.find((c) => c.key === subject) ?? curriculum[0];
   // Pre-Starter is a word level with its own fixed lesson count; phrase levels
   // use the per-subject curated counts from the live curriculum.
-  const lessonTotal = usingTopic
-    ? 20
-    : tier === "prestarter"
-    ? lessonsFor(tier, subject)
-    : current
-    ? current.lessons[tier as "starter" | "beginner" | "intermediate" | "advanced"]
-    : 20;
+  // Per-topic, per-level lesson count (same source the journey map uses) so the
+  // Create screen matches the map exactly.
+  const lessonTotal = usingTopic ? 20 : lessonsFor(tier, subject);
   const doneUpTo = progress[progressKey]?.[tier] ?? 0;
   useEffect(() => setLesson(Math.min(doneUpTo + 1, Math.max(1, lessonTotal))), [progressKey, tier, lessonTotal, doneUpTo]);
 
