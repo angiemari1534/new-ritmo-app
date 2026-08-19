@@ -37,6 +37,7 @@ import {
   setCatalogRating,
   loadCatalogFlags,
   toggleCatalogFlag,
+  clearCatalogFlags,
   getLastResolvedAt,
   applyResolvedFlags,
   loadLockedIds,
@@ -109,7 +110,7 @@ function AppInner() {
     name: "Ritmo Learner",
     avatar: "av001",
     language: "Spanish",
-    order: "es-en",
+    order: "en-es",
     defaultGenres: ["Reggaeton"],
     defaultMoods: ["Energetic"],
     defaultTempo: "Normal",
@@ -936,6 +937,7 @@ function AppInner() {
             catFlags={catFlags}
             catLocked={catLocked}
             onToggleFlag={flagCatalogSong}
+            onFlagsSent={async () => { setCatFlags({}); await clearCatalogFlags(); }}
             focusFilter={libFocus}
             onFocusConsumed={() => setLibFocus(null)}
             onShuffle={playShuffled}

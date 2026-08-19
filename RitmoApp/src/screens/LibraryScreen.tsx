@@ -30,6 +30,7 @@ export default function LibraryScreen({
   catFlags,
   catLocked,
   onToggleFlag,
+  onFlagsSent,
   focusFilter,
   onFocusConsumed,
   onShuffle,
@@ -55,6 +56,7 @@ export default function LibraryScreen({
   catFlags: Record<string, CatalogFlag[]>;
   catLocked: string[];
   onToggleFlag: (id: string, flag: CatalogFlag) => void;
+  onFlagsSent?: () => void;
   focusFilter?: string | null;
   onFocusConsumed?: () => void;
   onShuffle: (list: Song[]) => void;
@@ -547,10 +549,11 @@ export default function LibraryScreen({
                 onPress={async () => {
                   const payload = flagsPayload(catFlags, songs);
                   const ok = await sendFlags({ flags: payload });
+                  if (ok) { onFlagsSent?.(); setShowFlags(false); }
                   Alert.alert(
                     ok ? "Sent ✓" : "Couldn't reach developer",
                     ok
-                      ? `${payload.length} flag${payload.length === 1 ? "" : "s"} sent. Tell your developer they're ready.`
+                      ? `${payload.length} flag${payload.length === 1 ? "" : "s"} sent to your developer. They'll clear from here now.`
                       : "Make sure your phone and computer are on the same Wi-Fi, then try again."
                   );
                 }}

@@ -70,6 +70,13 @@ export async function loadCatalogFlags(): Promise<Record<string, CatalogFlag[]>>
   }
 }
 
+// Clear all local flags — called after they're sent to the developer, so the
+// ⚑ tile only ever counts flags that still need sending.
+export async function clearCatalogFlags(): Promise<Record<string, CatalogFlag[]>> {
+  await AsyncStorage.setItem(ns(CATFLAG_KEY), JSON.stringify({}));
+  return {};
+}
+
 export async function toggleCatalogFlag(id: string, flag: CatalogFlag): Promise<Record<string, CatalogFlag[]>> {
   const cur = await loadCatalogFlags();
   const set = new Set(cur[id] || []);

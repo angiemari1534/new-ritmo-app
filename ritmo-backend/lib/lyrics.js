@@ -8,7 +8,7 @@
 // This is what makes lessons effectively unlimited and covers the language.
 
 const { getLessonVocab, lessonCount, tierWords, SUBJECTS } = require("./vocab");
-const { generateLessonVocab, generateSongLyrics, pickScenario, validateVocab, translateWords } = require("./llm");
+const { generateLessonVocab, generateSongLyrics, pickScenario, validateVocab, translateWords, fixSungPairs } = require("./llm");
 
 const MAX_LYRICS = 990; // just under MiniMax's 1000-char cap (fuller = longer song)
 
@@ -479,6 +479,8 @@ async function buildLyrics({ subject = "greetings", topic = "", level = "beginne
   // songs get the ad-lib intro, flowing story, rhymes and catchy hook.
   try {
     lyrics = await generateSongLyrics({ theme, tier, targetPhrase, newVocab: songVocab, reviewVocab: songReview, language, order, scenario, genre });
+    // Verify + correct every translation pair (order, accuracy, no word↔phrase mismatch).
+    lyrics = await fixSungPairs(lyrics, language, order);
   } catch (err) {
     console.error("Song lyric generation failed, using simple structure:", err.message);
     if (isStarter) {

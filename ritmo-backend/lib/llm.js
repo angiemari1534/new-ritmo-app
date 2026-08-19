@@ -114,7 +114,7 @@ function parsePairs(text) {
 // chorus (repeated 3-4x), verses give context, and earlier "review" phrases
 // are woven back in for spaced repetition. Returns a lyrics string with
 // [Verse]/[Pre-Chorus]/[Chorus] tags; each Spanish line is followed by English.
-async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newVocab = [], reviewVocab = [], language = "Spanish", order = "es-en", scenario = "", genre = "" }) {
+async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newVocab = [], reviewVocab = [], language = "Spanish", order = "en-es", scenario = "", genre = "" }) {
   const apiKey = process.env.MINIMAX_API_KEY;
   if (!apiKey) throw new Error("MINIMAX_API_KEY is not set");
 
@@ -180,8 +180,11 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
     `Match that style EXACTLY:\n` +
     `- CRITICAL LANGUAGE ORDER: every teaching line must be "${first}… ${second}" — the ${first} word FIRST, then the ${second} translation. Follow this order exactly (as in the example above).\n` +
     `- Open with a short spoken ad-lib line (2-5 words), and add a couple more short ad-libs across the song to keep the energy. IMPORTANT: invent FRESH, DIFFERENT ad-libs every time that fit${genre ? ` a ${genre}` : " this"} song and theme — do NOT copy the example's intro, and NEVER use the word "vibes" or reuse the same opener. Draw from the genre (hip-hop: "Uh, yeah"; reggaeton: "¡Dale!"; pop: "Here we go"; country: "Alright now") or make up your own. Keep ad-libs light — a sprinkle, not every line.\n` +
-    `- Teach each word on ONE line as "${first} word… ${second} meaning" with "…" between them — e.g. "${targetPair}".\n` +
-    `- DO weave in some short English STORY lines for flow, rhyme and vibe — they make it feel like a real song. Keep them a MINORITY though: never more than 2 English-only lines in a row, and never a whole verse with zero translations.\n` +
+    `- Teach each phrase on ONE line as "${first} phrase… ${second} translation" with "…" between them — e.g. "${targetPair}".\n` +
+    `- EVERY "…" line is a TRUE TRANSLATION PAIR: the text before "…" and the text after "…" must mean EXACTLY the same thing — a faithful, accurate, natural translation of each other, the SAME phrase in both languages. Never pad or change one side. WRONG: "Saludo… A greeting everywhere" (one word vs a padded phrase). RIGHT: "A greeting… Un saludo". WRONG: "Good vibes… Buenos momentos" (means "good moments"). RIGHT: "Good vibes… Buenas vibras".\n` +
+    `- Use ACCURATE, natural ${language}. Never invent a translation that changes the meaning. If a phrase does not translate cleanly, pick a simpler phrase that does.\n` +
+    `- English-only STORY lines must NOT contain "…" — reserve "…" ONLY for real translation pairs, so a story line is never mistaken for a translation.\n` +
+    `- DO weave in some short English STORY lines (no "…") for flow, rhyme and vibe — they make it feel like a real song. Keep them a MINORITY though: never more than 2 English-only lines in a row, and never a whole verse with zero translations.\n` +
     `- THIS IS A LEARNING SONG: aim for roughly 70-75% of lines to be bilingual teaching pairs "${first}… ${second}", with the remaining ~25-30% as English story lines and a few ad-libs. Mostly teaching, with real story flavor mixed in.\n` +
     `- Commit to ONE clear concept/character/vibe (a road trip, a night out, a day in the city…) that ties every word together.\n` +
     `- Write a CATCHY [Hook] with a memorable final line; repeat the SAME hook 3 times through the song and END on it.\n` +
@@ -224,6 +227,42 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
     "";
   lyrics = String(lyrics).replace(/```/g, "").trim();
   if (!lyrics || lyrics.length < 20) throw new Error("LLM returned empty lyrics");
+  return lyrics;
+}
+
+// Post-generation pass over the FULL lyrics: fix every "…" translation pair so
+// it reads "English… <language>" (English first), with both halves the SAME
+// meaning and an accurate, natural translation. Catches in-song mistranslations
+// and word↔phrase mismatches the songwriter sometimes makes. Leaves story lines,
+// section tags and line count untouched. Returns originals if the pass fails.
+async function fixSungPairs(lyrics, language = "Spanish", order = "en-es") {
+  const apiKey = process.env.MINIMAX_API_KEY;
+  if (!apiKey || !lyrics || !lyrics.includes("…")) return lyrics;
+  const first = order === "en-es" ? "English" : language;
+  const second = order === "en-es" ? language : "English";
+  const system = `You are a meticulous ${language}/English lyric editor. Output ONLY the corrected lyrics — no notes, no code fences.`;
+  const user =
+    `Below are bilingual song lyrics that teach ${language}. Correct ONLY the translation pairs; keep everything else byte-for-byte the same (every [Section] tag, every English-only story line, the exact number and order of lines).\n` +
+    `For EVERY line containing "…":\n` +
+    `1) It must read "${first} phrase… ${second} phrase" — the ${first} FIRST, then the ${second}.\n` +
+    `2) Both halves must mean EXACTLY the same thing: a faithful, natural, accurate translation of each other. Fix any wrong, padded or mismatched translation. Examples: "Good vibes… Buenos momentos" → "Good vibes… Buenas vibras"; "Saludo… A greeting everywhere" → "A greeting… Un saludo".\n` +
+    `Do NOT add or remove lines. Do NOT touch lines without "…".\n` +
+    `Lyrics:\n"""\n${lyrics}\n"""\n` +
+    `Output ONLY the corrected lyrics.`;
+  try {
+    const res = await fetch(CHAT_URL, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ model: MODEL, messages: [{ role: "system", content: system }, { role: "user", content: user }], temperature: 0.2, max_tokens: 3000 }),
+    });
+    if (!res.ok) return lyrics;
+    const data = await res.json();
+    if (data?.base_resp?.status_code) return lyrics;
+    let out = data?.choices?.[0]?.message?.content ?? data?.choices?.[0]?.messages?.[0]?.content ?? "";
+    out = String(out).replace(/```/g, "").trim();
+    // Sanity: keep only if it looks like real lyrics of a similar size.
+    if (out.length > 40 && out.includes("…")) return out;
+  } catch {}
   return lyrics;
 }
 
@@ -300,4 +339,4 @@ async function translateWords(words, language = "Spanish") {
   }
 }
 
-module.exports = { generateLessonVocab, generateSongLyrics, pickScenario, validateVocab, translateWords };
+module.exports = { generateLessonVocab, generateSongLyrics, pickScenario, validateVocab, translateWords, fixSungPairs };
