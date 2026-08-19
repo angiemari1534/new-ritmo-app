@@ -65,14 +65,14 @@
     "subject": "greetings",
     "level": "prestarter",
     "lesson": 5,
-    "genre": "R&B",
+    "genre": "Country",
     "beat": "Chill Slow",
-    "artistFeel": "Usher",
+    "artistFeel": "Chris Stapleton",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Yeah by Usher",
-    "arrangement": "smooth clean-guitar licks"
+    "similarSongs": "Tennessee Whiskey by Chris Stapleton",
+    "arrangement": "banjo and dobro"
   },
   {
     "slug": "greetings-pop",
@@ -155,14 +155,14 @@
     "subject": "numbers",
     "level": "prestarter",
     "lesson": 5,
-    "genre": "R&B",
+    "genre": "Country",
     "beat": "Calm Slow",
-    "artistFeel": "Usher",
-    "similarSongs": "Yeah by Usher",
+    "artistFeel": "Morgan Wallen",
+    "similarSongs": "Last Night by Morgan Wallen",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "lush synth pads and sub-bass"
+    "arrangement": "warm piano and gentle steel"
   },
   {
     "slug": "numbers-reggaeton",
@@ -187,12 +187,12 @@
     "lesson": 1,
     "genre": "R&B",
     "beat": "Romantic Normal",
-    "artistFeel": "John Legend",
-    "similarSongs": "All of Me by John Legend",
+    "artistFeel": "Usher",
+    "similarSongs": "Yeah by Usher",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "finger-snap trap-soul groove"
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "colors-rock",
@@ -215,14 +215,14 @@
     "subject": "colors",
     "level": "prestarter",
     "lesson": 3,
-    "genre": "Pop",
+    "genre": "Country",
     "beat": "Dreamy Normal",
-    "artistFeel": "Bruno Mars",
+    "artistFeel": "Luke Combs",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Uptown Funk by Bruno Mars",
-    "arrangement": "plucky synth arps and claps"
+    "similarSongs": "Beautiful Crazy by Luke Combs",
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "colors-disco",
@@ -267,7 +267,7 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "banjo and dobro"
+    "arrangement": "pedal-steel guitar lead"
   },
   {
     "slug": "pronouns-pop",
@@ -282,7 +282,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "As It Was by Harry Styles",
-    "arrangement": "bright synth-lead hook"
+    "arrangement": "plucky synth arps and claps"
   },
   {
     "slug": "questions-reggaeton",
@@ -380,14 +380,14 @@
     "subject": "transportation",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "Latin",
+    "genre": "Country",
     "beat": "Chill Normal",
-    "artistFeel": "Enrique Iglesias",
+    "artistFeel": "Morgan Wallen",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias",
-    "arrangement": "accordion and horns"
+    "similarSongs": "Last Night by Morgan Wallen",
+    "arrangement": "banjo and dobro"
   },
   {
     "slug": "places-latin",
@@ -397,12 +397,12 @@
     "lesson": 1,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Ricky Martin",
+    "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin",
-    "arrangement": "marimba and light percussion"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "time-bachata",
@@ -492,7 +492,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Levitating by Dua Lipa",
-    "arrangement": "funky electric-guitar riff"
+    "arrangement": "bright synth-lead hook"
   },
   {
     "slug": "jobs-country",
@@ -502,11 +502,11 @@
     "lesson": 2,
     "genre": "Country",
     "beat": "Happy Upbeat",
-    "artistFeel": "Chris Stapleton",
+    "artistFeel": "Luke Combs",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Tennessee Whiskey by Chris Stapleton",
+    "similarSongs": "Beautiful Crazy by Luke Combs",
     "arrangement": "acoustic guitar and fiddle"
   },
   {
@@ -545,14 +545,14 @@
     "subject": "hobbies",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Pop",
+    "genre": "Country",
     "beat": "Happy Upbeat",
-    "artistFeel": "Ariana Grande",
+    "artistFeel": "Lainey Wilson",
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "7 Rings by Ariana Grande",
-    "arrangement": "piano-driven arrangement"
+    "similarSongs": "Heart Like a Truck by Lainey Wilson",
+    "arrangement": "pedal-steel guitar lead"
   },
   {
     "slug": "transportation-classicrock",
@@ -575,14 +575,14 @@
     "subject": "places",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Bachata",
+    "genre": "Country",
     "beat": "Chill Normal",
-    "artistFeel": "Romeo Santos",
+    "artistFeel": "Zach Bryan",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Propuesta Indecente by Romeo Santos",
-    "arrangement": "romantic guitar arpeggios"
+    "similarSongs": "Something in the Orange by Zach Bryan",
+    "arrangement": "banjo and dobro"
   },
   {
     "slug": "time-jazz",
@@ -612,7 +612,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Shape of You by Ed Sheeran",
-    "arrangement": "plucky synth arps and claps"
+    "arrangement": "funky electric-guitar riff"
   },
   {
     "slug": "emergencies-rock",
@@ -637,12 +637,12 @@
     "lesson": 1,
     "genre": "Pop",
     "beat": "Dreamy Slow",
-    "artistFeel": "The Weeknd",
+    "artistFeel": "Bruno Mars",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Blinding Lights by The Weeknd",
-    "arrangement": "bright synth-lead hook"
+    "similarSongs": "Uptown Funk by Bruno Mars",
+    "arrangement": "piano-driven arrangement"
   },
   {
     "slug": "feelings-blues",
@@ -665,14 +665,14 @@
     "subject": "food",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "Latin",
+    "genre": "Country",
     "beat": "Chill Normal",
-    "artistFeel": "Luis Fonsi",
+    "artistFeel": "Jelly Roll",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Despacito by Luis Fonsi",
-    "arrangement": "nylon guitar and brass"
+    "similarSongs": "Save Me by Jelly Roll",
+    "arrangement": "warm piano and gentle steel"
   },
   {
     "slug": "cooking-latin",
@@ -742,12 +742,12 @@
     "lesson": 1,
     "genre": "R&B",
     "beat": "Groovy Normal",
-    "artistFeel": "Chris Brown",
+    "artistFeel": "John Legend",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "No Guidance by Chris Brown",
-    "arrangement": "warm electric-piano chords"
+    "similarSongs": "All of Me by John Legend",
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "weather-classicrock",
@@ -770,14 +770,14 @@
     "subject": "days",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "Bachata",
+    "genre": "Country",
     "beat": "Romantic Normal",
-    "artistFeel": "Prince Royce",
+    "artistFeel": "Chris Stapleton",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Darte un Beso by Prince Royce",
-    "arrangement": "lead requinto guitar"
+    "similarSongs": "Tennessee Whiskey by Chris Stapleton",
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "directions-rap",
@@ -802,12 +802,12 @@
     "lesson": 1,
     "genre": "Pop",
     "beat": "Happy Upbeat",
-    "artistFeel": "Katy Perry",
+    "artistFeel": "Ariana Grande",
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Firework by Katy Perry",
-    "arrangement": "funky electric-guitar riff"
+    "similarSongs": "7 Rings by Ariana Grande",
+    "arrangement": "plucky synth arps and claps"
   },
   {
     "slug": "verbs-alt",
@@ -845,14 +845,14 @@
     "subject": "greetings",
     "level": "prestarter",
     "lesson": 7,
-    "genre": "Latin",
+    "genre": "Country",
     "beat": "Happy Upbeat",
-    "artistFeel": "Marc Anthony",
+    "artistFeel": "Zach Bryan",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "piano montuno and congas"
+    "similarSongs": "Something in the Orange by Zach Bryan",
+    "arrangement": "pedal-steel guitar lead"
   },
   {
     "slug": "pronouns-rock",
@@ -912,7 +912,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Can't Stop the Feeling by Justin Timberlake",
-    "arrangement": "piano-driven arrangement"
+    "arrangement": "bright synth-lead hook"
   },
   {
     "slug": "family-country",
@@ -937,12 +937,12 @@
     "lesson": 2,
     "genre": "Pop",
     "beat": "Calm Normal",
-    "artistFeel": "Olivia Rodrigo",
+    "artistFeel": "Katy Perry",
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Good 4 U by Olivia Rodrigo",
-    "arrangement": "plucky synth arps and claps"
+    "similarSongs": "Firework by Katy Perry",
+    "arrangement": "funky electric-guitar riff"
   },
   {
     "slug": "food-reggaeton",
@@ -997,12 +997,12 @@
     "lesson": 2,
     "genre": "R&B",
     "beat": "Dreamy Slow",
-    "artistFeel": "Usher",
+    "artistFeel": "Chris Brown",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Yeah by Usher",
-    "arrangement": "smooth clean-guitar licks"
+    "similarSongs": "No Guidance by Chris Brown",
+    "arrangement": "finger-snap trap-soul groove"
   },
   {
     "slug": "clothing-latin",
@@ -1017,7 +1017,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Hips Don't Lie by Shakira",
-    "arrangement": "accordion and horns"
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "home-pop",
@@ -1032,7 +1032,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Uptown Funk by Bruno Mars",
-    "arrangement": "bright synth-lead hook"
+    "arrangement": "piano-driven arrangement"
   },
   {
     "slug": "weather-reggae",
@@ -1040,14 +1040,14 @@
     "subject": "weather",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Bachata",
+    "genre": "Country",
     "beat": "Chill Normal",
-    "artistFeel": "Aventura",
+    "artistFeel": "Morgan Wallen",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Obsesion by Aventura",
-    "arrangement": "syncopated guitar and bongó"
+    "similarSongs": "Last Night by Morgan Wallen",
+    "arrangement": "banjo and dobro"
   },
   {
     "slug": "days-pop",
@@ -1062,7 +1062,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Blinding Lights by The Weeknd",
-    "arrangement": "funky electric-guitar riff"
+    "arrangement": "plucky synth arps and claps"
   },
   {
     "slug": "time-reggaeton",
@@ -1087,12 +1087,12 @@
     "lesson": 2,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Marc Anthony",
+    "artistFeel": "Ricky Martin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "marimba and light percussion"
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "transportation-rock",
@@ -1182,7 +1182,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "As It Was by Harry Styles",
-    "arrangement": "piano-driven arrangement"
+    "arrangement": "bright synth-lead hook"
   },
   {
     "slug": "hobbies-reggaeton",
@@ -1252,12 +1252,12 @@
     "lesson": 2,
     "genre": "R&B",
     "beat": "Dreamy Slow",
-    "artistFeel": "John Legend",
+    "artistFeel": "Usher",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "All of Me by John Legend",
-    "arrangement": "lush synth pads and sub-bass"
+    "similarSongs": "Yeah by Usher",
+    "arrangement": "warm electric-piano chords"
   },
   {
     "slug": "greetings-l8",
@@ -1294,12 +1294,12 @@
     "lesson": 4,
     "genre": "Latin",
     "beat": "Calm Normal",
-    "artistFeel": "Enrique Iglesias",
+    "artistFeel": "Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias",
-    "arrangement": "nylon guitar and brass"
+    "similarSongs": "Despacito by Luis Fonsi",
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "pronouns-l5",
@@ -1322,12 +1322,12 @@
     "lesson": 8,
     "genre": "Latin",
     "beat": "Chill Slow",
-    "artistFeel": "Ricky Martin",
+    "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin",
-    "arrangement": "piano montuno and congas"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "descriptions-l4",
@@ -1341,7 +1341,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "No One by Alicia Keys",
-    "arrangement": "finger-snap trap-soul groove"
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "descriptions-l5",
@@ -1476,12 +1476,12 @@
     "lesson": 3,
     "genre": "Latin",
     "beat": "Dreamy Normal",
-    "artistFeel": "Luis Fonsi",
+    "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Despacito by Luis Fonsi",
-    "arrangement": "accordion and horns"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "cooking-l4",
@@ -1504,12 +1504,12 @@
     "lesson": 3,
     "genre": "Latin",
     "beat": "Romantic Slow",
-    "artistFeel": "Enrique Iglesias",
+    "artistFeel": "Marc Anthony",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias",
-    "arrangement": "marimba and light percussion"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "animals-l4",
@@ -1560,12 +1560,12 @@
     "lesson": 3,
     "genre": "R&B",
     "beat": "Chill Slow",
-    "artistFeel": "Chris Brown",
+    "artistFeel": "John Legend",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "No Guidance by Chris Brown",
-    "arrangement": "warm electric-piano chords"
+    "similarSongs": "All of Me by John Legend",
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "clothing-l4",
@@ -1658,12 +1658,12 @@
     "lesson": 4,
     "genre": "Country",
     "beat": "Happy Normal",
-    "artistFeel": "Morgan Wallen",
+    "artistFeel": "Luke Combs",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Last Night by Morgan Wallen",
-    "arrangement": "pedal-steel guitar lead"
+    "similarSongs": "Beautiful Crazy by Luke Combs",
+    "arrangement": "warm piano and gentle steel"
   },
   {
     "slug": "time-l4",
@@ -1672,12 +1672,12 @@
     "lesson": 4,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Marc Anthony",
+    "artistFeel": "Ricky Martin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "nylon guitar and brass"
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "time-l5",
@@ -1812,12 +1812,12 @@
     "lesson": 4,
     "genre": "Latin",
     "beat": "Dreamy Slow",
-    "artistFeel": "Enrique Iglesias",
+    "artistFeel": "Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias",
-    "arrangement": "piano montuno and congas"
+    "similarSongs": "Despacito by Luis Fonsi",
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "jobs-l5",
@@ -1910,12 +1910,12 @@
     "lesson": 5,
     "genre": "Latin",
     "beat": "Calm Slow",
-    "artistFeel": "Ricky Martin",
+    "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin",
-    "arrangement": "accordion and horns"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "nature-l4",
@@ -1966,12 +1966,12 @@
     "lesson": 5,
     "genre": "R&B",
     "beat": "Dreamy Normal",
-    "artistFeel": "Usher",
+    "artistFeel": "Chris Brown",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Yeah by Usher",
-    "arrangement": "smooth clean-guitar licks"
+    "similarSongs": "No Guidance by Chris Brown",
+    "arrangement": "finger-snap trap-soul groove"
   },
   {
     "slug": "verbs-l3",
@@ -2013,7 +2013,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Shape of You by Ed Sheeran",
-    "arrangement": "plucky synth arps and claps"
+    "arrangement": "funky electric-guitar riff"
   },
   {
     "slug": "vacation-l4",
@@ -2022,12 +2022,12 @@
     "lesson": 4,
     "genre": "Country",
     "beat": "Romantic Slow",
-    "artistFeel": "Luke Combs",
+    "artistFeel": "Zach Bryan",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Beautiful Crazy by Luke Combs",
-    "arrangement": "banjo and dobro"
+    "similarSongs": "Something in the Orange by Zach Bryan",
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "greetings-l10",
@@ -2064,12 +2064,12 @@
     "lesson": 6,
     "genre": "Country",
     "beat": "Romantic Slow",
-    "artistFeel": "Zach Bryan",
+    "artistFeel": "Jelly Roll",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Something in the Orange by Zach Bryan",
-    "arrangement": "warm piano and gentle steel"
+    "similarSongs": "Save Me by Jelly Roll",
+    "arrangement": "pedal-steel guitar lead"
   },
   {
     "slug": "pronouns-l7",
@@ -2120,12 +2120,12 @@
     "lesson": 6,
     "genre": "R&B",
     "beat": "Chill Slow",
-    "artistFeel": "John Legend",
+    "artistFeel": "Usher",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "All of Me by John Legend",
-    "arrangement": "lush synth pads and sub-bass"
+    "similarSongs": "Yeah by Usher",
+    "arrangement": "warm electric-piano chords"
   },
   {
     "slug": "questions-l7",
@@ -2470,12 +2470,12 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Happy Normal",
-    "artistFeel": "Jelly Roll",
+    "artistFeel": "Chris Stapleton",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Save Me by Jelly Roll",
-    "arrangement": "acoustic guitar and fiddle"
+    "similarSongs": "Tennessee Whiskey by Chris Stapleton",
+    "arrangement": "banjo and dobro"
   },
   {
     "slug": "places-l6",
@@ -2498,12 +2498,12 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Happy Normal",
-    "artistFeel": "Chris Stapleton",
+    "artistFeel": "Morgan Wallen",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Tennessee Whiskey by Chris Stapleton",
-    "arrangement": "pedal-steel guitar lead"
+    "similarSongs": "Last Night by Morgan Wallen",
+    "arrangement": "warm piano and gentle steel"
   },
   {
     "slug": "shopping-l5",
@@ -2526,12 +2526,12 @@
     "lesson": 6,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Luis Fonsi",
+    "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Despacito by Luis Fonsi",
-    "arrangement": "marimba and light percussion"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "jobs-l6",
@@ -2540,12 +2540,12 @@
     "lesson": 6,
     "genre": "R&B",
     "beat": "Groovy Normal",
-    "artistFeel": "Chris Brown",
+    "artistFeel": "John Legend",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "No Guidance by Chris Brown",
-    "arrangement": "finger-snap trap-soul groove"
+    "similarSongs": "All of Me by John Legend",
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "jobs-l7",
@@ -2568,12 +2568,12 @@
     "lesson": 6,
     "genre": "Latin",
     "beat": "Romantic Slow",
-    "artistFeel": "Marc Anthony",
+    "artistFeel": "Ricky Martin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "nylon guitar and brass"
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "school-l7",
@@ -2652,12 +2652,12 @@
     "lesson": 6,
     "genre": "Latin",
     "beat": "Calm Slow",
-    "artistFeel": "Ricky Martin",
+    "artistFeel": "Enrique Iglesias",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin",
-    "arrangement": "piano montuno and congas"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "nature-l7",
@@ -2679,12 +2679,12 @@
     "lesson": 6,
     "genre": "Latin",
     "beat": "Dreamy Slow",
-    "artistFeel": "Enrique Iglesias",
+    "artistFeel": "Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias",
-    "arrangement": "accordion and horns"
+    "similarSongs": "Despacito by Luis Fonsi",
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "emergencies-l7",
@@ -2720,12 +2720,12 @@
     "lesson": 6,
     "genre": "R&B",
     "beat": "Chill Normal",
-    "artistFeel": "Usher",
+    "artistFeel": "Chris Brown",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Yeah by Usher",
-    "arrangement": "warm electric-piano chords"
+    "similarSongs": "No Guidance by Chris Brown",
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "vacation-l5",
@@ -2782,7 +2782,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "bright synth-lead hook"
+    "arrangement": "piano-driven arrangement"
   },
   {
     "slug": "pronouns-prestarter-l9",
@@ -2807,12 +2807,12 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Happy Upbeat",
-    "artistFeel": "Morgan Wallen",
-    "similarSongs": "Last Night by Morgan Wallen",
+    "artistFeel": "Luke Combs",
+    "similarSongs": "Beautiful Crazy by Luke Combs",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "banjo and dobro"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "numbers-prestarter-l8",
@@ -2827,7 +2827,7 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "smooth clean-guitar licks"
+    "arrangement": "finger-snap trap-soul groove"
   },
   {
     "slug": "numbers-prestarter-l9",
@@ -2837,12 +2837,12 @@
     "lesson": 9,
     "genre": "Latin",
     "beat": "Uplifting Upbeat",
-    "artistFeel": "Ricky Martin",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "artistFeel": "Marc Anthony",
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "marimba and light percussion"
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "numbers-prestarter-l10",
@@ -3052,7 +3052,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "funky electric-guitar riff"
+    "arrangement": "plucky synth arps and claps"
   },
   {
     "slug": "food-prestarter-l7",
@@ -3077,12 +3077,12 @@
     "lesson": 8,
     "genre": "Country",
     "beat": "Groovy Upbeat",
-    "artistFeel": "Luke Combs",
-    "similarSongs": "Beautiful Crazy by Luke Combs",
+    "artistFeel": "Zach Bryan",
+    "similarSongs": "Something in the Orange by Zach Bryan",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "warm piano and gentle steel"
+    "arrangement": "pedal-steel guitar lead"
   },
   {
     "slug": "food-prestarter-l9",
@@ -3092,12 +3092,12 @@
     "lesson": 9,
     "genre": "R&B",
     "beat": "Romantic Slow",
-    "artistFeel": "John Legend",
-    "similarSongs": "All of Me by John Legend",
+    "artistFeel": "Usher",
+    "similarSongs": "Yeah by Usher",
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "lush synth pads and sub-bass"
+    "arrangement": "warm electric-piano chords"
   },
   {
     "slug": "cooking-prestarter-l7",
@@ -3107,12 +3107,12 @@
     "lesson": 7,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Luis Fonsi",
-    "similarSongs": "Despacito by Luis Fonsi",
+    "artistFeel": "Enrique Iglesias",
+    "similarSongs": "Bailando by Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "nylon guitar and brass"
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "cooking-prestarter-l8",
@@ -3137,12 +3137,12 @@
     "lesson": 9,
     "genre": "Latin",
     "beat": "Chill Slow",
-    "artistFeel": "Luis Fonsi",
-    "similarSongs": "Despacito by Luis Fonsi",
+    "artistFeel": "Ricky Martin",
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "piano montuno and congas"
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "animals-prestarter-l7",
@@ -3322,7 +3322,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "piano-driven arrangement"
+    "arrangement": "bright synth-lead hook"
   },
   {
     "slug": "time-prestarter-l7",
@@ -3347,12 +3347,12 @@
     "lesson": 8,
     "genre": "Country",
     "beat": "Dance Upbeat",
-    "artistFeel": "Zach Bryan",
-    "similarSongs": "Something in the Orange by Zach Bryan",
+    "artistFeel": "Jelly Roll",
+    "similarSongs": "Save Me by Jelly Roll",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "acoustic guitar and fiddle"
+    "arrangement": "banjo and dobro"
   },
   {
     "slug": "time-prestarter-l9",
@@ -3362,12 +3362,12 @@
     "lesson": 9,
     "genre": "R&B",
     "beat": "Energetic Normal",
-    "artistFeel": "Chris Brown",
-    "similarSongs": "No Guidance by Chris Brown",
+    "artistFeel": "John Legend",
+    "similarSongs": "All of Me by John Legend",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "finger-snap trap-soul groove"
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "directions-prestarter-l7",
@@ -3377,12 +3377,12 @@
     "lesson": 7,
     "genre": "Latin",
     "beat": "Groovy Upbeat",
-    "artistFeel": "Shakira",
-    "similarSongs": "Hips Don't Lie by Shakira",
+    "artistFeel": "Luis Fonsi",
+    "similarSongs": "Despacito by Luis Fonsi",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "accordion and horns"
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "directions-prestarter-l8",
@@ -3547,7 +3547,7 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "marimba and light percussion"
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "technology-prestarter-l9",
@@ -3592,7 +3592,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "plucky synth arps and claps"
+    "arrangement": "funky electric-guitar riff"
   },
   {
     "slug": "nature-prestarter-l8",
@@ -3617,12 +3617,12 @@
     "lesson": 9,
     "genre": "Country",
     "beat": "Romantic Slow",
-    "artistFeel": "Morgan Wallen",
-    "similarSongs": "Last Night by Morgan Wallen",
+    "artistFeel": "Jelly Roll",
+    "similarSongs": "Save Me by Jelly Roll",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "pedal-steel guitar lead"
+    "arrangement": "warm piano and gentle steel"
   },
   {
     "slug": "emergencies-prestarter-l8",
@@ -3632,12 +3632,12 @@
     "lesson": 8,
     "genre": "R&B",
     "beat": "Chill Slow",
-    "artistFeel": "Usher",
-    "similarSongs": "Yeah by Usher",
+    "artistFeel": "Chris Brown",
+    "similarSongs": "No Guidance by Chris Brown",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "warm electric-piano chords"
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "emergencies-prestarter-l9",
@@ -3652,7 +3652,7 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "nylon guitar and brass"
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "verbs-prestarter-l7",
@@ -3812,12 +3812,12 @@
     "lesson": 6,
     "genre": "R&B",
     "beat": "Chill Normal",
-    "artistFeel": "John Legend",
-    "similarSongs": "All of Me by John Legend",
+    "artistFeel": "Usher",
+    "similarSongs": "Yeah by Usher",
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "smooth clean-guitar licks"
+    "arrangement": "finger-snap trap-soul groove"
   },
   {
     "slug": "greetings-starter-l7",
@@ -3857,12 +3857,12 @@
     "lesson": 9,
     "genre": "Pop",
     "beat": "Chill Slow",
-    "artistFeel": "Harry Styles",
-    "similarSongs": "As It Was by Harry Styles",
+    "artistFeel": "The Weeknd",
+    "similarSongs": "Blinding Lights by The Weeknd",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "bright synth-lead hook"
+    "arrangement": "piano-driven arrangement"
   },
   {
     "slug": "greetings-starter-l10",
@@ -3887,12 +3887,12 @@
     "lesson": 11,
     "genre": "Country",
     "beat": "Romantic Slow",
-    "artistFeel": "Lainey Wilson",
-    "similarSongs": "Heart Like a Truck by Lainey Wilson",
+    "artistFeel": "Shania Twain",
+    "similarSongs": "Man I Feel Like a Woman by Shania Twain",
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "banjo and dobro"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "greetings-starter-l12",
@@ -3902,12 +3902,12 @@
     "lesson": 12,
     "genre": "R&B",
     "beat": "Chill Normal",
-    "artistFeel": "Chris Brown",
-    "similarSongs": "No Guidance by Chris Brown",
+    "artistFeel": "John Legend",
+    "similarSongs": "All of Me by John Legend",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "lush synth pads and sub-bass"
+    "arrangement": "warm electric-piano chords"
   },
   {
     "slug": "greetings-starter-l13",
@@ -3922,7 +3922,7 @@
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "piano montuno and congas"
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "greetings-starter-l14",
@@ -3947,12 +3947,12 @@
     "lesson": 1,
     "genre": "R&B",
     "beat": "Calm Slow",
-    "artistFeel": "Usher",
-    "similarSongs": "Yeah by Usher",
+    "artistFeel": "Chris Brown",
+    "similarSongs": "No Guidance by Chris Brown",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "finger-snap trap-soul groove"
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "pronouns-starter-l2",
@@ -4127,12 +4127,12 @@
     "lesson": 1,
     "genre": "Pop",
     "beat": "Dreamy Slow",
-    "artistFeel": "Dua Lipa",
-    "similarSongs": "Levitating by Dua Lipa",
+    "artistFeel": "Olivia Rodrigo",
+    "similarSongs": "Good 4 U by Olivia Rodrigo",
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "funky electric-guitar riff"
+    "arrangement": "plucky synth arps and claps"
   },
   {
     "slug": "numbers-starter-l2",
@@ -4157,12 +4157,12 @@
     "lesson": 3,
     "genre": "Country",
     "beat": "Chill Normal",
-    "artistFeel": "Shania Twain",
-    "similarSongs": "Man I Feel Like a Woman by Shania Twain",
+    "artistFeel": "Dolly Parton",
+    "similarSongs": "Jolene by Dolly Parton",
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "warm piano and gentle steel"
+    "arrangement": "pedal-steel guitar lead"
   },
   {
     "slug": "numbers-starter-l4",
@@ -4172,12 +4172,12 @@
     "lesson": 4,
     "genre": "R&B",
     "beat": "Calm Normal",
-    "artistFeel": "John Legend",
-    "similarSongs": "All of Me by John Legend",
+    "artistFeel": "Usher",
+    "similarSongs": "Yeah by Usher",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "warm electric-piano chords"
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "numbers-starter-l5",
@@ -4187,12 +4187,12 @@
     "lesson": 5,
     "genre": "Latin",
     "beat": "Calm Slow",
-    "artistFeel": "Marc Anthony",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "artistFeel": "Ricky Martin",
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "accordion and horns"
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "numbers-starter-l6",
@@ -4217,12 +4217,12 @@
     "lesson": 1,
     "genre": "Latin",
     "beat": "Calm Slow",
-    "artistFeel": "Enrique Iglesias",
-    "similarSongs": "Bailando by Enrique Iglesias",
+    "artistFeel": "Luis Fonsi",
+    "similarSongs": "Despacito by Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "marimba and light percussion"
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "colors-starter-l2",
