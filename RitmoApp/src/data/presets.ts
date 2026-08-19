@@ -42,7 +42,6 @@ export const GENRES = [
   "R&B",
   "Hip-Hop",
   "Rap",
-  "Soul",
   "Country",
   "Rock",
   "Classic Rock",

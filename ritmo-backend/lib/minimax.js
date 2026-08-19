@@ -111,11 +111,12 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   }
   if (arr) parts.push(`led by ${arr}`);
   // Voice next (high priority so the char cap never trims it — esp. duet).
-  if (voice === "male") parts.push("mature adult male lead vocals");
-  else if (voice === "female") parts.push("warm low raspy husky female lead vocals, calm smooth and soulful, mellow not piercing or shrill, grown woman not a child");
-  else if (voice === "duet") parts.push("male and female adult duet trading lines and harmonizing, the woman raspy and soulful");
-  else if (voice === "duet-m") parts.push("two adult male singers, a male-male duet trading lines and harmonizing");
-  else if (voice === "duet-f") parts.push("two adult female singers, a female-female duet trading lines and harmonizing, raspy and soulful not shrill");
+  // Deep, low, relaxed and chill — no high-pitched or shrill singing, no falsetto.
+  if (voice === "male") parts.push("deep low relaxed adult male lead vocals, warm chill laid-back delivery, no falsetto");
+  else if (voice === "female") parts.push("deep low alto female lead vocals, warm husky chest voice, calm smooth and chill, NOT high-pitched, no falsetto, not piercing or shrill, grown woman not a child");
+  else if (voice === "duet") parts.push("male and female adult duet, both deep low and relaxed, warm chill delivery, no high-pitched or shrill notes");
+  else if (voice === "duet-m") parts.push("two deep low relaxed adult male singers, a male-male duet, warm and chill, no falsetto");
+  else if (voice === "duet-f") parts.push("two low alto female singers, a female-female duet, deep husky chest voice, chill and warm, not high-pitched or shrill");
   // Tempo comes from the LAST word of the song's beat ("Groovy Normal" -> Normal),
   // so I can nudge just one song faster/slower without changing the others.
   const tempoWord = String(beat || "").trim().split(/\s+/).pop();
@@ -144,7 +145,7 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   if (moodPhrase) parts.push(moodPhrase);
   // The feel — tied to the GENRE so it stays true to it (country stays country,
   // reggaeton stays reggaeton) instead of drifting into generic pop.
-  parts.push(`authentic ${genre || "pop"} song true to the ${genre || "pop"} style and instruments, catchy and grown-up, ${tempoPhrase}, clear vocals loud over soft backing, mature not a childish kids song`);
+  parts.push(`authentic ${genre || "pop"} song true to the ${genre || "pop"} style and instruments, catchy and grown-up, ${tempoPhrase}, deep low relaxed chill vocals not high-pitched or shrill, clear vocals loud over soft backing, mature not a childish kids song`);
   parts.push(`correct native ${language} pronunciation`);
   parts.push(`bilingual ${language} and English lyrics sung clearly`);
 

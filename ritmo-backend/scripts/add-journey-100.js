@@ -14,7 +14,7 @@ const need = (lvl, s) => (lvl === "prestarter" ? PRE[s] : PH[s][lvl]);
 const LABEL = {greetings:"Greetings & Basics",pronouns:"Pronouns",numbers:"Numbers",colors:"Colors",descriptions:"Descriptions",questions:"Questions",family:"Family",feelings:"Feelings",food:"Food",cooking:"Cooking",animals:"Animals",body:"The Body",clothing:"Clothing",home:"At Home",weather:"Weather",days:"Days & Time",time:"Telling Time",directions:"Getting Around",transportation:"Transportation",places:"Places in Town",shopping:"Shopping & Money",jobs:"Jobs & Work",school:"School",technology:"Technology",hobbies:"Hobbies & Sports",nature:"Nature & Outdoors",emergencies:"Emergencies",verbs:"Common Verbs",vacation:"Vacation & Travel"};
 
 // Varied genres tuned to Angie's tastes; mostly-male voice rotation (men > duet > women).
-const GENRES = ["Reggaeton","Pop","Hip-Hop","Country","R&B","Latin","Rock","Soul","Rap","EDM","Bachata","Disco","Alternative","Classic Rock","80s","90s","Salsa","Blues"];
+const GENRES = ["Reggaeton","Pop","Hip-Hop","Country","R&B","Latin","Rock","Rap","EDM","Bachata","Disco","Alternative","Classic Rock","80s","90s","Salsa","Blues"];
 const VOICES = ["male","male","duet","male","female","male","duet-m","male","male","duet","male","female","male","duet-f","male","male"];
 const BEATS = ["Energetic Normal","Groovy Upbeat","Chill Normal","Happy Upbeat","Confident Normal","Uplifting Upbeat","Party Upbeat","Romantic Slow","Powerful Normal","Dance Upbeat"];
 
