@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-18T19:51:48.908Z",
-  "count": 17,
+  "at": "2026-08-19T02:01:01.158Z",
+  "count": 41,
   "flags": [
     {
       "id": "cat-numbers-pop",
@@ -23,13 +23,102 @@
       ]
     },
     {
+      "id": "cat-hobbies-latin",
+      "title": "Hobbies & Sports",
+      "genre": "Latin",
+      "subject": "hobbies",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-places-latin",
+      "title": "Places in Town",
+      "genre": "Latin",
+      "subject": "places",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-rap",
+      "title": "Emergencies",
+      "genre": "Rap",
+      "subject": "emergencies",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-pronouns-hiphop",
+      "title": "Pronouns",
+      "genre": "Hip-Hop",
+      "subject": "pronouns",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-pop",
+      "title": "Nature & Outdoors",
+      "genre": "Pop",
+      "subject": "nature",
+      "lesson": 2,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-hobbies-reggaeton",
+      "title": "Hobbies & Sports",
+      "genre": "Reggaeton",
+      "subject": "hobbies",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-food-reggaeton",
+      "title": "Food & Restaurant",
+      "genre": "Reggaeton",
+      "subject": "food",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-animals-rock",
+      "title": "Animals",
+      "genre": "Rock",
+      "subject": "animals",
+      "lesson": 2,
+      "actions": [
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-home-rnb",
+      "title": "House & Home",
+      "genre": "R&B",
+      "subject": "home",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
       "id": "cat-greetings-rap",
       "title": "Greetings & Conversation",
       "genre": "Rap",
       "subject": "greetings",
       "lesson": 1,
       "actions": [
-        "badgenre",
         "lock"
       ]
     },
@@ -50,7 +139,8 @@
       "subject": "numbers",
       "lesson": 4,
       "actions": [
-        "reroll"
+        "reroll",
+        "badgenre"
       ]
     },
     {
@@ -60,7 +150,8 @@
       "subject": "numbers",
       "lesson": 5,
       "actions": [
-        "reroll"
+        "reroll",
+        "badgenre"
       ]
     },
     {
@@ -80,8 +171,7 @@
       "subject": "colors",
       "lesson": 1,
       "actions": [
-        "badgenre",
-        "reroll"
+        "lock"
       ]
     },
     {
@@ -91,7 +181,8 @@
       "subject": "greetings",
       "lesson": 2,
       "actions": [
-        "lock"
+        "badgenre",
+        "reroll"
       ]
     },
     {
@@ -111,7 +202,7 @@
       "subject": "greetings",
       "lesson": 4,
       "actions": [
-        "reroll"
+        "lock"
       ]
     },
     {
@@ -121,7 +212,8 @@
       "subject": "greetings",
       "lesson": 5,
       "actions": [
-        "lock"
+        "reroll",
+        "badgenre"
       ]
     },
     {
@@ -141,7 +233,7 @@
       "subject": "numbers",
       "lesson": 1,
       "actions": [
-        "lock"
+        "reroll"
       ]
     },
     {
@@ -151,7 +243,8 @@
       "subject": "colors",
       "lesson": 2,
       "actions": [
-        "lock"
+        "lock",
+        "badgenre"
       ]
     },
     {
@@ -161,7 +254,8 @@
       "subject": "colors",
       "lesson": 3,
       "actions": [
-        "lock"
+        "reroll",
+        "badgenre"
       ]
     },
     {
@@ -170,6 +264,158 @@
       "genre": "Alternative",
       "subject": "colors",
       "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-colors-country",
+      "title": "Colors",
+      "genre": "Country",
+      "subject": "colors",
+      "lesson": 6,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-pronouns-pop",
+      "title": "Pronouns",
+      "genre": "Pop",
+      "subject": "pronouns",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-questions-reggaeton",
+      "title": "Question Words",
+      "genre": "Reggaeton",
+      "subject": "questions",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-descriptions-disco",
+      "title": "Descriptions",
+      "genre": "Disco",
+      "subject": "descriptions",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-school-alt",
+      "title": "School",
+      "genre": "Alternative",
+      "subject": "school",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-jobs-hiphop",
+      "title": "Jobs & Work",
+      "genre": "Hip-Hop",
+      "subject": "jobs",
+      "lesson": 1,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-technology-edm",
+      "title": "Technology",
+      "genre": "EDM",
+      "subject": "technology",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-latin",
+      "title": "Transportation",
+      "genre": "Latin",
+      "subject": "transportation",
+      "lesson": 1,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-time-bachata",
+      "title": "Telling Time",
+      "genre": "Bachata",
+      "subject": "time",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-country",
+      "title": "Nature & Outdoors",
+      "genre": "Country",
+      "subject": "nature",
+      "lesson": 1,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-questions-rock",
+      "title": "Question Words",
+      "genre": "Rock",
+      "subject": "questions",
+      "lesson": 2,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-descriptions-pop",
+      "title": "Descriptions",
+      "genre": "Pop",
+      "subject": "descriptions",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-jobs-country",
+      "title": "Jobs & Work",
+      "genre": "Country",
+      "subject": "jobs",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-school-rap",
+      "title": "School",
+      "genre": "Rap",
+      "subject": "school",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-technology-hiphop",
+      "title": "Technology",
+      "genre": "Hip-Hop",
+      "subject": "technology",
+      "lesson": 2,
       "actions": [
         "lock"
       ]
