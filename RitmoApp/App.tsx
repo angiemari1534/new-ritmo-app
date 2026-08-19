@@ -168,6 +168,8 @@ function AppInner() {
   // made songs loop instead of advancing to the next one.
   useEffect(() => {
     if (!current) return;
+    maxDurRef.current = 0; // reset the end-detector for the new track
+    advancedFromRef.current = null;
     try {
       player.replace(current.audioModule ?? current.localUri ?? current.audioUrl);
       player.loop = loop;
@@ -195,10 +197,23 @@ function AppInner() {
   songsRef.current = displaySongs;
   const shuffleRef = useRef(shuffle);
   shuffleRef.current = shuffle;
+  // Track the LONGEST duration seen for the current track and the live position,
+  // so we only treat the song as "finished" when the position is genuinely at the
+  // end — never on a transient short/zero duration reading (which was restarting
+  // songs mid-play).
+  const maxDurRef = useRef(0);
+  const curTimeRef = useRef(0);
+  curTimeRef.current = status.currentTime || 0;
+  if ((status.duration || 0) > maxDurRef.current) maxDurRef.current = status.duration || 0;
 
-  function advanceQueue() {
+  function advanceQueue(trusted = false) {
     const cur = currentRef.current;
     if (!cur || loopRef.current) return; // repeat on → let the same song loop
+    // For the time-based backup, only advance if we're genuinely near the real
+    // end (the finish event is trusted and skips this — the position may already
+    // have reset to 0 by then).
+    const md = maxDurRef.current;
+    if (!trusted && md > 1 && curTimeRef.current < md - 1.5) return;
     if (advancedFromRef.current === cur.id) return; // already advanced from this song
     advancedFromRef.current = cur.id;
     const { queue: q, queueIndex: i } = queueRef.current;
@@ -229,20 +244,18 @@ function AppInner() {
 
   useEffect(() => {
     const sub = player.addListener("playbackStatusUpdate", (s: any) => {
-      if (s?.didJustFinish) advanceQueue();
+      if (s?.didJustFinish) advanceQueue(true);
     });
     return () => sub.remove();
   }, [player]);
 
-  // Backup trigger for when the finish event doesn't fire: the position is within
-  // half a second of the REAL end. We require `t` to sit in a tight band just
-  // below `duration` (not merely `t >= dur - 0.5`) — otherwise a momentarily
-  // wrong/short duration reading counts as "finished" mid-song and the track
-  // jumps or restarts. Also ignore tiny bogus durations.
+  // Backup trigger for when the finish event doesn't fire. advanceQueue() itself
+  // only proceeds when the position is genuinely near the longest-seen duration,
+  // so a transient wrong/short duration reading can't restart the song mid-play.
   useEffect(() => {
-    const dur = status.duration || 0;
+    const md = maxDurRef.current;
     const t = status.currentTime || 0;
-    if (dur > 1 && t >= dur - 0.5 && t <= dur + 1) advanceQueue();
+    if (md > 1 && t >= md - 0.5) advanceQueue();
   }, [status.currentTime, status.duration]);
 
   async function openFlashcards() {
