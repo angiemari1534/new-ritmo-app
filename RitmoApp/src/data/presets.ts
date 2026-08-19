@@ -54,7 +54,6 @@ export const GENRES = [
   "Club",
   "Acoustic",
   "Gospel",
-  "Salsa",
   "Bachata",
   "Cumbia",
   "Jazz",

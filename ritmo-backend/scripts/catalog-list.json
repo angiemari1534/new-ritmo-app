@@ -575,14 +575,14 @@
     "subject": "places",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Salsa",
-    "beat": "Romantic Slow",
-    "artistFeel": "Marc Anthony",
+    "genre": "Bachata",
+    "beat": "Chill Normal",
+    "artistFeel": "Romeo Santos",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "piano montuno"
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
+    "arrangement": "romantic guitar arpeggios"
   },
   {
     "slug": "time-jazz",
@@ -665,14 +665,14 @@
     "subject": "food",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "Salsa",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Gilberto Santa Rosa",
+    "genre": "Latin",
+    "beat": "Calm Slow",
+    "artistFeel": "Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa",
-    "arrangement": "flute-and-violin charanga"
+    "similarSongs": "Despacito by Luis Fonsi",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "cooking-latin",
@@ -772,12 +772,12 @@
     "lesson": 1,
     "genre": "Bachata",
     "beat": "Romantic Normal",
-    "artistFeel": "Romeo Santos",
+    "artistFeel": "Prince Royce",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Propuesta Indecente by Romeo Santos",
-    "arrangement": "romantic guitar arpeggios"
+    "similarSongs": "Darte un Beso by Prince Royce",
+    "arrangement": "lead requinto guitar"
   },
   {
     "slug": "directions-rap",
@@ -852,7 +852,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "nylon guitar and brass"
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "pronouns-rock",
@@ -1017,7 +1017,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Hips Don't Lie by Shakira",
-    "arrangement": "piano montuno and congas"
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "home-pop",
@@ -1087,12 +1087,12 @@
     "lesson": 2,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Luis Fonsi",
+    "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Despacito by Luis Fonsi",
-    "arrangement": "accordion and horns"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "transportation-rock",
@@ -1250,14 +1250,14 @@
     "subject": "vacation",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Salsa",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Hector Lavoe",
+    "genre": "R&B",
+    "beat": "Romantic Slow",
+    "artistFeel": "John Legend",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "El Cantante by Hector Lavoe",
-    "arrangement": "trombone front line"
+    "similarSongs": "All of Me by John Legend",
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "greetings-l8",
@@ -1294,12 +1294,12 @@
     "lesson": 4,
     "genre": "Latin",
     "beat": "Chill Normal",
-    "artistFeel": "Marc Anthony",
+    "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "marimba and light percussion"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "pronouns-l5",
@@ -1322,12 +1322,12 @@
     "lesson": 8,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Enrique Iglesias",
+    "artistFeel": "Ricky Martin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias",
-    "arrangement": "nylon guitar and brass"
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "descriptions-l4",
@@ -1341,7 +1341,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "No One by Alicia Keys",
-    "arrangement": "lush synth pads and sub-bass"
+    "arrangement": "finger-snap trap-soul groove"
   },
   {
     "slug": "descriptions-l5",
@@ -1462,26 +1462,26 @@
     "lesson": 4,
     "genre": "Bachata",
     "beat": "Romantic Slow",
-    "artistFeel": "Prince Royce",
+    "artistFeel": "Aventura",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Darte un Beso by Prince Royce",
-    "arrangement": "lead requinto guitar"
+    "similarSongs": "Obsesion by Aventura",
+    "arrangement": "syncopated guitar and bongó"
   },
   {
     "slug": "cooking-l3",
     "subject": "cooking",
     "level": "prestarter",
     "lesson": 3,
-    "genre": "Salsa",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Marc Anthony",
+    "genre": "Reggae",
+    "beat": "Dreamy Normal",
+    "artistFeel": "Shaggy",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "blazing brass mambo"
+    "similarSongs": "It Wasn't Me by Shaggy",
+    "arrangement": "organ bubble and skank"
   },
   {
     "slug": "cooking-l4",
@@ -1502,14 +1502,14 @@
     "subject": "animals",
     "level": "prestarter",
     "lesson": 3,
-    "genre": "Salsa",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Marc Anthony",
+    "genre": "Latin",
+    "beat": "Chill Normal",
+    "artistFeel": "Enrique Iglesias",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "piano montuno"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "animals-l4",
@@ -1560,12 +1560,12 @@
     "lesson": 3,
     "genre": "Reggae",
     "beat": "Chill Normal",
-    "artistFeel": "Shaggy",
+    "artistFeel": "Jimmy Cliff",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "It Wasn't Me by Shaggy",
-    "arrangement": "organ bubble and skank"
+    "similarSongs": "I Can See Clearly Now by Jimmy Cliff",
+    "arrangement": "horn-section stabs"
   },
   {
     "slug": "clothing-l4",
@@ -1672,12 +1672,12 @@
     "lesson": 4,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Ricky Martin",
+    "artistFeel": "Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin",
-    "arrangement": "piano montuno and congas"
+    "similarSongs": "Despacito by Luis Fonsi",
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "time-l5",
@@ -1740,14 +1740,14 @@
     "subject": "transportation",
     "level": "prestarter",
     "lesson": 5,
-    "genre": "Salsa",
-    "beat": "Romantic Slow",
-    "artistFeel": "Gilberto Santa Rosa",
+    "genre": "Bachata",
+    "beat": "Calm Slow",
+    "artistFeel": "Romeo Santos",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa",
-    "arrangement": "flute-and-violin charanga"
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
+    "arrangement": "romantic guitar arpeggios"
   },
   {
     "slug": "places-l4",
@@ -1770,12 +1770,12 @@
     "lesson": 5,
     "genre": "Bachata",
     "beat": "Romantic Normal",
-    "artistFeel": "Aventura",
+    "artistFeel": "Prince Royce",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Obsesion by Aventura",
-    "arrangement": "syncopated guitar and bongó"
+    "similarSongs": "Darte un Beso by Prince Royce",
+    "arrangement": "lead requinto guitar"
   },
   {
     "slug": "shopping-l3",
@@ -1796,28 +1796,28 @@
     "subject": "shopping",
     "level": "prestarter",
     "lesson": 4,
-    "genre": "Salsa",
-    "beat": "Chill Slow",
-    "artistFeel": "Gilberto Santa Rosa",
+    "genre": "Bachata",
+    "beat": "Romantic Slow",
+    "artistFeel": "Prince Royce",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa",
-    "arrangement": "trombone front line"
+    "similarSongs": "Darte un Beso by Prince Royce",
+    "arrangement": "syncopated guitar and bongó"
   },
   {
     "slug": "jobs-l4",
     "subject": "jobs",
     "level": "prestarter",
     "lesson": 4,
-    "genre": "Salsa",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Hector Lavoe",
+    "genre": "Latin",
+    "beat": "Dreamy Normal",
+    "artistFeel": "Marc Anthony",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "El Cantante by Hector Lavoe",
-    "arrangement": "blazing brass mambo"
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "jobs-l5",
@@ -1826,12 +1826,12 @@
     "lesson": 5,
     "genre": "Reggae",
     "beat": "Chill Normal",
-    "artistFeel": "Jimmy Cliff",
+    "artistFeel": "Bob Marley",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "I Can See Clearly Now by Jimmy Cliff",
-    "arrangement": "horn-section stabs"
+    "similarSongs": "Three Little Birds by Bob Marley",
+    "arrangement": "dub bass and echo"
   },
   {
     "slug": "school-l4",
@@ -1901,7 +1901,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Three Little Birds by Bob Marley",
-    "arrangement": "dub bass and echo"
+    "arrangement": "organ bubble and skank"
   },
   {
     "slug": "hobbies-l5",
@@ -1910,12 +1910,12 @@
     "lesson": 5,
     "genre": "Latin",
     "beat": "Calm Slow",
-    "artistFeel": "Luis Fonsi",
+    "artistFeel": "Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Despacito by Luis Fonsi",
-    "arrangement": "accordion and horns"
+    "similarSongs": "Bailando by Enrique Iglesias",
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "nature-l4",
@@ -1966,12 +1966,12 @@
     "lesson": 5,
     "genre": "R&B",
     "beat": "Dreamy Normal",
-    "artistFeel": "John Legend",
+    "artistFeel": "Chris Brown",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "All of Me by John Legend",
-    "arrangement": "finger-snap trap-soul groove"
+    "similarSongs": "No Guidance by Chris Brown",
+    "arrangement": "warm electric-piano chords"
   },
   {
     "slug": "verbs-l3",
@@ -2050,11 +2050,11 @@
     "lesson": 11,
     "genre": "Bachata",
     "beat": "Romantic Normal",
-    "artistFeel": "Romeo Santos",
+    "artistFeel": "Aventura",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Propuesta Indecente by Romeo Santos",
+    "similarSongs": "Obsesion by Aventura",
     "arrangement": "romantic guitar arpeggios"
   },
   {
@@ -2106,11 +2106,11 @@
     "lesson": 7,
     "genre": "Bachata",
     "beat": "Romantic Normal",
-    "artistFeel": "Prince Royce",
+    "artistFeel": "Romeo Santos",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Darte un Beso by Prince Royce",
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
     "arrangement": "lead requinto guitar"
   },
   {
@@ -2118,14 +2118,14 @@
     "subject": "questions",
     "level": "prestarter",
     "lesson": 6,
-    "genre": "Salsa",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Marc Anthony",
+    "genre": "R&B",
+    "beat": "Chill Normal",
+    "artistFeel": "Usher",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "piano montuno"
+    "similarSongs": "Yeah by Usher",
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "questions-l7",
@@ -2162,11 +2162,11 @@
     "lesson": 6,
     "genre": "Bachata",
     "beat": "Romantic Normal",
-    "artistFeel": "Aventura",
+    "artistFeel": "Prince Royce",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Obsesion by Aventura",
+    "similarSongs": "Darte un Beso by Prince Royce",
     "arrangement": "syncopated guitar and bongó"
   },
   {
@@ -2190,11 +2190,11 @@
     "lesson": 6,
     "genre": "Bachata",
     "beat": "Calm Slow",
-    "artistFeel": "Romeo Santos",
+    "artistFeel": "Aventura",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Propuesta Indecente by Romeo Santos",
+    "similarSongs": "Obsesion by Aventura",
     "arrangement": "romantic guitar arpeggios"
   },
   {
@@ -2232,12 +2232,12 @@
     "lesson": 5,
     "genre": "Reggae",
     "beat": "Chill Normal",
-    "artistFeel": "Bob Marley",
+    "artistFeel": "Sean Paul",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Three Little Birds by Bob Marley",
-    "arrangement": "organ bubble and skank"
+    "similarSongs": "Temperature by Sean Paul",
+    "arrangement": "horn-section stabs"
   },
   {
     "slug": "cooking-l6",
@@ -2526,12 +2526,12 @@
     "lesson": 6,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Marc Anthony",
+    "artistFeel": "Ricky Martin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
-    "arrangement": "marimba and light percussion"
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "jobs-l6",
@@ -2540,12 +2540,12 @@
     "lesson": 6,
     "genre": "R&B",
     "beat": "Groovy Normal",
-    "artistFeel": "Chris Brown",
+    "artistFeel": "John Legend",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "No Guidance by Chris Brown",
-    "arrangement": "warm electric-piano chords"
+    "similarSongs": "All of Me by John Legend",
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "jobs-l7",
@@ -2568,12 +2568,12 @@
     "lesson": 6,
     "genre": "Latin",
     "beat": "Romantic Slow",
-    "artistFeel": "Enrique Iglesias",
+    "artistFeel": "Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bailando by Enrique Iglesias",
-    "arrangement": "nylon guitar and brass"
+    "similarSongs": "Despacito by Luis Fonsi",
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "school-l7",
@@ -2608,14 +2608,14 @@
     "subject": "technology",
     "level": "prestarter",
     "lesson": 7,
-    "genre": "Salsa",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Gilberto Santa Rosa",
+    "genre": "Reggae",
+    "beat": "Calm Slow",
+    "artistFeel": "Shaggy",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa",
-    "arrangement": "flute-and-violin charanga"
+    "similarSongs": "It Wasn't Me by Shaggy",
+    "arrangement": "dub bass and echo"
   },
   {
     "slug": "hobbies-l6",
@@ -2638,11 +2638,11 @@
     "lesson": 7,
     "genre": "Bachata",
     "beat": "Romantic Normal",
-    "artistFeel": "Prince Royce",
+    "artistFeel": "Romeo Santos",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Darte un Beso by Prince Royce",
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
     "arrangement": "lead requinto guitar"
   },
   {
@@ -2650,14 +2650,14 @@
     "subject": "nature",
     "level": "prestarter",
     "lesson": 6,
-    "genre": "Salsa",
-    "beat": "Happy Upbeat",
-    "artistFeel": "Hector Lavoe",
+    "genre": "Latin",
+    "beat": "Romantic Slow",
+    "artistFeel": "Ricky Martin",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "El Cantante by Hector Lavoe",
-    "arrangement": "trombone front line"
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "nature-l7",
@@ -2679,12 +2679,12 @@
     "lesson": 6,
     "genre": "Reggae",
     "beat": "Chill Normal",
-    "artistFeel": "Sean Paul",
+    "artistFeel": "Jimmy Cliff",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Temperature by Sean Paul",
-    "arrangement": "horn-section stabs"
+    "similarSongs": "I Can See Clearly Now by Jimmy Cliff",
+    "arrangement": "organ bubble and skank"
   },
   {
     "slug": "emergencies-l7",
@@ -2720,12 +2720,12 @@
     "lesson": 6,
     "genre": "Reggae",
     "beat": "Chill Normal",
-    "artistFeel": "Shaggy",
+    "artistFeel": "Bob Marley",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "It Wasn't Me by Shaggy",
-    "arrangement": "dub bass and echo"
+    "similarSongs": "Three Little Birds by Bob Marley",
+    "arrangement": "horn-section stabs"
   },
   {
     "slug": "vacation-l5",
@@ -2734,12 +2734,12 @@
     "lesson": 5,
     "genre": "Reggae",
     "beat": "Calm Slow",
-    "artistFeel": "Jimmy Cliff",
+    "artistFeel": "Sean Paul",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "I Can See Clearly Now by Jimmy Cliff",
-    "arrangement": "organ bubble and skank"
+    "similarSongs": "Temperature by Sean Paul",
+    "arrangement": "dub bass and echo"
   },
   {
     "slug": "vacation-l6",
@@ -2827,7 +2827,7 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "smooth clean-guitar licks"
+    "arrangement": "finger-snap trap-soul groove"
   },
   {
     "slug": "numbers-prestarter-l9",
@@ -2837,8 +2837,8 @@
     "lesson": 9,
     "genre": "Latin",
     "beat": "Uplifting Upbeat",
-    "artistFeel": "Ricky Martin",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "artistFeel": "Marc Anthony",
+    "similarSongs": "Vivir Mi Vida by Marc Anthony",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
@@ -2867,8 +2867,8 @@
     "lesson": 11,
     "genre": "Bachata",
     "beat": "Chill Slow",
-    "artistFeel": "Aventura",
-    "similarSongs": "Obsesion by Aventura",
+    "artistFeel": "Prince Royce",
+    "similarSongs": "Darte un Beso by Prince Royce",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
@@ -2912,8 +2912,8 @@
     "lesson": 9,
     "genre": "Bachata",
     "beat": "Chill Normal",
-    "artistFeel": "Romeo Santos",
-    "similarSongs": "Propuesta Indecente by Romeo Santos",
+    "artistFeel": "Aventura",
+    "similarSongs": "Obsesion by Aventura",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
@@ -3000,14 +3000,14 @@
     "subject": "family",
     "level": "prestarter",
     "lesson": 7,
-    "genre": "Salsa",
-    "beat": "Party Upbeat",
-    "artistFeel": "Hector Lavoe",
-    "similarSongs": "El Cantante by Hector Lavoe",
+    "genre": "Bachata",
+    "beat": "Dreamy Normal",
+    "artistFeel": "Romeo Santos",
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "blazing brass mambo"
+    "arrangement": "lead requinto guitar"
   },
   {
     "slug": "family-prestarter-l8",
@@ -3092,12 +3092,12 @@
     "lesson": 9,
     "genre": "R&B",
     "beat": "Romantic Slow",
-    "artistFeel": "Usher",
-    "similarSongs": "Yeah by Usher",
+    "artistFeel": "Chris Brown",
+    "similarSongs": "No Guidance by Chris Brown",
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "lush synth pads and sub-bass"
+    "arrangement": "warm electric-piano chords"
   },
   {
     "slug": "cooking-prestarter-l7",
@@ -3107,8 +3107,8 @@
     "lesson": 7,
     "genre": "Latin",
     "beat": "Happy Upbeat",
-    "artistFeel": "Luis Fonsi",
-    "similarSongs": "Despacito by Luis Fonsi",
+    "artistFeel": "Enrique Iglesias",
+    "similarSongs": "Bailando by Enrique Iglesias",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
@@ -3137,8 +3137,8 @@
     "lesson": 9,
     "genre": "Latin",
     "beat": "Chill Slow",
-    "artistFeel": "Enrique Iglesias",
-    "similarSongs": "Bailando by Enrique Iglesias",
+    "artistFeel": "Luis Fonsi",
+    "similarSongs": "Despacito by Luis Fonsi",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
@@ -3187,7 +3187,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "lead requinto guitar"
+    "arrangement": "syncopated guitar and bongó"
   },
   {
     "slug": "body-prestarter-l7",
@@ -3270,14 +3270,14 @@
     "subject": "weather",
     "level": "prestarter",
     "lesson": 7,
-    "genre": "Salsa",
-    "beat": "Dreamy Normal",
-    "artistFeel": "Celia Cruz",
-    "similarSongs": "La Vida Es Un Carnaval by Celia Cruz",
+    "genre": "Bachata",
+    "beat": "Chill Normal",
+    "artistFeel": "Aventura",
+    "similarSongs": "Obsesion by Aventura",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "piano montuno"
+    "arrangement": "romantic guitar arpeggios"
   },
   {
     "slug": "days-prestarter-l7",
@@ -3362,12 +3362,12 @@
     "lesson": 9,
     "genre": "R&B",
     "beat": "Energetic Normal",
-    "artistFeel": "John Legend",
-    "similarSongs": "All of Me by John Legend",
+    "artistFeel": "Usher",
+    "similarSongs": "Yeah by Usher",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "finger-snap trap-soul groove"
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "directions-prestarter-l7",
@@ -3377,8 +3377,8 @@
     "lesson": 7,
     "genre": "Latin",
     "beat": "Groovy Upbeat",
-    "artistFeel": "Ricky Martin",
-    "similarSongs": "Livin la Vida Loca by Ricky Martin",
+    "artistFeel": "Shakira",
+    "similarSongs": "Hips Don't Lie by Shakira",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
@@ -3457,7 +3457,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "syncopated guitar and bongó"
+    "arrangement": "lead requinto guitar"
   },
   {
     "slug": "shopping-prestarter-l7",
@@ -3540,14 +3540,14 @@
     "subject": "technology",
     "level": "prestarter",
     "lesson": 8,
-    "genre": "Salsa",
-    "beat": "Chill Normal",
-    "artistFeel": "Celia Cruz",
-    "similarSongs": "La Vida Es Un Carnaval by Celia Cruz",
+    "genre": "Latin",
+    "beat": "Calm Slow",
+    "artistFeel": "Gloria Estefan",
+    "similarSongs": "Conga by Gloria Estefan",
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "flute-and-violin charanga"
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "technology-prestarter-l9",
@@ -3632,12 +3632,12 @@
     "lesson": 8,
     "genre": "R&B",
     "beat": "Chill Slow",
-    "artistFeel": "Chris Brown",
-    "similarSongs": "No Guidance by Chris Brown",
+    "artistFeel": "John Legend",
+    "similarSongs": "All of Me by John Legend",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "warm electric-piano chords"
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "emergencies-prestarter-l9",
@@ -3647,12 +3647,12 @@
     "lesson": 9,
     "genre": "Latin",
     "beat": "Dance Upbeat",
-    "artistFeel": "Gloria Estefan",
-    "similarSongs": "Conga by Gloria Estefan",
+    "artistFeel": "Shakira",
+    "similarSongs": "Hips Don't Lie by Shakira",
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "piano montuno and congas"
+    "arrangement": "accordion and horns"
   },
   {
     "slug": "verbs-prestarter-l7",
@@ -3682,7 +3682,7 @@
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "horn-section stabs"
+    "arrangement": "organ bubble and skank"
   },
   {
     "slug": "vacation-prestarter-l7",
@@ -3727,7 +3727,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "romantic guitar arpeggios"
+    "arrangement": "syncopated guitar and bongó"
   },
   {
     "slug": "greetings-starter-l1",
@@ -3810,14 +3810,14 @@
     "subject": "greetings",
     "level": "starter",
     "lesson": 6,
-    "genre": "Salsa",
+    "genre": "R&B",
     "beat": "Romantic Slow",
-    "artistFeel": "Marc Anthony",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "artistFeel": "Chris Brown",
+    "similarSongs": "No Guidance by Chris Brown",
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "trombone front line"
+    "arrangement": "finger-snap trap-soul groove"
   },
   {
     "slug": "greetings-starter-l7",
@@ -3907,7 +3907,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "smooth clean-guitar licks"
+    "arrangement": "warm electric-piano chords"
   },
   {
     "slug": "greetings-starter-l13",
@@ -3917,12 +3917,12 @@
     "lesson": 13,
     "genre": "Latin",
     "beat": "Romantic Slow",
-    "artistFeel": "Shakira",
-    "similarSongs": "Hips Don't Lie by Shakira",
+    "artistFeel": "Gloria Estefan",
+    "similarSongs": "Conga by Gloria Estefan",
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "accordion and horns"
+    "arrangement": "marimba and light percussion"
   },
   {
     "slug": "greetings-starter-l14",
@@ -3952,7 +3952,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "lush synth pads and sub-bass"
+    "arrangement": "smooth clean-guitar licks"
   },
   {
     "slug": "pronouns-starter-l2",
@@ -3992,12 +3992,12 @@
     "lesson": 4,
     "genre": "Bachata",
     "beat": "Dreamy Normal",
-    "artistFeel": "Prince Royce",
-    "similarSongs": "Darte un Beso by Prince Royce",
+    "artistFeel": "Romeo Santos",
+    "similarSongs": "Propuesta Indecente by Romeo Santos",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "lead requinto guitar"
+    "arrangement": "romantic guitar arpeggios"
   },
   {
     "slug": "pronouns-starter-l5",
@@ -4080,14 +4080,14 @@
     "subject": "pronouns",
     "level": "starter",
     "lesson": 10,
-    "genre": "Salsa",
-    "beat": "Powerful Normal",
-    "artistFeel": "Gilberto Santa Rosa",
-    "similarSongs": "Conteo Regresivo by Gilberto Santa Rosa",
+    "genre": "Reggae",
+    "beat": "Dreamy Normal",
+    "artistFeel": "Shaggy",
+    "similarSongs": "It Wasn't Me by Shaggy",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "blazing brass mambo"
+    "arrangement": "horn-section stabs"
   },
   {
     "slug": "pronouns-starter-l11",
@@ -4177,7 +4177,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "finger-snap trap-soul groove"
+    "arrangement": "lush synth pads and sub-bass"
   },
   {
     "slug": "numbers-starter-l5",
@@ -4187,12 +4187,12 @@
     "lesson": 5,
     "genre": "Latin",
     "beat": "Uplifting Upbeat",
-    "artistFeel": "Marc Anthony",
-    "similarSongs": "Vivir Mi Vida by Marc Anthony",
+    "artistFeel": "Ricky Martin",
+    "similarSongs": "Livin la Vida Loca by Ricky Martin",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "marimba and light percussion"
+    "arrangement": "nylon guitar and brass"
   },
   {
     "slug": "numbers-starter-l6",
@@ -4217,12 +4217,12 @@
     "lesson": 1,
     "genre": "Latin",
     "beat": "Calm Slow",
-    "artistFeel": "Enrique Iglesias",
-    "similarSongs": "Bailando by Enrique Iglesias",
+    "artistFeel": "Luis Fonsi",
+    "similarSongs": "Despacito by Luis Fonsi",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "nylon guitar and brass"
+    "arrangement": "piano montuno and congas"
   },
   {
     "slug": "colors-starter-l2",
