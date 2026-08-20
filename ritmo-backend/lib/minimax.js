@@ -110,16 +110,23 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
     arr = pool[h % pool.length];
   }
   if (arr) parts.push(`led by ${arr}`);
-  // Voice next (high priority so the char cap never trims it — esp. duet).
-  // Deep, low, relaxed and chill — no high-pitched or shrill singing, no falsetto.
-  if (voice === "male") parts.push("deep low relaxed adult male lead vocals, warm chill laid-back delivery, no falsetto");
-  else if (voice === "female") parts.push("deep low alto female lead vocals, warm husky chest voice, calm smooth and chill, NOT high-pitched, no falsetto, not piercing or shrill, grown woman not a child");
-  else if (voice === "duet") parts.push("male and female adult duet, both deep low and relaxed, warm chill delivery, no high-pitched or shrill notes");
-  else if (voice === "duet-m") parts.push("two deep low relaxed adult male singers, a male-male duet, warm and chill, no falsetto");
-  else if (voice === "duet-f") parts.push("two low alto female singers, a female-female duet, deep husky chest voice, chill and warm, not high-pitched or shrill");
-  // Tempo comes from the LAST word of the song's beat ("Groovy Normal" -> Normal),
-  // so I can nudge just one song faster/slower without changing the others.
+
+  // Tempo (LAST word of beat) and mood (FIRST word) drive both the feel and the
+  // vocal ENERGY. Upbeat/energetic songs get lively vocals; chill/slow songs get
+  // relaxed ones. Either way the voice stays deep-toned and never high-pitched.
   const tempoWord = String(beat || "").trim().split(/\s+/).pop();
+  const moodWord = String(beat || "").trim().split(/\s+/)[0];
+  const energetic = /Upbeat|Fast/i.test(tempoWord) ||
+    /Energetic|Party|Happy|Dance|Powerful|Confident|Groovy|Uplifting|Epic/i.test(moodWord);
+
+  // Voice (high priority so the char cap never trims it — esp. duet).
+  const F = energetic ? "energetic lively" : "relaxed chill laid-back";
+  if (voice === "male") parts.push(`deep-toned ${F} adult male lead vocals, not high-pitched, no falsetto`);
+  else if (voice === "female") parts.push(`deep low alto ${F} female lead vocals, warm husky chest voice, NOT high-pitched, no falsetto, not shrill, grown woman not a child`);
+  else if (voice === "duet") parts.push(`male and female adult duet, both deep-toned and ${F}, no high-pitched or shrill notes`);
+  else if (voice === "duet-m") parts.push(`two deep-toned ${F} adult male singers, a male-male duet, no falsetto`);
+  else if (voice === "duet-f") parts.push(`two low alto ${F} female singers, a female-female duet, deep husky chest voice, not high-pitched or shrill`);
+
   const TEMPO_PHRASE = {
     Slow: "relaxed easy tempo",
     Normal: "steady medium tempo",
@@ -127,14 +134,11 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
     Fast: "fast high-energy tempo",
   };
   const tempoPhrase = TEMPO_PHRASE[tempoWord] || "steady medium tempo";
-  // Mood comes from the FIRST word of the beat ("Groovy Normal" -> Groovy), so
-  // the user's mood pick actually shapes the feel (not just the tempo).
-  const moodWord = String(beat || "").trim().split(/\s+/)[0];
   const MOOD_PHRASE = {
     Energetic: "high-energy and driving", Chill: "relaxed and laid-back",
     Dance: "danceable club feel", Romantic: "warm and romantic",
     Tropical: "sunny tropical vibe", Party: "fun party-anthem energy",
-    Happy: "bright happy mood", Sad: "melancholy emotional mood",
+    Happy: "bright happy upbeat mood", Sad: "melancholy emotional mood",
     Dreamy: "dreamy atmospheric feel", Groovy: "funky groovy pocket",
     Powerful: "bold powerful and anthemic", Calm: "calm and gentle",
     Uplifting: "uplifting feel-good lift", Epic: "epic cinematic and huge",
@@ -145,7 +149,8 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   if (moodPhrase) parts.push(moodPhrase);
   // The feel — tied to the GENRE so it stays true to it (country stays country,
   // reggaeton stays reggaeton) instead of drifting into generic pop.
-  parts.push(`authentic ${genre || "pop"} song true to the ${genre || "pop"} style and instruments, catchy and grown-up, ${tempoPhrase}, deep low relaxed chill vocals not high-pitched or shrill, clear vocals loud over soft backing, mature not a childish kids song`);
+  const vocalFeel = energetic ? "deep-toned energetic vocals not high-pitched or shrill" : "deep low relaxed chill vocals not high-pitched or shrill";
+  parts.push(`authentic ${genre || "pop"} song true to the ${genre || "pop"} style and instruments, catchy and grown-up, ${tempoPhrase}, ${vocalFeel}, clear vocals loud over soft backing, mature not a childish kids song`);
   parts.push(`correct native ${language} pronunciation`);
   parts.push(`bilingual ${language} and English lyrics sung clearly`);
 
