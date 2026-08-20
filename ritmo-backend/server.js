@@ -17,6 +17,7 @@ const { generateSongFal } = require("./lib/fal");
 const makeSong = process.env.FAL_KEY ? generateSongFal : generateSong;
 const { generatePronunciation } = require("./lib/elevenlabs");
 const { alignSong, fetchAudioBuffer } = require("./lib/align");
+const { checkPronunciation } = require("./lib/pronounce");
 
 const app = express();
 app.set("trust proxy", true); // correct protocol/host behind Render's proxy
@@ -129,6 +130,22 @@ app.post("/translate", async (req, res) => {
 
 // Full curriculum: subjects + how many lessons each tier has (for progression).
 app.get("/curriculum", (_req, res) => res.json({ curriculum: getCurriculum() }));
+
+// POST /pronounce { audioB64, target, lang } — transcribe the learner's spoken
+// audio and score how close it is to the target phrase. Returns { heard, score,
+// verdict: "correct" | "close" | "tryagain" }.
+app.post("/pronounce", async (req, res) => {
+  try {
+    const { audioB64, target, lang } = req.body || {};
+    if (!audioB64 || !target) return res.status(400).json({ error: "audioB64 and target required" });
+    const buf = Buffer.from(audioB64, "base64");
+    const result = await checkPronunciation(buf, target, lang || "es");
+    res.json(result);
+  } catch (err) {
+    console.error("pronounce failed:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
 
 // ---- Create a song ------------------------------------------------------
 // POST /lyrics — build a lesson's lyrics + vocab WITHOUT generating audio. Used

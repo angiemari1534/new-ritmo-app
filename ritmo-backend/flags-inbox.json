@@ -1,37 +1,7 @@
 {
-  "at": "2026-08-20T17:07:14.029Z",
-  "count": 12,
+  "at": "2026-08-20T18:54:39.498Z",
+  "count": 8,
   "flags": [
-    {
-      "id": "cat-greetings-rnb",
-      "title": "Greetings & Conversation",
-      "genre": "Country",
-      "subject": "greetings",
-      "lesson": 5,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-numbers-hiphop",
-      "title": "Numbers",
-      "genre": "Hip-Hop",
-      "subject": "numbers",
-      "lesson": 1,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-greetings-country",
-      "title": "Greetings & Conversation",
-      "genre": "Country",
-      "subject": "greetings",
-      "lesson": 2,
-      "actions": [
-        "lock"
-      ]
-    },
     {
       "id": "cat-numbers-edm",
       "title": "Numbers",
@@ -49,75 +19,66 @@
       "subject": "numbers",
       "lesson": 5,
       "actions": [
-        "reroll"
+        "badgenre"
       ]
     },
     {
-      "id": "cat-colors-pop",
-      "title": "Colors",
+      "id": "cat-hobbies-pop",
+      "title": "Hobbies & Sports",
       "genre": "Country",
-      "subject": "colors",
-      "lesson": 3,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-colors-country",
-      "title": "Colors",
-      "genre": "Country",
-      "subject": "colors",
-      "lesson": 6,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-jobs-hiphop",
-      "title": "Jobs & Work",
-      "genre": "Hip-Hop",
-      "subject": "jobs",
-      "lesson": 1,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-transportation-latin",
-      "title": "Transportation",
-      "genre": "Country",
-      "subject": "transportation",
-      "lesson": 1,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-nature-country",
-      "title": "Nature & Outdoors",
-      "genre": "Country",
-      "subject": "nature",
-      "lesson": 1,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-questions-rock",
-      "title": "Question Words",
-      "genre": "Rock",
-      "subject": "questions",
+      "subject": "hobbies",
       "lesson": 2,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-food-salsa",
-      "title": "Food & Restaurant",
+      "id": "cat-transportation-classicrock",
+      "title": "Transportation",
+      "genre": "Classic Rock",
+      "subject": "transportation",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-places-salsa",
+      "title": "Places in Town",
       "genre": "Country",
-      "subject": "food",
-      "lesson": 1,
+      "subject": "places",
+      "lesson": 2,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-time-jazz",
+      "title": "Telling Time",
+      "genre": "80s",
+      "subject": "time",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-pop",
+      "title": "Nature & Outdoors",
+      "genre": "Pop",
+      "subject": "nature",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-rock",
+      "title": "Emergencies",
+      "genre": "Rock",
+      "subject": "emergencies",
+      "lesson": 2,
       "actions": [
         "lock"
       ]

@@ -113,6 +113,13 @@ export async function alignAudio(
   return Array.isArray(data.lineTimings) ? data.lineTimings : null;
 }
 
+// Pronunciation check: send the learner's recorded audio + target phrase; get
+// back what was heard and whether it was pronounced correctly.
+export type PronounceResult = { heard: string; score: number; verdict: "correct" | "close" | "tryagain" };
+export async function checkPronunciation(audioB64: string, target: string, lang = "es"): Promise<PronounceResult> {
+  return postJson("/pronounce", { audioB64, target, lang }, 30000);
+}
+
 // Live-translate a word/phrase (either direction) for the dictionary search.
 export async function translateWord(text: string, language = "Spanish"): Promise<{ es: string; en: string }> {
   return postJson("/translate", { text, language }, 30000);

@@ -1,10 +1,12 @@
 import React, { useMemo, useState } from "react";
-import { Text, View, StyleSheet, Pressable, ScrollView } from "react-native";
+import { Text, View, StyleSheet, Pressable, ScrollView, ActivityIndicator, Alert } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import * as Speech from "expo-speech";
+import { useAudioRecorder, RecordingPresets, requestRecordingPermissionsAsync, setAudioModeAsync } from "expo-audio";
 import { spacing, font, radius, type Colors, type Gradients } from "../theme";
 import { useTheme, useThemedStyles } from "../lib/theme-context";
-import type { VocabPair } from "../lib/api";
+import { checkPronunciation, type PronounceResult, type VocabPair } from "../lib/api";
+import { readAudioBase64 } from "../lib/download";
 
 function speak(text: string, language: string, rate = 0.55) {
   Speech.stop();
@@ -48,21 +50,61 @@ export function PronouncePanel({ vocab, lang }: { vocab: VocabPair[]; lang: stri
   );
 }
 
-// ---- Speaking practice: hear it, repeat out loud, self-assess -----------
+// ---- Speaking practice: hear it, say it out loud, get pronunciation feedback ----
 export function SpeakPanel({ vocab, lang }: { vocab: VocabPair[]; lang: string }) {
   const { colors, gradients } = useTheme();
   const styles = useThemedStyles(makeStyles);
+  const recorder = useAudioRecorder(RecordingPresets.HIGH_QUALITY);
   const [i, setI] = useState(0);
+  const [recording, setRecording] = useState(false);
+  const [checking, setChecking] = useState(false);
+  const [result, setResult] = useState<PronounceResult | null>(null);
+
+  const goTo = (n: number) => { setResult(null); setRecording(false); setI(n); };
+
+  async function startRec() {
+    setResult(null);
+    try {
+      const perm = await requestRecordingPermissionsAsync();
+      if (!perm.granted) { Alert.alert("Microphone needed", "Allow microphone access so Ritmo can hear your pronunciation."); return; }
+      await setAudioModeAsync({ allowsRecording: true, playsInSilentMode: true });
+      await recorder.prepareToRecordAsync();
+      recorder.record();
+      setRecording(true);
+    } catch { setRecording(false); }
+  }
+
+  async function stopRec(target: string) {
+    setRecording(false);
+    setChecking(true);
+    try {
+      await recorder.stop();
+      await setAudioModeAsync({ allowsRecording: false, playsInSilentMode: true });
+      const uri = (recorder as any).uri as string | null;
+      const b64 = uri ? await readAudioBase64(uri) : null;
+      if (!b64) { setResult({ heard: "", score: 0, verdict: "tryagain" }); return; }
+      setResult(await checkPronunciation(b64, target, lang));
+    } catch {
+      setResult({ heard: "", score: 0, verdict: "tryagain" });
+    } finally { setChecking(false); }
+  }
+
   if (vocab.length === 0) return <Empty text="No words to practice yet." />;
   if (i >= vocab.length)
     return (
       <View style={styles.center}>
         <Text style={styles.done}>🎉 Nice work!</Text>
         <Text style={styles.doneSub}>You practiced {vocab.length} phrases.</Text>
-        <Pressable onPress={() => setI(0)} style={styles.primary}><Text style={styles.primaryText}>Practice again</Text></Pressable>
+        <Pressable onPress={() => goTo(0)} style={styles.primary}><Text style={styles.primaryText}>Practice again</Text></Pressable>
       </View>
     );
   const w = vocab[i];
+  const V = { correct: colors.good, close: colors.gold, tryagain: colors.coral } as const;
+  const MSG = {
+    correct: "Perfect — you said it right!",
+    close: "Close! Almost there — try once more.",
+    tryagain: "Not quite — listen again and retry.",
+  } as const;
   return (
     <View style={styles.center}>
       <Text style={styles.progress}>{i + 1} / {vocab.length}</Text>
@@ -70,12 +112,38 @@ export function SpeakPanel({ vocab, lang }: { vocab: VocabPair[]; lang: string }
       <Text style={styles.bigEn}>{w.en}</Text>
       <Pressable onPress={() => speak(w.es, lang, 0.5)}>
         <LinearGradient colors={gradients.primary} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.hearBtn}>
-          <Text style={styles.hearText}>🔊  Hear it, then say it out loud</Text>
+          <Text style={styles.hearText}>🔊  Hear it</Text>
         </LinearGradient>
       </Pressable>
+
+      {/* Record + pronunciation check */}
+      <Pressable
+        onPress={() => (recording ? stopRec(w.es) : startRec())}
+        disabled={checking}
+        style={[styles.micBtn, recording && { borderColor: colors.coral, backgroundColor: `${colors.coral}22` }]}
+      >
+        {checking ? (
+          <ActivityIndicator color={colors.accent} />
+        ) : (
+          <Text style={[styles.micText, recording && { color: colors.coral }]}>
+            {recording ? "⏹  Listening… tap to check" : "🎤  Tap and say it out loud"}
+          </Text>
+        )}
+      </Pressable>
+
+      {result && (
+        <View style={[styles.result, { borderColor: V[result.verdict] }]}>
+          <Text style={[styles.resultTitle, { color: V[result.verdict] }]}>
+            {result.verdict === "correct" ? "✓ " : ""}{MSG[result.verdict]}
+          </Text>
+          {!!result.heard && <Text style={styles.resultHeard}>I heard: “{result.heard}”</Text>}
+          <Text style={styles.resultScore}>Match: {result.score}%</Text>
+        </View>
+      )}
+
       <View style={styles.rowBtns}>
         <Pressable onPress={() => speak(w.es, lang, 0.45)} style={styles.smallBtn}><Text style={styles.smallBtnText}>↻ Again</Text></Pressable>
-        <Pressable onPress={() => setI(i + 1)} style={styles.smallBtn}><Text style={styles.smallBtnText}>Next →</Text></Pressable>
+        <Pressable onPress={() => goTo(i + 1)} style={styles.smallBtn}><Text style={styles.smallBtnText}>Next →</Text></Pressable>
       </View>
     </View>
   );
@@ -186,8 +254,14 @@ const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   progress: { color: colors.muted, fontSize: font.small, fontWeight: "700" },
   bigEs: { color: colors.ink, fontSize: font.hero, fontWeight: "900", textAlign: "center", marginTop: 12 },
   bigEn: { color: colors.muted, fontSize: font.h3, fontStyle: "italic", textAlign: "center", marginTop: 6 },
-  hearBtn: { borderRadius: radius.md, paddingVertical: 15, paddingHorizontal: 22, marginTop: 24 },
+  hearBtn: { borderRadius: radius.md, paddingVertical: 13, paddingHorizontal: 22, marginTop: 20 },
   hearText: { color: "#E6EAF0", fontWeight: "900", fontSize: font.body },
+  micBtn: { borderRadius: radius.md, borderWidth: 1.5, borderColor: colors.accent, backgroundColor: colors.card, paddingVertical: 15, paddingHorizontal: 22, marginTop: 12, minWidth: 240, alignItems: "center" },
+  micText: { color: colors.accent, fontWeight: "900", fontSize: font.body },
+  result: { borderWidth: 1.5, borderRadius: radius.md, paddingVertical: 12, paddingHorizontal: 16, marginTop: 16, alignItems: "center", backgroundColor: colors.card, minWidth: 240 },
+  resultTitle: { fontWeight: "900", fontSize: font.body, textAlign: "center" },
+  resultHeard: { color: colors.muted, fontSize: font.small, marginTop: 6, textAlign: "center" },
+  resultScore: { color: colors.faint, fontSize: font.tiny, fontWeight: "800", marginTop: 3 },
   done: { color: colors.ink, fontSize: font.h1, fontWeight: "900" },
   doneSub: { color: colors.muted, fontSize: font.body, textAlign: "center", marginTop: 8 },
   primary: { backgroundColor: colors.accent, borderRadius: radius.md, paddingVertical: 14, paddingHorizontal: 26, marginTop: 20 },
