@@ -1,13 +1,598 @@
 {
-  "at": "2026-08-19T23:24:14.561Z",
-  "count": 1,
+  "at": "2026-08-20T02:09:37.477Z",
+  "count": 58,
   "flags": [
     {
-      "id": "cat-body-l4",
-      "title": "Body & Health",
-      "genre": "Jazz",
-      "subject": "body",
+      "id": "cat-greetings-country",
+      "title": "Greetings & Conversation",
+      "genre": "Country",
+      "subject": "greetings",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-rnb",
+      "title": "Greetings & Conversation",
+      "genre": "R&B",
+      "subject": "greetings",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-numbers-hiphop",
+      "title": "Numbers",
+      "genre": "Hip-Hop",
+      "subject": "numbers",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-numbers-edm",
+      "title": "Numbers",
+      "genre": "EDM",
+      "subject": "numbers",
       "lesson": 4,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-numbers-soul",
+      "title": "Numbers",
+      "genre": "Soul",
+      "subject": "numbers",
+      "lesson": 5,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-colors-pop",
+      "title": "Colors",
+      "genre": "Pop",
+      "subject": "colors",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-colors-country",
+      "title": "Colors",
+      "genre": "Country",
+      "subject": "colors",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-jobs-hiphop",
+      "title": "Jobs & Work",
+      "genre": "Hip-Hop",
+      "subject": "jobs",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-latin",
+      "title": "Transportation",
+      "genre": "Latin",
+      "subject": "transportation",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-country",
+      "title": "Nature & Outdoors",
+      "genre": "Country",
+      "subject": "nature",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-questions-rock",
+      "title": "Question Words",
+      "genre": "Rock",
+      "subject": "questions",
+      "lesson": 2,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-hobbies-pop",
+      "title": "Hobbies & Sports",
+      "genre": "Pop",
+      "subject": "hobbies",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-classicrock",
+      "title": "Transportation",
+      "genre": "Classic Rock",
+      "subject": "transportation",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-places-salsa",
+      "title": "Places in Town",
+      "genre": "Salsa",
+      "subject": "places",
+      "lesson": 2,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-time-jazz",
+      "title": "Telling Time",
+      "genre": "Jazz",
+      "subject": "time",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-pop",
+      "title": "Nature & Outdoors",
+      "genre": "Pop",
+      "subject": "nature",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-rock",
+      "title": "Emergencies",
+      "genre": "Rock",
+      "subject": "emergencies",
+      "lesson": 2,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-family-pop",
+      "title": "Family",
+      "genre": "Pop",
+      "subject": "family",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-feelings-blues",
+      "title": "Feelings",
+      "genre": "Blues",
+      "subject": "feelings",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-food-salsa",
+      "title": "Food & Restaurant",
+      "genre": "Salsa",
+      "subject": "food",
+      "lesson": 1,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-cooking-latin",
+      "title": "Cooking & Kitchen",
+      "genre": "Latin",
+      "subject": "cooking",
+      "lesson": 1,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-animals-reggae",
+      "title": "Animals",
+      "genre": "Reggae",
+      "subject": "animals",
+      "lesson": 1,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-body-hiphop",
+      "title": "Body & Health",
+      "genre": "Hip-Hop",
+      "subject": "body",
+      "lesson": 1,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-clothing-disco",
+      "title": "Clothing",
+      "genre": "Disco",
+      "subject": "clothing",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-weather-classicrock",
+      "title": "Weather",
+      "genre": "Classic Rock",
+      "subject": "weather",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-days-bachata",
+      "title": "Days & Time",
+      "genre": "Bachata",
+      "subject": "days",
+      "lesson": 1,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-directions-rap",
+      "title": "Getting Around",
+      "genre": "Rap",
+      "subject": "directions",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-shopping-pop",
+      "title": "Shopping & Money",
+      "genre": "Pop",
+      "subject": "shopping",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-verbs-alt",
+      "title": "Common Verbs",
+      "genre": "Alternative",
+      "subject": "verbs",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-vacation-reggaeton",
+      "title": "Vacation & Travel",
+      "genre": "Reggaeton",
+      "subject": "vacation",
+      "lesson": 1,
+      "actions": [
+        "lock",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-greetings-latin",
+      "title": "Greetings & Conversation",
+      "genre": "Latin",
+      "subject": "greetings",
+      "lesson": 7,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-pronouns-rock",
+      "title": "Pronouns",
+      "genre": "Rock",
+      "subject": "pronouns",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-colors-reggaeton",
+      "title": "Colors",
+      "genre": "Reggaeton",
+      "subject": "colors",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-descriptions-hiphop",
+      "title": "Descriptions",
+      "genre": "Hip-Hop",
+      "subject": "descriptions",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-questions-pop",
+      "title": "Question Words",
+      "genre": "Pop",
+      "subject": "questions",
+      "lesson": 3,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-family-country",
+      "title": "Family",
+      "genre": "Country",
+      "subject": "family",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-feelings-pop",
+      "title": "Feelings",
+      "genre": "Pop",
+      "subject": "feelings",
+      "lesson": 2,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-cooking-classicrock",
+      "title": "Cooking & Kitchen",
+      "genre": "Classic Rock",
+      "subject": "cooking",
+      "lesson": 2,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-animals-rock",
+      "title": "Animals",
+      "genre": "Rock",
+      "subject": "animals",
+      "lesson": 2,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-body-rnb",
+      "title": "Body & Health",
+      "genre": "R&B",
+      "subject": "body",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-clothing-latin",
+      "title": "Clothing",
+      "genre": "Latin",
+      "subject": "clothing",
+      "lesson": 2,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-home-pop",
+      "title": "House & Home",
+      "genre": "Pop",
+      "subject": "home",
+      "lesson": 2,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-weather-reggae",
+      "title": "Weather",
+      "genre": "Reggae",
+      "subject": "weather",
+      "lesson": 2,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-days-pop",
+      "title": "Days & Time",
+      "genre": "Pop",
+      "subject": "days",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-time-reggaeton",
+      "title": "Telling Time",
+      "genre": "Reggaeton",
+      "subject": "time",
+      "lesson": 3,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-directions-latin",
+      "title": "Getting Around",
+      "genre": "Latin",
+      "subject": "directions",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-rock",
+      "title": "Transportation",
+      "genre": "Rock",
+      "subject": "transportation",
+      "lesson": 3,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-places-hiphop",
+      "title": "Places in Town",
+      "genre": "Hip-Hop",
+      "subject": "places",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-shopping-disco",
+      "title": "Shopping & Money",
+      "genre": "Disco",
+      "subject": "shopping",
+      "lesson": 2,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-jobs-rock",
+      "title": "Jobs & Work",
+      "genre": "Rock",
+      "subject": "jobs",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-school-pop",
+      "title": "School",
+      "genre": "Pop",
+      "subject": "school",
+      "lesson": 3,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-technology-pop",
+      "title": "Technology",
+      "genre": "Pop",
+      "subject": "technology",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-blues",
+      "title": "Nature & Outdoors",
+      "genre": "Blues",
+      "subject": "nature",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-hiphop",
+      "title": "Emergencies",
+      "genre": "Hip-Hop",
+      "subject": "emergencies",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-verbs-rap",
+      "title": "Common Verbs",
+      "genre": "Rap",
+      "subject": "verbs",
+      "lesson": 2,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-vacation-salsa",
+      "title": "Vacation & Travel",
+      "genre": "Salsa",
+      "subject": "vacation",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-l8",
+      "title": "Greetings & Conversation",
+      "genre": "Hip-Hop",
+      "subject": "greetings",
+      "lesson": 8,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-greetings-l9",
+      "title": "Greetings & Conversation",
+      "genre": "Disco",
+      "subject": "greetings",
+      "lesson": 9,
       "actions": [
         "reroll"
       ]

@@ -11,6 +11,10 @@ const { buildLyrics } = require("./lib/lyrics");
 const { translateWords } = require("./lib/llm");
 const { listSubjects, getCurriculum, TOTAL_LESSONS_PER_TIER } = require("./lib/vocab");
 const { generateSong } = require("./lib/minimax");
+const { generateSongFal } = require("./lib/fal");
+// Use fal.ai for the sung audio when a FAL_KEY is present (MiniMax's direct music
+// API was discontinued); otherwise fall back to the old MiniMax path.
+const makeSong = process.env.FAL_KEY ? generateSongFal : generateSong;
 const { generatePronunciation } = require("./lib/elevenlabs");
 const { alignSong, fetchAudioBuffer } = require("./lib/align");
 
@@ -154,7 +158,7 @@ app.post("/create-song", async (req, res) => {
     const built = await buildLyrics({ subject, topic, level, lesson, reviewVocab, avoidWords: avoid, language: lang, order: ord, genre });
     const { title, lyrics, vocab, subjectLabel } = built;
 
-    const song = await generateSong({ lyrics, genre, beat, artistFeel, similarSongs, arrangement, level, language: lang, voice });
+    const song = await makeSong({ lyrics, genre, beat, artistFeel, similarSongs, arrangement, level, language: lang, voice });
 
     // MiniMax may give us a URL or raw bytes; normalize to a URL the app can play.
     let audioUrl = song.audioUrl;
