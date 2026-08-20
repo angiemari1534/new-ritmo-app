@@ -27,7 +27,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Tennessee Whiskey by Chris Stapleton",
-    "arrangement": "pedal-steel guitar lead"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "greetings-rock",
@@ -72,7 +72,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Tennessee Whiskey by Chris Stapleton",
-    "arrangement": "banjo and dobro"
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "greetings-pop",
@@ -162,7 +162,7 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "warm piano and gentle steel"
+    "arrangement": "bright pedal-steel over a solid groove"
   },
   {
     "slug": "numbers-reggaeton",
@@ -222,7 +222,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Beautiful Crazy by Luke Combs",
-    "arrangement": "acoustic guitar and fiddle"
+    "arrangement": "driving electric guitar and drums"
   },
   {
     "slug": "colors-disco",
@@ -267,7 +267,7 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "pedal-steel guitar lead"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "pronouns-pop",
@@ -387,7 +387,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Last Night by Morgan Wallen",
-    "arrangement": "banjo and dobro"
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "places-latin",
@@ -432,7 +432,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Before He Cheats by Carrie Underwood",
-    "arrangement": "warm piano and gentle steel"
+    "arrangement": "bright pedal-steel over a solid groove"
   },
   {
     "slug": "emergencies-rap",
@@ -507,7 +507,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Beautiful Crazy by Luke Combs",
-    "arrangement": "acoustic guitar and fiddle"
+    "arrangement": "driving electric guitar and drums"
   },
   {
     "slug": "school-rap",
@@ -552,7 +552,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Heart Like a Truck by Lainey Wilson",
-    "arrangement": "pedal-steel guitar lead"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "transportation-classicrock",
@@ -582,7 +582,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Something in the Orange by Zach Bryan",
-    "arrangement": "banjo and dobro"
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "time-jazz",
@@ -672,7 +672,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Save Me by Jelly Roll",
-    "arrangement": "warm piano and gentle steel"
+    "arrangement": "bright pedal-steel over a solid groove"
   },
   {
     "slug": "cooking-latin",
@@ -777,7 +777,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Tennessee Whiskey by Chris Stapleton",
-    "arrangement": "acoustic guitar and fiddle"
+    "arrangement": "driving electric guitar and drums"
   },
   {
     "slug": "directions-rap",
@@ -852,7 +852,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Something in the Orange by Zach Bryan",
-    "arrangement": "pedal-steel guitar lead"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "pronouns-rock",
@@ -1047,7 +1047,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Last Night by Morgan Wallen",
-    "arrangement": "banjo and dobro"
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "days-pop",
@@ -1663,7 +1663,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Beautiful Crazy by Luke Combs",
-    "arrangement": "warm piano and gentle steel"
+    "arrangement": "bright pedal-steel over a solid groove"
   },
   {
     "slug": "time-l4",
@@ -2027,7 +2027,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Something in the Orange by Zach Bryan",
-    "arrangement": "acoustic guitar and fiddle"
+    "arrangement": "driving electric guitar and drums"
   },
   {
     "slug": "greetings-l10",
@@ -2069,7 +2069,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Save Me by Jelly Roll",
-    "arrangement": "pedal-steel guitar lead"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "pronouns-l7",
@@ -2475,7 +2475,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Tennessee Whiskey by Chris Stapleton",
-    "arrangement": "banjo and dobro"
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "places-l6",
@@ -2503,7 +2503,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Last Night by Morgan Wallen",
-    "arrangement": "warm piano and gentle steel"
+    "arrangement": "bright pedal-steel over a solid groove"
   },
   {
     "slug": "shopping-l5",
@@ -2812,7 +2812,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "acoustic guitar and fiddle"
+    "arrangement": "driving electric guitar and drums"
   },
   {
     "slug": "numbers-prestarter-l8",
@@ -3082,7 +3082,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "pedal-steel guitar lead"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "food-prestarter-l9",
@@ -3352,7 +3352,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "banjo and dobro"
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "time-prestarter-l9",
@@ -3622,7 +3622,7 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "warm piano and gentle steel"
+    "arrangement": "bright pedal-steel over a solid groove"
   },
   {
     "slug": "emergencies-prestarter-l8",
@@ -3892,7 +3892,7 @@
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "acoustic guitar and fiddle"
+    "arrangement": "driving electric guitar and drums"
   },
   {
     "slug": "greetings-starter-l12",
@@ -4162,7 +4162,7 @@
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "pedal-steel guitar lead"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "numbers-starter-l4",

@@ -102,26 +102,39 @@ async function main() {
     // Locked (approved) song? Restore it into place and reuse — never regenerate.
     const lockJson = path.join(LOCKED_DIR, `${s.slug}.json`);
     const lockMp3 = path.join(LOCKED_DIR, `${s.slug}.mp3`);
-    if (fs.existsSync(lockJson) && fs.existsSync(lockMp3)) {
+    const isLocked = fs.existsSync(lockJson) && fs.existsSync(lockMp3);
+    if (isLocked) {
       fs.copyFileSync(lockJson, cachePath);
       fs.copyFileSync(lockMp3, mp3Path);
     }
-    if (fs.existsSync(cachePath) && fs.existsSync(mp3Path)) {
+    const haveCache = fs.existsSync(cachePath) && fs.existsSync(mp3Path);
+    // Re-add the existing cached entry (keeps the song in the catalog as-is).
+    const reuseCached = () => {
       try {
         const cached = JSON.parse(fs.readFileSync(cachePath, "utf8"));
         addUsed(cached.data && cached.data.subject, cached.data && cached.data.vocab);
         entries.push(cached);
         writeCatalog();
-        console.log(`${s.slug}: reused from cache`);
-        continue;
-      } catch {}
+        return true;
+      } catch { return false; }
+    };
+    // Normal mode reuses any cached song. REBUILD=1 regenerates non-locked songs
+    // IN PLACE (locked stay), never deleting the old audio up front, and ALWAYS
+    // keeps the previous version if a regen fails — so the catalog is never left
+    // partial or pointing at a missing file, even if the run is interrupted.
+    const REBUILD = process.env.REBUILD === "1";
+    if ((!REBUILD || isLocked) && haveCache) {
+      if (reuseCached()) { console.log(`${s.slug}: reused from cache`); continue; }
     }
 
     process.stdout.write(`Building ${s.slug} (${s.genre}) on ${PROVIDER}... `);
     let made = null;
     try { made = await makeSong(s, usedBySubject[s.subject] || []); }
     catch (e) { console.log("ERROR:", e.message); }
-    if (!made) continue;
+    if (!made) {
+      if (haveCache && reuseCached()) console.log(`${s.slug}: kept previous take (regen failed)`);
+      continue;
+    }
     // A transient FS write error (Windows file-watcher/AV lock) must not crash the
     // whole batch — log it and move on; the next run picks the song back up.
     try { fs.writeFileSync(mp3Path, made.buf); }
