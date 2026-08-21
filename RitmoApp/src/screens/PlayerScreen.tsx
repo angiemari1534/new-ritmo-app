@@ -233,6 +233,7 @@ export default function PlayerScreen({
           <PlayerFlagBtn label="🔒 Lock" tone="lock" on={flags.includes("lock")} onPress={() => onToggleFlag("lock")} />
           <PlayerFlagBtn label="🔄 Reroll" tone="reroll" on={flags.includes("reroll")} onPress={() => onToggleFlag("reroll")} />
           <PlayerFlagBtn label={`⚠️ Not ${song.genre || "genre"}`} tone="bad" on={flags.includes("badgenre")} onPress={() => onToggleFlag("badgenre")} />
+          <PlayerFlagBtn label="🎤 Clearer" tone="convert" on={flags.includes("convert")} onPress={() => onToggleFlag("convert")} />
         </View>
       )}
 
@@ -363,10 +364,10 @@ function fmt(sec: number) {
   return `${m}:${s.toString().padStart(2, "0")}`;
 }
 
-function PlayerFlagBtn({ label, on, tone, onPress }: { label: string; on: boolean; tone: "lock" | "reroll" | "bad"; onPress: () => void }) {
+function PlayerFlagBtn({ label, on, tone, onPress }: { label: string; on: boolean; tone: "lock" | "reroll" | "bad" | "convert"; onPress: () => void }) {
   const { colors } = useTheme();
   const styles = useThemedStyles(makeStyles);
-  const onStyle = tone === "lock" ? styles.pflagLock : tone === "reroll" ? styles.pflagReroll : styles.pflagBad;
+  const onStyle = tone === "lock" ? styles.pflagLock : tone === "reroll" ? styles.pflagReroll : tone === "convert" ? styles.pflagConvert : styles.pflagBad;
   return (
     <Pressable onPress={onPress} hitSlop={4} style={{ flex: 1 }}>
       <View style={[styles.pflag, on && onStyle]}>
@@ -388,6 +389,7 @@ const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   pflagLock: { backgroundColor: "#37D67A", borderColor: "#37D67A" },
   pflagReroll: { backgroundColor: "#3AA0FF", borderColor: "#3AA0FF" },
   pflagBad: { backgroundColor: "#F5A623", borderColor: "#F5A623" },
+  pflagConvert: { backgroundColor: "#A855F7", borderColor: "#A855F7" },
   hSide: { width: 40, alignItems: "flex-start" },
   hSideRight: { width: 40, alignItems: "flex-end" },
   hActions: { flexDirection: "row", alignItems: "center", gap: 12 },

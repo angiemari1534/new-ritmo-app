@@ -58,9 +58,10 @@ export async function setCatalogRating(id: string, rating: number): Promise<Reco
 //   "lock"     — keep this exact take (protect it from rebuilds)
 //   "reroll"   — make a new version of this one
 //   "badgenre" — doesn't sound like its genre
+//   "convert"  — rebuild this one on ElevenLabs for clearer Spanish pronunciation
 // Stored per catalog id. The developer reads these off to know what to change.
 const CATFLAG_KEY = "ritmo.catflags.v1";
-export type CatalogFlag = "lock" | "reroll" | "badgenre";
+export type CatalogFlag = "lock" | "reroll" | "badgenre" | "convert";
 export async function loadCatalogFlags(): Promise<Record<string, CatalogFlag[]>> {
   try {
     const raw = await AsyncStorage.getItem(ns(CATFLAG_KEY));

@@ -195,6 +195,7 @@ export default function LibraryScreen({
                 <FlagBtn label="🔒 Lock" tone="lock" on={(catFlags[s.id] || []).includes("lock")} onPress={() => onToggleFlag(s.id, "lock")} />
                 <FlagBtn label="🔄 Redo" tone="reroll" on={(catFlags[s.id] || []).includes("reroll")} onPress={() => onToggleFlag(s.id, "reroll")} />
                 <FlagBtn label="⚠️ Genre" tone="bad" on={(catFlags[s.id] || []).includes("badgenre")} onPress={() => onToggleFlag(s.id, "badgenre")} />
+                <FlagBtn label="🎤 Clearer" tone="convert" on={(catFlags[s.id] || []).includes("convert")} onPress={() => onToggleFlag(s.id, "convert")} />
               </View>
             )}
           </View>
@@ -613,6 +614,7 @@ const FLAG_GROUPS: [CatalogFlag, string][] = [
   ["lock", "🔒 Lock (keep these exact takes)"],
   ["reroll", "🔄 Reroll (make new versions)"],
   ["badgenre", "⚠️ Doesn't sound like its genre"],
+  ["convert", "🎤 Convert to clearer pronunciation (ElevenLabs)"],
 ];
 
 function flagsPayload(catFlags: Record<string, CatalogFlag[]>, songs: Song[]) {
@@ -639,10 +641,10 @@ function flagsShareText(catFlags: Record<string, CatalogFlag[]>, songs: Song[]):
   return lines.join("\n");
 }
 
-function FlagBtn({ label, on, tone, onPress }: { label: string; on: boolean; tone: "lock" | "reroll" | "bad"; onPress: () => void }) {
+function FlagBtn({ label, on, tone, onPress }: { label: string; on: boolean; tone: "lock" | "reroll" | "bad" | "convert"; onPress: () => void }) {
   const { colors, gradients } = useTheme();
   const styles = useThemedStyles(makeStyles);
-  const onStyle = tone === "lock" ? styles.flagOnLock : tone === "reroll" ? styles.flagOnReroll : styles.flagOnBad;
+  const onStyle = tone === "lock" ? styles.flagOnLock : tone === "reroll" ? styles.flagOnReroll : tone === "convert" ? styles.flagOnConvert : styles.flagOnBad;
   return (
     <Pressable onPress={onPress} hitSlop={4} style={{ flex: 1 }}>
       <View style={[styles.flagBtn, on && onStyle]}>
@@ -909,6 +911,7 @@ const makeStyles = (colors: Colors, gradients: Gradients) => StyleSheet.create({
   flagOnLock: { backgroundColor: "#37D67A", borderColor: "#37D67A" },
   flagOnReroll: { backgroundColor: "#3AA0FF", borderColor: "#3AA0FF" },
   flagOnBad: { backgroundColor: "#F5A623", borderColor: "#F5A623" },
+  flagOnConvert: { backgroundColor: "#A855F7", borderColor: "#A855F7" },
   flagsHint: { color: colors.muted, fontSize: font.small, marginBottom: 10 },
   flagsGroup: { color: colors.accent, fontSize: font.small, fontWeight: "900", marginBottom: 6, textTransform: "uppercase", letterSpacing: 0.5 },
   flagsItem: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 8, paddingVertical: 6, borderBottomWidth: 1, borderBottomColor: colors.line },
