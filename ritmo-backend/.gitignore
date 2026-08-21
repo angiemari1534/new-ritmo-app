@@ -2,3 +2,6 @@ node_modules/
 .env
 *.log
 .DS_Store
+
+scripts/_regen*.txt
+scripts/_regen*.log

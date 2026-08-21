@@ -87,6 +87,10 @@ async function makeSong(s, avoidWords) {
 
 async function main() {
   const songs = JSON.parse(fs.readFileSync(LIST, "utf8"));
+  // Optional targeted-regen list (comma-separated slugs). Empty = all songs.
+  const onlyList = (process.env.ONLY || "").split(",").map((x) => x.trim()).filter(Boolean);
+  const onlySet = onlyList.length ? new Set(onlyList) : null;
+  if (onlySet) console.log(`ONLY mode: regenerating ${onlySet.size} targeted song(s), reusing the rest.`);
   fs.mkdirSync(CATALOG_DIR, { recursive: true });
   const entries = [];
   const usedBySubject = {};
@@ -123,7 +127,11 @@ async function main() {
     // keeps the previous version if a regen fails — so the catalog is never left
     // partial or pointing at a missing file, even if the run is interrupted.
     const REBUILD = process.env.REBUILD === "1";
-    if ((!REBUILD || isLocked) && haveCache) {
+    // ONLY=slug1,slug2,... regenerates just those slugs (targeted reroll); every
+    // other song reuses its cache. Locked songs are never regenerated regardless.
+    const targeted = !onlySet || onlySet.has(s.slug);
+    const shouldRegen = !isLocked && targeted && (onlySet ? true : REBUILD);
+    if (!shouldRegen && haveCache) {
       if (reuseCached()) { console.log(`${s.slug}: reused from cache`); continue; }
     }
 
