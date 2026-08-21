@@ -141,8 +141,8 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
 
   // Ad-libs are the #1 source of mindless repetition — keep them rare and unique.
   const adlibRule = isStarter
-    ? `- AD-LIBS: use AT MOST ONE tiny spoken ad-lib, only at the very start (2-4 words, e.g. "Here we go" or "¡Vamos!"). Do NOT sprinkle ad-libs through the song, and NEVER repeat an ad-lib phrase. At this level nearly every line should teach, not fill.\n`
-    : `- AD-LIBS: use them VERY sparingly — at most 2 or 3 in the WHOLE song, and every one must be DIFFERENT. NEVER repeat the same ad-lib phrase (do NOT say something like "in the pocket" over and over). Invent fresh ad-libs that fit${genre ? ` a ${genre}` : " this"} song; never use the word "vibes". A rare sprinkle, never a crutch.\n`;
+    ? `- AD-LIBS: use AT MOST ONE tiny spoken ad-lib, only at the very start, and it MUST be in ENGLISH — 2-4 words like "Here we go", "Alright now", "Let's go" — NEVER in ${language}. Do NOT sprinkle ad-libs through the song, and NEVER repeat an ad-lib phrase. At this level nearly every line should teach, not fill.\n`
+    : `- AD-LIBS: keep them in ENGLISH (never in ${language}) and use them VERY sparingly — at most 2 in the WHOLE song, each DIFFERENT. NEVER repeat an ad-lib phrase (do NOT say something like "in the pocket" over and over) and never use the word "vibes". Invent fresh English ad-libs that fit${genre ? ` a ${genre}` : " this"} song. A rare sprinkle, never a crutch.\n`;
 
   // Teaching proportion + how much English-only story filler is allowed.
   const teachRule = isStarter
@@ -205,6 +205,7 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
     `"""\n` + ex + `\n"""\n` +
     `Match that style EXACTLY:\n` +
     `- CRITICAL LANGUAGE ORDER: every teaching line must be "${first}… ${second}" — the ${first} word FIRST, then the ${second} translation. Follow this order exactly (as in the example above).\n` +
+    `- OPEN IN ENGLISH: the very first words of the song (including any intro ad-lib) must be English — NEVER start the song on a ${language} word or line. Begin in English, then bring in the ${language}.\n` +
     adlibRule +
     `- Teach each phrase on ONE line as "${first} phrase… ${second} translation" with "…" between them — e.g. "${targetPair}".\n` +
     `- EVERY "…" line is a TRUE TRANSLATION PAIR: the text before "…" and the text after "…" must mean EXACTLY the same thing — a faithful, accurate, natural translation of each other, the SAME phrase in both languages. Never pad or change one side. WRONG: "Saludo… A greeting everywhere" (one word vs a padded phrase). RIGHT: "A greeting… Un saludo". WRONG: "Good vibes… Buenos momentos" (means "good moments"). RIGHT: "Good vibes… Buenas vibras".\n` +

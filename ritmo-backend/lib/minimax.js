@@ -146,11 +146,13 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
     Moody: "moody and brooding", Confident: "confident and swaggering",
   };
   const moodPhrase = MOOD_PHRASE[moodWord];
-  if (moodPhrase) parts.push(moodPhrase);
-  // Some genres drift into generic pop/rock when the tempo is pushed up. Re-assert
-  // the signature sound so upbeat songs still read as their genre (esp. Country).
-  if (genre === "Country" && energetic)
-    parts.push("KEEP IT COUNTRY at this faster tempo — fiddle, banjo and pedal-steel, twangy guitars, a clear country vocal twang and boot-stomping country groove, never generic pop or pop-rock");
+  const countryEnergetic = genre === "Country" && energetic;
+  // For upbeat Country the generic "driving/club" mood language pushes MiniMax
+  // toward rock — replace it with an explicitly honky-tonk country description so
+  // fast country still reads as COUNTRY, not pop-rock.
+  if (moodPhrase && !countryEnergetic) parts.push(moodPhrase);
+  if (countryEnergetic)
+    parts.push("upbeat honky-tonk country two-step — fiddle, banjo and bright pedal-steel, twangy telecaster, clear country vocal twang, boot-stompin' backbeat, foot-tapping but unmistakably COUNTRY, never generic pop, rock or pop-rock");
   // The feel — tied to the GENRE so it stays true to it (country stays country,
   // reggaeton stays reggaeton) instead of drifting into generic pop.
   const vocalFeel = energetic ? "deep-toned energetic vocals not high-pitched or shrill" : "deep low relaxed chill vocals not high-pitched or shrill";

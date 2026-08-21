@@ -577,11 +577,11 @@
     "lesson": 2,
     "genre": "Country",
     "beat": "Energetic Normal",
-    "artistFeel": "Zach Bryan",
+    "artistFeel": "Luke Combs",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Something in the Orange by Zach Bryan",
+    "similarSongs": "When It Rains It Pours by Luke Combs",
     "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
@@ -847,11 +847,11 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Confident Normal",
-    "artistFeel": "Zach Bryan",
+    "artistFeel": "Shania Twain",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Something in the Orange by Zach Bryan",
+    "similarSongs": "Man I Feel Like a Woman by Shania Twain",
     "arrangement": "acoustic guitar and fiddle"
   },
   {
@@ -1046,7 +1046,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Last Night by Morgan Wallen",
+    "similarSongs": "Whiskey Glasses by Morgan Wallen",
     "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
@@ -2022,12 +2022,12 @@
     "lesson": 4,
     "genre": "Country",
     "beat": "Dance Upbeat",
-    "artistFeel": "Zach Bryan",
+    "artistFeel": "Morgan Wallen",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Something in the Orange by Zach Bryan",
-    "arrangement": "driving electric guitar and drums"
+    "similarSongs": "Last Night by Morgan Wallen",
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "greetings-l10",
@@ -2498,12 +2498,12 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Groovy Upbeat",
-    "artistFeel": "Morgan Wallen",
+    "artistFeel": "Chris Stapleton",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Last Night by Morgan Wallen",
-    "arrangement": "bright pedal-steel over a solid groove"
+    "similarSongs": "Second One to Know by Chris Stapleton",
+    "arrangement": "bright pedal-steel over a solid country groove"
   },
   {
     "slug": "shopping-l5",
@@ -2808,11 +2808,11 @@
     "genre": "Country",
     "beat": "Happy Upbeat",
     "artistFeel": "Luke Combs",
-    "similarSongs": "Beautiful Crazy by Luke Combs",
+    "similarSongs": "When It Rains It Pours by Luke Combs",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "driving electric guitar and drums"
+    "arrangement": "acoustic guitar and fiddle"
   },
   {
     "slug": "numbers-prestarter-l8",
@@ -4157,8 +4157,8 @@
     "lesson": 3,
     "genre": "Country",
     "beat": "Powerful Normal",
-    "artistFeel": "Dolly Parton",
-    "similarSongs": "Jolene by Dolly Parton",
+    "artistFeel": "Carrie Underwood",
+    "similarSongs": "Before He Cheats by Carrie Underwood",
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
