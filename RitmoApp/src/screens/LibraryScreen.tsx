@@ -80,6 +80,7 @@ export default function LibraryScreen({
       setLevelFilter(null);
       setGenreFilter(null);
       setTopicFilter(null);
+      setLockFilter(null);
       onFocusConsumed?.();
     }
   }, [focusFilter]);
@@ -95,7 +96,9 @@ export default function LibraryScreen({
   const [levelFilter, setLevelFilter] = useState<Tier | null>(null);
   const [genreFilter, setGenreFilter] = useState<string | null>(null);
   const [topicFilter, setTopicFilter] = useState<string | null>(null);
-  const [dropdown, setDropdown] = useState<null | "level" | "genre" | "topic">(null);
+  const [lockFilter, setLockFilter] = useState<null | "locked" | "unlocked">(null);
+  const [dropdown, setDropdown] = useState<null | "level" | "genre" | "topic" | "lock">(null);
+  const isLockedSong = (s: Song) => s.catalog === true && catLocked.includes(s.id);
 
   const q = search.trim().toLowerCase();
   // Songs in the current tab (before level/genre filters) — the dropdowns and
@@ -110,6 +113,7 @@ export default function LibraryScreen({
   if (levelFilter) base = base.filter((s) => s.level === levelFilter);
   if (genreFilter) base = base.filter((s) => (s.genre || "Other") === genreFilter);
   if (topicFilter) base = base.filter((s) => s.subject === topicFilter);
+  if (lockFilter) base = base.filter((s) => (lockFilter === "locked" ? isLockedSong(s) : !isLockedSong(s)));
   const shown = q
     ? base.filter((s) => `${songTitle(s)} ${s.genre ?? ""} ${s.level} ${subjectLabel(s.subject)}`.toLowerCase().includes(q))
     : base;
@@ -143,7 +147,10 @@ export default function LibraryScreen({
     setLevelFilter(null);
     setGenreFilter(null);
     setTopicFilter(null);
+    setLockFilter(null);
   };
+  const lockedCount = scopeSongs.filter(isLockedSong).length;
+  const unlockedCount = scopeSongs.length - lockedCount;
   const levelsPresent = TIER_ORDER.filter((l) => scopeSongs.some((s) => s.level === l));
   const genresPresent = Array.from(new Set(scopeSongs.map((s) => s.genre || "Other"))).sort();
   const topicsPresent = Array.from(new Set(scopeSongs.map((s) => s.subject)))
@@ -316,6 +323,12 @@ export default function LibraryScreen({
                 <Text style={styles.ddLabel}>Topic</Text>
                 <Text style={styles.ddValue}>{topicFilter ? subjectLabel(topicFilter) : "All"} ▾</Text>
               </Pressable>
+              {filter === "catalog" && (
+                <Pressable style={[styles.ddBtn, lockFilter && styles.ddBtnOn]} onPress={() => setDropdown("lock")}>
+                  <Text style={styles.ddLabel}>Status</Text>
+                  <Text style={styles.ddValue}>{lockFilter === "locked" ? "🔒 Locked" : lockFilter === "unlocked" ? "Unlocked" : "All"} ▾</Text>
+                </Pressable>
+              )}
             </View>
 
             {shown.length > 1 && (
@@ -464,22 +477,36 @@ export default function LibraryScreen({
         <Pressable style={sheet.backdrop} onPress={() => setDropdown(null)} />
         <View style={sheet.card}>
           <View style={sheet.handle} />
-          <Text style={sheet.title}>{dropdown === "level" ? "Choose a level" : dropdown === "genre" ? "Choose a genre" : "Choose a topic"}</Text>
+          <Text style={sheet.title}>{dropdown === "level" ? "Choose a level" : dropdown === "genre" ? "Choose a genre" : dropdown === "lock" ? "Locked or unlocked" : "Choose a topic"}</Text>
           <ScrollView style={{ maxHeight: 360 }}>
             <Pressable
               onPress={() => {
                 if (dropdown === "level") setLevelFilter(null);
                 else if (dropdown === "genre") setGenreFilter(null);
+                else if (dropdown === "lock") setLockFilter(null);
                 else setTopicFilter(null);
                 setDropdown(null);
               }}
             >
               <View style={styles.ddOpt}>
-                <Text style={styles.ddOptText}>All {dropdown === "level" ? "levels" : dropdown === "genre" ? "genres" : "topics"}</Text>
-                {(dropdown === "level" ? !levelFilter : dropdown === "genre" ? !genreFilter : !topicFilter) && <Text style={styles.ddCheck}>✓</Text>}
+                <Text style={styles.ddOptText}>All {dropdown === "level" ? "levels" : dropdown === "genre" ? "genres" : dropdown === "lock" ? "songs" : "topics"}</Text>
+                {(dropdown === "level" ? !levelFilter : dropdown === "genre" ? !genreFilter : dropdown === "lock" ? !lockFilter : !topicFilter) && <Text style={styles.ddCheck}>✓</Text>}
               </View>
             </Pressable>
-            {dropdown === "level"
+            {dropdown === "lock"
+              ? [
+                  { key: "locked" as const, label: "🔒 Locked", count: lockedCount },
+                  { key: "unlocked" as const, label: "Unlocked", count: unlockedCount },
+                ].map((o) => (
+                  <Pressable key={o.key} onPress={() => { setLockFilter(o.key); setDropdown(null); }}>
+                    <View style={styles.ddOpt}>
+                      <Text style={styles.ddOptText}>{o.label}</Text>
+                      <Text style={styles.ddCount}>{o.count}</Text>
+                      {lockFilter === o.key && <Text style={styles.ddCheck}>✓</Text>}
+                    </View>
+                  </Pressable>
+                ))
+              : dropdown === "level"
               ? levelsPresent.map((l) => (
                   <Pressable key={l} onPress={() => { setLevelFilter(l); setDropdown(null); }}>
                     <View style={styles.ddOpt}>
