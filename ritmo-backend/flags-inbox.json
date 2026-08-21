@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-20T18:54:39.498Z",
-  "count": 8,
+  "at": "2026-08-20T22:11:27.486Z",
+  "count": 22,
   "flags": [
     {
       "id": "cat-numbers-edm",
@@ -9,7 +9,7 @@
       "subject": "numbers",
       "lesson": 4,
       "actions": [
-        "reroll"
+        "lock"
       ]
     },
     {
@@ -19,7 +19,7 @@
       "subject": "numbers",
       "lesson": 5,
       "actions": [
-        "badgenre"
+        "lock"
       ]
     },
     {
@@ -29,7 +29,8 @@
       "subject": "hobbies",
       "lesson": 2,
       "actions": [
-        "lock"
+        "reroll",
+        "badgenre"
       ]
     },
     {
@@ -49,8 +50,7 @@
       "subject": "places",
       "lesson": 2,
       "actions": [
-        "reroll",
-        "badgenre"
+        "lock"
       ]
     },
     {
@@ -79,6 +79,146 @@
       "genre": "Rock",
       "subject": "emergencies",
       "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-family-pop",
+      "title": "Family",
+      "genre": "Pop",
+      "subject": "family",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-feelings-blues",
+      "title": "Feelings",
+      "genre": "Blues",
+      "subject": "feelings",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-cooking-latin",
+      "title": "Cooking & Kitchen",
+      "genre": "90s",
+      "subject": "cooking",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-animals-reggae",
+      "title": "Animals",
+      "genre": "Reggaeton",
+      "subject": "animals",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-body-hiphop",
+      "title": "Body & Health",
+      "genre": "Hip-Hop",
+      "subject": "body",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-animals-l4",
+      "title": "Animals",
+      "genre": "Blues",
+      "subject": "animals",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-animals-l3",
+      "title": "Animals",
+      "genre": "Latin",
+      "subject": "animals",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-cooking-l4",
+      "title": "Cooking & Kitchen",
+      "genre": "Blues",
+      "subject": "cooking",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-cooking-l3",
+      "title": "Cooking & Kitchen",
+      "genre": "Latin",
+      "subject": "cooking",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-food-l4",
+      "title": "Food & Restaurant",
+      "genre": "Bachata",
+      "subject": "food",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-food-l3",
+      "title": "Food & Restaurant",
+      "genre": "Classic Rock",
+      "subject": "food",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-feelings-l4",
+      "title": "Feelings",
+      "genre": "Rap",
+      "subject": "feelings",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-feelings-l3",
+      "title": "Feelings",
+      "genre": "EDM",
+      "subject": "feelings",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-family-l4",
+      "title": "Family",
+      "genre": "Rap",
+      "subject": "family",
+      "lesson": 4,
       "actions": [
         "lock"
       ]
