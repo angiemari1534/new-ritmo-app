@@ -5,3 +5,7 @@ node_modules/
 
 scripts/_regen*.txt
 scripts/_regen*.log
+
+scripts/_el5_lockbak/
+scripts/_el*.log
+scripts/_eltest/

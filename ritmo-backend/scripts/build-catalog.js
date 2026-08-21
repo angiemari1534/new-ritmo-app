@@ -11,7 +11,7 @@
 //   node ritmo-backend/scripts/build-catalog.js
 // Add songs by editing catalog-list.json and re-running (incremental + cached).
 
-const PROVIDER = "minimax"; // <-- "minimax" (free testing) or "elevenlabs" (launch)
+const PROVIDER = process.env.PROVIDER || "minimax"; // "minimax" (fal) or "elevenlabs"; override per-run via env
 
 const fs = require("fs");
 const path = require("path");
@@ -43,8 +43,24 @@ async function postJson(url, body, headers) {
   return res;
 }
 
+// ElevenLabs ToS forbids naming real artists, so for genres whose GENRE_STYLE
+// mentions artists (Country, Rock), describe the SOUND instead — keeps the vibe.
+const EL_STYLE_OVERRIDE = {
+  Country: "authentic outlaw Americana country, real fiddle banjo and pedal-steel, warm acoustic and twangy electric guitar, raw soulful vocals with a genuine country twang and drawl, organic rootsy groove, not pop",
+  Rock: "raw alternative and grunge rock, gritty distorted electric guitar, real live drums and driving bass, raw emotive vocals with an edge, garage-band energy",
+};
+const EL_ROCKISH = (g) => g === "Rock" || g === "Classic Rock" || g === "Alternative";
+const EL_BPM = { Slow: 80, Normal: 100, Upbeat: 120, Fast: 132 };
+function elTempo(beat) {
+  const t = String(beat || "").trim().split(/\s+/).pop();
+  const bpm = EL_BPM[t] || 100;
+  const feel = t === "Slow" ? "relaxed" : (t === "Upbeat" || t === "Fast") ? "upbeat energetic" : "medium";
+  return `steady ${bpm} BPM ${feel} tempo, natural and singable`;
+}
+
 // ElevenLabs: our "[Section]\nline" lyrics -> composition_plan chunks (no artist).
-function lyricsToChunks(lyrics, genre) {
+// Preserves genre CHARACTER + the song's own tempo, and keeps pronunciation clear.
+function lyricsToChunks(lyrics, genre, beat) {
   const blocks = [];
   let cur = null;
   for (const raw of lyrics.split("\n")) {
@@ -53,9 +69,23 @@ function lyricsToChunks(lyrics, genre) {
     if (t.startsWith("[")) { cur = { name: t, lines: [] }; blocks.push(cur); }
     else if (cur) cur.lines.push(t);
   }
-  const style = GENRE_STYLE[genre] || (genre ? `${genre} music` : "catchy melodic song");
-  const pos = [style, "Spanish-language vocals", "clear correct native Spanish pronunciation and accent", "lead vocals mixed loud and clear out in front", "soft gentle light backing music, easy to hear every word", "comfortable steady medium tempo around 100 BPM, upbeat and fun to sing along, easy to follow"];
-  const neg = ["muffled or slurred vocals", "English-accented Spanish", "loud instruments drowning out the vocals", "instruments louder than the singing", "heavy distortion, aggressive, wall of sound, screaming", "too slow, draggy, sluggish, dragging ballad tempo, too fast or rushed"];
+  const style = EL_STYLE_OVERRIDE[genre] || GENRE_STYLE[genre] || (genre ? `${genre} music` : "catchy melodic song");
+  const pos = [
+    style,
+    "Spanish-language vocals",
+    "clear, correct, fully enunciated native Latin-American Spanish pronunciation and accent",
+    "lead vocals mixed loud and clear right out in front, every word easy to hear and sing along",
+    "soft, controlled backing music that never covers the voice",
+    elTempo(beat),
+  ];
+  const neg = [
+    "muffled, mumbled or slurred vocals",
+    "English-accented Spanish",
+    "instruments louder than the singing",
+    "screamed or shouted vocals",
+    "too slow and draggy, or too fast and rushed",
+  ];
+  if (!EL_ROCKISH(genre)) neg.push("heavy distortion, aggressive wall of sound");
   return blocks.filter((b) => b.lines.length).map((b) => ({
     text: `${b.name}\n${b.lines.join("\n")}`,
     duration_ms: Math.max(4000, b.lines.length * 2200),
@@ -72,7 +102,7 @@ async function makeSong(s, avoidWords) {
     const built = await lr.json();
     if (!built || built.error || !built.lyrics) { console.log("LYRICS FAILED:", (built && built.error) || "none"); return null; }
     const data = { title: built.title, subject: s.subject, subjectLabel: built.subjectLabel, level: s.level, lesson: built.lesson || s.lesson || 1, totalLessons: 100, genre: s.genre, lyrics: built.lyrics, vocab: built.vocab };
-    const mr = await fetch(EL_MUSIC_URL, { method: "POST", headers: { "xi-api-key": EL_KEY, "Content-Type": "application/json" }, body: JSON.stringify({ composition_plan: { chunks: lyricsToChunks(data.lyrics, s.genre) }, model_id: "music_v2" }) });
+    const mr = await fetch(EL_MUSIC_URL, { method: "POST", headers: { "xi-api-key": EL_KEY, "Content-Type": "application/json" }, body: JSON.stringify({ composition_plan: { chunks: lyricsToChunks(data.lyrics, s.genre, s.beat) }, model_id: "music_v2" }) });
     if (!mr.ok) { console.log("EL MUSIC FAILED:", mr.status, (await mr.text()).slice(0, 160)); return null; }
     return { data, buf: Buffer.from(await mr.arrayBuffer()) };
   }
