@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-20T22:11:27.486Z",
-  "count": 22,
+  "at": "2026-08-21T10:44:34.424Z",
+  "count": 163,
   "flags": [
     {
       "id": "cat-numbers-edm",
@@ -23,202 +23,1619 @@
       ]
     },
     {
-      "id": "cat-hobbies-pop",
-      "title": "Hobbies & Sports",
-      "genre": "Country",
-      "subject": "hobbies",
-      "lesson": 2,
+      "id": "cat-clothing-l3",
+      "title": "Clothing",
+      "genre": "R&B",
+      "subject": "clothing",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-body-l4",
+      "title": "Body & Health",
+      "genre": "Jazz",
+      "subject": "body",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-body-l3",
+      "title": "Body & Health",
+      "genre": "Blues",
+      "subject": "body",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-days-l3",
+      "title": "Days & Time",
+      "genre": "Rock",
+      "subject": "days",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-weather-l4",
+      "title": "Weather",
+      "genre": "Hip-Hop",
+      "subject": "weather",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-weather-l3",
+      "title": "Weather",
+      "genre": "Reggaeton",
+      "subject": "weather",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-home-l4",
+      "title": "House & Home",
+      "genre": "Rock",
+      "subject": "home",
+      "lesson": 4,
       "actions": [
         "reroll",
         "badgenre"
       ]
     },
     {
-      "id": "cat-transportation-classicrock",
-      "title": "Transportation",
-      "genre": "Classic Rock",
-      "subject": "transportation",
-      "lesson": 2,
+      "id": "cat-home-l3",
+      "title": "House & Home",
+      "genre": "Jazz",
+      "subject": "home",
+      "lesson": 3,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-places-salsa",
+      "id": "cat-clothing-l4",
+      "title": "Clothing",
+      "genre": "Reggaeton",
+      "subject": "clothing",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-days-l4",
+      "title": "Days & Time",
+      "genre": "Country",
+      "subject": "days",
+      "lesson": 4,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-time-l4",
+      "title": "Telling Time",
+      "genre": "Latin",
+      "subject": "time",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-time-l5",
+      "title": "Telling Time",
+      "genre": "Disco",
+      "subject": "time",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-directions-l3",
+      "title": "Getting Around",
+      "genre": "Hip-Hop",
+      "subject": "directions",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-directions-l4",
+      "title": "Getting Around",
+      "genre": "Disco",
+      "subject": "directions",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-l4",
+      "title": "Transportation",
+      "genre": "Disco",
+      "subject": "transportation",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-l5",
+      "title": "Transportation",
+      "genre": "Bachata",
+      "subject": "transportation",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-places-l4",
+      "title": "Places in Town",
+      "genre": "EDM",
+      "subject": "places",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-places-l5",
+      "title": "Places in Town",
+      "genre": "Bachata",
+      "subject": "places",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-shopping-l3",
+      "title": "Shopping & Money",
+      "genre": "EDM",
+      "subject": "shopping",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-shopping-l4",
+      "title": "Shopping & Money",
+      "genre": "Bachata",
+      "subject": "shopping",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-jobs-l4",
+      "title": "Jobs & Work",
+      "genre": "Latin",
+      "subject": "jobs",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-jobs-l5",
+      "title": "Jobs & Work",
+      "genre": "Reggaeton",
+      "subject": "jobs",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-school-l4",
+      "title": "School",
+      "genre": "Classic Rock",
+      "subject": "school",
+      "lesson": 4,
+      "actions": [
+        "badgenre",
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-school-l5",
+      "title": "School",
+      "genre": "Blues",
+      "subject": "school",
+      "lesson": 5,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-technology-l4",
+      "title": "Technology",
+      "genre": "Blues",
+      "subject": "technology",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-technology-l5",
+      "title": "Technology",
+      "genre": "Reggaeton",
+      "subject": "technology",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-hobbies-l4",
+      "title": "Hobbies & Sports",
+      "genre": "Bachata",
+      "subject": "hobbies",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-hobbies-l5",
+      "title": "Hobbies & Sports",
+      "genre": "Latin",
+      "subject": "hobbies",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-l4",
+      "title": "Nature & Outdoors",
+      "genre": "Jazz",
+      "subject": "nature",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-l4",
+      "title": "Emergencies",
+      "genre": "Reggaeton",
+      "subject": "emergencies",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-l5",
+      "title": "Nature & Outdoors",
+      "genre": "Rock",
+      "subject": "nature",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-l5",
+      "title": "Emergencies",
+      "genre": "R&B",
+      "subject": "emergencies",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-verbs-l3",
+      "title": "Common Verbs",
+      "genre": "Blues",
+      "subject": "verbs",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-verbs-l4",
+      "title": "Common Verbs",
+      "genre": "Reggaeton",
+      "subject": "verbs",
+      "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-vacation-l3",
+      "title": "Vacation & Travel",
+      "genre": "Pop",
+      "subject": "vacation",
+      "lesson": 3,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-vacation-l4",
+      "title": "Vacation & Travel",
+      "genre": "Country",
+      "subject": "vacation",
+      "lesson": 4,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-greetings-l10",
+      "title": "Greetings & Conversation",
+      "genre": "Classic Rock",
+      "subject": "greetings",
+      "lesson": 10,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-l11",
+      "title": "Greetings & Conversation",
+      "genre": "Bachata",
+      "subject": "greetings",
+      "lesson": 11,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-pronouns-l6",
+      "title": "Pronouns",
+      "genre": "Country",
+      "subject": "pronouns",
+      "lesson": 6,
+      "actions": [
+        "lock",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-pronouns-l7",
+      "title": "Pronouns",
+      "genre": "Classic Rock",
+      "subject": "pronouns",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-descriptions-l6",
+      "title": "Descriptions",
+      "genre": "Rap",
+      "subject": "descriptions",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-descriptions-l7",
+      "title": "Descriptions",
+      "genre": "Bachata",
+      "subject": "descriptions",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-questions-l6",
+      "title": "Question Words",
+      "genre": "R&B",
+      "subject": "questions",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-questions-l7",
+      "title": "Question Words",
+      "genre": "Blues",
+      "subject": "questions",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-family-l5",
+      "title": "Family",
+      "genre": "Classic Rock",
+      "subject": "family",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-family-l6",
+      "title": "Family",
+      "genre": "Bachata",
+      "subject": "family",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-feelings-l5",
+      "title": "Feelings",
+      "genre": "Classic Rock",
+      "subject": "feelings",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-feelings-l6",
+      "title": "Feelings",
+      "genre": "Bachata",
+      "subject": "feelings",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-food-l5",
+      "title": "Food & Restaurant",
+      "genre": "Blues",
+      "subject": "food",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-food-l6",
+      "title": "Food & Restaurant",
+      "genre": "Jazz",
+      "subject": "food",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-cooking-l5",
+      "title": "Cooking & Kitchen",
+      "genre": "Reggaeton",
+      "subject": "cooking",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-cooking-l6",
+      "title": "Cooking & Kitchen",
+      "genre": "80s Synthpop",
+      "subject": "cooking",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-animals-l5",
+      "title": "Animals",
+      "genre": "Jazz",
+      "subject": "animals",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-animals-l6",
+      "title": "Animals",
+      "genre": "80s New Wave",
+      "subject": "animals",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-body-l5",
+      "title": "Body & Health",
+      "genre": "80s Synthpop",
+      "subject": "body",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-body-l6",
+      "title": "Body & Health",
+      "genre": "80s Rock",
+      "subject": "body",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-clothing-l5",
+      "title": "Clothing",
+      "genre": "80s New Wave",
+      "subject": "clothing",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-clothing-l6",
+      "title": "Clothing",
+      "genre": "90s Grunge",
+      "subject": "clothing",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-home-l5",
+      "title": "House & Home",
+      "genre": "80s Rock",
+      "subject": "home",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-home-l6",
+      "title": "House & Home",
+      "genre": "90s Hip-Hop",
+      "subject": "home",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-weather-l5",
+      "title": "Weather",
+      "genre": "90s Grunge",
+      "subject": "weather",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-weather-l6",
+      "title": "Weather",
+      "genre": "90s R&B",
+      "subject": "weather",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-days-l5",
+      "title": "Days & Time",
+      "genre": "90s Hip-Hop",
+      "subject": "days",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-days-l6",
+      "title": "Days & Time",
+      "genre": "90s Dance",
+      "subject": "days",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-time-l6",
+      "title": "Telling Time",
+      "genre": "90s Dance",
+      "subject": "time",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-directions-l5",
+      "title": "Getting Around",
+      "genre": "90s Dance",
+      "subject": "directions",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-directions-l6",
+      "title": "Getting Around",
+      "genre": "Reggaeton",
+      "subject": "directions",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-l6",
+      "title": "Transportation",
+      "genre": "Reggaeton",
+      "subject": "transportation",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-l7",
+      "title": "Transportation",
+      "genre": "Country",
+      "subject": "transportation",
+      "lesson": 7,
+      "actions": [
+        "reroll",
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-places-l6",
+      "title": "Places in Town",
+      "genre": "Reggaeton",
+      "subject": "places",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-places-l7",
       "title": "Places in Town",
       "genre": "Country",
       "subject": "places",
-      "lesson": 2,
+      "lesson": 7,
       "actions": [
-        "lock"
+        "badgenre"
       ]
     },
     {
-      "id": "cat-time-jazz",
-      "title": "Telling Time",
-      "genre": "80s",
-      "subject": "time",
-      "lesson": 2,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-nature-pop",
-      "title": "Nature & Outdoors",
-      "genre": "Pop",
-      "subject": "nature",
-      "lesson": 2,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-emergencies-rock",
-      "title": "Emergencies",
-      "genre": "Rock",
-      "subject": "emergencies",
-      "lesson": 2,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-family-pop",
-      "title": "Family",
-      "genre": "Pop",
-      "subject": "family",
-      "lesson": 1,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-feelings-blues",
-      "title": "Feelings",
-      "genre": "Blues",
-      "subject": "feelings",
-      "lesson": 1,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-cooking-latin",
-      "title": "Cooking & Kitchen",
-      "genre": "90s",
-      "subject": "cooking",
-      "lesson": 1,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-animals-reggae",
-      "title": "Animals",
+      "id": "cat-shopping-l5",
+      "title": "Shopping & Money",
       "genre": "Reggaeton",
-      "subject": "animals",
-      "lesson": 1,
+      "subject": "shopping",
+      "lesson": 5,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-body-hiphop",
-      "title": "Body & Health",
-      "genre": "Hip-Hop",
-      "subject": "body",
-      "lesson": 1,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-animals-l4",
-      "title": "Animals",
-      "genre": "Blues",
-      "subject": "animals",
-      "lesson": 4,
-      "actions": [
-        "lock"
-      ]
-    },
-    {
-      "id": "cat-animals-l3",
-      "title": "Animals",
+      "id": "cat-shopping-l6",
+      "title": "Shopping & Money",
       "genre": "Latin",
-      "subject": "animals",
-      "lesson": 3,
+      "subject": "shopping",
+      "lesson": 6,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-cooking-l4",
-      "title": "Cooking & Kitchen",
-      "genre": "Blues",
-      "subject": "cooking",
-      "lesson": 4,
+      "id": "cat-jobs-l6",
+      "title": "Jobs & Work",
+      "genre": "R&B",
+      "subject": "jobs",
+      "lesson": 6,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-cooking-l3",
-      "title": "Cooking & Kitchen",
+      "id": "cat-jobs-l7",
+      "title": "Jobs & Work",
+      "genre": "Rap",
+      "subject": "jobs",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-school-l6",
+      "title": "School",
       "genre": "Latin",
-      "subject": "cooking",
-      "lesson": 3,
+      "subject": "school",
+      "lesson": 6,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-food-l4",
-      "title": "Food & Restaurant",
+      "id": "cat-school-l7",
+      "title": "School",
+      "genre": "Disco",
+      "subject": "school",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-technology-l6",
+      "title": "Technology",
+      "genre": "Disco",
+      "subject": "technology",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-technology-l7",
+      "title": "Technology",
       "genre": "Bachata",
-      "subject": "food",
-      "lesson": 4,
+      "subject": "technology",
+      "lesson": 7,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-food-l3",
-      "title": "Food & Restaurant",
+      "id": "cat-hobbies-l6",
+      "title": "Hobbies & Sports",
       "genre": "Classic Rock",
-      "subject": "food",
-      "lesson": 3,
+      "subject": "hobbies",
+      "lesson": 6,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-feelings-l4",
-      "title": "Feelings",
+      "id": "cat-hobbies-l7",
+      "title": "Hobbies & Sports",
+      "genre": "Bachata",
+      "subject": "hobbies",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-l6",
+      "title": "Nature & Outdoors",
+      "genre": "Latin",
+      "subject": "nature",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-l7",
+      "title": "Nature & Outdoors",
+      "genre": "80s Synthpop",
+      "subject": "nature",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-l6",
+      "title": "Emergencies",
+      "genre": "Latin",
+      "subject": "emergencies",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-l7",
+      "title": "Emergencies",
+      "genre": "80s New Wave",
+      "subject": "emergencies",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-verbs-l5",
+      "title": "Common Verbs",
+      "genre": "Classic Rock",
+      "subject": "verbs",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-verbs-l6",
+      "title": "Common Verbs",
+      "genre": "R&B",
+      "subject": "verbs",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-vacation-l5",
+      "title": "Vacation & Travel",
+      "genre": "Reggaeton",
+      "subject": "vacation",
+      "lesson": 5,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-vacation-l6",
+      "title": "Vacation & Travel",
+      "genre": "80s New Wave",
+      "subject": "vacation",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-prestarter-l12",
+      "title": "Greetings & Conversation",
+      "genre": "Reggaeton",
+      "subject": "greetings",
+      "lesson": 12,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-pronouns-prestarter-l8",
+      "title": "Pronouns",
+      "genre": "Pop",
+      "subject": "pronouns",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-pronouns-prestarter-l9",
+      "title": "Pronouns",
+      "genre": "Hip-Hop",
+      "subject": "pronouns",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-numbers-prestarter-l8",
+      "title": "Numbers",
+      "genre": "R&B",
+      "subject": "numbers",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-numbers-prestarter-l9",
+      "title": "Numbers",
+      "genre": "Latin",
+      "subject": "numbers",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-numbers-prestarter-l10",
+      "title": "Numbers",
+      "genre": "Rock",
+      "subject": "numbers",
+      "lesson": 10,
+      "actions": [
+        "badgenre",
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-numbers-prestarter-l11",
+      "title": "Numbers",
+      "genre": "Bachata",
+      "subject": "numbers",
+      "lesson": 11,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-numbers-prestarter-l12",
+      "title": "Numbers",
       "genre": "Rap",
-      "subject": "feelings",
-      "lesson": 4,
+      "subject": "numbers",
+      "lesson": 12,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-feelings-l3",
-      "title": "Feelings",
+      "id": "cat-numbers-prestarter-l13",
+      "title": "Numbers",
       "genre": "EDM",
+      "subject": "numbers",
+      "lesson": 13,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-colors-prestarter-l9",
+      "title": "Colors",
+      "genre": "Bachata",
+      "subject": "colors",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-colors-prestarter-l10",
+      "title": "Colors",
+      "genre": "Disco",
+      "subject": "colors",
+      "lesson": 10,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-descriptions-prestarter-l8",
+      "title": "Descriptions",
+      "genre": "Alternative",
+      "subject": "descriptions",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-descriptions-prestarter-l9",
+      "title": "Descriptions",
+      "genre": "Classic Rock",
+      "subject": "descriptions",
+      "lesson": 9,
+      "actions": [
+        "badgenre",
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-questions-prestarter-l8",
+      "title": "Question Words",
+      "genre": "80s",
+      "subject": "questions",
+      "lesson": 8,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-questions-prestarter-l9",
+      "title": "Question Words",
+      "genre": "90s",
+      "subject": "questions",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-family-prestarter-l7",
+      "title": "Family",
+      "genre": "Bachata",
+      "subject": "family",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-family-prestarter-l8",
+      "title": "Family",
+      "genre": "Blues",
+      "subject": "family",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-family-prestarter-l9",
+      "title": "Family",
+      "genre": "Reggaeton",
+      "subject": "family",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-feelings-prestarter-l7",
+      "title": "Feelings",
+      "genre": "Pop",
       "subject": "feelings",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-food-prestarter-l7",
+      "title": "Food & Restaurant",
+      "genre": "Hip-Hop",
+      "subject": "food",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-food-prestarter-l8",
+      "title": "Food & Restaurant",
+      "genre": "Country",
+      "subject": "food",
+      "lesson": 8,
+      "actions": [
+        "badgenre"
+      ]
+    },
+    {
+      "id": "cat-food-prestarter-l9",
+      "title": "Food & Restaurant",
+      "genre": "R&B",
+      "subject": "food",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-cooking-prestarter-l7",
+      "title": "Cooking & Kitchen",
+      "genre": "Latin",
+      "subject": "cooking",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-cooking-prestarter-l8",
+      "title": "Cooking & Kitchen",
+      "genre": "Rock",
+      "subject": "cooking",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-cooking-prestarter-l9",
+      "title": "Cooking & Kitchen",
+      "genre": "Latin",
+      "subject": "cooking",
+      "lesson": 9,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-animals-prestarter-l7",
+      "title": "Animals",
+      "genre": "Rap",
+      "subject": "animals",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-animals-prestarter-l8",
+      "title": "Animals",
+      "genre": "EDM",
+      "subject": "animals",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-animals-prestarter-l9",
+      "title": "Animals",
+      "genre": "Bachata",
+      "subject": "animals",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-body-prestarter-l7",
+      "title": "Body & Health",
+      "genre": "Disco",
+      "subject": "body",
+      "lesson": 7,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-body-prestarter-l8",
+      "title": "Body & Health",
+      "genre": "Alternative",
+      "subject": "body",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-clothing-prestarter-l7",
+      "title": "Clothing",
+      "genre": "Classic Rock",
+      "subject": "clothing",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-home-prestarter-l7",
+      "title": "House & Home",
+      "genre": "80s",
+      "subject": "home",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-home-prestarter-l8",
+      "title": "House & Home",
+      "genre": "90s",
+      "subject": "home",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-weather-prestarter-l7",
+      "title": "Weather",
+      "genre": "Bachata",
+      "subject": "weather",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-days-prestarter-l7",
+      "title": "Days & Time",
+      "genre": "Blues",
+      "subject": "days",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-days-prestarter-l8",
+      "title": "Days & Time",
+      "genre": "Reggaeton",
+      "subject": "days",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-days-prestarter-l9",
+      "title": "Days & Time",
+      "genre": "Pop",
+      "subject": "days",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-time-prestarter-l7",
+      "title": "Telling Time",
+      "genre": "Hip-Hop",
+      "subject": "time",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-time-prestarter-l8",
+      "title": "Telling Time",
+      "genre": "Country",
+      "subject": "time",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-time-prestarter-l9",
+      "title": "Telling Time",
+      "genre": "R&B",
+      "subject": "time",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-directions-prestarter-l7",
+      "title": "Getting Around",
+      "genre": "Latin",
+      "subject": "directions",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-directions-prestarter-l8",
+      "title": "Getting Around",
+      "genre": "Rock",
+      "subject": "directions",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-prestarter-l8",
+      "title": "Transportation",
+      "genre": "Blues",
+      "subject": "transportation",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-transportation-prestarter-l9",
+      "title": "Transportation",
+      "genre": "Rap",
+      "subject": "transportation",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-places-prestarter-l8",
+      "title": "Places in Town",
+      "genre": "EDM",
+      "subject": "places",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-places-prestarter-l9",
+      "title": "Places in Town",
+      "genre": "Bachata",
+      "subject": "places",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-shopping-prestarter-l7",
+      "title": "Shopping & Money",
+      "genre": "Disco",
+      "subject": "shopping",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-jobs-prestarter-l8",
+      "title": "Jobs & Work",
+      "genre": "Alternative",
+      "subject": "jobs",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-jobs-prestarter-l9",
+      "title": "Jobs & Work",
+      "genre": "Classic Rock",
+      "subject": "jobs",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-school-prestarter-l8",
+      "title": "School",
+      "genre": "80s",
+      "subject": "school",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-school-prestarter-l9",
+      "title": "School",
+      "genre": "90s",
+      "subject": "school",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-technology-prestarter-l8",
+      "title": "Technology",
+      "genre": "Latin",
+      "subject": "technology",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-technology-prestarter-l9",
+      "title": "Technology",
+      "genre": "Blues",
+      "subject": "technology",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-hobbies-prestarter-l8",
+      "title": "Hobbies & Sports",
+      "genre": "Reggaeton",
+      "subject": "hobbies",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-hobbies-prestarter-l9",
+      "title": "Hobbies & Sports",
+      "genre": "Pop",
+      "subject": "hobbies",
+      "lesson": 9,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-nature-prestarter-l8",
+      "title": "Nature & Outdoors",
+      "genre": "Hip-Hop",
+      "subject": "nature",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-nature-prestarter-l9",
+      "title": "Nature & Outdoors",
+      "genre": "Country",
+      "subject": "nature",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-prestarter-l8",
+      "title": "Emergencies",
+      "genre": "R&B",
+      "subject": "emergencies",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-emergencies-prestarter-l9",
+      "title": "Emergencies",
+      "genre": "Latin",
+      "subject": "emergencies",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-verbs-prestarter-l7",
+      "title": "Common Verbs",
+      "genre": "Rock",
+      "subject": "verbs",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-verbs-prestarter-l8",
+      "title": "Common Verbs",
+      "genre": "Bachata",
+      "subject": "verbs",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-vacation-prestarter-l7",
+      "title": "Vacation & Travel",
+      "genre": "Rap",
+      "subject": "vacation",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-vacation-prestarter-l8",
+      "title": "Vacation & Travel",
+      "genre": "EDM",
+      "subject": "vacation",
+      "lesson": 8,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-vacation-prestarter-l9",
+      "title": "Vacation & Travel",
+      "genre": "Bachata",
+      "subject": "vacation",
+      "lesson": 9,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-starter-l1",
+      "title": "Greetings & Conversation",
+      "genre": "Disco",
+      "subject": "greetings",
+      "lesson": 1,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-starter-l2",
+      "title": "Greetings & Conversation",
+      "genre": "Alternative",
+      "subject": "greetings",
+      "lesson": 2,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-starter-l3",
+      "title": "Greetings & Conversation",
+      "genre": "Classic Rock",
+      "subject": "greetings",
       "lesson": 3,
       "actions": [
         "lock"
       ]
     },
     {
-      "id": "cat-family-l4",
-      "title": "Family",
-      "genre": "Rap",
-      "subject": "family",
+      "id": "cat-greetings-starter-l4",
+      "title": "Greetings & Conversation",
+      "genre": "80s",
+      "subject": "greetings",
       "lesson": 4,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-starter-l5",
+      "title": "Greetings & Conversation",
+      "genre": "90s",
+      "subject": "greetings",
+      "lesson": 5,
+      "actions": [
+        "reroll"
+      ]
+    },
+    {
+      "id": "cat-greetings-starter-l6",
+      "title": "Greetings & Conversation",
+      "genre": "R&B",
+      "subject": "greetings",
+      "lesson": 6,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-starter-l7",
+      "title": "Greetings & Conversation",
+      "genre": "Blues",
+      "subject": "greetings",
+      "lesson": 7,
+      "actions": [
+        "lock"
+      ]
+    },
+    {
+      "id": "cat-greetings-starter-l10",
+      "title": "Greetings & Conversation",
+      "genre": "Hip-Hop",
+      "subject": "greetings",
+      "lesson": 10,
       "actions": [
         "lock"
       ]

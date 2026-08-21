@@ -134,6 +134,32 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
   };
   const lineStyle = LINE_STYLE[tier] || LINE_STYLE.beginner;
 
+  // Starter levels (prestarter "First Words" + starter) get much stricter rules:
+  // clean full-phrase repeats in BOTH languages, almost no English-only filler,
+  // steady progress through NEW words, and near-zero ad-libs.
+  const isStarter = tier === "starter" || tier === "prestarter";
+
+  // Ad-libs are the #1 source of mindless repetition — keep them rare and unique.
+  const adlibRule = isStarter
+    ? `- AD-LIBS: use AT MOST ONE tiny spoken ad-lib, only at the very start (2-4 words, e.g. "Here we go" or "¡Vamos!"). Do NOT sprinkle ad-libs through the song, and NEVER repeat an ad-lib phrase. At this level nearly every line should teach, not fill.\n`
+    : `- AD-LIBS: use them VERY sparingly — at most 2 or 3 in the WHOLE song, and every one must be DIFFERENT. NEVER repeat the same ad-lib phrase (do NOT say something like "in the pocket" over and over). Invent fresh ad-libs that fit${genre ? ` a ${genre}` : " this"} song; never use the word "vibes". A rare sprinkle, never a crutch.\n`;
+
+  // Teaching proportion + how much English-only story filler is allowed.
+  const teachRule = isStarter
+    ? `- THIS IS A STARTER LEARNING SONG: about 90% of lines must be bilingual teaching pairs "${first}… ${second}". Keep English-only story lines to an absolute minimum (0-2 in the whole song). Beginners need clear, repeated pairs — not story filler.\n`
+    : `- THIS IS A LEARNING SONG: aim for roughly 70-75% of lines to be bilingual teaching pairs "${first}… ${second}", with the remaining ~25-30% as English story lines and a few ad-libs. Mostly teaching, with real story flavor mixed in.\n`;
+
+  // The core fix: at starter, each teaching line is the SAME short phrase in BOTH
+  // languages, in full — never half-English/half-Spanish, never a lone word.
+  const fullPhraseRule = isStarter
+    ? `- FULL-PHRASE REPEAT (critical at this level): each teaching line is ONE complete short phrase said fully in BOTH languages — e.g. "I want water… Quiero agua". NEVER do a partial repeat like "I want water… agua", and NEVER mix languages inside one phrase like "I want agua all day". The ${first} side is 100% ${first}; the ${second} side is 100% ${second}; they mean EXACTLY the same thing. Keep both sides the SAME short length (proportional) — if one side is 3 words, the other is about 3 words too.\n`
+    : "";
+
+  // Progress through NEW words instead of drilling one phrase the whole song.
+  const hookRule = isStarter
+    ? `- Write a short catchy [Hook] and repeat it TWICE only. The rest of the song must keep introducing DIFFERENT teaching pairs so the learner meets many new words — do NOT drill the same phrase over and over. Some repetition helps memory, but progress through the new words.\n`
+    : `- Write a CATCHY [Hook] with a memorable final line; repeat the SAME hook 3 times through the song and END on it.\n`;
+
   // Order-aware few-shot example: teaching pairs are "<first>… <second>", so it
   // must flip when the learner picked English → target (en-es).
   const ex = (order === "en-es"
@@ -179,19 +205,22 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
     `"""\n` + ex + `\n"""\n` +
     `Match that style EXACTLY:\n` +
     `- CRITICAL LANGUAGE ORDER: every teaching line must be "${first}… ${second}" — the ${first} word FIRST, then the ${second} translation. Follow this order exactly (as in the example above).\n` +
-    `- Open with a short spoken ad-lib line (2-5 words), and add a couple more short ad-libs across the song to keep the energy. IMPORTANT: invent FRESH, DIFFERENT ad-libs every time that fit${genre ? ` a ${genre}` : " this"} song and theme — do NOT copy the example's intro, and NEVER use the word "vibes" or reuse the same opener. Draw from the genre (hip-hop: "Uh, yeah"; reggaeton: "¡Dale!"; pop: "Here we go"; country: "Alright now") or make up your own. Keep ad-libs light — a sprinkle, not every line.\n` +
+    adlibRule +
     `- Teach each phrase on ONE line as "${first} phrase… ${second} translation" with "…" between them — e.g. "${targetPair}".\n` +
     `- EVERY "…" line is a TRUE TRANSLATION PAIR: the text before "…" and the text after "…" must mean EXACTLY the same thing — a faithful, accurate, natural translation of each other, the SAME phrase in both languages. Never pad or change one side. WRONG: "Saludo… A greeting everywhere" (one word vs a padded phrase). RIGHT: "A greeting… Un saludo". WRONG: "Good vibes… Buenos momentos" (means "good moments"). RIGHT: "Good vibes… Buenas vibras".\n` +
+    fullPhraseRule +
     `- Use ACCURATE, natural ${language}. Never invent a translation that changes the meaning. If a phrase does not translate cleanly, pick a simpler phrase that does.\n` +
     `- English-only STORY lines must NOT contain "…" — reserve "…" ONLY for real translation pairs, so a story line is never mistaken for a translation.\n` +
     `- DO weave in some short English STORY lines (no "…") for flow, rhyme and vibe — they make it feel like a real song. Keep them a MINORITY though: never more than 2 English-only lines in a row, and never a whole verse with zero translations.\n` +
-    `- THIS IS A LEARNING SONG: aim for roughly 70-75% of lines to be bilingual teaching pairs "${first}… ${second}", with the remaining ~25-30% as English story lines and a few ad-libs. Mostly teaching, with real story flavor mixed in.\n` +
+    teachRule +
     `- Commit to ONE clear concept/character/vibe (a road trip, a night out, a day in the city…) that ties every word together.\n` +
-    `- Write a CATCHY [Hook] with a memorable final line; repeat the SAME hook 3 times through the song and END on it.\n` +
+    hookRule +
     `- Section tags each on their own line: a short intro, then [Hook], [Verse], [Hook], [Verse], [Bridge], [Hook].\n` +
     `Teaching rules:\n` +
     `- Teach these new words, each as its own "${first}… ${second}" line: ${newList}.\n` +
-    `- The SONG comes first: it's fine to drop a few of these words if fitting them all in would hurt the flow, rhyme, or catchiness. A great catchy song with fewer words beats a crammed one.\n` +
+    (isStarter
+      ? `- Teach as MANY of these new words as you can — the learner is here to meet new words, so keep moving to the next one instead of repeating the same few. It's fine to drop 1-2 if they truly won't fit, but cover most of them.\n`
+      : `- The SONG comes first: it's fine to drop a few of these words if fitting them all in would hurt the flow, rhyme, or catchiness. A great catchy song with fewer words beats a crammed one.\n`) +
     (reviewList ? `- Lightly bring back these 1-2 earlier words once: ${reviewList}.\n` : "") +
     `- Line length: ${lineStyle}\n` +
     `- Simple, natural, singable ${language} with a steady beat.\n` +
