@@ -9,3 +9,4 @@ scripts/_regen*.log
 scripts/_el5_lockbak/
 scripts/_el*.log
 scripts/_eltest/
+scripts/_catalog-list.bak.json
