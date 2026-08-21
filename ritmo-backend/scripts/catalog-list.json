@@ -605,14 +605,14 @@
     "subject": "nature",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Pop",
+    "genre": "Classic Rock",
     "beat": "Energetic Normal",
-    "artistFeel": "Ed Sheeran",
+    "artistFeel": null,
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Shape of You by Ed Sheeran",
-    "arrangement": "funky electric-guitar riff"
+    "similarSongs": null,
+    "arrangement": "Hammond organ and guitars"
   },
   {
     "slug": "emergencies-rock",
@@ -635,14 +635,14 @@
     "subject": "family",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "Pop",
+    "genre": "80s",
     "beat": "Chill Normal",
-    "artistFeel": "Bruno Mars",
+    "artistFeel": null,
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Uptown Funk by Bruno Mars",
-    "arrangement": "piano-driven arrangement"
+    "similarSongs": null,
+    "arrangement": "gated-reverb drums and synths"
   },
   {
     "slug": "feelings-blues",
@@ -800,14 +800,14 @@
     "subject": "shopping",
     "level": "prestarter",
     "lesson": 1,
-    "genre": "Pop",
+    "genre": "Disco",
     "beat": "Happy Upbeat",
-    "artistFeel": "Ariana Grande",
+    "artistFeel": null,
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "7 Rings by Ariana Grande",
-    "arrangement": "plucky synth arps and claps"
+    "similarSongs": null,
+    "arrangement": "wah guitar and strings"
   },
   {
     "slug": "verbs-alt",
@@ -905,14 +905,14 @@
     "subject": "questions",
     "level": "prestarter",
     "lesson": 3,
-    "genre": "Pop",
+    "genre": "Rock",
     "beat": "Confident Normal",
-    "artistFeel": "Justin Timberlake",
+    "artistFeel": null,
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Can't Stop the Feeling by Justin Timberlake",
-    "arrangement": "bright synth-lead hook"
+    "similarSongs": null,
+    "arrangement": "twin distorted guitar riffs"
   },
   {
     "slug": "family-country",
@@ -935,14 +935,14 @@
     "subject": "feelings",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Pop",
+    "genre": "Blues",
     "beat": "Calm Normal",
-    "artistFeel": "Katy Perry",
+    "artistFeel": null,
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Firework by Katy Perry",
-    "arrangement": "funky electric-guitar riff"
+    "similarSongs": null,
+    "arrangement": "slide guitar and harmonica"
   },
   {
     "slug": "food-reggaeton",
@@ -1025,14 +1025,14 @@
     "subject": "home",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Pop",
+    "genre": "Disco",
     "beat": "Party Upbeat",
-    "artistFeel": "Bruno Mars",
+    "artistFeel": null,
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Uptown Funk by Bruno Mars",
-    "arrangement": "piano-driven arrangement"
+    "similarSongs": null,
+    "arrangement": "slap bass and horns"
   },
   {
     "slug": "weather-reggae",
@@ -1055,14 +1055,14 @@
     "subject": "days",
     "level": "prestarter",
     "lesson": 2,
-    "genre": "Pop",
+    "genre": "EDM",
     "beat": "Dance Upbeat",
-    "artistFeel": "The Weeknd",
+    "artistFeel": null,
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Blinding Lights by The Weeknd",
-    "arrangement": "plucky synth arps and claps"
+    "similarSongs": null,
+    "arrangement": "big supersaw drops"
   },
   {
     "slug": "time-reggaeton",
@@ -1175,14 +1175,14 @@
     "subject": "technology",
     "level": "prestarter",
     "lesson": 3,
-    "genre": "Pop",
+    "genre": "80s",
     "beat": "Dreamy Normal",
-    "artistFeel": "Harry Styles",
+    "artistFeel": null,
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "As It Was by Harry Styles",
-    "arrangement": "bright synth-lead hook"
+    "similarSongs": null,
+    "arrangement": "sax solo over synths"
   },
   {
     "slug": "hobbies-reggaeton",
@@ -3585,14 +3585,14 @@
     "subject": "hobbies",
     "level": "prestarter",
     "lesson": 9,
-    "genre": "Pop",
+    "genre": "90s",
     "beat": "Uplifting Upbeat",
-    "artistFeel": "Harry Styles",
-    "similarSongs": "As It Was by Harry Styles",
+    "artistFeel": null,
+    "similarSongs": null,
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "funky electric-guitar riff"
+    "arrangement": "dance-piano stabs"
   },
   {
     "slug": "nature-prestarter-l8",
@@ -3855,14 +3855,14 @@
     "subject": "greetings",
     "level": "starter",
     "lesson": 9,
-    "genre": "Pop",
+    "genre": "Blues",
     "beat": "Chill Slow",
-    "artistFeel": "The Weeknd",
-    "similarSongs": "Blinding Lights by The Weeknd",
+    "artistFeel": null,
+    "similarSongs": null,
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "piano-driven arrangement"
+    "arrangement": "organ and shuffle guitar"
   },
   {
     "slug": "greetings-starter-l10",
@@ -4125,14 +4125,14 @@
     "subject": "numbers",
     "level": "starter",
     "lesson": 1,
-    "genre": "Pop",
+    "genre": "90s",
     "beat": "Dance Upbeat",
-    "artistFeel": "Olivia Rodrigo",
-    "similarSongs": "Good 4 U by Olivia Rodrigo",
+    "artistFeel": null,
+    "similarSongs": null,
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "plucky synth arps and claps"
+    "arrangement": "new-jack-swing groove"
   },
   {
     "slug": "numbers-starter-l2",
