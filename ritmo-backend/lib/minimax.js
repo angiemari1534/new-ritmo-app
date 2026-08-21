@@ -153,6 +153,10 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   if (moodPhrase && !countryEnergetic) parts.push(moodPhrase);
   if (countryEnergetic)
     parts.push("upbeat outlaw honky-tonk country two-step — driving fiddle, banjo and pedal-steel, twangy telecaster, raw gritty country vocals with a real drawl, boot-stompin' backbeat, foot-stompin' but unmistakably COUNTRY (Morgan Wallen / Zach Bryan energy), never pop, country-pop or generic rock");
+  // Teaching tiers must be SLOW and clear enough for a beginner to follow and sing
+  // back — real space between phrases, unhurried, never crammed.
+  if (/prestarter|starter|beginner/i.test(String(level || "")))
+    parts.push("easy unhurried teaching pace with clear space between each phrase, words well separated and simple to follow and sing back, relaxed and never rushed or crammed");
   // The feel — tied to the GENRE so it stays true to it (country stays country,
   // reggaeton stays reggaeton) instead of drifting into generic pop.
   const vocalFeel = energetic ? "deep-toned energetic vocals not high-pitched or shrill" : "deep low relaxed chill vocals not high-pitched or shrill";
