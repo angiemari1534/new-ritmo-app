@@ -22,7 +22,7 @@ const GENRE_STYLE = {
   Rap: "energetic rap, booming 808 bass, bouncy trap drums, bright synth stabs, confident lively delivery, upbeat street energy, not jazzy or lounge",
   Soul: "classic Motown soul, warm horn section, Hammond organ, tight rhythm guitar, finger-snap groove",
   Country: "authentic outlaw / Americana country like Chris Stapleton, Zach Bryan, Morgan Wallen and Ella Langley — real fiddle, banjo, dobro and pedal-steel, warm acoustic and gritty twangy electric guitar, raw soulful vocals with a genuine country twang and drawl, organic rootsy country groove; NOT pop, NOT country-pop crossover, no glossy synths or radio-pop production",
-  Rock: "energetic guitar rock, driving distorted riffs, punchy live drums, big anthemic chorus, powerful but melodic",
+  Rock: "raw guitar rock like Nirvana, The Doors, Pink Floyd and Red Hot Chili Peppers — gritty distorted or funky electric guitar, real live drums and bass, raw emotive vocals with an edge, grunge / psychedelic / alt-rock feel, NOT glossy pop-rock or arena-pop",
   "Classic Rock": "70s classic rock anthem, distorted guitar riffs, bluesy solo, Hammond organ, big sing-along chorus, raw analog energy",
   Alternative: "90s alternative rock, distorted guitars, loud-quiet dynamics, gritty melodic vocals, anthemic indie energy, not pop",
   Blues: "gritty electric blues, wailing bent-note guitar, 12-bar shuffle, walking bass, soulful raspy vocals, smoky bar feel",

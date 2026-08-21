@@ -1102,12 +1102,12 @@
     "lesson": 3,
     "genre": "Rock",
     "beat": "Calm Normal",
-    "artistFeel": "Queen",
+    "artistFeel": "Candlebox",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bohemian Rhapsody by Queen",
-    "arrangement": "punchy power chords"
+    "similarSongs": "Far Behind by Candlebox",
+    "arrangement": "gritty grunge guitars and drums"
   },
   {
     "slug": "places-hiphop",
@@ -1602,12 +1602,12 @@
     "lesson": 4,
     "genre": "Rock",
     "beat": "Dance Upbeat",
-    "artistFeel": "Queen",
+    "artistFeel": "Red Hot Chili Peppers",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Bohemian Rhapsody by Queen",
-    "arrangement": "twin distorted guitar riffs"
+    "similarSongs": "Cant Stop by Red Hot Chili Peppers",
+    "arrangement": "soaring lead-guitar hooks"
   },
   {
     "slug": "weather-l3",
@@ -3195,14 +3195,14 @@
     "subject": "body",
     "level": "prestarter",
     "lesson": 7,
-    "genre": "Disco",
+    "genre": "Rock",
     "beat": "Groovy Upbeat",
-    "artistFeel": "ABBA",
-    "similarSongs": "Dancing Queen by ABBA",
+    "artistFeel": "Heart",
+    "similarSongs": "Barracuda by Heart",
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "wah guitar and strings"
+    "arrangement": "punchy power chords"
   },
   {
     "slug": "body-prestarter-l8",
@@ -4155,14 +4155,14 @@
     "subject": "numbers",
     "level": "starter",
     "lesson": 3,
-    "genre": "Country",
+    "genre": "Rock",
     "beat": "Powerful Normal",
-    "artistFeel": "Ella Langley",
-    "similarSongs": "You Look Like You Love Me by Ella Langley",
+    "artistFeel": "Janis Joplin",
+    "similarSongs": "Piece of My Heart by Janis Joplin",
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "banjo with a stomp-clap backbeat"
+    "arrangement": "organ and crunchy guitars"
   },
   {
     "slug": "numbers-starter-l4",
