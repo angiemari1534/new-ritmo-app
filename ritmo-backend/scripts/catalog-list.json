@@ -12,7 +12,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Lose Yourself by Eminem",
-    "arrangement": "aggressive synth-brass stabs"
+    "arrangement": "bright synth-brass stabs"
   },
   {
     "slug": "greetings-country",
@@ -102,7 +102,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "God's Plan by Drake",
-    "arrangement": "dark melodic synth lead"
+    "arrangement": "smooth melodic synth lead"
   },
   {
     "slug": "numbers-disco",
@@ -462,7 +462,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Sicko Mode by Travis Scott",
-    "arrangement": "moody bell melody and heavy bass"
+    "arrangement": "bright bell melody and deep bass"
   },
   {
     "slug": "questions-rock",
@@ -522,7 +522,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Drop It Like It's Hot by Snoop Dogg",
-    "arrangement": "dark orchestral hit and hard drums"
+    "arrangement": "orchestral hit and bouncy drums"
   },
   {
     "slug": "technology-hiphop",
@@ -537,7 +537,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "No Role Modelz by J. Cole",
-    "arrangement": "hard 808s and rattling trap hats"
+    "arrangement": "deep 808s and trap hats"
   },
   {
     "slug": "hobbies-pop",
@@ -717,7 +717,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Circles by Post Malone",
-    "arrangement": "dark melodic synth lead"
+    "arrangement": "smooth melodic synth lead"
   },
   {
     "slug": "clothing-disco",
@@ -792,7 +792,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "In Da Club by 50 Cent",
-    "arrangement": "gritty distorted synth lead"
+    "arrangement": "clean distorted synth lead"
   },
   {
     "slug": "shopping-pop",
@@ -1122,7 +1122,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "HUMBLE by Kendrick Lamar",
-    "arrangement": "moody bell melody and heavy bass"
+    "arrangement": "bright bell melody and deep bass"
   },
   {
     "slug": "shopping-disco",
@@ -1227,7 +1227,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Sicko Mode by Travis Scott",
-    "arrangement": "hard 808s and rattling trap hats"
+    "arrangement": "deep 808s and trap hats"
   },
   {
     "slug": "verbs-rap",
@@ -1271,7 +1271,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "No Role Modelz by J. Cole",
-    "arrangement": "dark melodic synth lead"
+    "arrangement": "smooth melodic synth lead"
   },
   {
     "slug": "greetings-l9",
@@ -1383,7 +1383,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Lose Yourself by Eminem",
-    "arrangement": "aggressive synth-brass stabs"
+    "arrangement": "bright synth-brass stabs"
   },
   {
     "slug": "family-l3",
@@ -1411,7 +1411,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Drop It Like It's Hot by Snoop Dogg",
-    "arrangement": "dark orchestral hit and hard drums"
+    "arrangement": "orchestral hit and bouncy drums"
   },
   {
     "slug": "feelings-l3",
@@ -1439,7 +1439,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "In Da Club by 50 Cent",
-    "arrangement": "gritty distorted synth lead"
+    "arrangement": "clean distorted synth lead"
   },
   {
     "slug": "food-l3",
@@ -1635,7 +1635,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "God's Plan by Drake",
-    "arrangement": "moody bell melody and heavy bass"
+    "arrangement": "bright bell melody and deep bass"
   },
   {
     "slug": "days-l3",
@@ -1705,7 +1705,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "God's Plan by Drake",
-    "arrangement": "hard 808s and rattling trap hats"
+    "arrangement": "deep 808s and trap hats"
   },
   {
     "slug": "directions-l4",
@@ -2559,7 +2559,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Lose Yourself by Eminem",
-    "arrangement": "aggressive synth-brass stabs"
+    "arrangement": "bright synth-brass stabs"
   },
   {
     "slug": "school-l6",
@@ -2797,7 +2797,7 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "dark melodic synth lead"
+    "arrangement": "smooth melodic synth lead"
   },
   {
     "slug": "numbers-prestarter-l7",
@@ -2887,7 +2887,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "dark orchestral hit and hard drums"
+    "arrangement": "orchestral hit and bouncy drums"
   },
   {
     "slug": "numbers-prestarter-l13",
@@ -3157,7 +3157,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "gritty distorted synth lead"
+    "arrangement": "clean distorted synth lead"
   },
   {
     "slug": "animals-prestarter-l8",
@@ -3337,7 +3337,7 @@
     "voice": "duet-m",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "moody bell melody and heavy bass"
+    "arrangement": "bright bell melody and deep bass"
   },
   {
     "slug": "time-prestarter-l8",
@@ -3607,7 +3607,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "hard 808s and rattling trap hats"
+    "arrangement": "deep 808s and trap hats"
   },
   {
     "slug": "nature-prestarter-l9",
@@ -3697,7 +3697,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "aggressive synth-brass stabs"
+    "arrangement": "bright synth-brass stabs"
   },
   {
     "slug": "vacation-prestarter-l8",
@@ -3877,7 +3877,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "dark melodic synth lead"
+    "arrangement": "smooth melodic synth lead"
   },
   {
     "slug": "greetings-starter-l11",
@@ -3967,7 +3967,7 @@
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "dark orchestral hit and hard drums"
+    "arrangement": "orchestral hit and bouncy drums"
   },
   {
     "slug": "pronouns-starter-l3",
@@ -4237,7 +4237,7 @@
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "gritty distorted synth lead"
+    "arrangement": "clean distorted synth lead"
   },
   {
     "slug": "colors-starter-l3",
