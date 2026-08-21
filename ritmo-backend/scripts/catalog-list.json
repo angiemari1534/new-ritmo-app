@@ -547,12 +547,12 @@
     "lesson": 2,
     "genre": "Country",
     "beat": "Dreamy Normal",
-    "artistFeel": "Lainey Wilson",
+    "artistFeel": "Ella Langley",
     "voice": "female",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Heart Like a Truck by Lainey Wilson",
-    "arrangement": "acoustic guitar and fiddle"
+    "similarSongs": "Werent For The Wind by Ella Langley",
+    "arrangement": "pedal-steel and acoustic guitar"
   },
   {
     "slug": "transportation-classicrock",
@@ -777,7 +777,7 @@
     "language": "Spanish",
     "order": "en-es",
     "similarSongs": "Tennessee Whiskey by Chris Stapleton",
-    "arrangement": "driving electric guitar and drums"
+    "arrangement": "pedal-steel and acoustic guitar"
   },
   {
     "slug": "directions-rap",
@@ -847,12 +847,12 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Confident Normal",
-    "artistFeel": "Shania Twain",
+    "artistFeel": "Morgan Wallen",
     "voice": "duet",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Man I Feel Like a Woman by Shania Twain",
-    "arrangement": "acoustic guitar and fiddle"
+    "similarSongs": "Whiskey Glasses by Morgan Wallen",
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "pronouns-rock",
@@ -2022,11 +2022,11 @@
     "lesson": 4,
     "genre": "Country",
     "beat": "Dance Upbeat",
-    "artistFeel": "Morgan Wallen",
+    "artistFeel": "Chris Stapleton",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Last Night by Morgan Wallen",
+    "similarSongs": "Midnight Train to Memphis by Chris Stapleton",
     "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
@@ -2498,12 +2498,12 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Groovy Upbeat",
-    "artistFeel": "Chris Stapleton",
+    "artistFeel": "Jelly Roll",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "similarSongs": "Second One to Know by Chris Stapleton",
-    "arrangement": "bright pedal-steel over a solid country groove"
+    "similarSongs": "Son of a Sinner by Jelly Roll",
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "shopping-l5",
@@ -2807,12 +2807,12 @@
     "lesson": 7,
     "genre": "Country",
     "beat": "Happy Upbeat",
-    "artistFeel": "Luke Combs",
-    "similarSongs": "When It Rains It Pours by Luke Combs",
+    "artistFeel": "Morgan Wallen",
+    "similarSongs": "Up Down by Morgan Wallen",
     "voice": "male",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "acoustic guitar and fiddle"
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "numbers-prestarter-l8",
@@ -4157,12 +4157,12 @@
     "lesson": 3,
     "genre": "Country",
     "beat": "Powerful Normal",
-    "artistFeel": "Carrie Underwood",
-    "similarSongs": "Before He Cheats by Carrie Underwood",
+    "artistFeel": "Ella Langley",
+    "similarSongs": "You Look Like You Love Me by Ella Langley",
     "voice": "duet-f",
     "language": "Spanish",
     "order": "en-es",
-    "arrangement": "acoustic guitar and fiddle"
+    "arrangement": "banjo with a stomp-clap backbeat"
   },
   {
     "slug": "numbers-starter-l4",

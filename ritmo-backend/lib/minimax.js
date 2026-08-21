@@ -21,7 +21,7 @@ const GENRE_STYLE = {
   "Hip-Hop": "modern hip-hop, deep booming 808 bass, crisp trap hi-hats, tight drums, smooth melodic synths, confident bounce, not jazzy or lounge",
   Rap: "energetic rap, booming 808 bass, bouncy trap drums, bright synth stabs, confident lively delivery, upbeat street energy, not jazzy or lounge",
   Soul: "classic Motown soul, warm horn section, Hammond organ, tight rhythm guitar, finger-snap groove",
-  Country: "modern country with real twang — fiddle, banjo and bright pedal-steel over acoustic and twangy electric guitar, warm country vocals with a country twang, boot-stomping backbeat, radio-ready; stays unmistakably country at ANY tempo, never generic pop or pop-rock",
+  Country: "authentic outlaw / Americana country like Chris Stapleton, Zach Bryan, Morgan Wallen and Ella Langley — real fiddle, banjo, dobro and pedal-steel, warm acoustic and gritty twangy electric guitar, raw soulful vocals with a genuine country twang and drawl, organic rootsy country groove; NOT pop, NOT country-pop crossover, no glossy synths or radio-pop production",
   Rock: "energetic guitar rock, driving distorted riffs, punchy live drums, big anthemic chorus, powerful but melodic",
   "Classic Rock": "70s classic rock anthem, distorted guitar riffs, bluesy solo, Hammond organ, big sing-along chorus, raw analog energy",
   Alternative: "90s alternative rock, distorted guitars, loud-quiet dynamics, gritty melodic vocals, anthemic indie energy, not pop",
@@ -139,7 +139,7 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
     Dance: "danceable club feel", Romantic: "warm and romantic",
     Tropical: "sunny tropical vibe", Party: "fun party-anthem energy",
     Happy: "bright happy upbeat mood", Sad: "melancholy emotional mood",
-    Dreamy: "dreamy atmospheric feel", Groovy: "funky groovy pocket",
+    Dreamy: "dreamy atmospheric feel", Groovy: "funky groovy feel",
     Powerful: "bold powerful and anthemic", Calm: "calm and gentle",
     Uplifting: "uplifting feel-good lift", Epic: "epic cinematic and huge",
     Nostalgic: "warm nostalgic throwback feel", Playful: "playful and cheeky",
@@ -152,7 +152,7 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   // fast country still reads as COUNTRY, not pop-rock.
   if (moodPhrase && !countryEnergetic) parts.push(moodPhrase);
   if (countryEnergetic)
-    parts.push("upbeat honky-tonk country two-step — fiddle, banjo and bright pedal-steel, twangy telecaster, clear country vocal twang, boot-stompin' backbeat, foot-tapping but unmistakably COUNTRY, never generic pop, rock or pop-rock");
+    parts.push("upbeat outlaw honky-tonk country two-step — driving fiddle, banjo and pedal-steel, twangy telecaster, raw gritty country vocals with a real drawl, boot-stompin' backbeat, foot-stompin' but unmistakably COUNTRY (Morgan Wallen / Zach Bryan energy), never pop, country-pop or generic rock");
   // The feel — tied to the GENRE so it stays true to it (country stays country,
   // reggaeton stays reggaeton) instead of drifting into generic pop.
   const vocalFeel = energetic ? "deep-toned energetic vocals not high-pitched or shrill" : "deep low relaxed chill vocals not high-pitched or shrill";

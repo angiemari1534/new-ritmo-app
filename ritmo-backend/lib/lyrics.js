@@ -174,9 +174,9 @@ const WORD_ADLIBS = [
   "Go go go!", "Let's get it!", "Uh-huh!", "Hey hey!", "Yeah yeah!", "Oh-oh!", "Sing it!",
   "Ooh!", "Whoa!", "Alright!", "C'mon now", "Big time", "You know it", "That's right",
   "Give it up", "Let it flow", "Feel it now", "Say what?", "Oh my!", "Let's move", "Hands up",
-  "Do it again", "Groove with me", "Feel the rhythm", "Let's vibe", "Hit it!", "Break it down",
+  "Do it again", "Groove with me", "Feel the rhythm", "Hit it!", "Break it down",
   "Yes yes!", "Uh yeah", "Oh oh oh", "La la la", "Na na na", "Come on now", "Let's roll",
-  "Turn it up now", "Ride the beat", "In the pocket", "Take it away", "Bring it back",
+  "Turn it up now", "Ride the beat", "Take it away", "Bring it back",
   "One more round", "Here it comes", "All together", "Step it up", "Lock it in",
   // encouraging callouts
   "Listen up!", "One more time", "Nice work!", "Feel the beat", "That's it!", "Repeat with me",

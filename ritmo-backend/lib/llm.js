@@ -142,7 +142,7 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
   // Ad-libs are the #1 source of mindless repetition — keep them rare and unique.
   const adlibRule = isStarter
     ? `- AD-LIBS: use AT MOST ONE tiny spoken ad-lib, only at the very start, and it MUST be in ENGLISH — 2-4 words like "Here we go", "Alright now", "Let's go" — NEVER in ${language}. Do NOT sprinkle ad-libs through the song, and NEVER repeat an ad-lib phrase. At this level nearly every line should teach, not fill.\n`
-    : `- AD-LIBS: keep them in ENGLISH (never in ${language}) and use them VERY sparingly — at most 2 in the WHOLE song, each DIFFERENT. NEVER repeat an ad-lib phrase (do NOT say something like "in the pocket" over and over) and never use the word "vibes". Invent fresh English ad-libs that fit${genre ? ` a ${genre}` : " this"} song. A rare sprinkle, never a crutch.\n`;
+    : `- AD-LIBS: keep them in ENGLISH (never in ${language}) and use them VERY sparingly — at most 2 in the WHOLE song, each DIFFERENT. NEVER repeat an ad-lib and never lean on a filler catchphrase; never use the word "vibes". Invent fresh English ad-libs that fit${genre ? ` a ${genre}` : " this"} song. A rare sprinkle, never a crutch.\n`;
 
   // Teaching proportion + how much English-only story filler is allowed.
   const teachRule = isStarter
