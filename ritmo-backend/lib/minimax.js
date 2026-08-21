@@ -14,14 +14,14 @@ const MODEL = process.env.MINIMAX_MODEL || "music-3.0";
 // sound alike — the specific instruments here are the main lever, so keep them
 // vivid and true to the genre.
 const GENRE_STYLE = {
-  Pop: "bright modern synth-pop, shimmering synth arps, layered vocal harmonies, tight electronic beat, huge radio chorus",
+  Pop: "polished modern pop, catchy topline melody, warm piano and clean electric guitar with tasteful synths, punchy organic drums, layered vocal harmonies, big memorable radio chorus, strong hooks, mature and musical, not cheesy synthetic or childish",
   Latin: "latin pop, warm nylon guitar, congas and timbales, bright brass stabs, danceable clave groove",
   Reggaeton: "reggaeton, signature dembow riddim, deep sub-bass, staccato synth stabs, latin percussion",
   "R&B": "modern R&B, silky smooth sung vocals, warm electric-piano chords, deep sub-bass, crisp trap-soul drums, lush harmonies, sensual and polished, not jazzy",
   "Hip-Hop": "modern hip-hop, deep booming 808 bass, crisp trap hi-hats, tight drums, smooth melodic synths, confident bounce, not jazzy or lounge",
   Rap: "energetic rap, booming 808 bass, bouncy trap drums, bright synth stabs, confident lively delivery, upbeat street energy, not jazzy or lounge",
   Soul: "classic Motown soul, warm horn section, Hammond organ, tight rhythm guitar, finger-snap groove",
-  Country: "modern country, acoustic and bright electric guitar, gravelly soulful vocals, catchy country-rock groove with a solid backbeat, radio-ready, real country not pop; tempo follows the beat (can be upbeat)",
+  Country: "modern country with real twang — fiddle, banjo and bright pedal-steel over acoustic and twangy electric guitar, warm country vocals with a country twang, boot-stomping backbeat, radio-ready; stays unmistakably country at ANY tempo, never generic pop or pop-rock",
   Rock: "energetic guitar rock, driving distorted riffs, punchy live drums, big anthemic chorus, powerful but melodic",
   "Classic Rock": "70s classic rock anthem, distorted guitar riffs, bluesy solo, Hammond organ, big sing-along chorus, raw analog energy",
   Alternative: "90s alternative rock, distorted guitars, loud-quiet dynamics, gritty melodic vocals, anthemic indie energy, not pop",
@@ -63,7 +63,7 @@ const ARRANGEMENTS = {
   "Hip-Hop": ["deep 808s and trap hats", "smooth melodic synth lead", "chopped-vocal hook over 808s", "bright bell melody and deep bass"],
   Rap: ["booming 808 bass and trap drums", "bright synth-brass stabs", "orchestral hit and bouncy drums", "clean distorted synth lead"],
   Soul: ["punchy horn section", "Hammond organ and rhythm guitar", "sweeping strings and horns", "gospel piano and claps"],
-  Country: ["driving electric guitar and drums", "acoustic guitar and fiddle", "banjo with a stomp-clap backbeat", "bright pedal-steel over a solid groove"],
+  Country: ["driving twangy electric guitar, fiddle and drums", "acoustic guitar and fiddle", "banjo with a stomp-clap backbeat", "bright pedal-steel over a solid country groove"],
   Rock: ["twin distorted guitar riffs", "organ and crunchy guitars", "punchy power chords", "soaring lead-guitar hooks"],
   "Classic Rock": ["Hammond organ and guitars", "bluesy slide-guitar lead", "piano-and-guitar boogie", "wailing guitar solo"],
   Alternative: ["jangly reverb guitars", "layered synth and guitar", "fuzzy bass-driven riff", "atmospheric guitar textures"],
@@ -147,6 +147,10 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   };
   const moodPhrase = MOOD_PHRASE[moodWord];
   if (moodPhrase) parts.push(moodPhrase);
+  // Some genres drift into generic pop/rock when the tempo is pushed up. Re-assert
+  // the signature sound so upbeat songs still read as their genre (esp. Country).
+  if (genre === "Country" && energetic)
+    parts.push("KEEP IT COUNTRY at this faster tempo — fiddle, banjo and pedal-steel, twangy guitars, a clear country vocal twang and boot-stomping country groove, never generic pop or pop-rock");
   // The feel — tied to the GENRE so it stays true to it (country stays country,
   // reggaeton stays reggaeton) instead of drifting into generic pop.
   const vocalFeel = energetic ? "deep-toned energetic vocals not high-pitched or shrill" : "deep low relaxed chill vocals not high-pitched or shrill";
