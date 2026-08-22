@@ -286,6 +286,10 @@ async function buildPreStarterLesson({ subject = "words", topic = "", lessonNum,
     if (knownSubject) pool = starterPool(subject); // e.g. all short Colors words
     else if (isGuidedTrack) pool = combinedWordPool(); // mixed all-topics track
   }
+  // First Words = SINGLE words only (a noun with its article, e.g. "el lobo").
+  // Drop any curated multi-word phrases ("el animal salvaje", "está en peligro")
+  // that are too advanced for someone who has never heard the language.
+  pool = pool.filter((w) => String(w.es || "").trim().split(/\s+/).length <= 2);
 
   let vocab = [];
   let recall = [];
@@ -314,7 +318,7 @@ async function buildPreStarterLesson({ subject = "words", topic = "", lessonNum,
     try {
       const gen = await generateLessonVocab({
         theme,
-        tier: "starter",
+        tier: "prestarter",
         lessonNum,
         language,
         scenario: "",
@@ -322,8 +326,9 @@ async function buildPreStarterLesson({ subject = "words", topic = "", lessonNum,
         avoid: [...avoidWords, ...vocab.map((w) => w.es), ...pool.map((w) => w.es)],
       });
       const clean = await validateVocab(gen, language);
-      // Keep only short (1-3 word) items so it stays "one word at a time".
-      const shortClean = clean.filter(isShortPair);
+      // Keep only SINGLE words (≤2 Spanish words = noun + article) — First Words
+      // must stay one word at a time for a true beginner.
+      const shortClean = clean.filter((w) => String(w.es || "").trim().split(/\s+/).length <= 2);
       vocab = vocab.concat(shortClean.length ? shortClean : clean).slice(0, WORDS_PER_PRESTARTER);
     } catch (err) {
       console.error("Pre-Starter vocab failed, using fallback:", err.message);

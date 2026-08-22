@@ -28,6 +28,7 @@ function pickScenario(lessonNum = 1) {
 // Levels PROGRESS toward conversation: First Words = single words (handled
 // separately), Starter = short phrases, Explorer = longer phrases, then sentences.
 const TIER_GUIDANCE = {
+  prestarter: "ONE single, very common word each (NEVER a phrase) — the simplest, most essential words, for someone who has never heard the language",
   starter: "a SHORT 2-4 word phrase each (NOT single words) — simple, useful everyday mini-phrases",
   beginner: "a SHORT 2-4 word phrase each — like Starter but a bit more varied vocabulary; still only 2-4 words, NOT longer yet",
   intermediate: "a short everyday SENTENCE each — natural conversational lines",
