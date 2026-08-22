@@ -164,6 +164,10 @@ async function main() {
     if (!shouldRegen && haveCache) {
       if (reuseCached()) { console.log(`${s.slug}: reused from cache`); continue; }
     }
+    // Strict ONLY mode: never GENERATE a non-targeted song (even if uncached) — it
+    // just stays absent this run. Prevents an ONLY reroll from silently building
+    // unrelated uncached songs and spending on them.
+    if (onlySet && !targeted) { console.log(`${s.slug}: skipped (not targeted)`); continue; }
 
     process.stdout.write(`Building ${s.slug} (${s.genre}) on ${PROVIDER}... `);
     let made = null;
