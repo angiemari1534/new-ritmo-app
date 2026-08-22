@@ -39,8 +39,15 @@ const camel = (s) => s.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
 const J = (v) => JSON.stringify(v === undefined ? null : v);
 
 async function postJson(url, body, headers) {
-  const res = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json", ...(headers || {}) }, body: JSON.stringify(body) });
-  return res;
+  // Hard timeout so a hung provider call (fal occasionally stalls) aborts and the
+  // build moves on instead of freezing the whole batch.
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), 240000);
+  try {
+    return await fetch(url, { method: "POST", headers: { "Content-Type": "application/json", ...(headers || {}) }, body: JSON.stringify(body), signal: ctrl.signal });
+  } finally {
+    clearTimeout(t);
+  }
 }
 
 // ElevenLabs ToS forbids naming real artists, so for genres whose GENRE_STYLE
