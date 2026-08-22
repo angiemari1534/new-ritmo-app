@@ -495,6 +495,10 @@ async function buildLyrics({ subject = "greetings", topic = "", level = "beginne
   // Safety net: force every identifiable teaching line into the chosen order,
   // in case the AI flipped some lines despite the instructions.
   lyrics = enforceOrder(lyrics, vocab, order);
+  // "All words repeated": cap English-only story/filler lines so nearly every
+  // line is a bilingual teaching pair. Keeps tags, all "…" pairs, and up to a few
+  // English-only lines for flow; drops the rest.
+  lyrics = trimStoryLines(lyrics, 4);
 
   if (lyrics.length > MAX_LYRICS) {
     lyrics = lyrics.slice(0, MAX_LYRICS);
@@ -518,10 +522,35 @@ async function buildLyrics({ subject = "greetings", topic = "", level = "beginne
 // chosen order using the known vocab, so a flipped line gets corrected.
 // Spanish / English word hints for detecting a pair's order when it isn't in the
 // lesson vocab (the songwriter often adds its own pairs).
-const ES_HINT = /[ñáéíóúü¿¡]|\b(el|la|los|las|un|una|unos|unas|de|del|al|est[aá]|estoy|estamos|es|son|qu[eé]|c[oó]mo|por|para|con|sin|y|o|en|mi|tu|su|me|te|se|le|nos|no|s[ií]|muy|m[aá]s|gracias|hola|adi[oó]s|quiero|tiene|tienes|vas|voy|hacer|comida|casa|mesa|d[ií]a)\b/i;
-const EN_HINT = /\b(the|is|are|am|was|were|a|an|to|do|does|did|you|i|we|they|he|she|it|please|what|how|where|when|why|thank|thanks|hello|hi|want|have|has|my|your|our|and|or|of|with|for|in|on|it|this|that|these|those|let|let's)\b/i;
-function looksEs(s) { return ES_HINT.test(s) && !EN_HINT.test(s); }
-function looksEn(s) { return EN_HINT.test(s) && !ES_HINT.test(s); }
+// Count-based language scoring (more robust than a single hint — "a" is both an
+// English article and a Spanish preposition, so we weigh many signals).
+const ES_WORDS = /\b(el|la|los|las|un|una|unos|unas|del|al|est[aá]|est[aá]s|estoy|estamos|es|son|qu[eé]|c[oó]mo|por|para|con|sin|en|mi|tu|su|me|te|se|le|nos|s[ií]|muy|m[aá]s|gracias|hola|adi[oó]s|quiero|tengo|tiene|tienes|vas|voy|vamos|hacer|comida|casa|mesa|d[ií]a|bien|abre|cierra|cantar|de)\b/gi;
+const EN_WORDS = /\b(the|is|are|am|was|were|an|to|do|does|did|you|we|they|he|she|please|what|how|where|when|why|thank|thanks|hello|want|have|has|my|your|our|and|of|with|for|on|this|that|these|those|let|lets|down|up|open|close|good|here|there)\b/gi;
+function esScore(s) { const a = (String(s).match(/[ñáéíóúü¿¡]/g) || []).length * 2; const b = (String(s).match(ES_WORDS) || []).length; return a + b; }
+function enScore(s) { return (String(s).match(EN_WORDS) || []).length; }
+function looksEs(s) { return esScore(s) > enScore(s); }
+function looksEn(s) { return enScore(s) > esScore(s); }
+
+// Drop English-only story lines beyond `maxStory` so the song is mostly bilingual
+// teaching pairs. Section tags and every "…" pair are always kept.
+function trimStoryLines(lyrics, maxStory = 4) {
+  let kept = 0;
+  const out = [];
+  for (const ln of lyrics.split("\n")) {
+    const t = ln.trim();
+    if (!t || t.startsWith("[") || t.includes("…")) { out.push(ln); continue; }
+    if (kept < maxStory) { out.push(ln); kept++; } // keep a few for flow, drop rest
+  }
+  // Collapse any section tag left with no lines under it.
+  const res = [];
+  for (let i = 0; i < out.length; i++) {
+    const t = out[i].trim();
+    const next = (out[i + 1] || "").trim();
+    if (t.startsWith("[") && (i === out.length - 1 || next.startsWith("["))) continue;
+    res.push(out[i]);
+  }
+  return res.join("\n");
+}
 
 function enforceOrder(lyrics, vocab, order) {
   const norm = (s) =>

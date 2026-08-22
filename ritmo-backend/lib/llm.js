@@ -147,10 +147,10 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
     ? `- AD-LIBS: use AT MOST ONE tiny spoken ad-lib, only at the very start, and it MUST be in ENGLISH — 2-4 words like "Here we go", "Alright now", "Let's go" — NEVER in ${language}. Do NOT sprinkle ad-libs through the song, and NEVER repeat an ad-lib phrase. At this level nearly every line should teach, not fill.\n`
     : `- AD-LIBS: keep them in ENGLISH (never in ${language}) and use them VERY sparingly — at most 2 in the WHOLE song, each DIFFERENT. NEVER repeat an ad-lib and never lean on a filler catchphrase; never use the word "vibes". Invent fresh English ad-libs that fit${genre ? ` a ${genre}` : " this"} song. A rare sprinkle, never a crutch.\n`;
 
-  // Teaching proportion + how much English-only story filler is allowed.
-  const teachRule = isStarter
-    ? `- THIS IS A STARTER LEARNING SONG: about 90% of lines must be bilingual teaching pairs "${first}… ${second}". Keep English-only story lines to an absolute minimum (0-2 in the whole song). Beginners need clear, repeated pairs — not story filler.\n`
-    : `- THIS IS A LEARNING SONG: aim for roughly 70-75% of lines to be bilingual teaching pairs "${first}… ${second}", with the remaining ~25-30% as English story lines and a few ad-libs. Mostly teaching, with real story flavor mixed in.\n`;
+  // Teaching proportion: nearly EVERY line is a repeated pair — the learner must
+  // hear every phrase in both languages. Almost no English-only filler.
+  const teachRule =
+    `- ALL WORDS REPEATED: about 90% of lines must be bilingual teaching pairs "${first}… ${second}" — EVERY phrase you introduce is repeated fully in both languages, none left in only one. Keep English-only story lines to an absolute minimum (0-2 in the whole song). This is a learning song, not story filler.\n`;
 
   // Core rule for EVERY level: each teaching line is the SAME phrase in BOTH
   // languages, in full — never half-English/half-Spanish, never a lone word.
@@ -198,7 +198,7 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
   ).join("\n");
 
   const system =
-    `You are a hit bilingual ${language}/English songwriter for language learning. You write catchy songs that tell a STORY and flow from start to finish, like a real artist. Output ONLY song lyrics — no titles, no explanations, no code fences.`;
+    `You are a hit bilingual ${language}/English songwriter for language learning. You write catchy, singable songs where NEARLY EVERY LINE teaches a phrase in both languages — English, then the same phrase in ${language}. The song still flows and has a strong catchy hook, but TEACHING comes first: almost no story-only lines. Output ONLY song lyrics — no titles, no explanations, no code fences.`;
   const user =
     `Write a catchy, story-driven bilingual (${language} + English) song that teaches ${language} to a ${tier} learner — make it feel like a real hit song.\n` +
     `Theme: "${theme}".\n` +
