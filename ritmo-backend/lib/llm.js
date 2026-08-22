@@ -216,7 +216,8 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
     `- English-only STORY lines must NOT contain "…" — reserve "…" ONLY for real translation pairs, so a story line is never mistaken for a translation.\n` +
     `- DO weave in some short English STORY lines (no "…") for flow, rhyme and vibe — they make it feel like a real song. Keep them a MINORITY though: never more than 2 English-only lines in a row, and never a whole verse with zero translations.\n` +
     teachRule +
-    `- Commit to ONE clear concept/character/vibe (a road trip, a night out, a day in the city…) that ties every word together.\n` +
+    `- Commit to ONE clear concept/scene (a road trip, a night out, a day in the city…) that ties every word together. Pick a FRESH scene each time — do NOT default to a birthday, a party, or a fiesta.\n` +
+    `- BANNED words/themes (overused — never use ANY of these): "vibes", "in the pocket", "birthday", "cumpleaños", "fiesta", "candles", "velas". Avoid the same stock callouts song after song.\n` +
     hookRule +
     `- Section tags each on their own line: a short intro, then [Hook], [Verse], [Hook], [Verse], [Bridge], [Hook].\n` +
     `Teaching rules:\n` +

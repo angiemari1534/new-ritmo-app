@@ -238,31 +238,27 @@ function buildWordLyrics(words, order = "en-es", recall = []) {
   const recallWord = recall && recall.length && seed % 2 === 0 ? recall[0] : null;
   const recallAt = words.length >= 4 ? 2 : -1; // a middle verse, not the first
 
-  const lines = ["[Intro]", adlib(), adlib()];
-  // Ad-libs are woven all through the song — opening each verse, between the words,
-  // and tagging both sides of every chorus — for a catchy, hit-song feel.
+  // ONE short opener only — ad-libs are filler and, shared across every song, they
+  // become repetitive. Keep the focus on the words being taught.
+  const lines = ["[Intro]", adlib()];
   for (let i = 0; i < words.length; i += 2) {
-    lines.push("[Verse]", adlib());
+    lines.push("[Verse]");
     teach(lines, words[i]);
-    lines.push(adlib()); // woven between the words
     if (words[i + 1]) teach(lines, words[i + 1]);
     if (recallWord && i === recallAt) teach(lines, recallWord); // one old word, mid-song
-    lines.push(adlib());
-    lines.push("[Chorus]", adlib());
+    lines.push("[Chorus]");
     hook(lines);
-    lines.push(adlib());
   }
-  // Bridge: run through every NEW word once as a bilingual pair, with callouts.
-  lines.push("[Bridge]", adlib());
+  // Bridge: run through every NEW word once as a bilingual pair.
+  lines.push("[Bridge]");
   for (const w of words) {
     const p = pair(w);
     if (p) lines.push(p[0], p[1]);
   }
-  lines.push(adlib());
   // Final hook to end on the catchy part.
-  lines.push("[Chorus]", adlib());
+  lines.push("[Chorus]");
   hook(lines);
-  lines.push("[Outro]", adlib(), adlib());
+  lines.push("[Outro]");
   return lines.join("\n");
 }
 
