@@ -10,3 +10,4 @@ scripts/_el5_lockbak/
 scripts/_el*.log
 scripts/_eltest/
 scripts/_catalog-list.bak.json
+scripts/_pre-starter.bak.json
