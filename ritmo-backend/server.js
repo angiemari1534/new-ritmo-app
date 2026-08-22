@@ -155,7 +155,7 @@ app.post("/lyrics", async (req, res) => {
     const { subject, topic, level, lesson, avoidWords, language, order, genre } = req.body || {};
     const lang = language || "Spanish";
     const ord = order === "en-es" ? "en-es" : "es-en";
-    const avoid = Array.isArray(avoidWords) ? avoidWords.slice(0, 60) : [];
+    const avoid = Array.isArray(avoidWords) ? avoidWords.slice(0, 300) : [];
     const built = await buildLyrics({ subject, topic, level, lesson, avoidWords: avoid, language: lang, order: ord, genre });
     res.json(built);
   } catch (err) {
@@ -171,7 +171,7 @@ app.post("/create-song", async (req, res) => {
     const lang = language || "Spanish";
     const ord = order === "en-es" ? "en-es" : "es-en";
     const reviewVocab = Array.isArray(reviewWords) ? reviewWords.slice(0, 4) : [];
-    const avoid = Array.isArray(avoidWords) ? avoidWords.slice(0, 60) : [];
+    const avoid = Array.isArray(avoidWords) ? avoidWords.slice(0, 300) : [];
     const built = await buildLyrics({ subject, topic, level, lesson, reviewVocab, avoidWords: avoid, language: lang, order: ord, genre });
     const { title, lyrics, vocab, subjectLabel } = built;
 

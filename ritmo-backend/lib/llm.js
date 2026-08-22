@@ -25,11 +25,13 @@ function pickScenario(lessonNum = 1) {
   return SCENARIOS[Math.max(0, base)];
 }
 
+// Levels PROGRESS toward conversation: First Words = single words (handled
+// separately), Starter = short phrases, Explorer = longer phrases, then sentences.
 const TIER_GUIDANCE = {
-  starter: "ONE single very common word each (never a phrase) — the simplest, most essential words",
-  beginner: "single common words or very short phrases",
-  intermediate: "short everyday phrases",
-  advanced: "full, useful sentences",
+  starter: "a SHORT 2-3 word phrase each (NOT single words) — simple, useful everyday mini-phrases",
+  beginner: "a short 3-5 word phrase each — simple everyday phrases in the present tense",
+  intermediate: "a short everyday SENTENCE each — natural conversational lines",
+  advanced: "a full, natural conversational sentence each",
 };
 
 // Returns an array of { es, en } pairs (usually 5). Throws on failure so the
@@ -39,7 +41,7 @@ async function generateLessonVocab({ theme, tier = "beginner", lessonNum = 1, av
   if (!apiKey) throw new Error("MINIMAX_API_KEY is not set");
 
   const level = TIER_GUIDANCE[tier] || TIER_GUIDANCE.beginner;
-  const avoidList = avoid.slice(0, 60).join(", ");
+  const avoidList = avoid.slice(0, 300).join(", ");
 
   const system =
     `You generate ${language}-learning vocabulary. You reply with ONLY a JSON array, no prose, no code fences.`;
@@ -47,9 +49,10 @@ async function generateLessonVocab({ theme, tier = "beginner", lessonNum = 1, av
     `Create exactly ${count} ${language} vocabulary items for a language-learning song.\n` +
     `Theme: "${theme}".\n` +
     `Learner level: ${tier} — use ${level}.\n` +
-    `This is lesson ${lessonNum} of a progressive course. Make it clearly DIFFERENT from other lessons — vary the sub-topic and vocabulary; don't repeat the usual obvious words.\n` +
+    `This is lesson ${lessonNum} of a progressive course. Make it clearly DIFFERENT from other lessons — vary the sub-topic and bring genuinely NEW vocabulary; never re-teach the usual obvious words.\n` +
     (scenario ? `Center this lesson on a specific everyday scene: ${scenario}. Pick words that fit that scene.\n` : "") +
-    (avoidList ? `Do NOT reuse any of these already-taught items: ${avoidList}.\n` : "") +
+    (avoidList ? `NEVER teach any of these already-taught items again — every item must be brand NEW: ${avoidList}.\n` +
+      `A previously-taught word may ONLY appear as part of a longer NEW phrase (e.g. use a known color to describe a new noun), never on its own as a repeated item.\n` : "") +
     `Use natural, correct ${language} and accurate English translations.\n` +
     `Return ONLY a JSON array where "es" is the ${language} text and "en" is the English, like: [{"es":"...","en":"hello"},{"es":"...","en":"thank you"}]`;
 
@@ -127,10 +130,10 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
   const targetPair = order === "en-es" ? `${target.en}… ${target.es}` : `${target.es}… ${target.en}`;
 
   const LINE_STYLE = {
-    starter: `keep the ${language} words very short (1-3 words) — mostly single words per teaching line.`,
-    beginner: `keep the ${language} short (2-4 words) — simple present tense, easy to sing.`,
-    intermediate: `short ${language} phrases, about 4-7 words.`,
-    advanced: `natural full ${language} phrases are welcome.`,
+    starter: `teach SHORT 2-3 word ${language} phrases (NOT single words) — simple and easy to sing.`,
+    beginner: `teach short 3-5 word ${language} phrases — simple present tense, easy to sing.`,
+    intermediate: `teach short everyday ${language} sentences (conversational), about 5-8 words.`,
+    advanced: `teach full, natural conversational ${language} sentences.`,
   };
   const lineStyle = LINE_STYLE[tier] || LINE_STYLE.beginner;
 

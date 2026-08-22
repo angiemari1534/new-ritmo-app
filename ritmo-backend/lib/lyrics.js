@@ -390,7 +390,7 @@ async function buildLyrics({ subject = "greetings", topic = "", level = "beginne
   const wordParts = customTopic ? customTopic.split(/[,\n]/).map((s) => s.trim()).filter(Boolean) : [];
   const isWordList = wordParts.length >= 2 && wordParts.every((p) => p.split(/\s+/).length <= 3);
 
-  const STARTER_PER = 15; // fresh words per Starter lesson
+  const STARTER_PER = 8; // fresh PHRASES per Starter lesson (phrases need room)
 
   let vocab;
   const curatedCount = known ? lessonCount(subject, vocabTier) : 0;
@@ -398,13 +398,9 @@ async function buildLyrics({ subject = "greetings", topic = "", level = "beginne
   const poolStart = (lessonNum - 1) * STARTER_PER;
   const freshLeft = pool.length - poolStart;
 
-  if (isStarter && freshLeft >= 8) {
-    // Starter, known subject: a fresh block of curated words that advances every
-    // lesson (L1 = first 15, L2 = next 15 …). Once fewer than 8 new curated words
-    // remain, we fall through to AI generation below for genuinely new words.
-    vocab = pool.slice(poolStart, poolStart + STARTER_PER);
-  } else if (!isStarter && known && lessonNum <= curatedCount) {
-    // Curated words for the early lessons.
+  if (!isStarter && known && lessonNum <= curatedCount) {
+    // Explorer+ early lessons: seed from the curated pool (still phrase-ified by
+    // the songwriter). Starter no longer uses single words — it generates PHRASES.
     vocab = getLessonVocab(subject, vocabTier, lessonNum);
   } else {
     // AI-generated words: Starter past its curated pool, custom topics, or
@@ -524,8 +520,14 @@ async function buildLyrics({ subject = "greetings", topic = "", level = "beginne
 
 // Deterministically force each identifiable teaching line ("X … Y") into the
 // chosen order using the known vocab, so a flipped line gets corrected.
+// Spanish / English word hints for detecting a pair's order when it isn't in the
+// lesson vocab (the songwriter often adds its own pairs).
+const ES_HINT = /[ñáéíóúü¿¡]|\b(el|la|los|las|un|una|unos|unas|de|del|al|est[aá]|estoy|estamos|es|son|qu[eé]|c[oó]mo|por|para|con|sin|y|o|en|mi|tu|su|me|te|se|le|nos|no|s[ií]|muy|m[aá]s|gracias|hola|adi[oó]s|quiero|tiene|tienes|vas|voy|hacer|comida|casa|mesa|d[ií]a)\b/i;
+const EN_HINT = /\b(the|is|are|am|was|were|a|an|to|do|does|did|you|i|we|they|he|she|it|please|what|how|where|when|why|thank|thanks|hello|hi|want|have|has|my|your|our|and|or|of|with|for|in|on|it|this|that|these|those|let|let's)\b/i;
+function looksEs(s) { return ES_HINT.test(s) && !EN_HINT.test(s); }
+function looksEn(s) { return EN_HINT.test(s) && !ES_HINT.test(s); }
+
 function enforceOrder(lyrics, vocab, order) {
-  if (!Array.isArray(vocab) || vocab.length === 0) return lyrics;
   const norm = (s) =>
     String(s || "")
       .toLowerCase()
@@ -534,8 +536,9 @@ function enforceOrder(lyrics, vocab, order) {
       .replace(/[^a-z0-9ñ ]/gi, "")
       .replace(/\s+/g, " ")
       .trim();
-  const esSet = new Set(vocab.map((w) => norm(w.es)).filter(Boolean));
-  const enSet = new Set(vocab.map((w) => norm(w.en)).filter(Boolean));
+  const list = Array.isArray(vocab) ? vocab : [];
+  const esSet = new Set(list.map((w) => norm(w.es)).filter(Boolean));
+  const enSet = new Set(list.map((w) => norm(w.en)).filter(Boolean));
   const wantEnFirst = order === "en-es";
 
   return lyrics
@@ -546,10 +549,16 @@ function enforceOrder(lyrics, vocab, order) {
       if (!m) return line;
       const [, lead, a, b, trail] = m;
       const na = norm(a), nb = norm(b);
-      // Identify the current order only when we can match the vocab confidently.
       let firstIsEn = null;
+      // 1) confident match against the lesson vocab
       if (enSet.has(na) && esSet.has(nb)) firstIsEn = true;
       else if (esSet.has(na) && enSet.has(nb)) firstIsEn = false;
+      // 2) language heuristic for songwriter-added pairs (one side clearly ES,
+      //    the other clearly EN)
+      if (firstIsEn === null) {
+        if (looksEs(a) && looksEn(b)) firstIsEn = false;
+        else if (looksEn(a) && looksEs(b)) firstIsEn = true;
+      }
       if (firstIsEn === null || firstIsEn === wantEnFirst) return line;
       return `${lead}${b.trim()}… ${a.trim()}${trail}`; // swap to the wanted order
     })
