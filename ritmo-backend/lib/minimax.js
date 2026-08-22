@@ -94,6 +94,9 @@ function buildStylePrompt({ genre, beat, artistFeel, similarSongs, level, langua
   const parts = [];
   // 1) Genre identity + reference artist.
   parts.push(GENRE_STYLE[genre] || (genre ? `${genre} music` : "catchy melodic song"));
+  // A standout, catchy chorus is what makes the song memorable — ask for it up
+  // front so the model gives the hook a bigger, different feel than the verses.
+  parts.push("with a big, catchy, memorable chorus that clearly stands out from the verses and makes you want to sing along");
   if (artistFeel) parts.push(`in the style of ${artistFeel}`);
   // Real reference songs of this genre (high priority — the strongest genre cue
   // so MiniMax actually matches the genre's sound). Kept near the top so it

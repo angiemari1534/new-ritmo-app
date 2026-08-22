@@ -159,8 +159,8 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
 
   // Progress through NEW words instead of drilling one phrase the whole song.
   const hookRule = isStarter
-    ? `- Write a short catchy [Hook] and repeat it TWICE only. The rest of the song must keep introducing DIFFERENT teaching pairs so the learner meets many new words — do NOT drill the same phrase over and over. Some repetition helps memory, but progress through the new words.\n`
-    : `- Write a CATCHY [Hook] with a memorable final line; repeat the SAME hook 3 times through the song and END on it.\n`;
+    ? `- Write ONE short, CATCHY [Hook] — the most memorable, sing-along part of the song, clearly different from the verses — and repeat that SAME hook TWICE. The verses keep introducing DIFFERENT teaching pairs (don't drill one phrase); the hook is the anchor you come back to.\n`
+    : `- Write ONE strong, CATCHY [Hook] — the standout, sing-along centerpiece with a memorable line, clearly different from the verses. Repeat the SAME hook 3 times through the song and END on it, so it's the part that sticks.\n`;
 
   // Order-aware few-shot example: teaching pairs are "<first>… <second>", so it
   // must flip when the learner picked English → target (en-es).
