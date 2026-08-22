@@ -28,8 +28,8 @@ function pickScenario(lessonNum = 1) {
 // Levels PROGRESS toward conversation: First Words = single words (handled
 // separately), Starter = short phrases, Explorer = longer phrases, then sentences.
 const TIER_GUIDANCE = {
-  starter: "a SHORT 2-3 word phrase each (NOT single words) — simple, useful everyday mini-phrases",
-  beginner: "a short 3-5 word phrase each — simple everyday phrases in the present tense",
+  starter: "a SHORT 2-4 word phrase each (NOT single words) — simple, useful everyday mini-phrases",
+  beginner: "a SHORT 2-4 word phrase each — like Starter but a bit more varied vocabulary; still only 2-4 words, NOT longer yet",
   intermediate: "a short everyday SENTENCE each — natural conversational lines",
   advanced: "a full, natural conversational sentence each",
 };
@@ -130,8 +130,8 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
   const targetPair = order === "en-es" ? `${target.en}… ${target.es}` : `${target.es}… ${target.en}`;
 
   const LINE_STYLE = {
-    starter: `teach SHORT 2-3 word ${language} phrases (NOT single words) — simple and easy to sing.`,
-    beginner: `teach short 3-5 word ${language} phrases — simple present tense, easy to sing.`,
+    starter: `teach SHORT 2-4 word ${language} phrases (NOT single words) — simple and easy to sing.`,
+    beginner: `teach SHORT 2-4 word ${language} phrases (NOT longer yet) — a bit more varied than Starter.`,
     intermediate: `teach short everyday ${language} sentences (conversational), about 5-8 words.`,
     advanced: `teach full, natural conversational ${language} sentences.`,
   };
@@ -152,11 +152,10 @@ async function generateSongLyrics({ theme, tier = "beginner", targetPhrase, newV
     ? `- THIS IS A STARTER LEARNING SONG: about 90% of lines must be bilingual teaching pairs "${first}… ${second}". Keep English-only story lines to an absolute minimum (0-2 in the whole song). Beginners need clear, repeated pairs — not story filler.\n`
     : `- THIS IS A LEARNING SONG: aim for roughly 70-75% of lines to be bilingual teaching pairs "${first}… ${second}", with the remaining ~25-30% as English story lines and a few ad-libs. Mostly teaching, with real story flavor mixed in.\n`;
 
-  // The core fix: at starter, each teaching line is the SAME short phrase in BOTH
+  // Core rule for EVERY level: each teaching line is the SAME phrase in BOTH
   // languages, in full — never half-English/half-Spanish, never a lone word.
-  const fullPhraseRule = isStarter
-    ? `- FULL-PHRASE REPEAT (critical at this level): each teaching line is ONE complete short phrase said fully in BOTH languages — e.g. "I want water… Quiero agua". NEVER do a partial repeat like "I want water… agua", and NEVER mix languages inside one phrase like "I want agua all day". The ${first} side is 100% ${first}; the ${second} side is 100% ${second}; they mean EXACTLY the same thing. Keep both sides the SAME short length (proportional) — if one side is 3 words, the other is about 3 words too.\n`
-    : "";
+  const fullPhraseRule =
+    `- FULL-PHRASE REPEAT (critical, EVERY line): each teaching line is ONE complete phrase said FULLY in BOTH languages — e.g. "I want water… Quiero agua". NEVER a partial repeat like "I want water… agua", and NEVER mix languages inside one phrase like "I want agua all day". The ${first} side is 100% ${first}; the ${second} side is 100% ${second}; they mean EXACTLY the same thing, and are the SAME length (if one side is 3 words, so is the other).\n`;
 
   // Progress through NEW words instead of drilling one phrase the whole song.
   const hookRule = isStarter
